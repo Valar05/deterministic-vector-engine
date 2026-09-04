@@ -1,0 +1,32 @@
+name: controller-pixels
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'controller.html'
+      - 'controller.css'
+      - 'controller.js'
+      - 'tools/controller_pixel_canary.mjs'
+      - '.github/workflows/controller-pixels.yml'
+  workflow_dispatch:
+
+jobs:
+  pixels:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Show Chrome version
+        run: google-chrome --version
+      - name: Render and verify controller pixels
+        run: node tools/controller_pixel_canary.mjs
+      - name: Upload rendered pixels
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: noodle-controller-pixels
+          path: controller-pixels.png
+          if-no-files-found: error

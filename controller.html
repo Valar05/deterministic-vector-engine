@@ -41,5 +41,15 @@
     <p id="instructions" class="sr-only">Move with W A S D or the left touch stick. Drag the right side to look. Press Space or Jump to jump. The Keys button exposes discrete directional controls for keyboard and assistive technology.</p>
   </main>
   <script type="module" src="./controller.js?v=noodle-controller-v1"></script>
+  <script type="module">
+    const faceArena = () => {
+      if (window.__noodleController) {
+        window.__noodleController.player.yaw = Math.PI;
+        return;
+      }
+      requestAnimationFrame(faceArena);
+    };
+    faceArena();
+  </script>
 </body>
 </html>

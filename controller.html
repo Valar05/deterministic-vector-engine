@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-build="noodle-controller-v1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#060809">
+  <title>Noodle Controller Kata</title>
+  <link rel="stylesheet" href="./controller.css?v=noodle-controller-v1">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"}}</script>
+</head>
+<body>
+  <main id="gameShell" aria-label="Noodle Controller Kata">
+    <canvas id="game" aria-hidden="true"></canvas>
+
+    <div id="hud" aria-live="polite">
+      <strong>NOODLE KATA</strong>
+      <span id="status">loading deterministic arena…</span>
+    </div>
+
+    <div id="crosshair" aria-hidden="true"></div>
+
+    <section id="touchLayer" aria-label="Touch controls">
+      <div id="moveZone" aria-hidden="true">
+        <div id="moveBase"><div id="moveKnob"></div></div>
+      </div>
+      <div id="lookZone" aria-label="Drag here to look"></div>
+      <button id="jumpButton" class="game-button" type="button" aria-label="Jump">JUMP</button>
+      <button id="fullscreenButton" class="game-button utility" type="button" aria-label="Enter fullscreen">FULL</button>
+    </section>
+
+    <nav id="accessibleMovement" aria-label="Accessible movement controls">
+      <button type="button" data-move="forward" aria-label="Move forward">▲</button>
+      <div>
+        <button type="button" data-move="left" aria-label="Move left">◀</button>
+        <button type="button" data-move="back" aria-label="Move backward">▼</button>
+        <button type="button" data-move="right" aria-label="Move right">▶</button>
+      </div>
+    </nav>
+
+    <button id="controlsToggle" type="button" aria-expanded="false" aria-controls="accessibleMovement">KEYS</button>
+    <p id="instructions" class="sr-only">Move with W A S D or the left touch stick. Drag the right side to look. Press Space or Jump to jump. The Keys button exposes discrete directional controls for keyboard and assistive technology.</p>
+  </main>
+  <script type="module" src="./controller.js?v=noodle-controller-v1"></script>
+</body>
+</html>

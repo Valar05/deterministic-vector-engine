@@ -1,0 +1,20 @@
+name: noodle3d-chatgpt-app
+on:
+  push:
+    paths:
+      - 'chatgpt-app/**'
+      - '.github/workflows/noodle3d-chatgpt-app.yml'
+  workflow_dispatch:
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: chatgpt-app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --ignore-scripts
+      - run: npm run check

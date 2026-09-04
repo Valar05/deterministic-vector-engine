@@ -334,7 +334,7 @@ PROJECT_ORIENTATION.md             operational owner and handoff
 
 During the portrait/tracing discussion, the agent repeatedly loaded long instruction documents, produced large plans and preflights, transferred image data, and performed many agentic turns before delivering corrected pixels. The user reported that the weekly allowance meter fell from approximately 80% remaining to 7% remaining.
 
-OpenAI’s documentation states that Codex allowance use varies with task size, complexity, model, execution location, and extended-session behavior. This repository cannot independently reconstruct the account’s exact credit ledger, and local exact token counters were unavailable. Therefore:
+[OpenAI’s Codex plan documentation](https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan) states that allowance use varies with task size, complexity, model, execution location, and extended-session behavior. This repository cannot independently reconstruct the account’s exact credit ledger, and local exact token counters were unavailable. Therefore:
 
 - the reported meter change is treated as credible user evidence
 - this session likely contributed materially

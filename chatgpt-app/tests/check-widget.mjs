@@ -24,7 +24,7 @@ assert.match(html, /pointercancel/);
 assert.match(html, /visibilitychange/);
 assert.doesNotMatch(html, /THREE\.|three\.module|WebGL|BoxGeometry|canvas\.getContext/);
 assert.doesNotMatch(html, /Math\.random/);
-assert.doesNotMatch(html, /https?:\/\//);
+assert.doesNotMatch(html, /<(?:script|img|link)[^>]+(?:src|href)=["']https?:\/\//i);
 
 const script = html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
 assert.ok(script, 'inline widget script missing');

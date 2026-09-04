@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-build="dve-noodle-box-v1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d0e">
+  <title>Vector Noodle - Brutalist Box</title>
+  <link rel="stylesheet" href="./styles.css?v=dve-noodle-box-v1">
+</head>
+<body>
+  <main class="shell" data-build="dve-noodle-box-v1">
+    <header>
+      <p class="eyebrow">PASTA'FAHR // ORGANISM 001</p>
+      <h1>BRUTALIST<br>NOODLE BOX</h1>
+      <p class="lede">One contour. One depth strand. Impossible mass.</p>
+    </header>
+
+    <form id="renderForm" class="controls">
+      <label for="promptInput">Primitive + material</label>
+      <div class="input-row">
+        <input id="promptInput" name="prompt" value="concrete box" autocomplete="off" spellcheck="false">
+        <button id="renderButton" type="submit">Forge</button>
+      </div>
+      <output id="resolvedStatus" class="status" aria-live="polite"></output>
+    </form>
+
+    <section class="artboard" aria-label="Interactive flat SVG brutalist box">
+      <div class="plate plate-top" aria-hidden="true">DVE // 2.5D DADDY</div>
+      <svg id="vector-output" viewBox="0 0 320 320" role="img" tabindex="0"
+        aria-describedby="interactionHint" aria-label="Concrete brutalist vector noodle box"></svg>
+      <div class="plate plate-bottom" aria-hidden="true">PURE SVG // GENOTYPE 0000</div>
+    </section>
+
+    <p id="interactionHint" class="interaction-hint">One finger: rotate any direction // Double-tap: reset</p>
+    <p class="vocabulary">Primitives: box, cube, rect // Materials: concrete, rust, hazard</p>
+    <noscript>This deterministic forge requires JavaScript.</noscript>
+  </main>
+
+  <script src="./engine.js?v=dve-noodle-box-v1"></script>
+  <script>
+    const form = document.getElementById('renderForm');
+    const input = document.getElementById('promptInput');
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      renderPromptToSvg(input.value);
+    });
+    renderPromptToSvg(input.value);
+    startSvgIllusion();
+  </script>
+</body>
+</html>

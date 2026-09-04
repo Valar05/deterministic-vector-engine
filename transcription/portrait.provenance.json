@@ -1,0 +1,21 @@
+{
+  "schema": "dve.asset-provenance.v1",
+  "asset": "transcription/portrait.svg",
+  "asset_class": "source-authored vector",
+  "source": {
+    "ownership": "user-owned private reference",
+    "filename": "PXL_20260904_132608014.MP.jpg",
+    "sha256": "0a662d15147cf17d53761ce2fa5513c80201448971071bddfd2089c78cd12654"
+  },
+  "authoring": {
+    "date": "2026-09-04",
+    "tool": "Codex manual SVG path authoring",
+    "method": "artistic landmark observation only",
+    "declaration": "No tracing, autotrace, overlay, pixel sampling, coordinate extraction, embedded raster, or source-size registration."
+  },
+  "privacy": {
+    "reference_copied_into_project": false,
+    "exif_copied_into_project": false
+  },
+  "license": "private commission; user-controlled use"
+}

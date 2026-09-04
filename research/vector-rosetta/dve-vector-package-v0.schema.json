@@ -1,0 +1,605 @@
+{
+  "$defs": {
+    "bone": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "length": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "parent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rotation": {
+          "type": "number"
+        },
+        "scaleX": {
+          "type": "number"
+        },
+        "scaleY": {
+          "type": "number"
+        },
+        "shearX": {
+          "type": "number"
+        },
+        "shearY": {
+          "type": "number"
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "parent",
+        "x",
+        "y",
+        "rotation",
+        "scaleX",
+        "scaleY",
+        "shearX",
+        "shearY",
+        "length"
+      ],
+      "type": "object"
+    },
+    "constraint": {
+      "additionalProperties": false,
+      "properties": {
+        "bones": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "mix": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "order": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "target": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "ik",
+            "transform",
+            "path"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "order",
+        "bones",
+        "target",
+        "mix"
+      ],
+      "type": "object"
+    },
+    "coordinateSpace": {
+      "additionalProperties": false,
+      "properties": {
+        "origin": {
+          "items": false,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "type": "array"
+        },
+        "unitsPerPixel": {
+          "exclusiveMinimum": 0,
+          "type": "number"
+        },
+        "xAxis": {
+          "enum": [
+            "right"
+          ]
+        },
+        "yAxis": {
+          "enum": [
+            "down",
+            "up"
+          ]
+        }
+      },
+      "required": [
+        "xAxis",
+        "yAxis",
+        "origin",
+        "unitsPerPixel"
+      ],
+      "type": "object"
+    },
+    "deform": {
+      "additionalProperties": false,
+      "properties": {
+        "controlPoint": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "pathId": {
+          "type": "string"
+        },
+        "weights": {
+          "items": {
+            "$ref": "#/$defs/weight"
+          },
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "pathId",
+        "controlPoint",
+        "weights"
+      ],
+      "type": "object"
+    },
+    "event": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "payload": {
+          "additionalProperties": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "type": "object"
+        },
+        "time": {
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "time",
+        "name",
+        "payload"
+      ],
+      "type": "object"
+    },
+    "key": {
+      "additionalProperties": false,
+      "properties": {
+        "curve": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 4,
+          "minItems": 4,
+          "type": "array"
+        },
+        "interpolation": {
+          "enum": [
+            "hold",
+            "linear",
+            "cubic-bezier"
+          ]
+        },
+        "time": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "value": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            }
+          ]
+        }
+      },
+      "required": [
+        "time",
+        "value",
+        "interpolation"
+      ],
+      "type": "object"
+    },
+    "node": {
+      "additionalProperties": false,
+      "properties": {
+        "drawOrder": {
+          "type": "integer"
+        },
+        "id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "parent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pathRefs": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "slot": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "transform": {
+          "items": {
+            "type": "number"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "type": "array"
+        },
+        "visible": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "parent",
+        "pathRefs",
+        "transform",
+        "visible",
+        "drawOrder"
+      ],
+      "type": "object"
+    },
+    "paint": {
+      "additionalProperties": false,
+      "properties": {
+        "fill": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "stroke": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "strokeWidth": {
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "fill",
+        "stroke",
+        "strokeWidth"
+      ],
+      "type": "object"
+    },
+    "path": {
+      "additionalProperties": false,
+      "properties": {
+        "clipPath": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "d": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "paint": {
+          "$ref": "#/$defs/paint"
+        },
+        "sourceId": {
+          "pattern": "^S[0-9]{2}$"
+        }
+      },
+      "required": [
+        "id",
+        "d",
+        "paint"
+      ],
+      "type": "object"
+    },
+    "provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "contentHash": {
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "rightsVerdict": {
+          "enum": [
+            "ACCEPT",
+            "LINK_ONLY",
+            "REJECT"
+          ]
+        },
+        "sourceFormat": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "sourceIds": {
+          "items": {
+            "pattern": "^S[0-9]{2}$"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "sourceVersion": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "sourceFormat",
+        "sourceVersion",
+        "sourceIds",
+        "contentHash",
+        "rightsVerdict"
+      ],
+      "type": "object"
+    },
+    "rig": {
+      "additionalProperties": false,
+      "properties": {
+        "bones": {
+          "items": {
+            "$ref": "#/$defs/bone"
+          },
+          "type": "array"
+        },
+        "constraints": {
+          "items": {
+            "$ref": "#/$defs/constraint"
+          },
+          "type": "array"
+        },
+        "slots": {
+          "items": {
+            "$ref": "#/$defs/slot"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "bones",
+        "slots",
+        "constraints"
+      ],
+      "type": "object"
+    },
+    "slot": {
+      "additionalProperties": false,
+      "properties": {
+        "attachment": {
+          "type": "string"
+        },
+        "bone": {
+          "type": "string"
+        },
+        "drawOrder": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "bone",
+        "attachment",
+        "drawOrder"
+      ],
+      "type": "object"
+    },
+    "track": {
+      "additionalProperties": false,
+      "properties": {
+        "keys": {
+          "items": {
+            "$ref": "#/$defs/key"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "property": {
+          "enum": [
+            "x",
+            "y",
+            "rotation",
+            "scaleX",
+            "scaleY",
+            "shearX",
+            "shearY",
+            "opacity",
+            "drawOrder",
+            "deform"
+          ]
+        },
+        "target": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "target",
+        "property",
+        "keys"
+      ],
+      "type": "object"
+    },
+    "unsupported": {
+      "additionalProperties": false,
+      "properties": {
+        "feature": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "reason": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "sourceLocation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "verdict": {
+          "enum": [
+            "OBSERVE",
+            "REJECT",
+            "NEEDS_KERNEL_EXTENSION"
+          ]
+        }
+      },
+      "required": [
+        "feature",
+        "sourceLocation",
+        "verdict",
+        "reason"
+      ],
+      "type": "object"
+    },
+    "weight": {
+      "additionalProperties": false,
+      "properties": {
+        "bindX": {
+          "type": "number"
+        },
+        "bindY": {
+          "type": "number"
+        },
+        "bone": {
+          "type": "string"
+        },
+        "weight": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "bone",
+        "weight",
+        "bindX",
+        "bindY"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "https://drewgrounds.local/schemas/dve-vector-package-v0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "coordinateSpace": {
+      "$ref": "#/$defs/coordinateSpace"
+    },
+    "deform": {
+      "items": {
+        "$ref": "#/$defs/deform"
+      },
+      "type": "array"
+    },
+    "events": {
+      "items": {
+        "$ref": "#/$defs/event"
+      },
+      "type": "array"
+    },
+    "geometry": {
+      "items": {
+        "$ref": "#/$defs/path"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+    "rig": {
+      "$ref": "#/$defs/rig"
+    },
+    "scene": {
+      "items": {
+        "$ref": "#/$defs/node"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "schemaVersion": {
+      "const": "dve-vector-package-v0"
+    },
+    "timeline": {
+      "items": {
+        "$ref": "#/$defs/track"
+      },
+      "type": "array"
+    },
+    "unsupported": {
+      "items": {
+        "$ref": "#/$defs/unsupported"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "provenance",
+    "coordinateSpace",
+    "geometry",
+    "scene",
+    "rig",
+    "deform",
+    "timeline",
+    "events",
+    "unsupported"
+  ],
+  "title": "DVE Vector Package v0",
+  "type": "object"
+}

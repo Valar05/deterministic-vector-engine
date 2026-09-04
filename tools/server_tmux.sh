@@ -1,0 +1,41 @@
+#!/bin/sh
+set -eu
+
+PROJECT_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+SESSION_NAME=dve-m1-server
+PORT=8810
+
+if ! command -v tmux >/dev/null 2>&1; then
+  echo 'ERROR: tmux is required for the durable server lane.' >&2
+  exit 1
+fi
+
+if command -v python3 >/dev/null 2>&1; then
+  PYTHON_BIN=$(command -v python3)
+elif command -v python >/dev/null 2>&1; then
+  PYTHON_BIN=$(command -v python)
+else
+  echo 'ERROR: python is required for the static server.' >&2
+  exit 1
+fi
+
+if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
+  echo "Server session already exists: $SESSION_NAME"
+else
+  tmux new-session -d -s "$SESSION_NAME" -c "$PROJECT_ROOT" \
+    "$PYTHON_BIN -m http.server $PORT --bind 127.0.0.1"
+  echo "Started server session: $SESSION_NAME"
+fi
+
+attempt=0
+while [ "$attempt" -lt 30 ]; do
+  if curl -fs --max-time 2 "http://127.0.0.1:$PORT/" >/dev/null; then
+    echo "Server ready: http://127.0.0.1:$PORT/"
+    exit 0
+  fi
+  attempt=$((attempt + 1))
+  sleep 0.1
+done
+
+echo "ERROR: server did not become ready: http://127.0.0.1:$PORT/" >&2
+exit 1

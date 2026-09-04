@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-09-04",
+  "previous_state": "INTERRUPTED_UNACCEPTED_DO_NOT_MUTATE",
+  "state": "SUPERSEDED_BY_CONFIRMED_NOODLE_BOX",
+  "authority": "User explicitly confirmed the First Vector Noodle Organism interactive brutalist box plan.",
+  "previous_sha256": {
+    "engine.js": "401b9a75fbdd7e83bfb5d17e6f07dff4bd69db0d538daa7947bb56d7828a1e77",
+    "index.html": "ed0be89d72584523f575e401cdea90d90669cb7f619ddd3a68977a52e4c4af83",
+    "styles.css": "fb5494f890727b8f10e8cf26e323ecb305033f78d1766bc890c289eeb12ee8c3",
+    "tests/m1.test.mjs": "565ff0a700821118c4619f471e97b861cbda742873ffe6752335ede0d618922c"
+  },
+  "replacement_sha256": {
+    "engine.js": "433dce0646c9f5f8195add07fdf2c5dda09b043873b4035d8f98af745660cd99",
+    "index.html": "2393e503e34940829e5b788624e0b1676ec5a31d6f560fd11563afba7c29e6e2",
+    "styles.css": "f4fa3ff6d45cd1dbe7181d74c55be831d6383f1f2d16c6ccd300a2c7859882d2",
+    "tests/m1.test.mjs": "a16211b6e37a785638f544800c163ffbc0a532a9595b222054cbf3864c6e2a11"
+  },
+  "contract_tests": "23/23 green in staging",
+  "visual_acceptance": "RED_PENDING_USER_PIXEL_CONFIRMATION"
+}

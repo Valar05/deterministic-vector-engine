@@ -1,0 +1,18 @@
+{
+  "canonical_clean": true,
+  "commit_count": 1,
+  "dirty_window_seconds": "UNKNOWN_NOT_RECONSTRUCTED",
+  "entry_head": "a00b3a87878c2f0fa415011329a7895071012634",
+  "gap_seal": "c8cc71bd2dc1ce44f4f40ea69a4d17660d39feb5448fa6ec3a98765dd790ddfd",
+  "lock_absent": true,
+  "packet_seal": "c4ca3d38856863ac8a8d86b014ad5b383c3e6f7bac86d160b133af7578ce3ae0",
+  "publication_commit": "c849159760e34060e9b3a3a02e1d2709235f2bc6",
+  "published_file_count": 3,
+  "receipt_kind": "derived_postcondition_verification",
+  "remote_push": false,
+  "schema": "dve-thunder-publication-verification-v0",
+  "source_ref_count": 16,
+  "transaction_stdout_receipt": "UNAVAILABLE_WRAPPER_RETURNED_NO_STDOUT",
+  "transaction_tests_passed": 5,
+  "verified_at": "2026-09-04"
+}

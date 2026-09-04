@@ -1,0 +1,62 @@
+{
+  "artifacts": {
+    "CONFORMANCE_FIXTURE_PLAN.md": {
+      "bytes": 2051,
+      "sha256": "669f6eb4913c8a1b0e8b98de594d2d4ea3c7192e9c8421541249d57c2d22ac1c"
+    },
+    "DVE_VECTOR_PACKAGE_V0.md": {
+      "bytes": 1814,
+      "sha256": "0dacc07a1ce65eb3f992a6c24e0afd232b72e789dfdc546672b05aec879c3299"
+    },
+    "FORMAT_CAPABILITY_MATRIX.md": {
+      "bytes": 2345,
+      "sha256": "0f55f31234ed721f7574acf4eebcd5da7a92d317cde9fac585b7048c0dfdc878"
+    },
+    "PATTERN_CARDS.md": {
+      "bytes": 1793,
+      "sha256": "c1c1dd51d580ec0f09c643da252c28c659be0a665278458aa2c9990d8216c11f"
+    },
+    "README.md": {
+      "bytes": 3415,
+      "sha256": "fff08e3c37146cc54ac6f534cf9314aa4e74df4547de265addc4ea996604e1b5"
+    },
+    "RESEARCH_VERDICTS.md": {
+      "bytes": 1917,
+      "sha256": "d9de9d6a5f13d49ba1b84a638d166ce4b128a2b61a917c3be2f63f475219bdfb"
+    },
+    "RUNTIME_QUARANTINE.json": {
+      "bytes": 1117,
+      "sha256": "95f82f13d8309a2a4c1e17030938d89672c9a3b033cadf1fe843106060520355"
+    },
+    "SOURCE_MANIFEST.jsonl": {
+      "bytes": 10263,
+      "sha256": "585ebfd2385acba58ba49ffaebd3976310ba06e9a2247228753e33c5c5ec2ff8"
+    },
+    "THUNDER_PUBLICATION_VERIFICATION.json": {
+      "bytes": 752,
+      "sha256": "6d722be2982e01635dde8a9fd05b0dd045d559a5d3771ac26affbca53aa64864"
+    },
+    "dve-vector-package-v0.schema.json": {
+      "bytes": 11700,
+      "sha256": "b22d939885fcee16643fc6385c01a58b37a7868429e80e1cb2111deef75c7515"
+    },
+    "fixtures/minimal-svg-spine-package.json": {
+      "bytes": 2908,
+      "sha256": "546224c78fb5aa935b219d127f612c7e4608e913def631555e448d1ccdeead47"
+    },
+    "fixtures/reject-unknown-field.json": {
+      "bytes": 2943,
+      "sha256": "a4eb5572661e95b7c0e173657b81fabd16198fb193c488fd51fd8c3ac66003b9"
+    },
+    "validate_research.py": {
+      "bytes": 4502,
+      "sha256": "39a983f00cce1fda2f7aa41f6ecd5051bda17e894f334ac59360b42c1799ef00"
+    },
+    "visual-atlas/index.html": {
+      "bytes": 7901,
+      "sha256": "e3038ff77d284186192d4c279e5d0355e3eceaa648fd187b7689f46ff6eccc74"
+    }
+  },
+  "generated_at": "2026-09-04",
+  "schema": "dve-rosetta-artifact-manifest-v0"
+}

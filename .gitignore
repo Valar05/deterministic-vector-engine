@@ -1,0 +1,7 @@
+# private local references and editor state
+transcription/private/
+transcription/*.MP.jpg
+transcription/reference-*
+*.swp
+.DS_Store
+node_modules/

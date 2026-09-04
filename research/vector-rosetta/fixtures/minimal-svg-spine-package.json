@@ -1,0 +1,162 @@
+{
+  "coordinateSpace": {
+    "origin": [
+      0,
+      0
+    ],
+    "unitsPerPixel": 1,
+    "xAxis": "right",
+    "yAxis": "down"
+  },
+  "deform": [],
+  "events": [
+    {
+      "name": "extension-peak",
+      "payload": {
+        "phase": "reach"
+      },
+      "time": 0.3
+    }
+  ],
+  "geometry": [
+    {
+      "clipPath": null,
+      "d": "M 0 0 L 72 0 L 72 24 L 0 24 Z",
+      "id": "upper-arm",
+      "paint": {
+        "fill": "#D7793A",
+        "stroke": "#24100C",
+        "strokeWidth": 3
+      },
+      "sourceId": "S02"
+    },
+    {
+      "clipPath": null,
+      "d": "M 0 0 L 64 0 L 64 20 L 0 20 Z",
+      "id": "forearm",
+      "paint": {
+        "fill": "#B85A2C",
+        "stroke": "#24100C",
+        "strokeWidth": 3
+      },
+      "sourceId": "S02"
+    }
+  ],
+  "provenance": {
+    "contentHash": "83b540bcf56891f4c7ce553f1c8a7c38a370eaf7e020f9fc4a2eda200734b180",
+    "rightsVerdict": "ACCEPT",
+    "sourceFormat": "svg+spine-json",
+    "sourceIds": [
+      "S02",
+      "S05"
+    ],
+    "sourceVersion": "research-fixture-v0"
+  },
+  "rig": {
+    "bones": [
+      {
+        "id": "upper",
+        "length": 72,
+        "parent": null,
+        "rotation": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "shearX": 0,
+        "shearY": 0,
+        "x": 96,
+        "y": 128
+      },
+      {
+        "id": "fore",
+        "length": 64,
+        "parent": "upper",
+        "rotation": 22,
+        "scaleX": 1,
+        "scaleY": 1,
+        "shearX": 0,
+        "shearY": 0,
+        "x": 72,
+        "y": 0
+      }
+    ],
+    "constraints": [],
+    "slots": [
+      {
+        "attachment": "upper-node",
+        "bone": "upper",
+        "drawOrder": 0,
+        "id": "upper-slot"
+      },
+      {
+        "attachment": "fore-node",
+        "bone": "fore",
+        "drawOrder": 1,
+        "id": "fore-slot"
+      }
+    ]
+  },
+  "scene": [
+    {
+      "drawOrder": 0,
+      "id": "upper-node",
+      "parent": null,
+      "pathRefs": [
+        "upper-arm"
+      ],
+      "slot": "upper-slot",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        96,
+        116
+      ],
+      "visible": true
+    },
+    {
+      "drawOrder": 1,
+      "id": "fore-node",
+      "parent": "upper-node",
+      "pathRefs": [
+        "forearm"
+      ],
+      "slot": "fore-slot",
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        72,
+        2
+      ],
+      "visible": true
+    }
+  ],
+  "schemaVersion": "dve-vector-package-v0",
+  "timeline": [
+    {
+      "keys": [
+        {
+          "curve": [
+            0.25,
+            0.1,
+            0.25,
+            1
+          ],
+          "interpolation": "cubic-bezier",
+          "time": 0,
+          "value": -18
+        },
+        {
+          "interpolation": "linear",
+          "time": 0.6,
+          "value": 38
+        }
+      ],
+      "property": "rotation",
+      "target": "fore"
+    }
+  ],
+  "unsupported": []
+}

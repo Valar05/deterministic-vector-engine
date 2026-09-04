@@ -1,0 +1,93 @@
+{
+  "schema": "dve.transcription-receipt.v1",
+  "commission_contract_sha256": "5033c7f6dbdeff12d7240aae4918939eaabcdf567887ed0ea388228983ec0d6a",
+  "authority": {
+    "command": "Implement the plan.",
+    "confirmed_plan": "DVE Editorial Contour Portrait v1",
+    "classification": "invention",
+    "stale_premise_forbidden": "interactive brutalist box is preserved, not replaced"
+  },
+  "timing": {
+    "start_wall": "2026-09-04T08:37:31-05:00",
+    "start_monotonic_ns": 80956854964863,
+    "first_valid_pixels_wall": "2026-09-04T08:39:36.880271-05:00",
+    "first_valid_pixels_elapsed_ms_wall": 125324.504,
+    "first_valid_pixels_monotonic_ns": "UNKNOWN: not captured at the gate; no inference substituted",
+    "final_verified_wall": "2026-09-04T08:43:58.016980-05:00",
+    "final_verified_monotonic_ns": 81343262618439,
+    "total_elapsed_ms_monotonic": 386407.654
+  },
+  "tokens": {
+    "input": "UNKNOWN",
+    "output": "UNKNOWN",
+    "total": "UNKNOWN",
+    "reason": "exact local Codex token counters are not exposed"
+  },
+  "artifacts": {
+    "portrait.svg": "18136e9d1bf91598743a9305c7a7d3007cb5659646cbb1f9d1b0e36ea349cd49",
+    "portrait-v1.svg": "eb527e3c74b4c8a567342263e1182d19dec3d2ada83f8ff806f3b3deda60783c",
+    "portrait-v2.svg": "f7ec64e8c320d23a1fb22e13265ebd0328cbad133b45615584bf4f58896ab5a6",
+    "portrait-v3.svg": "04288669ac4c414b450f0834477f78b394478fed163b922015e577f1eaede627",
+    "portrait-v4.svg": "f3ebf3d46a6eaae3a62a31ce3185908abefd8f44acc116f29eab6f9b76910c0e",
+    "provenance": "28cfb066d44898e0c465f9dae1fda8949d578c1c17dc3ef46b086b6591d3cea1",
+    "critique": "535321a8522445dbcd6bb2ea2407180c2f1a3a6cebed9dff81745f2ed1d3c408"
+  },
+  "proof": {
+    "lineart_validator": "PASS: 85 paths, fixed ink and weights, allowed commands only",
+    "negative_controls": "PASS",
+    "draft_distinctness": "PASS: 4 unique hashes",
+    "preview": "PASS: nonblank bounds [141,94,660,870]",
+    "privacy": "PASS: no raster/reference file in bounded transcription inventory; EXIF not copied",
+    "reference_cleanup": "PASS: two named temp copies removed; original preserved with expected SHA-256",
+    "box_regression": "PASS: 23/23 and protected runtime hashes unchanged",
+    "research_lineage": "PASS",
+    "live_html": "HTTP 200 + dve-transcription-v1 marker",
+    "live_svg": "HTTP 200 + dve-transcription-v1 marker",
+    "agent_art": "AGENT_ART_ACCEPTED",
+    "user_pixels": "USER_PIXEL_CONFIRMATION_PENDING"
+  },
+  "soundness": {
+    "line_only": {
+      "semantic": "covered",
+      "production": "portrait.svg validator",
+      "negative": "image/fill/command fixtures",
+      "variation": "three line weights and responsive scaling"
+    },
+    "no_tracing": {
+      "semantic": "covered",
+      "production": "manual paths only",
+      "negative": "raster and forbidden-element rejection",
+      "accepted_evidence": "provenance plus source absence; method cannot be mathematically proven from output alone"
+    },
+    "appeal": {
+      "semantic": "covered",
+      "production": "selected v4",
+      "ablation": "rejected v1-v3",
+      "variation": "identity, expression, grooming, line economy individually scored",
+      "accepted_evidence": "agent accepted; user pending"
+    },
+    "privacy": {
+      "semantic": "covered",
+      "production": "reference excluded",
+      "recovery": "original camera file preserved"
+    }
+  },
+  "recovery": {
+    "backup_dir": "/data/data/com.termux/files/usr/tmp/dve-transcription-backup.W9cpbI8J",
+    "orientation_backup": "PROJECT_ORIENTATION.md",
+    "protected_hash_manifest": "expected-before.sha256"
+  },
+  "retrospective": {
+    "wasted_time": [
+      "unavailable /proc uptime probe",
+      "validator substring false positive",
+      "direct image viewer sandbox mismatch",
+      "shell deletion policy rejection"
+    ],
+    "wasted_tokens": "UNKNOWN: exact counters unavailable",
+    "weakest_soundness": "final aesthetic success still requires user pixel confirmation; first-pixel monotonic timestamp was not captured at the gate",
+    "improvement": "capture every gate timestamp atomically in the rendering command and keep exact deletion method in the preflight",
+    "frontier_classification": "INVALID",
+    "classification_reason": "product gates pass, but exact token axis and first-pixel monotonic datum are unavailable, so this run cannot update three-axis par history"
+  }
+}

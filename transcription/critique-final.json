@@ -1,0 +1,32 @@
+{
+  "schema": "dve.portrait-critique.v1",
+  "selected": "transcription/portrait.svg",
+  "selected_draft": "transcription/drafts/portrait-v4.svg",
+  "sequential_no_overlay_review": true,
+  "binary_gates": {
+    "line_only": true,
+    "no_shading": true,
+    "no_tracing": true,
+    "no_raster": true,
+    "privacy_preserved": true,
+    "no_uncanny_issue": true
+  },
+  "scores": {
+    "recognizability": 4,
+    "realism": 4,
+    "expression": 4,
+    "grooming": 5,
+    "line_economy": 5
+  },
+  "threshold": 4,
+  "decision": "USER_REJECTED",
+  "appeal_comparison": "PASS: stronger framing, intentional expression, groomed-rugged silhouette, clean background, and coherent line rhythm while retaining mature identity anchors.",
+  "remaining_state": "QUARANTINED_NEGATIVE_EXAMPLE",
+  "historical_decision": "AGENT_ART_ACCEPTED",
+  "user_verdict": {
+    "date": "2026-09-04",
+    "accepted": false,
+    "statement": "this is horrific"
+  },
+  "agent_scores_valid_for_acceptance": false
+}

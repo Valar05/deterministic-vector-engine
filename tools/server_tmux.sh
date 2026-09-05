@@ -20,7 +20,8 @@ else
 fi
 
 if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
-  if ! curl -fs --max-time 2 "http://127.0.0.1:$PORT/api/noodle/health" | grep -q "$MARKER"; then
+  SESSION_ROOT=$(tmux display-message -p -t "$SESSION_NAME" '#{pane_current_path}')
+  if [ "$SESSION_ROOT" != "$PROJECT_ROOT" ] || ! curl -fs --max-time 2 "http://127.0.0.1:$PORT/api/noodle/health" | grep -q "$MARKER"; then
     tmux kill-session -t "$SESSION_NAME"
   fi
 fi

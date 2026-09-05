@@ -1,0 +1,28 @@
+{
+  "schema": "vector-noodle.capability-registry.v1",
+  "capabilities": [
+    {
+      "id":"pressure_valve_gate","title":"Fleshpunk Pressure Valve Gate","kind":"machine","active":true,
+      "aliases":["pressure_valve_gate"],"components":["frame","pipe","valve","tendon","connective_tissue"],
+      "views":["assembled","exploded","orthographic"],"motions":["rotate","pulse","open","close"],
+      "provenance":{"type":"seed-capability","source":"infinite-brutality fleshpunk lineart asset campaign","sourceCommit":"80dc874"},
+      "program":[
+        {"op":"rect","x":170,"y":125,"w":460,"h":350,"rx":12,"depth":-2,"component":"gate-frame"},{"op":"polygon","points":[[170,125],[215,90],[675,90],[630,125]],"depth":1,"component":"gate-frame"},{"op":"line","x1":630,"y1":125,"x2":675,"y2":90,"depth":2,"component":"gate-frame"},{"op":"line","x1":630,"y1":475,"x2":675,"y2":440,"depth":2,"component":"gate-frame"},{"op":"line","x1":675,"y1":90,"x2":675,"y2":440,"depth":2,"component":"gate-frame"},
+        {"op":"path","d":"M 120 300 C 220 220 305 350 400 285 C 500 215 585 350 720 265","depth":3,"component":"main-pipe"},{"op":"path","d":"M 120 326 C 220 246 305 376 400 311 C 500 241 585 376 720 291","depth":2,"component":"main-pipe"},{"op":"line","x1":120,"y1":300,"x2":120,"y2":326,"depth":2,"component":"main-pipe"},{"op":"line","x1":720,"y1":265,"x2":720,"y2":291,"depth":2,"component":"main-pipe"},
+        {"op":"ellipse","cx":400,"cy":275,"rx":92,"ry":92,"depth":6,"component":"valve-wheel"},{"op":"ellipse","cx":400,"cy":275,"rx":27,"ry":27,"depth":7,"component":"valve-wheel"},{"op":"line","x1":308,"y1":275,"x2":492,"y2":275,"depth":7,"component":"valve-wheel"},{"op":"line","x1":400,"y1":183,"x2":400,"y2":367,"depth":7,"component":"valve-wheel"},{"op":"line","x1":335,"y1":210,"x2":465,"y2":340,"depth":7,"component":"valve-wheel"},{"op":"line","x1":465,"y1":210,"x2":335,"y2":340,"depth":7,"component":"valve-wheel"},
+        {"op":"path","d":"M 190 160 C 285 95 320 190 355 232","depth":8,"component":"upper-tendon"},{"op":"path","d":"M 190 178 C 270 120 305 205 345 244","depth":7,"component":"upper-tendon"},{"op":"path","d":"M 445 335 C 500 405 565 350 618 425","depth":8,"component":"lower-tendon"},{"op":"path","d":"M 456 323 C 510 383 574 330 626 407","depth":7,"component":"lower-tendon"},{"op":"path","d":"M 205 405 C 270 365 325 392 350 445 C 295 465 240 462 205 405 Z","depth":4,"component":"membrane"},{"op":"path","d":"M 450 130 C 505 102 565 108 610 155 C 552 180 500 174 450 130 Z","depth":4,"component":"membrane"},{"op":"line","x1":205,"y1":405,"x2":350,"y2":445,"depth":5,"component":"membrane"},{"op":"line","x1":450,"y1":130,"x2":610,"y2":155,"depth":5,"component":"membrane"}
+      ]
+    },
+    {
+      "id":"tendon_hound","title":"Articulated Tendon Hound","kind":"creature","active":true,
+      "aliases":["tendon_hound"],"components":["frame","tendon","connective_tissue","leg","jaw"],
+      "views":["assembled","exploded","orthographic"],"motions":["rotate","pulse","lunge","crawl"],
+      "provenance":{"type":"seed-capability","source":"infinite-brutality fleshpunk lineart asset campaign","sourceCommit":"80dc874"},
+      "program":[
+        {"op":"path","d":"M 220 270 C 285 185 455 180 555 260 C 500 335 315 350 220 270 Z","depth":2,"component":"torso-frame"},{"op":"path","d":"M 245 264 C 320 220 440 215 525 263","depth":4,"component":"torso-tendon"},{"op":"path","d":"M 248 292 C 330 255 438 254 512 288","depth":5,"component":"torso-tendon"},{"op":"ellipse","cx":575,"cy":235,"rx":72,"ry":57,"depth":5,"component":"head"},{"op":"path","d":"M 622 245 L 705 285 L 620 312","depth":7,"component":"jaw"},{"op":"line","x1":645,"y1":257,"x2":652,"y2":294,"depth":8,"component":"jaw"},{"op":"line","x1":670,"y1":269,"x2":674,"y2":290,"depth":8,"component":"jaw"},{"op":"ellipse","cx":601,"cy":218,"rx":9,"ry":9,"depth":8,"component":"head"},
+        {"op":"path","d":"M 270 320 L 235 410 L 175 478 L 245 478","depth":4,"component":"front-leg"},{"op":"ellipse","cx":235,"cy":410,"rx":14,"ry":14,"depth":6,"component":"front-leg"},{"op":"path","d":"M 345 330 L 330 425 L 285 492 L 355 492","depth":3,"component":"mid-leg"},{"op":"ellipse","cx":330,"cy":425,"rx":14,"ry":14,"depth":5,"component":"mid-leg"},{"op":"path","d":"M 475 320 L 515 408 L 485 482 L 555 482","depth":4,"component":"rear-leg"},{"op":"ellipse","cx":515,"cy":408,"rx":14,"ry":14,"depth":6,"component":"rear-leg"},
+        {"op":"path","d":"M 225 265 C 155 190 100 220 72 155","depth":6,"component":"tail-tendon"},{"op":"path","d":"M 226 285 C 150 215 112 242 82 174","depth":5,"component":"tail-tendon"},{"op":"path","d":"M 282 205 C 350 145 430 152 485 202 C 425 228 345 231 282 205 Z","depth":6,"component":"back-membrane"},{"op":"line","x1":298,"y1":203,"x2":472,"y2":203,"depth":7,"component":"back-membrane"}
+      ]
+    }
+  ]
+}

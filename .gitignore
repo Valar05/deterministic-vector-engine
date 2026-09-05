@@ -5,3 +5,6 @@ transcription/reference-*
 *.swp
 .DS_Store
 node_modules/
+
+.noodle-state/
+__pycache__/

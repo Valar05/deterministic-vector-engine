@@ -12,17 +12,20 @@ The prior raster-skeleton, blob-correspondence, and hand-authored ontology pipel
 2. Establish silhouette before detail.
 3. Add identity anchors that distinguish this shovel.
 4. Add correction ink only for an observed hidden-reference misread.
-5. Review without the source at 96, 220, and 360 pixels.
-6. Remove each stroke once and ask whether recognition collapses.
-7. Delete redundant strokes.
-8. Export a raster-free SVG and deterministic study record.
+5. Verify the exact modern source hash, then review without it at 96, 220, and 360 pixels.
+6. Record a separate recognition verdict for every scale.
+7. Remove each stroke once and ask whether recognition collapses.
+8. Delete redundant strokes and repair affected negative-space relationships.
+9. Repeat scale review after geometry changes.
+10. Explicitly accept each view only after every retained stroke is essential.
+11. Save the hash-bound acceptance receipt locally and export raster-free SVG and JSON.
 
-Only the user can decide that the pixels are recognizable or accepted.
+Only the user can decide that the pixels are recognizable or accepted. The server may persist an accepted study but independently rejects missing scale reviews, incomplete ablation, wrong sources, Fleshpunk, machine authority, or an invalid replay binding.
 
 ## Run
 
 ```sh
-npm run test:wonder:sparse
+npm run test:wonder:finish
 npm run wonder:sparse
 sh tools/server_tmux.sh
 ```

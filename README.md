@@ -38,7 +38,7 @@ The current shovel starter has 16 assembled candidates and 20 exploded candidate
 ## Run
 
 ```sh
-npm run test:wonder:sparse
+npm run test:wonder:finish
 npm run wonder:sparse
 sh tools/server_tmux.sh
 ```
@@ -59,10 +59,12 @@ The uploaded contact sheet is copied only into an ignored local source cache aft
 
 1. Choose assembled or exploded.
 2. Draw a silhouette, identity anchor, or correction stroke directly on the visible reference.
-3. Hide the reference and inspect thumbnail, normal, and enlarged output.
-4. Record `RECOGNIZABLE`, `WRONG`, `GENERIC`, or `OVERDRAWN`.
-5. Walk the destructive test and mark each missing stroke `ESSENTIAL` or `REMOVABLE`.
-6. Delete removable ink and export the recognition core.
+3. Hide the reference and record an independent verdict at 96, 220, and 360 pixels.
+4. Walk the destructive test and mark each missing stroke `ESSENTIAL` or `REMOVABLE`.
+5. Delete removable ink; negative-space relationships repair or fail closed.
+6. Repeat all three scale verdicts after any geometry change.
+7. Use **Accept this view** only when every surviving stroke is essential and every scale is recognizable.
+8. Finish both views. Acceptance is saved atomically under ignored local state and remains human-owned.
 
 Drawing has no timing, direction, pressure, or gesture-angle requirement. Undo, redo, source replacement, explicit reference hiding, visible budget, autosave, and JSON/SVG export are available from the same mobile surface.
 
@@ -78,12 +80,13 @@ Reference pattern:
 
 ## Evidence
 
-- `evidence/wonder-sparse/shovel-three-scale.svg` shows both unaccepted views at three scales.
-- `evidence/wonder-sparse/shovel-ablation.svg` removes every candidate stroke independently.
-- `evidence/wonder-sparse/visual-gate.json` states the exact missing visual verdict.
+- `evidence/wonder-sparse/shovel-review-v2.svg` shows both unaccepted views at three scales.
+- `evidence/wonder-sparse/shovel-ablation-v2.svg` removes every candidate stroke independently.
+- `evidence/wonder-sparse/visual-gate-v2.json` enumerates every remaining acceptance blocker.
+- The original shovel evidence remains preserved as the pre-hardening candidate.
 - `evidence/wonder-v2/REJECTION.json` prevents the superseded gates from being presented as green.
 
-Static tests verify the 20-stroke ceiling, deterministic fitting and replay, source exclusion, hidden-reference review rule, ablation coverage, negative-space integrity, and raster-free SVG. Those are guardrails, not proof that the shovel is good.
+Static tests verify the 20-stroke ceiling, exact browser source hashing, independent scale reviews, deterministic fitting and replay, source exclusion, deletion repair, ablation coverage, human-only promotion, atomic acceptance receipts, and raster-free SVG. Those are guardrails, not proof that the shovel is good.
 
 ## Repository map
 

@@ -6,7 +6,7 @@
   <title>Empty Glass · Shovel</title>
   <link rel="stylesheet" href="./studio.css">
 </head>
-<body data-build-marker="empty-glass-shovel-v1">
+<body data-build-marker="empty-glass-shovel-finish-v3">
   <header>
     <p class="eyebrow">VECTOR NOODLE · MODERN OBJECT APPRENTICESHIP</p>
     <h1>Every stroke must earn its ink.</h1>
@@ -20,7 +20,7 @@
       </div>
       <label class="file">Load local source<input id="source-file" type="file" accept="image/*"></label>
       <button id="reference-toggle">Hide reference</button>
-      <output id="source-status">Checking local source…</output>
+      <output id="source-status">Checking local source…</output><output id="curriculum-state">0 / 2 views accepted</output>
     </section>
 
     <section class="workspace">
@@ -49,6 +49,7 @@
       <aside>
         <div class="panel">
           <p class="panel-label">Hidden-reference review</p>
+          <strong id="active-scale">Reviewing 96 px</strong>
           <div id="scale-previews" class="scale-previews"></div>
           <label>What does it read as?<textarea id="review-note" rows="2" placeholder="Name the concrete misread"></textarea></label>
           <div id="verdicts" class="verdicts">
@@ -60,12 +61,14 @@
           <p class="panel-label">Destructive test</p>
           <strong id="ablation-name">Start ablation</strong>
           <p id="ablation-note">Each step removes exactly one stroke.</p>
-          <div class="actions"><button id="ablation-prev">Previous</button><button id="ablation-next">Next</button></div>
+          <div class="actions"><button id="ablation-prev">Previous</button><button id="ablation-clear">Full drawing</button><button id="ablation-next">Next</button></div>
           <div class="actions"><button id="essential">Identity collapses</button><button id="removable">Still reads</button></div>
         </div>
         <div class="panel">
           <p class="panel-label">Durable record</p>
           <p id="state">Loading…</p>
+          <p id="acceptance-blockers" class="warning">Acceptance is locked.</p>
+          <button id="accept-view" disabled>Accept this view</button>
           <div class="actions"><button id="export-svg">Export SVG</button><button id="export-json">Export study</button><button id="reset">Reset starter</button></div>
         </div>
       </aside>

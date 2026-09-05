@@ -23,6 +23,10 @@
           "y": 0,
           "width": 397,
           "height": 397
+        },
+        "verification": {
+          "state": "UNVERIFIED",
+          "sha256": null
         }
       },
       "view": "ASSEMBLED",
@@ -155,16 +159,27 @@
         }
       ],
       "review": {
-        "verdict": null,
         "referenceHidden": false,
         "scales": [
-          96,
-          220,
-          360
-        ],
-        "note": ""
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ]
       },
-      "state": "DRAFT"
+      "state": "DRAFT",
+      "acceptance": null
     },
     {
       "schema": "vector-noodle.sparse-line-study.v1",
@@ -178,6 +193,10 @@
           "y": 397,
           "width": 397,
           "height": 396
+        },
+        "verification": {
+          "state": "UNVERIFIED",
+          "sha256": null
         }
       },
       "view": "EXPLODED",
@@ -350,16 +369,27 @@
         }
       ],
       "review": {
-        "verdict": null,
         "referenceHidden": false,
         "scales": [
-          96,
-          220,
-          360
-        ],
-        "note": ""
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ]
       },
-      "state": "DRAFT"
+      "state": "DRAFT",
+      "acceptance": null
     }
   ]
 }

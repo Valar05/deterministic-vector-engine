@@ -15,7 +15,9 @@ The former Wonder v2 skeleton pipeline is rejected archaeology. Fleshpunk is not
 - `fitStroke(points, tolerance)` fits deliberate strokes through a measured cubic error objective.
 - `validateSparseStudy(study)` rejects non-modern sources, Fleshpunk identifiers, invalid roles, broken negative spaces, and more than 20 strokes.
 - `renderSparseSvg(study, options)` is the replaceable SVG terminal adapter.
-- `recordUserReview` refuses review while the reference is visible.
+- `recordScaleReview` records one hidden-reference scale at a time.
+- `acceptanceFailures` exposes every unmet source, scale, ablation, and visibility gate.
+- `promoteUserAccepted` requires an explicit user gesture after all blockers are cleared.
 - Machine state is limited to `DENY` or `AWAITING_USER_PIXEL_VERDICT`.
 
 The older box compiler remains independent and unchanged.
@@ -23,10 +25,10 @@ The older box compiler remains independent and unchanged.
 ## Run and verify
 
 ```sh
-npm run test:wonder:sparse
+npm run test:wonder:finish
 npm run wonder:sparse
 sh tools/server_tmux.sh
-curl -fsS http://127.0.0.1:8811/api/noodle/health | grep -F 'empty-glass-shovel-v1'
+curl -fsS http://127.0.0.1:8811/api/noodle/health | grep -F 'empty-glass-shovel-finish-v3'
 curl -fsS http://127.0.0.1:8811/api/wonder/status | grep -F 'MODERN_OBJECTS_ONLY'
 ```
 
@@ -39,16 +41,19 @@ Review URL:
 - Touch, pen, or mouse draws without timing, angle, direction, or pressure requirements.
 - Three explicit roles are available: silhouette, identity anchor, correction.
 - Undo, redo, deletion, reference replacement, and autosave are immediate.
-- Reference visibility is explicit and verdict buttons lock while it is shown.
+- Source pixels are hashed in-browser before drawing or judgment is enabled.
+- Reference visibility is explicit and each of 96, 220, and 360 pixels owns a verdict.
 - Ablation hides one stroke without altering the evidence graph.
+- Removing ink repairs negative-space references and invalidates stale scale reviews.
+- Explicit human acceptance is saved atomically under ignored local state.
 - JSON and SVG exports contain no reference pixels.
 
 ## Evidence state
 
 - Assembled starter: 16 candidate strokes.
 - Exploded starter: 20 candidate strokes.
-- Deterministic guardrails: implemented.
-- Three-scale and destructive-ablation SVGs: generated.
+- Source, scale, ablation, replay, and receipt guardrails: implemented.
+- Versioned three-scale and destructive-ablation SVGs: generated.
 - Artistic state: `AWAITING_USER_PIXEL_VERDICT`.
 
 Only the user can promote the shovel pixels.

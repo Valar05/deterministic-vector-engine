@@ -18,7 +18,9 @@
     "runtimeAI": false,
     "rasterSkeletonization": false,
     "inkLimitPerView": 20,
-    "artisticState": "AWAITING_USER_PIXEL_VERDICT"
+    "artisticState": "AWAITING_USER_PIXEL_VERDICT",
+    "reviewContract": "THREE_SCALE_HASH_VERIFIED_ABLATION_COMPLETE_USER_GESTURE",
+    "reviewBuildMarker": "empty-glass-shovel-finish-v3"
   },
   "artifacts": [
     {
@@ -55,6 +57,30 @@
       "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
       "generator": "tools/render_sparse_shovel.mjs",
       "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/shovel-review-v2.svg",
+      "sha256": "a955c4f114e2a718479874da119399787164fd1369ec09b48953c7b7afbfc25e",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false,
+      "version": "REVIEW_V2"
+    },
+    {
+      "path": "evidence/wonder-sparse/shovel-ablation-v2.svg",
+      "sha256": "c0d81a122b46cd62c9250037450f12188d3283b10b4d2d1c499a112265639178",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false,
+      "version": "REVIEW_V2"
+    },
+    {
+      "path": "evidence/wonder-sparse/visual-gate-v2.json",
+      "sha256": "d4584a90405b843dd4496462f845e97d04fb2aaaee0c7cff4131b20e774fbdfe",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false,
+      "version": "REVIEW_V2"
     }
   ]
 }

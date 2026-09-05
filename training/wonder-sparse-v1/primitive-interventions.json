@@ -1,0 +1,604 @@
+{
+  "schema": "vector-noodle.proof-carrying-interventions.v1",
+  "sourceSha256": "e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1fa923",
+  "order": [
+    "SINGLE_PRIMITIVE",
+    "SINGLE_ATTACHMENT",
+    "PAIRWISE_PRIMITIVE",
+    "STROKE_ABLATION"
+  ],
+  "humanAuthority": true,
+  "axes": [
+    "CATEGORY",
+    "INSTANCE",
+    "MECHANISM",
+    "AFFORDANCE",
+    "NOISE",
+    "SCALE",
+    "CROSS_VIEW"
+  ],
+  "singles": [
+    {
+      "id": "intervention-01",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-01",
+        "operator": "ROTATE",
+        "direction": -1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-10670396",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-02",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-01",
+        "operator": "ROTATE",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-66aa33e9",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-03",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-01",
+        "operator": "SCALE",
+        "direction": -1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-83e0b78c",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-04",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-01",
+        "operator": "SCALE",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-27ea3821",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-05",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-01",
+        "operator": "REMOVE",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-e1f83bbd",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-06",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-02",
+        "operator": "ROTATE",
+        "direction": -1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-9e6ffea2",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-07",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-02",
+        "operator": "ROTATE",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-8813ec30",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-08",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-02",
+        "operator": "SCALE",
+        "direction": -1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-13a0cd41",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-09",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-02",
+        "operator": "SCALE",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-4ec81c62",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-10",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-02",
+        "operator": "REMOVE",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-72314e7a",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-11",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-03",
+        "operator": "ROTATE",
+        "direction": -1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-5bda41e1",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-12",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-03",
+        "operator": "ROTATE",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-d0d0a131",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-13",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-03",
+        "operator": "SCALE",
+        "direction": -1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-2a69ca93",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-14",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-03",
+        "operator": "SCALE",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-2f742480",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-15",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-03",
+        "operator": "REMOVE",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-19435a73",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-16",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-04",
+        "operator": "ROTATE",
+        "direction": -1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-2b982808",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-17",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-04",
+        "operator": "ROTATE",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-c185ebe8",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-18",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-04",
+        "operator": "SCALE",
+        "direction": -1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-e83defcb",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-19",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-04",
+        "operator": "SCALE",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-30ad8bed",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-20",
+      "kind": "SINGLE_PRIMITIVE",
+      "input": {
+        "targetId": "part-04",
+        "operator": "REMOVE",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-9eb0096e",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-21",
+      "kind": "SINGLE_ATTACHMENT",
+      "input": {
+        "targetId": "attachment-01",
+        "operator": "DETACH",
+        "direction": -1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-2531d4ef",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-22",
+      "kind": "SINGLE_ATTACHMENT",
+      "input": {
+        "targetId": "attachment-01",
+        "operator": "DETACH",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-51fe0797",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-23",
+      "kind": "SINGLE_ATTACHMENT",
+      "input": {
+        "targetId": "attachment-02",
+        "operator": "DETACH",
+        "direction": -1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-bd1a1f1e",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-24",
+      "kind": "SINGLE_ATTACHMENT",
+      "input": {
+        "targetId": "attachment-02",
+        "operator": "DETACH",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-b9979cdd",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-25",
+      "kind": "SINGLE_ATTACHMENT",
+      "input": {
+        "targetId": "attachment-03",
+        "operator": "DETACH",
+        "direction": -1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-cc9f297a",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    },
+    {
+      "id": "intervention-26",
+      "kind": "SINGLE_ATTACHMENT",
+      "input": {
+        "targetId": "attachment-03",
+        "operator": "DETACH",
+        "direction": 1,
+        "view": "ASSEMBLED"
+      },
+      "replayHash": "fnv1a32-d592b74f",
+      "judgment": {
+        "CATEGORY": "PENDING_HUMAN",
+        "INSTANCE": "PENDING_HUMAN",
+        "MECHANISM": "PENDING_HUMAN",
+        "AFFORDANCE": "PENDING_HUMAN",
+        "NOISE": "PENDING_HUMAN",
+        "SCALE": "PENDING_HUMAN",
+        "CROSS_VIEW": "PENDING_HUMAN"
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "id": "pair-intervention-01",
+      "kind": "PAIRWISE_PRIMITIVE",
+      "inputs": [
+        {
+          "targetId": "part-01",
+          "operator": "REMOVE",
+          "direction": 1,
+          "view": "ASSEMBLED"
+        },
+        {
+          "targetId": "part-02",
+          "operator": "REMOVE",
+          "direction": 1,
+          "view": "ASSEMBLED"
+        }
+      ],
+      "replayHash": "fnv1a32-2d0f31fe",
+      "interactionJudgment": "PENDING_HUMAN"
+    },
+    {
+      "id": "pair-intervention-02",
+      "kind": "PAIRWISE_PRIMITIVE",
+      "inputs": [
+        {
+          "targetId": "part-02",
+          "operator": "REMOVE",
+          "direction": 1,
+          "view": "ASSEMBLED"
+        },
+        {
+          "targetId": "part-03",
+          "operator": "REMOVE",
+          "direction": 1,
+          "view": "ASSEMBLED"
+        }
+      ],
+      "replayHash": "fnv1a32-06bf9e81",
+      "interactionJudgment": "PENDING_HUMAN"
+    },
+    {
+      "id": "pair-intervention-03",
+      "kind": "PAIRWISE_PRIMITIVE",
+      "inputs": [
+        {
+          "targetId": "part-03",
+          "operator": "REMOVE",
+          "direction": 1,
+          "view": "ASSEMBLED"
+        },
+        {
+          "targetId": "part-04",
+          "operator": "REMOVE",
+          "direction": 1,
+          "view": "ASSEMBLED"
+        }
+      ],
+      "replayHash": "fnv1a32-75dba0c4",
+      "interactionJudgment": "PENDING_HUMAN"
+    }
+  ]
+}

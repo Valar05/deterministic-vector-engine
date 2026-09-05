@@ -1,0 +1,964 @@
+{
+  "schema": "vector-noodle.correspondence-first-curriculum.v1",
+  "state": "AWAITING_HUMAN_COMPONENT_COHERENCE",
+  "sourcePolicy": "MODERN_OBJECTS_ONLY_FLESHPUNK_FORBIDDEN",
+  "sourceImage": {
+    "id": "utility-normal",
+    "sha256": "e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1fa923",
+    "width": 1983,
+    "height": 793,
+    "localHref": "../training/wonder-sparse-v1/source-cache/utility-normal.png",
+    "committed": false
+  },
+  "commission": {
+    "question": "Which cross-view relations must survive for both panels to remain the same manipulable object?",
+    "pipeline": [
+      "PAIRED_EVIDENCE",
+      "PERSISTENT_REGION_CANDIDATES",
+      "CROSS_VIEW_HYPOTHESES",
+      "SHARED_LATENT_COMPONENTS",
+      "ATTACHMENT_GRAPH",
+      "CANONICAL_COMPONENT_CONTOURS",
+      "ASSEMBLED_EXPLODED_TRANSFORMS",
+      "PRIMITIVE_INTERVENTIONS",
+      "STROKE_ABLATION",
+      "HUMAN_VERDICT"
+    ],
+    "proofAxes": [
+      "CATEGORY",
+      "INSTANCE",
+      "MECHANISM",
+      "AFFORDANCE",
+      "NOISE",
+      "SCALE",
+      "CROSS_VIEW"
+    ],
+    "strokeCeiling": 20,
+    "strokeTarget": null,
+    "humanOwnsAcceptance": true,
+    "accessibilityOralExam": true
+  },
+  "rejectedCandidate": {
+    "state": "VISUAL_REJECTED_REGRESSION",
+    "artifact": "rejected-relation-v5.json",
+    "reason": "PCA_WIDTH_SLABS_ASSERT_FALSE_TOPOLOGY"
+  },
+  "diagnostics": {
+    "jointCoverage": 0.31739,
+    "jointCollision": 0.02755,
+    "areaGapRatio": 2.445,
+    "componentCountDiscovered": 4,
+    "qualityAuthority": false
+  },
+  "study": {
+    "schema": "vector-noodle.mechanism-line-study.v1",
+    "subjectId": "modern-object-01",
+    "state": "DRAFT",
+    "source": {
+      "id": "utility-normal:column-0:paired",
+      "sha256": "e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1fa923",
+      "class": "MODERN_OBJECT",
+      "verification": {
+        "state": "UNVERIFIED",
+        "sha256": null
+      },
+      "views": {
+        "ASSEMBLED": {
+          "x": 0,
+          "y": 0,
+          "width": 397,
+          "height": 397
+        },
+        "EXPLODED": {
+          "x": 0,
+          "y": 397,
+          "width": 397,
+          "height": 396
+        }
+      }
+    },
+    "canvas": {
+      "width": 397,
+      "height": 397
+    },
+    "derivation": {
+      "method": "CORRESPONDENCE_FIRST_PROOF_CARRYING",
+      "geometryOwner": "EXPLODED_ISOLATED_COMPONENT_EVIDENCE",
+      "assembledOperation": "JOINT_REGISTERED_COMPONENT_TRANSFORMS",
+      "explodedOperation": "CANONICAL_COMPONENT_POSES",
+      "unknownPolicy": "UNKNOWN_DOES_NOT_RENDER"
+    },
+    "objectProgram": {
+      "schema": "vector-noodle.object-program.v1",
+      "layers": {
+        "L0": "PERCEPTUAL_CARRIERS",
+        "L1": "STRUCTURAL_PRIMITIVES",
+        "L2": "ACTION_RELATIONS",
+        "L3": "COMPOSITIONAL_PROGRAM"
+      },
+      "selection": {
+        "method": "PERSISTENT_EXPLODED_REGIONS_PLUS_JOINT_ASSEMBLED_REGISTRATION",
+        "requestedComponentCount": null,
+        "fractionalFallbackCuts": false,
+        "selectedCount": 4,
+        "areaGapRatio": 2.445,
+        "jointCoverage": 0.31739,
+        "jointCollision": 0.02755
+      },
+      "primitives": [
+        {
+          "id": "part-01",
+          "sourceComponentId": "component-01",
+          "uncertainty": 0.24188,
+          "proofState": "PENDING_HUMAN"
+        },
+        {
+          "id": "part-02",
+          "sourceComponentId": "component-02",
+          "uncertainty": 0.08864,
+          "proofState": "PENDING_HUMAN"
+        },
+        {
+          "id": "part-03",
+          "sourceComponentId": "component-03",
+          "uncertainty": 0.19213,
+          "proofState": "PENDING_HUMAN"
+        },
+        {
+          "id": "part-04",
+          "sourceComponentId": "component-04",
+          "uncertainty": 0.21277,
+          "proofState": "PENDING_HUMAN"
+        }
+      ],
+      "attachments": [
+        {
+          "id": "attachment-01",
+          "members": [
+            "part-01",
+            "part-04"
+          ],
+          "interfaceGap": 0,
+          "proofState": "PENDING_HUMAN"
+        },
+        {
+          "id": "attachment-02",
+          "members": [
+            "part-04",
+            "part-03"
+          ],
+          "interfaceGap": 12.369,
+          "proofState": "PENDING_HUMAN"
+        },
+        {
+          "id": "attachment-03",
+          "members": [
+            "part-03",
+            "part-02"
+          ],
+          "interfaceGap": 14.866,
+          "proofState": "PENDING_HUMAN"
+        }
+      ],
+      "actionRelations": [],
+      "accessibilityAnswers": {
+        "heldEnd": {
+          "state": "UNKNOWN",
+          "basis": "INSUFFICIENT_GEOMETRIC_EVIDENCE"
+        },
+        "workingEnd": {
+          "state": "UNKNOWN",
+          "basis": "INSUFFICIENT_GEOMETRIC_EVIDENCE"
+        },
+        "connectionMechanism": {
+          "state": "UNKNOWN",
+          "basis": "CANDIDATE_ATTACHMENTS_NOT_HUMAN_EVIDENCED"
+        },
+        "relativeMotion": {
+          "state": "UNKNOWN",
+          "basis": "NO_ACTION_RELATION_EVIDENCE"
+        },
+        "rotationConstraint": {
+          "state": "UNKNOWN",
+          "basis": "NO_INTERFACE_CONSTRAINT_EVIDENCE"
+        },
+        "removableComponent": {
+          "state": "UNKNOWN",
+          "basis": "NO_DISASSEMBLY_EVIDENCE"
+        }
+      }
+    },
+    "parts": [
+      {
+        "id": "part-01",
+        "sourceComponentId": "component-01",
+        "sourceEvidence": {
+          "EXPLODED": {
+            "x": 96,
+            "y": 202,
+            "width": 170,
+            "height": 174
+          },
+          "ASSEMBLED": {
+            "x": 51.44995999999999,
+            "y": 215.16067,
+            "width": 158.10658,
+            "height": 160.7023
+          }
+        },
+        "poses": {
+          "ASSEMBLED": [
+            0.78785,
+            -0.13892,
+            0.13892,
+            0.78785,
+            51.44995999999999,
+            238.77707
+          ],
+          "EXPLODED": [
+            1,
+            0,
+            0,
+            1,
+            96,
+            202
+          ]
+        },
+        "strokes": [
+          {
+            "id": "stroke-01",
+            "role": "SILHOUETTE",
+            "d": "M48 0 L68 6 L74 18 L83 20 L92 20 L97 3 L101 0 L110 1 L120 7 L124 12 L125 26 L128 34 L142 39 L142 34 L146 31 L163 35 L167 39 L170 48 L128 127 L117 140 L104 151 L73 167 L58 171 L28 174 L15 159 L2 132 L0 99 L3 86 Z",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "sourceTrace": {
+              "view": "EXPLODED",
+              "componentId": "component-01",
+              "maskSha256": "f7d2fc6432d4cb04eef1e43f8e442a0f92f35e366d1ac736887551030319de3f",
+              "closure": "SOURCE_REGION_BOUNDARY"
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              }
+            }
+          }
+        ],
+        "uncertainty": 0.24188
+      },
+      {
+        "id": "part-02",
+        "sourceComponentId": "component-02",
+        "sourceEvidence": {
+          "EXPLODED": {
+            "x": 94,
+            "y": 4,
+            "width": 81,
+            "height": 94
+          },
+          "ASSEMBLED": {
+            "x": 250.78439,
+            "y": 22.613899999999997,
+            "width": 86.61203000000003,
+            "height": 92.82772
+          }
+        },
+        "poses": {
+          "ASSEMBLED": [
+            0.75175,
+            -0.27362,
+            0.27362,
+            0.75175,
+            250.78439,
+            44.77712
+          ],
+          "EXPLODED": [
+            1,
+            0,
+            0,
+            1,
+            94,
+            4
+          ]
+        },
+        "strokes": [
+          {
+            "id": "stroke-02",
+            "role": "SILHOUETTE",
+            "d": "M6 0 L8 1 L6 15 L10 0 L19 0 L25 3 L29 2 L52 8 L65 6 L66 1 L70 1 L69 5 L71 5 L74 0 L81 1 L81 11 L67 45 L38 69 L30 92 L27 94 L10 91 L5 85 L10 66 L10 53 L0 31 L0 21 Z",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "sourceTrace": {
+              "view": "EXPLODED",
+              "componentId": "component-02",
+              "maskSha256": "e27e5a8a14472dd86315b914bc950a7ae2527254ec4e8ae5c7b0fd1957bbeae9",
+              "closure": "SOURCE_REGION_BOUNDARY"
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              }
+            }
+          },
+          {
+            "id": "stroke-03",
+            "role": "STRUCTURE",
+            "d": "M18 9 L15 30 L17 37 L23 44 L37 46 L47 41 L56 33 L63 17 Z",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "sourceTrace": {
+              "view": "EXPLODED",
+              "componentId": "component-02",
+              "maskSha256": "e27e5a8a14472dd86315b914bc950a7ae2527254ec4e8ae5c7b0fd1957bbeae9",
+              "closure": "SOURCE_REGION_BOUNDARY"
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              }
+            }
+          }
+        ],
+        "uncertainty": 0.08864
+      },
+      {
+        "id": "part-03",
+        "sourceComponentId": "component-03",
+        "sourceEvidence": {
+          "EXPLODED": {
+            "x": 213,
+            "y": 4,
+            "width": 114,
+            "height": 170
+          },
+          "ASSEMBLED": {
+            "x": 160.02415,
+            "y": 77.90384000000002,
+            "width": 113.4313,
+            "height": 149.77138000000002
+          }
+        },
+        "poses": {
+          "ASSEMBLED": [
+            0.78785,
+            -0.13892,
+            0.13892,
+            0.78785,
+            160.02415,
+            93.74072000000001
+          ],
+          "EXPLODED": [
+            1,
+            0,
+            0,
+            1,
+            213,
+            4
+          ]
+        },
+        "strokes": [
+          {
+            "id": "stroke-04",
+            "role": "SILHOUETTE",
+            "d": "M82 0 L98 2 L113 0 L114 3 L101 21 L73 71 L41 133 L39 141 L25 169 L20 170 L7 165 L0 158 L1 151 L14 124 L18 123 L33 91 Z",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "sourceTrace": {
+              "view": "EXPLODED",
+              "componentId": "component-03",
+              "maskSha256": "428585e23d6193fed0dfada2b500625d320bd278d0dbd1a2195a2d4c45f57395",
+              "closure": "SOURCE_REGION_BOUNDARY"
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              }
+            }
+          },
+          {
+            "id": "stroke-05",
+            "role": "STRUCTURE",
+            "d": "M87 5 L82 10 L61 46 L26 112 L25 120 L30 116 L27 124 L33 126 L44 110 L47 110 L49 105 L48 103 L59 81 L62 82 L61 78 L72 57 L89 27 L92 26 L91 24 L96 9 L95 6 Z",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "sourceTrace": {
+              "view": "EXPLODED",
+              "componentId": "component-03",
+              "maskSha256": "428585e23d6193fed0dfada2b500625d320bd278d0dbd1a2195a2d4c45f57395",
+              "closure": "SOURCE_REGION_BOUNDARY"
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              }
+            }
+          }
+        ],
+        "uncertainty": 0.19213
+      },
+      {
+        "id": "part-04",
+        "sourceComponentId": "component-04",
+        "sourceEvidence": {
+          "EXPLODED": {
+            "x": 33,
+            "y": 160,
+            "width": 92,
+            "height": 184
+          },
+          "ASSEMBLED": {
+            "x": 108.44969,
+            "y": 188.08221,
+            "width": 85.78724,
+            "height": 138.02668000000003
+          }
+        },
+        "poses": {
+          "ASSEMBLED": [
+            0.68937,
+            -0.12155,
+            0.12155,
+            0.68937,
+            108.44969,
+            199.26481
+          ],
+          "EXPLODED": [
+            1,
+            0,
+            0,
+            1,
+            33,
+            160
+          ]
+        },
+        "strokes": [
+          {
+            "id": "stroke-06",
+            "role": "SILHOUETTE",
+            "d": "M81 0 L87 1 L92 6 L85 21 L85 28 L18 182 L16 184 L7 183 L0 177 L17 132 L61 33 L69 17 L73 16 Z",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "sourceTrace": {
+              "view": "EXPLODED",
+              "componentId": "component-04",
+              "maskSha256": "f2da28749ad66cc3c6762df4da365cde4e16e7a4d98e114ef12b21ff82ba6cfc",
+              "closure": "SOURCE_REGION_BOUNDARY"
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              }
+            }
+          },
+          {
+            "id": "stroke-07",
+            "role": "STRUCTURE",
+            "d": "M74 20 L69 24 L56 52 L16 144 L15 152 L10 160 L16 159 L21 161 L23 155 L22 152 L26 152 L78 35 L77 28 L80 28 L81 24 Z",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "sourceTrace": {
+              "view": "EXPLODED",
+              "componentId": "component-04",
+              "maskSha256": "f2da28749ad66cc3c6762df4da365cde4e16e7a4d98e114ef12b21ff82ba6cfc",
+              "closure": "SOURCE_REGION_BOUNDARY"
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "INSTANCE": "PENDING",
+                "MECHANISM": "PENDING",
+                "AFFORDANCE": "PENDING",
+                "NOISE": "PENDING",
+                "SCALE": "PENDING",
+                "CROSS_VIEW": "PENDING"
+              }
+            }
+          }
+        ],
+        "uncertainty": 0.21277
+      }
+    ],
+    "attachments": [
+      {
+        "id": "attachment-01",
+        "partIds": [
+          "part-01",
+          "part-04"
+        ],
+        "state": "CANDIDATE",
+        "interfaceGap": 0,
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 51.44995999999999,
+            "y": 215.16067,
+            "width": 158.10658,
+            "height": 160.7023
+          },
+          "EXPLODED": {
+            "x": 33,
+            "y": 160,
+            "width": 92,
+            "height": 184
+          }
+        }
+      },
+      {
+        "id": "attachment-02",
+        "partIds": [
+          "part-04",
+          "part-03"
+        ],
+        "state": "CANDIDATE",
+        "interfaceGap": 12.369,
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 108.44969,
+            "y": 188.08221,
+            "width": 85.78724,
+            "height": 138.02668000000003
+          },
+          "EXPLODED": {
+            "x": 213,
+            "y": 4,
+            "width": 114,
+            "height": 170
+          }
+        }
+      },
+      {
+        "id": "attachment-03",
+        "partIds": [
+          "part-03",
+          "part-02"
+        ],
+        "state": "CANDIDATE",
+        "interfaceGap": 14.866,
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 160.02415,
+            "y": 77.90384000000002,
+            "width": 113.4313,
+            "height": 149.77138000000002
+          },
+          "EXPLODED": {
+            "x": 94,
+            "y": 4,
+            "width": 81,
+            "height": 94
+          }
+        }
+      }
+    ],
+    "proofEvidence": [
+      {
+        "targetId": "part-01",
+        "targetType": "PRIMITIVE",
+        "CATEGORY": "PENDING",
+        "INSTANCE": "PENDING",
+        "MECHANISM": "PENDING",
+        "AFFORDANCE": "PENDING",
+        "NOISE": "PENDING",
+        "SCALE": "PENDING",
+        "CROSS_VIEW": "PENDING"
+      },
+      {
+        "targetId": "part-02",
+        "targetType": "PRIMITIVE",
+        "CATEGORY": "PENDING",
+        "INSTANCE": "PENDING",
+        "MECHANISM": "PENDING",
+        "AFFORDANCE": "PENDING",
+        "NOISE": "PENDING",
+        "SCALE": "PENDING",
+        "CROSS_VIEW": "PENDING"
+      },
+      {
+        "targetId": "part-03",
+        "targetType": "PRIMITIVE",
+        "CATEGORY": "PENDING",
+        "INSTANCE": "PENDING",
+        "MECHANISM": "PENDING",
+        "AFFORDANCE": "PENDING",
+        "NOISE": "PENDING",
+        "SCALE": "PENDING",
+        "CROSS_VIEW": "PENDING"
+      },
+      {
+        "targetId": "part-04",
+        "targetType": "PRIMITIVE",
+        "CATEGORY": "PENDING",
+        "INSTANCE": "PENDING",
+        "MECHANISM": "PENDING",
+        "AFFORDANCE": "PENDING",
+        "NOISE": "PENDING",
+        "SCALE": "PENDING",
+        "CROSS_VIEW": "PENDING"
+      },
+      {
+        "targetId": "attachment-01",
+        "targetType": "ATTACHMENT",
+        "CATEGORY": "PENDING",
+        "INSTANCE": "PENDING",
+        "MECHANISM": "PENDING",
+        "AFFORDANCE": "PENDING",
+        "NOISE": "PENDING",
+        "SCALE": "PENDING",
+        "CROSS_VIEW": "PENDING"
+      },
+      {
+        "targetId": "attachment-02",
+        "targetType": "ATTACHMENT",
+        "CATEGORY": "PENDING",
+        "INSTANCE": "PENDING",
+        "MECHANISM": "PENDING",
+        "AFFORDANCE": "PENDING",
+        "NOISE": "PENDING",
+        "SCALE": "PENDING",
+        "CROSS_VIEW": "PENDING"
+      },
+      {
+        "targetId": "attachment-03",
+        "targetType": "ATTACHMENT",
+        "CATEGORY": "PENDING",
+        "INSTANCE": "PENDING",
+        "MECHANISM": "PENDING",
+        "AFFORDANCE": "PENDING",
+        "NOISE": "PENDING",
+        "SCALE": "PENDING",
+        "CROSS_VIEW": "PENDING"
+      }
+    ],
+    "review": {
+      "ASSEMBLED": {
+        "referenceHidden": false,
+        "CATEGORY": [
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ],
+        "INSTANCE": [
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ],
+        "MECHANISM": [
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ],
+        "CROSS_VIEW": [
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ]
+      },
+      "EXPLODED": {
+        "referenceHidden": false,
+        "CATEGORY": [
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ],
+        "INSTANCE": [
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ],
+        "MECHANISM": [
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ],
+        "CROSS_VIEW": [
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ]
+      }
+    },
+    "acceptance": null,
+    "interactionEvidence": [
+      {
+        "id": "pair-intervention-01",
+        "inputs": [
+          {
+            "targetId": "part-01",
+            "operator": "REMOVE",
+            "direction": 1,
+            "view": "ASSEMBLED"
+          },
+          {
+            "targetId": "part-02",
+            "operator": "REMOVE",
+            "direction": 1,
+            "view": "ASSEMBLED"
+          }
+        ],
+        "CATEGORY": "PENDING",
+        "INSTANCE": "PENDING",
+        "MECHANISM": "PENDING",
+        "AFFORDANCE": "PENDING",
+        "NOISE": "PENDING",
+        "SCALE": "PENDING",
+        "CROSS_VIEW": "PENDING"
+      },
+      {
+        "id": "pair-intervention-02",
+        "inputs": [
+          {
+            "targetId": "part-02",
+            "operator": "REMOVE",
+            "direction": 1,
+            "view": "ASSEMBLED"
+          },
+          {
+            "targetId": "part-03",
+            "operator": "REMOVE",
+            "direction": 1,
+            "view": "ASSEMBLED"
+          }
+        ],
+        "CATEGORY": "PENDING",
+        "INSTANCE": "PENDING",
+        "MECHANISM": "PENDING",
+        "AFFORDANCE": "PENDING",
+        "NOISE": "PENDING",
+        "SCALE": "PENDING",
+        "CROSS_VIEW": "PENDING"
+      },
+      {
+        "id": "pair-intervention-03",
+        "inputs": [
+          {
+            "targetId": "part-03",
+            "operator": "REMOVE",
+            "direction": 1,
+            "view": "ASSEMBLED"
+          },
+          {
+            "targetId": "part-04",
+            "operator": "REMOVE",
+            "direction": 1,
+            "view": "ASSEMBLED"
+          }
+        ],
+        "CATEGORY": "PENDING",
+        "INSTANCE": "PENDING",
+        "MECHANISM": "PENDING",
+        "AFFORDANCE": "PENDING",
+        "NOISE": "PENDING",
+        "SCALE": "PENDING",
+        "CROSS_VIEW": "PENDING"
+      }
+    ]
+  }
+}

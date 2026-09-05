@@ -1,0 +1,45 @@
+{
+  "schema": "vector-noodle.wonder-contract.v1",
+  "commission": "PUNNETT_WONDER_APPRENTICESHIP",
+  "state": "INTAKE_OPEN",
+  "objective": "Teach the system why a cultivated industrial contour exists before encoding its geometry.",
+  "prohibitions": [
+    "GENERIC_CAPSULE",
+    "RASTER_STAT_STYLE",
+    "PILLOW_AUTHORED_GEOMETRY",
+    "INKSCAPE_EXECUTION",
+    "COPIED_GPL_IMPLEMENTATION",
+    "MODEL_RUNTIME_DEPENDENCY",
+    "MACHINE_ARTISTIC_ACCEPTANCE",
+    "UNSEALED_STYLE_MUTATION"
+  ],
+  "requiredStudies": [
+    "visualHierarchy",
+    "forceLoadPaths",
+    "negativeSpace",
+    "repetitionRhythm",
+    "grownManufacturedGrammar",
+    "causalAssemblyGraph",
+    "contourIntent"
+  ],
+  "requiredVariants": [
+    "FAITHFUL",
+    "TOO_MECHANICAL",
+    "TOO_ORGANIC",
+    "DECORATIVE_FLESH",
+    "WONDER"
+  ],
+  "artisticAuthority": {
+    "machineMay": [
+      "DENY",
+      "STRUCTURALLY_VALID_AWAITING_HUMAN"
+    ],
+    "machineMayNever": [
+      "USER_ACCEPTED",
+      "ARTISTICALLY_ACCEPTED"
+    ],
+    "humanVerdictRequired": true
+  },
+  "candidateRule": "Recovered paths and teacher regions are observations only until every accepted contour has a plain-language intent and every adjacency has a functional reason.",
+  "graduationRule": "All five variants at identical scale, structural gates green, and explicit human artistic verdict."
+}

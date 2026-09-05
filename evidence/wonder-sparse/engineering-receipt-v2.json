@@ -1,0 +1,49 @@
+{
+  "schema": "vector-noodle.engineering-receipt.v2",
+  "date": "2026-09-05",
+  "command": "Implement the confirmed Finish the Empty Glass Shovel plan.",
+  "buildMarker": "empty-glass-shovel-finish-v3",
+  "productionPath": "verified source bytes -> sparse study -> three scale review -> ablation -> repaired pruning -> user gesture -> atomic local receipt",
+  "soundness": {
+    "semanticCoverage": "IMPLEMENTED_GUARDRAILS",
+    "productionPathProof": "LIVE_HTTP_BUILD_MARKER_SOURCE_HASH_AND_STATUS",
+    "negativeControls": [
+      "WRONG_SOURCE_REJECTED",
+      "FLESHPUNK_REJECTED",
+      "MACHINE_AUTHORITY_REJECTED",
+      "VISIBLE_REFERENCE_REJECTED",
+      "INCOMPLETE_SCALE_REJECTED",
+      "PENDING_ABLATION_REJECTED",
+      "REPLAY_TAMPER_REJECTED"
+    ],
+    "ordinaryVariation": [
+      "ASSEMBLED",
+      "EXPLODED",
+      "96_PX",
+      "220_PX",
+      "360_PX"
+    ],
+    "recoveryProof": [
+      "LOCALSTORAGE",
+      "UNDO_REDO",
+      "ATOMIC_SERVER_RECEIPT",
+      "JSON_EXPORT"
+    ],
+    "acceptedEvidence": "PENDING_USER_PIXEL_VERDICT"
+  },
+  "threeAxis": {
+    "speedSeconds": "UNKNOWN_NOT_MEASURED_FROM_COMMAND_BOUNDARY",
+    "exactLocalCodexTokens": "UNKNOWN",
+    "classification": "INVALID_PENDING_USER_VISUAL_ACCEPTANCE",
+    "parHistoryUpdated": false
+  },
+  "retrospective": {
+    "wastedTime": [
+      "Initial expected-before hash was stale and failed closed before mutation.",
+      "Responsive CSS initially made named review scales inexact; corrected before handoff."
+    ],
+    "wastedTokens": "UNKNOWN_EXACT_COUNT",
+    "weakestClause": "Neither shovel view has a human scale or ablation verdict.",
+    "nextImprovement": "Open the live review surface and begin with the assembled 96 pixel verdict; do not add infrastructure."
+  }
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Empty Glass · Correspondence First</title>
+  <link rel="stylesheet" href="./studio.css">
+</head>
+<body data-build-marker="empty-glass-correspondence-v6">
+  <header>
+    <p class="eyebrow">VECTOR NOODLE · MODERN OBJECT CONTROL</p>
+    <h1>The two views must explain one object.</h1>
+    <p>Exploded evidence proposes components. Assembled evidence tests correspondence. Uncertainty stays visible.</p>
+  </header>
+  <main>
+    <section class="toolbar" aria-label="Study controls">
+      <div class="segmented" role="group" aria-label="Object view"><button id="assembled" class="active">Assembled</button><button id="exploded">Exploded</button></div>
+      <label class="file">Load sealed source<input id="source-file" type="file" accept="image/*"></label>
+      <button id="reference-toggle">Hide reference</button><button id="map-toggle" class="active">Hide evidence map</button><output id="source-status">Checking source…</output>
+    </section>
+    <section class="workspace">
+      <div class="drawing-column">
+        <div class="stage-heading"><div><span>Gate 1 · cross-view coherence</span><strong id="budget">0 / 20 visible strokes</strong></div><p>Every path comes from an isolated exploded-region proposal. No global silhouette slabs.</p></div>
+        <svg id="drawing" viewBox="0 0 397 397" aria-label="Correspondence-first modern object study"><rect class="paper" width="100%" height="100%"/><image id="reference" preserveAspectRatio="none"/><g id="ink"></g></svg>
+        <p class="truth-line"><strong>Render law</strong> Both views reuse one canonical component program. A candidate correspondence is not an accepted part.</p>
+        <div id="part-ledger" class="part-ledger"></div>
+        <div id="oral-exam" class="part-ledger"></div>
+      </div>
+      <aside>
+        <div class="panel">
+          <p class="panel-label">Three-scale human review</p><strong id="active-scale">Reviewing 96 px</strong><div id="scale-previews" class="scale-previews"></div>
+          <label>Concrete visual read<textarea id="review-note" rows="2" placeholder="Name the exact identity or construction failure"></textarea></label>
+          <div id="review-axes"></div><p id="review-lock" class="warning">Hide the reference before judgment.</p>
+        </div>
+        <div class="panel relation-test">
+          <p class="panel-label">Primitive and attachment interventions first</p><strong id="intervention-name">Base program</strong><p id="intervention-note">Delete, rotate, scale, and detach before stroke compression.</p>
+          <div class="actions"><button id="intervention-prev">Previous</button><button id="intervention-clear">Base</button><button id="intervention-next">Next</button></div>
+          <label>Judgment axis<select id="proof-axis"></select></label><div class="evidence-row"><button data-proof-value="POSITIVE">Absence hurts</button><button data-proof-value="NEUTRAL">No change</button><button data-proof-value="NEGATIVE">Absence improves</button></div>
+        </div>
+        <div class="panel ablation">
+          <p class="panel-label">Stroke deletion second</p><strong id="ablation-name">Full drawing</strong><p>Locked until primitive and pairwise proof is complete.</p>
+          <div class="actions"><button id="ablation-prev">Previous</button><button id="ablation-clear">Full</button><button id="ablation-next">Next</button></div>
+          <label>Judgment axis<select id="stroke-axis"></select></label><div class="evidence-row"><button data-stroke-value="POSITIVE">Absence hurts</button><button data-stroke-value="NEUTRAL">No change</button><button data-stroke-value="NEGATIVE">Absence improves</button></div>
+        </div>
+        <div class="panel"><p class="panel-label">Human boundary</p><p id="state">Loading…</p><p id="acceptance-blockers" class="warning">Acceptance is locked.</p><button id="accept-study" disabled>Accept paired study</button><div class="actions"><button id="export-svg">Export SVG</button><button id="export-json">Export study</button><button id="reset">Reset</button></div></div>
+      </aside>
+    </section>
+    <section class="quarantine"><strong>Negative ore retained.</strong><span>The v5 PCA width slicer is preserved as VISUAL_REJECTED_REGRESSION and cannot enter v6 rendering.</span></section>
+  </main>
+  <script type="module" src="./studio.mjs"></script>
+</body>
+</html>

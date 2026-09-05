@@ -1,0 +1,117 @@
+{
+  "schema": "vector-noodle.asset-provenance.v3",
+  "date": "2026-09-05",
+  "source": {
+    "id": "utility-normal",
+    "externalPath": "/storage/emulated/0/Pictures/file_000000003dbc82308d6bed066cb8f146.png",
+    "sha256": "e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1fa923",
+    "assetClass": "USER_SUPPLIED_GENERATED_SOURCE_ART",
+    "generator": "UNKNOWN",
+    "license": "USER_CONTROLLED_SOURCE_PROVENANCE_UNKNOWN",
+    "committed": false,
+    "localCache": "training/wonder-sparse-v1/source-cache/utility-normal.png",
+    "cachePolicy": "IGNORED_LOCAL_ONLY"
+  },
+  "transcription": {
+    "method": "RELATION_FIRST_NEUTRAL_GEOMETRY",
+    "authoringAgent": "OpenAI Codex",
+    "runtimeAI": false,
+    "rasterSkeletonization": false,
+    "semanticPartOntology": false,
+    "teacherProposal": "@visioncortex/vtracer@1.0.0-alpha.4",
+    "teacherProposalRuntime": false,
+    "geometryOwner": "SOURCE_DERIVED_CANONICAL_PARTS",
+    "explodedOperation": "MATCHED_PART_TRANSFORMS_ONLY",
+    "visibleStrokeCeiling": 20,
+    "visibleStrokeTarget": null,
+    "strokeAxes": [
+      "CATEGORY",
+      "STRUCTURE",
+      "NOISE"
+    ],
+    "relationAxes": [
+      "CATEGORY",
+      "STRUCTURE"
+    ],
+    "artisticState": "AWAITING_USER_PIXEL_VERDICT",
+    "reviewContract": "RELATION_DISTORTION_THEN_STROKE_ABLATION_HUMAN_ONLY",
+    "reviewBuildMarker": "empty-glass-relations-v5"
+  },
+  "negativeOre": {
+    "state": "USER_REJECTED_VISUAL_NOOP",
+    "reason": "BLOATED_CONTOUR_LINE_CHATTER_TANGLED_TRANSITION_WEAK_TERMINAL_PROPORTION",
+    "replayHash": "fnv1a32-849134b1"
+  },
+  "artifacts": [
+    {
+      "path": "evidence/wonder-sparse/before-after-assembled-v5.svg",
+      "sha256": "05e2444d3dc7d0157a1050cf9193e6127cbec300325cc543f0e4a802fb4eec30",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/before-after-exploded-v5.svg",
+      "sha256": "82e51235209c01b634e516cf31e2f49dba25931fb28ceb7c2ddc8eaf851faaa0",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/neutral-landmark-relation-graph-v5.svg",
+      "sha256": "0445f6f37bb00c947a2c721579324e4b2aeb5a9818b8fdffc9c8b030a1c055b5",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/relation-vs-stroke-ablation-v5.svg",
+      "sha256": "3182cddb66411c9d976f58ec8f106f5142ba941ded51e077d255fdbc261762a5",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/after-three-scale-v5.svg",
+      "sha256": "d1ac6ce6fd4b2403443227eb371e035ee24ab55df2e398bfa6a621b6ddfa69f0",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/visual-gate-v5.json",
+      "sha256": "d88aaaa62f38e028eba6b8d21acae77ffb12911d9b525d9b94e755a1d8b88ec7",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false
+    },
+    {
+      "path": "training/wonder-sparse-v1/landmark-graph.json",
+      "sha256": "21d6bbc338339dfacc6434cf8beaf66273804d38c0225fdc120ffa6ba98f00c8",
+      "assetClass": "SOURCE_DERIVED_GEOMETRY_EVIDENCE",
+      "generator": "tools/build_relation_study.mjs",
+      "accepted": false
+    },
+    {
+      "path": "training/wonder-sparse-v1/relation-mutations.json",
+      "sha256": "a8be93f19e3323ddaf3c60bee2abbe774c91d0eac4590604e2df7795a77e423b",
+      "assetClass": "RELATION_ABLATION_CURRICULUM",
+      "generator": "tools/build_relation_study.mjs",
+      "accepted": false
+    },
+    {
+      "path": "training/wonder-sparse-v1/rejected-mechanism-v4.json",
+      "sha256": "baabbff87090ac475ab8ed6d9e7f556d00c6420a8eb3b1379dbd4f0865eb37b4",
+      "assetClass": "QUARANTINED_NEGATIVE_EXAMPLE",
+      "generator": "migration-from-user-rejected-v4",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/engineering-receipt-v5.json",
+      "sha256": "8d9ddc726748d402a703bdda2f4c760331cc9e84b37f42f7f3eec06370366d2e",
+      "assetClass": "ENGINEERING_RECEIPT",
+      "generator": "bounded-retrospective",
+      "accepted": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "vector-noodle.visual-gate.v1",
+  "buildMarker": "empty-glass-shovel-v1",
+  "state": "AWAITING_USER_PIXEL_VERDICT",
+  "expected": "Recognizable modern shovel at thumbnail, normal, and enlarged scale with every retained stroke surviving human ablation.",
+  "actual": "Authored sparse candidate available; no human recognition or ablation verdict recorded.",
+  "acceptance": false,
+  "guardrails": [
+    {
+      "view": "ASSEMBLED",
+      "strokeCount": 16,
+      "state": "AWAITING_USER_PIXEL_VERDICT",
+      "failures": [],
+      "replayHash": "fnv1a32-d99bb8ef"
+    },
+    {
+      "view": "EXPLODED",
+      "strokeCount": 20,
+      "state": "AWAITING_USER_PIXEL_VERDICT",
+      "failures": [],
+      "replayHash": "fnv1a32-fdfb3b06"
+    }
+  ],
+  "sourceComparison": "LOCAL_ONLY_SOURCE_NOT_COMMITTED",
+  "forbiddenTraining": "FLESHPUNK"
+}

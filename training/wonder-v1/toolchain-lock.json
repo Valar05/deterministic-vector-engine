@@ -1,0 +1,43 @@
+{
+  "schema": "vector-noodle.apprentice-toolchain.v1",
+  "inkscape": {
+    "status": "FORBIDDEN_RUNTIME",
+    "borrowedArchitectureOnly": [
+      "preprocess",
+      "trace",
+      "postprocess"
+    ],
+    "source": "https://inkscape.org/release/inkscape-1.4.2/source/archive/xz/dl/",
+    "license": "GPL-2.0-or-later",
+    "codeCopied": false
+  },
+  "vtracer": {
+    "package": "@visioncortex/vtracer",
+    "version": "1.0.0-alpha.4",
+    "npmIntegrity": "sha512-Hhi+vfG4ealLH1m9alrWo1lM00cWFfur4zeLEcNtzrYUjeEYTgukLNfvOXmuaGe2adugu+jl9o9IUzqHuqFO9g==",
+    "license": "MIT OR Apache-2.0",
+    "role": "CANDIDATE_CONTOUR_RECOVERY_ONLY"
+  },
+  "florence": {
+    "repo": "onnx-community/Florence-2-base-ft",
+    "revision": "e88a44eaf3791a35eae0c5a47b3dbcd36e67eb6f",
+    "upstream": "microsoft/Florence-2-base-ft",
+    "upstreamRevision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+    "license": "MIT",
+    "role": "OPTIONAL_OFFLINE_REGION_TEACHER",
+    "tasks": [
+      "<OD>",
+      "<DENSE_REGION_CAPTION>",
+      "<CAPTION_TO_PHRASE_GROUNDING>",
+      "<REFERRING_EXPRESSION_SEGMENTATION>"
+    ],
+    "runtimeDependency": false,
+    "acceptanceAuthority": false
+  },
+  "excluded": [
+    {
+      "id": "starvector-1b-im2svg",
+      "reason": "large opaque image-to-SVG model would collapse the judgment boundary"
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "schema": "vector-noodle.paired-correspondence-build.v1",
+  "state": "AWAITING_HUMAN_COMPONENT_COHERENCE",
+  "sourceSha256": "e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1fa923",
+  "inference": {
+    "state": "PAIRED_CORRESPONDENCE_PROPOSED",
+    "components": 4,
+    "gap": 2.445,
+    "coverage": 0.31739,
+    "collision": 0.02755,
+    "scores": [
+      0.75812,
+      0.91136,
+      0.80787,
+      0.78723
+    ]
+  },
+  "teacher": {
+    "tool": "@visioncortex/vtracer@1.0.0-alpha.4",
+    "mode": "polygon",
+    "status": "TEACHER_PROPOSAL_NOT_RUNTIME"
+  },
+  "prohibitionChecks": {
+    "requestedComponentCount": null,
+    "fractionalFallbackCuts": false,
+    "globalLongitudinalPartition": false,
+    "semanticObjectLabels": false,
+    "artificialCutFaces": false
+  },
+  "spec": {
+    "schema": "vector-noodle.paired-correspondence.v1",
+    "sourceSha256": "e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1fa923",
+    "selection": {
+      "method": "PERSISTENT_EXPLODED_REGIONS_PLUS_JOINT_ASSEMBLED_REGISTRATION",
+      "requestedComponentCount": null,
+      "fractionalFallbackCuts": false,
+      "selectedCount": 4,
+      "areaGapRatio": 2.445,
+      "jointCoverage": 0.31739,
+      "jointCollision": 0.02755
+    },
+    "assembledEvidence": {
+      "bbox": [
+        43,
+        21,
+        336,
+        362
+      ],
+      "inkMass": 9222
+    },
+    "components": [
+      {
+        "id": "component-01",
+        "explodedEvidence": {
+          "bbox": [
+            96,
+            202,
+            266,
+            376
+          ],
+          "inkMass": 5313,
+          "maskSha256": "f7d2fc6432d4cb04eef1e43f8e442a0f92f35e366d1ac736887551030319de3f"
+        },
+        "assembledHypothesis": {
+          "score": 0.75812,
+          "angle": -10,
+          "scale": 0.8,
+          "matrix": [
+            0.78785,
+            -0.13892,
+            0.13892,
+            0.78785,
+            -52.24548,
+            92.96769
+          ],
+          "targetCentroid": [
+            130.335,
+            283.273
+          ]
+        },
+        "alternatives": [
+          {
+            "score": 0.4086,
+            "angle": 30,
+            "scale": 0.7,
+            "matrix": [
+              0.60622,
+              0.35,
+              -0.35,
+              0.60622,
+              126.55865,
+              26.24483
+            ],
+            "targetCentroid": [
+              141.905,
+              256.495
+            ]
+          },
+          {
+            "score": 0.28983,
+            "angle": 10,
+            "scale": 1,
+            "matrix": [
+              0.98481,
+              0.17365,
+              -0.17365,
+              0.98481,
+              125.90204,
+              -215.66317
+            ],
+            "targetCentroid": [
+              259.003,
+              85.93
+            ]
+          },
+          {
+            "score": 0.26847,
+            "angle": 0,
+            "scale": 1.2,
+            "matrix": [
+              1.2,
+              0,
+              0,
+              1.2,
+              20.99553,
+              -220.54239
+            ],
+            "targetCentroid": [
+              241.136,
+              108.136
+            ]
+          }
+        ],
+        "state": "CANDIDATE_CROSS_VIEW"
+      },
+      {
+        "id": "component-02",
+        "explodedEvidence": {
+          "bbox": [
+            94,
+            4,
+            175,
+            98
+          ],
+          "inkMass": 2851,
+          "maskSha256": "e27e5a8a14472dd86315b914bc950a7ae2527254ec4e8ae5c7b0fd1957bbeae9"
+        },
+        "assembledHypothesis": {
+          "score": 0.91136,
+          "angle": -20,
+          "scale": 0.8,
+          "matrix": [
+            0.75175,
+            -0.27362,
+            0.27362,
+            0.75175,
+            179.02541,
+            67.4904
+          ],
+          "targetCentroid": [
+            288.191,
+            64.732
+          ]
+        },
+        "alternatives": [
+          {
+            "score": 0.69325,
+            "angle": 10,
+            "scale": 0.7,
+            "matrix": [
+              0.68937,
+              0.12155,
+              -0.12155,
+              0.68937,
+              59.19324,
+              207.88262
+            ],
+            "targetCentroid": [
+              143.123,
+              253.552
+            ]
+          },
+          {
+            "score": 0.50771,
+            "angle": 0,
+            "scale": 1,
+            "matrix": [
+              1,
+              0,
+              0,
+              1,
+              -7.88934,
+              229.73056
+            ],
+            "targetCentroid": [
+              121.518,
+              273.161
+            ]
+          },
+          {
+            "score": 0.38934,
+            "angle": 30,
+            "scale": 1.1,
+            "matrix": [
+              0.95263,
+              0.55,
+              -0.55,
+              0.95263,
+              46.83046,
+              111.44363
+            ],
+            "targetCentroid": [
+              146.22,
+              223.991
+            ]
+          }
+        ],
+        "state": "CANDIDATE_CROSS_VIEW"
+      },
+      {
+        "id": "component-03",
+        "explodedEvidence": {
+          "bbox": [
+            213,
+            4,
+            327,
+            174
+          ],
+          "inkMass": 2730,
+          "maskSha256": "428585e23d6193fed0dfada2b500625d320bd278d0dbd1a2195a2d4c45f57395"
+        },
+        "assembledHypothesis": {
+          "score": 0.80787,
+          "angle": -10,
+          "scale": 0.8,
+          "matrix": [
+            0.78785,
+            -0.13892,
+            0.13892,
+            0.78785,
+            -8.34358,
+            120.17928
+          ],
+          "targetCentroid": [
+            212,
+            159.074
+          ]
+        },
+        "alternatives": [
+          {
+            "score": 0.82769,
+            "angle": 0,
+            "scale": 0.7,
+            "matrix": [
+              0.7,
+              0,
+              0,
+              0.7,
+              -34.68179,
+              183.26308
+            ],
+            "targetCentroid": [
+              149.28,
+              250.258
+            ]
+          },
+          {
+            "score": 0.61818,
+            "angle": -20,
+            "scale": 0.7,
+            "matrix": [
+              0.65778,
+              -0.23941,
+              0.23941,
+              0.65778,
+              78.40051,
+              88.0363
+            ],
+            "targetCentroid": [
+              274.182,
+              88.073
+            ]
+          },
+          {
+            "score": 0.56839,
+            "angle": -30,
+            "scale": 0.7,
+            "matrix": [
+              0.60622,
+              -0.35,
+              0.35,
+              0.60622,
+              105.34477,
+              106.73323
+            ],
+            "targetCentroid": [
+              298.158,
+              72.772
+            ]
+          }
+        ],
+        "state": "CANDIDATE_CROSS_VIEW"
+      },
+      {
+        "id": "component-04",
+        "explodedEvidence": {
+          "bbox": [
+            33,
+            160,
+            125,
+            344
+          ],
+          "inkMass": 1890,
+          "maskSha256": "f2da28749ad66cc3c6762df4da365cde4e16e7a4d98e114ef12b21ff82ba6cfc"
+        },
+        "assembledHypothesis": {
+          "score": 0.78723,
+          "angle": -10,
+          "scale": 0.7,
+          "matrix": [
+            0.68937,
+            -0.12155,
+            0.12155,
+            0.68937,
+            66.25248,
+            92.97676
+          ],
+          "targetCentroid": [
+            150.536,
+            259.243
+          ]
+        },
+        "alternatives": [
+          {
+            "score": 0.69231,
+            "angle": -10,
+            "scale": 0.8,
+            "matrix": [
+              0.78785,
+              -0.13892,
+              0.13892,
+              0.78785,
+              119.40822,
+              -37.72374
+            ],
+            "targetCentroid": [
+              215.732,
+              152.294
+            ]
+          },
+          {
+            "score": 0.66454,
+            "angle": -10,
+            "scale": 1,
+            "matrix": [
+              0.98481,
+              -0.17365,
+              0.17365,
+              0.98481,
+              58.41426,
+              -34.2232
+            ],
+            "targetCentroid": [
+              178.82,
+              203.299
+            ]
+          },
+          {
+            "score": 0.64898,
+            "angle": -30,
+            "scale": 0.7,
+            "matrix": [
+              0.60622,
+              -0.35,
+              0.35,
+              0.60622,
+              141.34523,
+              -42.51406
+            ],
+            "targetCentroid": [
+              277.412,
+              84.898
+            ]
+          }
+        ],
+        "state": "CANDIDATE_CROSS_VIEW"
+      }
+    ],
+    "attachments": [
+      {
+        "id": "attachment-01",
+        "members": [
+          "component-01",
+          "component-04"
+        ],
+        "interfaceGap": 0,
+        "state": "CANDIDATE_CROSS_VIEW"
+      },
+      {
+        "id": "attachment-02",
+        "members": [
+          "component-04",
+          "component-03"
+        ],
+        "interfaceGap": 12.369,
+        "state": "CANDIDATE_CROSS_VIEW"
+      },
+      {
+        "id": "attachment-03",
+        "members": [
+          "component-03",
+          "component-02"
+        ],
+        "interfaceGap": 14.866,
+        "state": "CANDIDATE_CROSS_VIEW"
+      }
+    ],
+    "judgment": "AWAITING_HUMAN_COMPONENT_COHERENCE"
+  }
+}

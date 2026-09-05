@@ -1,0 +1,23 @@
+{
+  "schema": "vector-noodle.region-teacher.v1",
+  "status": "TEACHER_UNAVAILABLE",
+  "accepted": false,
+  "model": {
+    "repo": "onnx-community/Florence-2-base-ft",
+    "revision": "e88a44eaf3791a35eae0c5a47b3dbcd36e67eb6f",
+    "upstream": "microsoft/Florence-2-base-ft",
+    "upstreamRevision": "f6c1a25888ffc1d945ee8a1a77ac833c7303d46e",
+    "license": "MIT",
+    "role": "OPTIONAL_OFFLINE_REGION_TEACHER",
+    "tasks": [
+      "<OD>",
+      "<DENSE_REGION_CAPTION>",
+      "<CAPTION_TO_PHRASE_GROUNDING>",
+      "<REFERRING_EXPRESSION_SEGMENTATION>"
+    ],
+    "runtimeDependency": false,
+    "acceptanceAuthority": false
+  },
+  "reason": "MODEL_NOT_ACQUIRED",
+  "proposals": []
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "vector-noodle.engineering-receipt.v1",
+  "date": "2026-09-05",
+  "command": "Implement the confirmed Empty Glass modern-shovel apprenticeship plan.",
+  "productionPath": "modern source -> assisted strokes -> cubic fit -> hidden review -> ablation -> SVG export",
+  "soundness": {
+    "semanticCoverage": "IMPLEMENTED_GUARDRAILS",
+    "productionPathProof": "LIVE_HTTP_AND_BUILD_MARKER",
+    "negativeControl": "FLESHPUNK_INPUT_REJECTED",
+    "ordinaryVariation": "ASSEMBLED_AND_EXPLODED",
+    "recoveryProof": "LOCALSTORAGE_UNDO_REDO_EXPORT",
+    "acceptedEvidence": "PENDING_USER_PIXEL_VERDICT"
+  },
+  "threeAxis": {
+    "speedSeconds": "NOT_RECORDED_FROM_ACCEPTED_COMMAND",
+    "exactLocalCodexTokens": "UNKNOWN",
+    "classification": "INVALID_PENDING_USER_VISUAL_ACCEPTANCE",
+    "parHistoryUpdated": false
+  },
+  "retrospective": {
+    "wastedTime": [
+      "One apply_patch attempt was rejected on Android shared storage before mutation.",
+      "ffmpeg lacked an SVG decoder, so direct SVG rasterization was unavailable."
+    ],
+    "wastedTokens": "UNKNOWN_EXACT_COUNT",
+    "weakestClause": "Human recognition and per-stroke ablation verdicts remain unrecorded.",
+    "nextImprovement": "Begin the next visual pass from the generated three-scale artifact and user verdict, not another infrastructure expansion."
+  }
+}

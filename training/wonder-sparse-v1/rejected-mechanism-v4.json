@@ -1,0 +1,885 @@
+{
+  "schema": "vector-noodle.rejected-candidate.v1",
+  "state": "USER_REJECTED_VISUAL_NOOP",
+  "reason": "BLOATED_CONTOUR_LINE_CHATTER_TANGLED_TRANSITION_WEAK_TERMINAL_PROPORTION",
+  "study": {
+    "schema": "vector-noodle.mechanism-line-study.v1",
+    "subjectId": "shovel",
+    "state": "DRAFT",
+    "source": {
+      "id": "utility-normal:column-0:paired",
+      "sha256": "e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1fa923",
+      "class": "MODERN_OBJECT",
+      "verification": {
+        "state": "UNVERIFIED",
+        "sha256": null
+      },
+      "views": {
+        "ASSEMBLED": {
+          "x": 0,
+          "y": 0,
+          "width": 397,
+          "height": 397
+        },
+        "EXPLODED": {
+          "x": 0,
+          "y": 397,
+          "width": 397,
+          "height": 396
+        }
+      }
+    },
+    "canvas": {
+      "width": 397,
+      "height": 397
+    },
+    "derivation": {
+      "method": "SOURCE_CORRESPONDENCE_WITH_NEUTRAL_PART_IDS",
+      "geometryOwner": "ASSEMBLED_PART_PATHS",
+      "explodedOperation": "PART_TRANSFORMS_ONLY",
+      "unknownPolicy": "UNKNOWN_DOES_NOT_RENDER",
+      "occlusionPolicy": "PART_GEOMETRY_MAY_BE_HIDDEN_IN_ASSEMBLED_VIEW_BUT_CANNOT_BE_BORN_DURING_EXPLOSION"
+    },
+    "parts": [
+      {
+        "id": "part-01",
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 258,
+            "y": 17,
+            "width": 84,
+            "height": 82
+          },
+          "EXPLODED": {
+            "x": 62,
+            "y": 4,
+            "width": 112,
+            "height": 110
+          }
+        },
+        "poses": {
+          "ASSEMBLED": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "EXPLODED": [
+            1,
+            0,
+            0,
+            1,
+            -190,
+            12
+          ]
+        },
+        "strokes": [
+          {
+            "id": "stroke-01",
+            "role": "SILHOUETTE",
+            "d": "M277 74 C266 67 260 57 261 45 C263 34 270 22 279 19 L326 24 C337 25 341 34 336 44 L315 68 C306 79 291 82 277 74 Z",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          },
+          {
+            "id": "stroke-02",
+            "role": "STRUCTURE",
+            "d": "M280 58 C273 54 269 49 270 42 C271 35 275 29 281 27 L325 31 C330 32 332 36 329 41 L310 61 C303 68 290 67 280 58 Z",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          },
+          {
+            "id": "stroke-03",
+            "role": "CORRECTION",
+            "d": "M278 29 C289 34 309 36 326 34 M280 27 C291 31 311 32 326 30",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "part-02",
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 257,
+            "y": 70,
+            "width": 32,
+            "height": 31
+          },
+          "EXPLODED": {
+            "x": 61,
+            "y": 102,
+            "width": 53,
+            "height": 34
+          }
+        },
+        "poses": {
+          "ASSEMBLED": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "EXPLODED": [
+            1,
+            0,
+            0,
+            1,
+            -190,
+            42
+          ]
+        },
+        "strokes": [
+          {
+            "id": "stroke-04",
+            "role": "STRUCTURE",
+            "d": "M274 72 L286 79 L276 95 C272 100 261 94 258 89 Z M264 82 L279 90",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "part-03",
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 143,
+            "y": 86,
+            "width": 140,
+            "height": 174
+          },
+          "EXPLODED": {
+            "x": 225,
+            "y": 0,
+            "width": 86,
+            "height": 186
+          }
+        },
+        "poses": {
+          "ASSEMBLED": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "EXPLODED": [
+            1,
+            0,
+            0,
+            1,
+            28,
+            -82
+          ]
+        },
+        "strokes": [
+          {
+            "id": "stroke-05",
+            "role": "SILHOUETTE",
+            "d": "M144 246 C153 229 170 210 184 191 L259 93 C264 86 272 86 278 91 C282 96 281 101 277 106 L160 254 C155 260 146 256 144 246 Z",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          },
+          {
+            "id": "stroke-06",
+            "role": "CORRECTION",
+            "d": "M158 231 C181 201 216 159 264 99",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "part-04",
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 137,
+            "y": 218,
+            "width": 31,
+            "height": 38
+          },
+          "EXPLODED": {
+            "x": 196,
+            "y": 161,
+            "width": 68,
+            "height": 51
+          }
+        },
+        "poses": {
+          "ASSEMBLED": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "EXPLODED": [
+            1,
+            0,
+            0,
+            1,
+            70,
+            -58
+          ]
+        },
+        "strokes": [
+          {
+            "id": "stroke-07",
+            "role": "STRUCTURE",
+            "d": "M145 225 C151 220 162 226 166 232 L155 249 C151 254 141 248 139 242 Z M145 231 L160 239",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "part-05",
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 143,
+            "y": 86,
+            "width": 140,
+            "height": 174,
+            "state": "OCCLUDED_WITHIN_ASSEMBLY"
+          },
+          "EXPLODED": {
+            "x": 35,
+            "y": 154,
+            "width": 89,
+            "height": 218
+          }
+        },
+        "poses": {
+          "ASSEMBLED": [
+            1,
+            0,
+            0,
+            1,
+            70,
+            -20
+          ],
+          "EXPLODED": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        "strokes": [
+          {
+            "id": "stroke-08",
+            "role": "SILHOUETTE",
+            "d": "M98 108 C106 106 115 111 117 118 L86 307 C84 317 61 316 53 309 L91 119 C92 113 95 110 98 108 Z",
+            "visible": {
+              "ASSEMBLED": false,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "NOT_VISIBLE",
+                "STRUCTURE": "NOT_VISIBLE",
+                "NOISE": "NOT_VISIBLE"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "part-06",
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 42,
+            "y": 222,
+            "width": 178,
+            "height": 146
+          },
+          "EXPLODED": {
+            "x": 96,
+            "y": 194,
+            "width": 181,
+            "height": 198
+          }
+        },
+        "poses": {
+          "ASSEMBLED": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "EXPLODED": [
+            1,
+            0,
+            0,
+            1,
+            47,
+            8
+          ]
+        },
+        "strokes": [
+          {
+            "id": "stroke-09",
+            "role": "SILHOUETTE",
+            "d": "M108 225 C95 233 91 247 80 257 C61 273 45 291 45 314 C45 332 54 349 67 360 C91 367 119 365 143 357 C169 348 186 326 199 302 C210 282 216 260 217 241 C205 244 196 241 187 235 C180 252 173 260 163 263 C151 252 130 238 108 225 Z",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          },
+          {
+            "id": "stroke-10",
+            "role": "STRUCTURE",
+            "d": "M128 263 C132 276 134 299 131 325 C130 340 127 351 123 360 M128 264 C139 276 150 289 162 302",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          },
+          {
+            "id": "stroke-11",
+            "role": "CORRECTION",
+            "d": "M67 360 C90 357 104 355 123 360 C136 359 145 356 154 350",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          },
+          {
+            "id": "stroke-12",
+            "role": "STRUCTURE",
+            "d": "M108 225 L106 246 C111 252 118 257 126 260",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          },
+          {
+            "id": "stroke-13",
+            "role": "STRUCTURE",
+            "d": "M187 235 L181 255 C174 259 168 262 162 263",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          },
+          {
+            "id": "stroke-16",
+            "role": "STRUCTURE",
+            "d": "M139 239 C132 248 126 260 125 275 C132 282 143 282 152 274 C153 262 157 252 162 246",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "part-07",
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 265,
+            "y": 79,
+            "width": 14,
+            "height": 16
+          },
+          "EXPLODED": {
+            "x": 151,
+            "y": 72,
+            "width": 35,
+            "height": 67
+          }
+        },
+        "poses": {
+          "ASSEMBLED": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "EXPLODED": [
+            1,
+            0,
+            0,
+            1,
+            -113,
+            11
+          ]
+        },
+        "strokes": [
+          {
+            "id": "stroke-14",
+            "role": "STRUCTURE",
+            "d": "M267 86 L274 92 M268 83 L277 90",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "part-08",
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 143,
+            "y": 227,
+            "width": 18,
+            "height": 18
+          },
+          "EXPLODED": {
+            "x": 277,
+            "y": 157,
+            "width": 43,
+            "height": 68
+          }
+        },
+        "poses": {
+          "ASSEMBLED": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "EXPLODED": [
+            1,
+            0,
+            0,
+            1,
+            137,
+            -69
+          ]
+        },
+        "strokes": [
+          {
+            "id": "stroke-15",
+            "role": "STRUCTURE",
+            "d": "M146 232 L157 240 M148 228 L160 237",
+            "visible": {
+              "ASSEMBLED": true,
+              "EXPLODED": true
+            },
+            "evidence": {
+              "ASSEMBLED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              },
+              "EXPLODED": {
+                "CATEGORY": "PENDING",
+                "STRUCTURE": "PENDING",
+                "NOISE": "PENDING"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "attachments": [
+      {
+        "id": "attachment-01",
+        "partIds": [
+          "part-01",
+          "part-02",
+          "part-07"
+        ],
+        "state": "EVIDENCED",
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 257,
+            "y": 70,
+            "width": 33,
+            "height": 31
+          },
+          "EXPLODED": {
+            "x": 61,
+            "y": 70,
+            "width": 126,
+            "height": 67
+          }
+        }
+      },
+      {
+        "id": "attachment-02",
+        "partIds": [
+          "part-02",
+          "part-03",
+          "part-07"
+        ],
+        "state": "EVIDENCED",
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 255,
+            "y": 77,
+            "width": 36,
+            "height": 31
+          },
+          "EXPLODED": {
+            "x": 151,
+            "y": 0,
+            "width": 161,
+            "height": 139
+          }
+        }
+      },
+      {
+        "id": "attachment-03",
+        "partIds": [
+          "part-03",
+          "part-04",
+          "part-08"
+        ],
+        "state": "EVIDENCED",
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 137,
+            "y": 215,
+            "width": 34,
+            "height": 43
+          },
+          "EXPLODED": {
+            "x": 196,
+            "y": 157,
+            "width": 125,
+            "height": 69
+          }
+        }
+      },
+      {
+        "id": "attachment-04",
+        "partIds": [
+          "part-04",
+          "part-05",
+          "part-08"
+        ],
+        "state": "EVIDENCED",
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 122,
+            "y": 226,
+            "width": 47,
+            "height": 61
+          },
+          "EXPLODED": {
+            "x": 35,
+            "y": 154,
+            "width": 286,
+            "height": 72
+          }
+        }
+      },
+      {
+        "id": "attachment-05",
+        "partIds": [
+          "part-05",
+          "part-06"
+        ],
+        "state": "EVIDENCED",
+        "sourceEvidence": {
+          "ASSEMBLED": {
+            "x": 100,
+            "y": 220,
+            "width": 91,
+            "height": 70
+          },
+          "EXPLODED": {
+            "x": 35,
+            "y": 154,
+            "width": 243,
+            "height": 238
+          }
+        }
+      }
+    ],
+    "rejectedExplodedMarks": [
+      {
+        "id": "rejected-independent-exploded-geometry",
+        "state": "QUARANTINED_NEGATIVE_EXAMPLE",
+        "sha256": "e582026c38644446e0bd7b6af879893c65e5b56c59a84b259acaf56eb9e761ab",
+        "reason": "EXPLODED_TROPE_WITHOUT_ATTACHMENT_TRUTH"
+      },
+      {
+        "id": "rejected-generic-fastener-language",
+        "state": "QUARANTINED_NEGATIVE_EXAMPLE",
+        "reason": "UNMAPPED_MARKS_CANNOT_RENDER"
+      }
+    ],
+    "review": {
+      "ASSEMBLED": {
+        "referenceHidden": false,
+        "CATEGORY": [
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ],
+        "STRUCTURE": [
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ]
+      },
+      "EXPLODED": {
+        "referenceHidden": false,
+        "CATEGORY": [
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ],
+        "STRUCTURE": [
+          {
+            "size": 96,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 220,
+            "verdict": null,
+            "note": ""
+          },
+          {
+            "size": 360,
+            "verdict": null,
+            "note": ""
+          }
+        ]
+      }
+    },
+    "acceptance": null
+  }
+}

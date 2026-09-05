@@ -2,63 +2,51 @@
 
 ## Current owner
 
-This standalone static-web project owns the deterministic text-to-SVG birth gate and the first Vector Noodle organism: an interactive brutalist box.
+The active Wonder owner is the correspondence-first Empty Glass studio under `wonder`. The prior relation-first v5 geometry is a preserved visual regression, not a generator.
 
 Production path:
 
-`prompt -> fixed primitive/material resolver -> frozen Noodle genotype -> contour/depth sweep -> projected inline SVG paths -> one-finger quaternion trackball -> browser pixels`
+```text
+sealed modern assembled and exploded pair
+  → persistent isolated regions in exploded evidence
+  → bounded cross-view registration hypotheses
+  → shared latent component candidates
+  → candidate attachment graph
+  → canonical contours from isolated exploded regions
+  → assembled and exploded poses from one object program
+  → single and pairwise primitive intervention
+  → stroke ablation
+  → human verdict
+```
 
-The box is not a model file or a WebGL object. Its canonical form is a closed cubic contour noodle plus a cubic depth noodle. The compiler deterministically emits transient cap and hull surfaces; JavaScript projects them into flat SVG paths.
+## Hard boundaries
 
-## Public boundaries
-
-- `compileNoodleOrganism({ primitive, color, genotype })` compiles and validates a frozen curve/sweep package.
-- `renderPromptToSvg(prompt)` resolves exactly one primitive and one material, compiles genotype 0, and updates the inline SVG.
-- `startSvgIllusion(options)` owns trackball input, inertia, reset, keyboard control, and reduced-motion behavior.
-- Unsupported compiler inputs throw explicit `REJECT:*` errors.
-
-No Canvas, WebGL, CSS 3D, external model, image, library, random source, network data, or runtime AI is used.
+- No fixed part count, fractional fallback cuts, global-axis slabs, semantic shovel template, or artificial cut face.
+- Every canonical path carries a hash-bound exploded-region source trace.
+- Cross-view matches and attachments remain candidates until human evidence promotes them.
+- Proof axes are CATEGORY, INSTANCE, MECHANISM, AFFORDANCE, NOISE, SCALE, and CROSS_VIEW.
+- Accessibility answers come only from the object program and remain `UNKNOWN` when evidence is insufficient.
+- Fleshpunk is forbidden during modern-object control learning.
+- The SVG adapter renders terminal pixels; it does not own inference or acceptance.
+- Machine checks may deny. Only the human can accept.
 
 ## Run and verify
 
 ```sh
-node --test tests/m1.test.mjs
-python research/vector-rosetta/validate_research.py
+npm run wonder:sparse
+npm run test:wonder:finish
 sh tools/server_tmux.sh
-curl -fsS http://127.0.0.1:8810/ | grep -F 'dve-noodle-box-v1'
+curl -fsS http://127.0.0.1:8811/api/noodle/health
 ```
 
-Play URL: <http://127.0.0.1:8810/>
+Review surface:
 
-## Interaction contract
+http://127.0.0.1:8811/wonder/
 
-- One finger or mouse controls a virtual-sphere quaternion trackball in any direction with no dead zone.
-- Curved gestures can roll the object; there is no pitch clamp or gimbal lock.
-- Release provides brief capped deterministic inertia.
-- Double-tap or press Home to restore the opening orientation.
-- Arrow keys provide accessible manual rotation.
-- Automatic demonstration rotation stops permanently after the first real interaction.
-- Reduced motion disables demonstration motion and inertia, never direct control or reset.
-- Changing material preserves orientation.
+Current build marker: `empty-glass-correspondence-v6`.
 
-## Evidence state
+## Current evidence
 
-- Compiler and interaction contract: 23/23 deterministic tests green.
-- Exact URL and runtime resources require post-promotion HTTP verification.
-- The visible brutalist read and interaction remain `RED_PENDING_USER_PIXEL_CONFIRMATION` until the user accepts the live artifact.
+The sealed source produces four candidate regions from a 2.445 persistent-area gap, seven canonical paths, three candidate attachments, 26 single interventions, and three pairwise interventions. These counts describe the proposal. They do not certify component coherence or visual quality.
 
-## Transcription surface
-
-The isolated `/transcription/` route owns DVE Editorial Contour Portrait v1. Its production artifact is `transcription/portrait.svg`: a transparent 800 x 1000, one-ink, line-only SVG authored from artistic landmark observation without tracing or embedded raster data.
-
-Validation:
-
-```sh
-python tools/validate_lineart.py --self-test
-python tools/validate_transcription.py
-```
-
-Review URL: <http://127.0.0.1:8810/transcription/?v=dve-transcription-v1>
-Direct SVG: <http://127.0.0.1:8810/transcription/portrait.svg?v=dve-transcription-v1>
-
-Evidence state: structural, privacy, draft-distinctness, preview-bounds, and agent critique gates are green. Final visible acceptance remains `USER_PIXEL_CONFIRMATION_PENDING`.
+Fresh v6 artifacts are under `evidence/wonder-sparse`. The candidate state is `AWAITING_HUMAN_COMPONENT_COHERENCE`.

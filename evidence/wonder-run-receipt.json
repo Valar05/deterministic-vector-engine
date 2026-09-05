@@ -1,0 +1,38 @@
+{
+  "schema": "vector-noodle.wonder-run-receipt.v1",
+  "date": "2026-09-05",
+  "result": "FRONTIER_EXPANSION_NOT_PAR_ELIGIBLE",
+  "productionPath": {
+    "url": "http://127.0.0.1:8811/",
+    "buildMarker": "punnett-wonder-apprenticeship-v1",
+    "http": 200
+  },
+  "pixels": {
+    "artifact": "evidence/wonder-gate-01.svg",
+    "sha256": "4ae6f89e114ee76d38ec9e3a6648fbdf5bb02332194a67ff1d5252fe47a493fa",
+    "visualAcceptance": "UNKNOWN_NOT_HUMAN_REVIEWED"
+  },
+  "soundness": {
+    "sourceHashes": "PASS",
+    "negativeControl": "PASS_OLD_API_HTTP_410",
+    "ordinaryVariation": "NOT_APPLICABLE_INTAKE_OPEN",
+    "recovery": "PASS_SOURCE_CACHE_REBUILDABLE",
+    "acceptedEvidence": "PENDING_HUMAN"
+  },
+  "timing": {
+    "successfulVerificationCommandSeconds": null,
+    "reason": "no single integrity-valid artistic production result yet"
+  },
+  "localCodexTokens": {
+    "input": "UNKNOWN",
+    "output": "UNKNOWN",
+    "total": "UNKNOWN",
+    "parUpdate": false
+  },
+  "retrospective": {
+    "wastedTime": "one malformed JavaScript newline stopped the first VTracer run",
+    "wastedTokens": "UNKNOWN",
+    "weakestClause": "no complete exploded set and no human visual verdict",
+    "improvement": "syntax-check adapters before invoking costly source conversion"
+  }
+}

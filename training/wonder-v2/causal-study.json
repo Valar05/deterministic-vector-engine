@@ -1,0 +1,3780 @@
+{
+  "schema": "vector-noodle.causal-apprenticeship.v1",
+  "state": "STRUCTURAL_STUDY_COMPLETE_AWAITING_HUMAN",
+  "accepted": false,
+  "sourceManifestHash": "af6b0fa34c90b6cc7175a165644566ec150d67b173c3098fc3b6caa8543d8909",
+  "studies": [
+    {
+      "id": "shovel",
+      "group": "utility",
+      "functionalFeatures": [
+        "handheld",
+        "human-force",
+        "ground-contact",
+        "cutting-edge",
+        "long-lever"
+      ],
+      "expectedFamily": "force-transfer",
+      "editProgram": {
+        "proposition": "Cultivate the force-transmission body while retaining rigid tool, grip, and reaction interfaces.",
+        "preserve": [
+          "direction of work",
+          "operator interface",
+          "terminal tool geometry"
+        ],
+        "propagate": [
+          "actuator volume",
+          "housing",
+          "reaction path",
+          "service access"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.02672,
+        "fleshSkeletonDensity": 0.03709,
+        "normalComponents": 18,
+        "fleshComponents": 21
+      },
+      "correspondences": [
+        {
+          "normal": 2,
+          "flesh": 1,
+          "cost": 0.102,
+          "confidence": 0.9031,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 3,
+          "cost": 0.1989,
+          "confidence": 0.8197,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 12,
+          "cost": 0.2182,
+          "confidence": 0.8039,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.221,
+          "confidence": 0.8017,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 13,
+          "cost": 0.2229,
+          "confidence": 0.8002,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 11,
+          "cost": 0.2331,
+          "confidence": 0.7921,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 8,
+          "cost": 0.28,
+          "confidence": 0.7558,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 5,
+          "cost": 0.3769,
+          "confidence": 0.686,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 10,
+          "cost": 0.3986,
+          "confidence": 0.6713,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 9,
+          "cost": 0.6139,
+          "confidence": 0.5412,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 4,
+          "cost": 0.6565,
+          "confidence": 0.5186,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 7,
+          "cost": 0.8328,
+          "confidence": 0.4348,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 2,
+          "cost": 0.9865,
+          "confidence": 0.3729,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 6,
+          "cost": 1.7231,
+          "confidence": 0.1785,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "power-drill",
+      "group": "utility",
+      "functionalFeatures": [
+        "handheld",
+        "rotary-drive",
+        "tool-interface",
+        "torque",
+        "portable-power"
+      ],
+      "expectedFamily": "force-transfer",
+      "editProgram": {
+        "proposition": "Cultivate the force-transmission body while retaining rigid tool, grip, and reaction interfaces.",
+        "preserve": [
+          "direction of work",
+          "operator interface",
+          "terminal tool geometry"
+        ],
+        "propagate": [
+          "actuator volume",
+          "housing",
+          "reaction path",
+          "service access"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.06962,
+        "fleshSkeletonDensity": 0.07254,
+        "normalComponents": 42,
+        "fleshComponents": 39
+      },
+      "correspondences": [
+        {
+          "normal": 0,
+          "flesh": 1,
+          "cost": 0.12,
+          "confidence": 0.887,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 3,
+          "cost": 0.142,
+          "confidence": 0.8676,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 2,
+          "cost": 0.1687,
+          "confidence": 0.8448,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 6,
+          "cost": 0.1769,
+          "confidence": 0.8379,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 12,
+          "cost": 0.199,
+          "confidence": 0.8196,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 10,
+          "cost": 0.2575,
+          "confidence": 0.773,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 9,
+          "cost": 0.3052,
+          "confidence": 0.737,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 13,
+          "cost": 0.323,
+          "confidence": 0.724,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 5,
+          "cost": 0.3636,
+          "confidence": 0.6951,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 4,
+          "cost": 0.3993,
+          "confidence": 0.6708,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 0,
+          "cost": 0.4616,
+          "confidence": 0.6303,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 11,
+          "cost": 0.4676,
+          "confidence": 0.6265,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 7,
+          "cost": 0.544,
+          "confidence": 0.5804,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 8,
+          "cost": 2.0912,
+          "confidence": 0.1235,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "toolbox",
+      "group": "utility",
+      "functionalFeatures": [
+        "portable",
+        "container",
+        "latching",
+        "human-carry",
+        "service-access"
+      ],
+      "expectedFamily": "containment",
+      "editProgram": {
+        "proposition": "Cultivate a tensioned containment membrane inside standardized edges, closures, and lifting interfaces.",
+        "preserve": [
+          "usable volume",
+          "closure",
+          "handling interface"
+        ],
+        "propagate": [
+          "frame spacing",
+          "puncture protection",
+          "inspection access",
+          "replacement seams"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.05515,
+        "fleshSkeletonDensity": 0.07112,
+        "normalComponents": 41,
+        "fleshComponents": 48
+      },
+      "correspondences": [
+        {
+          "normal": 0,
+          "flesh": 1,
+          "cost": 0.0722,
+          "confidence": 0.9303,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 2,
+          "cost": 0.1045,
+          "confidence": 0.9008,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 0,
+          "cost": 0.1298,
+          "confidence": 0.8783,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 3,
+          "cost": 0.2135,
+          "confidence": 0.8078,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 6,
+          "cost": 0.2888,
+          "confidence": 0.7492,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 13,
+          "cost": 0.3171,
+          "confidence": 0.7283,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 5,
+          "cost": 0.4182,
+          "confidence": 0.6582,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 4,
+          "cost": 0.5537,
+          "confidence": 0.5748,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 11,
+          "cost": 0.6748,
+          "confidence": 0.5093,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 9,
+          "cost": 0.7683,
+          "confidence": 0.4638,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 7,
+          "cost": 0.9278,
+          "confidence": 0.3954,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 12,
+          "cost": 0.9565,
+          "confidence": 0.3842,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 10,
+          "cost": 1.1337,
+          "confidence": 0.3218,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 8,
+          "cost": 1.6156,
+          "confidence": 0.1988,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "trash-can",
+      "group": "utility",
+      "functionalFeatures": [
+        "container",
+        "waste",
+        "lid",
+        "mobile",
+        "service-access"
+      ],
+      "expectedFamily": "containment",
+      "editProgram": {
+        "proposition": "Cultivate a tensioned containment membrane inside standardized edges, closures, and lifting interfaces.",
+        "preserve": [
+          "usable volume",
+          "closure",
+          "handling interface"
+        ],
+        "propagate": [
+          "frame spacing",
+          "puncture protection",
+          "inspection access",
+          "replacement seams"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.0528,
+        "fleshSkeletonDensity": 0.06843,
+        "normalComponents": 34,
+        "fleshComponents": 32
+      },
+      "correspondences": [
+        {
+          "normal": 1,
+          "flesh": 4,
+          "cost": 0.0622,
+          "confidence": 0.9397,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 3,
+          "cost": 0.0729,
+          "confidence": 0.9296,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.1271,
+          "confidence": 0.8807,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 13,
+          "cost": 0.1729,
+          "confidence": 0.8412,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 1,
+          "cost": 0.2666,
+          "confidence": 0.766,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 10,
+          "cost": 0.3321,
+          "confidence": 0.7174,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 12,
+          "cost": 0.3381,
+          "confidence": 0.7131,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 6,
+          "cost": 0.5442,
+          "confidence": 0.5803,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 5,
+          "cost": 0.6473,
+          "confidence": 0.5234,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 7,
+          "cost": 0.7404,
+          "confidence": 0.4769,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 11,
+          "cost": 0.884,
+          "confidence": 0.4131,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 2,
+          "cost": 0.9035,
+          "confidence": 0.4051,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 9,
+          "cost": 1.2349,
+          "confidence": 0.2909,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 8,
+          "cost": 1.3239,
+          "confidence": 0.2661,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "dumpster",
+      "group": "utility",
+      "functionalFeatures": [
+        "container",
+        "waste",
+        "lid",
+        "mobile",
+        "lifting-interface"
+      ],
+      "expectedFamily": "containment",
+      "editProgram": {
+        "proposition": "Cultivate a tensioned containment membrane inside standardized edges, closures, and lifting interfaces.",
+        "preserve": [
+          "usable volume",
+          "closure",
+          "handling interface"
+        ],
+        "propagate": [
+          "frame spacing",
+          "puncture protection",
+          "inspection access",
+          "replacement seams"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.06232,
+        "fleshSkeletonDensity": 0.07413,
+        "normalComponents": 48,
+        "fleshComponents": 42
+      },
+      "correspondences": [
+        {
+          "normal": 9,
+          "flesh": 6,
+          "cost": 0.1379,
+          "confidence": 0.8712,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 2,
+          "cost": 0.1606,
+          "confidence": 0.8517,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 8,
+          "cost": 0.1628,
+          "confidence": 0.8498,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 1,
+          "cost": 0.22,
+          "confidence": 0.8025,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 5,
+          "cost": 0.2409,
+          "confidence": 0.786,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 3,
+          "cost": 0.3306,
+          "confidence": 0.7185,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 7,
+          "cost": 0.347,
+          "confidence": 0.7068,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.455,
+          "confidence": 0.6344,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 12,
+          "cost": 0.4911,
+          "confidence": 0.6119,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 11,
+          "cost": 0.7541,
+          "confidence": 0.4705,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 10,
+          "cost": 0.7996,
+          "confidence": 0.4495,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 9,
+          "cost": 0.8612,
+          "confidence": 0.4227,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 13,
+          "cost": 0.8633,
+          "confidence": 0.4218,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 4,
+          "cost": 1.2827,
+          "confidence": 0.2773,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "iv-stand",
+      "group": "medical",
+      "functionalFeatures": [
+        "support",
+        "fluid-logistics",
+        "mobile",
+        "height-adjustment",
+        "human-service"
+      ],
+      "expectedFamily": "support-logistics",
+      "editProgram": {
+        "proposition": "Cultivate the load or service column while retaining exact height, mobility, and attachment interfaces.",
+        "preserve": [
+          "working elevation",
+          "wheel contact",
+          "tool interface"
+        ],
+        "propagate": [
+          "column section",
+          "base spread",
+          "nutrient routing",
+          "maintenance clearance"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.01948,
+        "fleshSkeletonDensity": 0.03475,
+        "normalComponents": 7,
+        "fleshComponents": 26
+      },
+      "correspondences": [
+        {
+          "normal": 4,
+          "flesh": 8,
+          "cost": 0.0809,
+          "confidence": 0.9223,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 9,
+          "cost": 0.2148,
+          "confidence": 0.8067,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 3,
+          "cost": 0.3347,
+          "confidence": 0.7155,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 13,
+          "cost": 0.4856,
+          "confidence": 0.6153,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 2,
+          "cost": 0.5013,
+          "confidence": 0.6057,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 6,
+          "cost": 0.655,
+          "confidence": 0.5195,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 4,
+          "cost": 1.9854,
+          "confidence": 0.1373,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "examination-lamp",
+      "group": "medical",
+      "functionalFeatures": [
+        "support",
+        "articulation",
+        "precision-direction",
+        "mobile",
+        "human-service"
+      ],
+      "expectedFamily": "support-logistics",
+      "editProgram": {
+        "proposition": "Cultivate the load or service column while retaining exact height, mobility, and attachment interfaces.",
+        "preserve": [
+          "working elevation",
+          "wheel contact",
+          "tool interface"
+        ],
+        "propagate": [
+          "column section",
+          "base spread",
+          "nutrient routing",
+          "maintenance clearance"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.03833,
+        "fleshSkeletonDensity": 0.04414,
+        "normalComponents": 20,
+        "fleshComponents": 30
+      },
+      "correspondences": [
+        {
+          "normal": 10,
+          "flesh": 11,
+          "cost": 0.2244,
+          "confidence": 0.799,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 12,
+          "cost": 0.3202,
+          "confidence": 0.726,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 13,
+          "cost": 0.3384,
+          "confidence": 0.7129,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 7,
+          "cost": 0.365,
+          "confidence": 0.6942,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 2,
+          "cost": 0.3776,
+          "confidence": 0.6855,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 3,
+          "cost": 0.391,
+          "confidence": 0.6764,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.4485,
+          "confidence": 0.6386,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 9,
+          "cost": 0.459,
+          "confidence": 0.6319,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 10,
+          "cost": 0.4595,
+          "confidence": 0.6316,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 6,
+          "cost": 0.7939,
+          "confidence": 0.4521,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 1,
+          "cost": 0.895,
+          "confidence": 0.4086,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 8,
+          "cost": 0.9529,
+          "confidence": 0.3856,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 4,
+          "cost": 1.0,
+          "confidence": 0.3679,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 5,
+          "cost": 1.5255,
+          "confidence": 0.2175,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "instrument-tray",
+      "group": "medical",
+      "functionalFeatures": [
+        "support",
+        "work-surface",
+        "mobile",
+        "height-adjustment",
+        "human-service"
+      ],
+      "expectedFamily": "support-logistics",
+      "editProgram": {
+        "proposition": "Cultivate the load or service column while retaining exact height, mobility, and attachment interfaces.",
+        "preserve": [
+          "working elevation",
+          "wheel contact",
+          "tool interface"
+        ],
+        "propagate": [
+          "column section",
+          "base spread",
+          "nutrient routing",
+          "maintenance clearance"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.03295,
+        "fleshSkeletonDensity": 0.0406,
+        "normalComponents": 12,
+        "fleshComponents": 23
+      },
+      "correspondences": [
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.1972,
+          "confidence": 0.821,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 8,
+          "cost": 0.218,
+          "confidence": 0.8041,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 5,
+          "cost": 0.3483,
+          "confidence": 0.7059,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 13,
+          "cost": 0.3867,
+          "confidence": 0.6793,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 2,
+          "cost": 0.6697,
+          "confidence": 0.5118,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 12,
+          "cost": 0.6942,
+          "confidence": 0.4995,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 11,
+          "cost": 0.7245,
+          "confidence": 0.4846,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 9,
+          "cost": 0.8304,
+          "confidence": 0.4359,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 10,
+          "cost": 0.946,
+          "confidence": 0.3883,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 1,
+          "cost": 0.9941,
+          "confidence": 0.3701,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 7,
+          "cost": 2.4134,
+          "confidence": 0.0895,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 6,
+          "cost": 2.6006,
+          "confidence": 0.0742,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "wheeled-stretcher",
+      "group": "medical",
+      "functionalFeatures": [
+        "human-load",
+        "support",
+        "mobile",
+        "height-adjustment",
+        "compliance"
+      ],
+      "expectedFamily": "compliant-support",
+      "editProgram": {
+        "proposition": "Cultivate distributed compliance where human load enters the object while preserving stable manufactured support geometry.",
+        "preserve": [
+          "human scale",
+          "ground stability",
+          "safe posture"
+        ],
+        "propagate": [
+          "load surface depth",
+          "restraint spacing",
+          "replacement access",
+          "frame geometry"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.05119,
+        "fleshSkeletonDensity": 0.06782,
+        "normalComponents": 33,
+        "fleshComponents": 28
+      },
+      "correspondences": [
+        {
+          "normal": 5,
+          "flesh": 3,
+          "cost": 0.189,
+          "confidence": 0.8278,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 5,
+          "cost": 0.2591,
+          "confidence": 0.7717,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 13,
+          "cost": 0.2615,
+          "confidence": 0.7699,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 1,
+          "cost": 0.2813,
+          "confidence": 0.7548,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 9,
+          "cost": 0.2893,
+          "confidence": 0.7488,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 6,
+          "cost": 0.495,
+          "confidence": 0.6096,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 0,
+          "cost": 0.6399,
+          "confidence": 0.5273,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 2,
+          "cost": 0.6439,
+          "confidence": 0.5252,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 10,
+          "cost": 0.7262,
+          "confidence": 0.4837,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 4,
+          "cost": 0.7506,
+          "confidence": 0.4721,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 7,
+          "cost": 0.8239,
+          "confidence": 0.4387,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 11,
+          "cost": 0.8909,
+          "confidence": 0.4103,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 12,
+          "cost": 0.91,
+          "confidence": 0.4025,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 8,
+          "cost": 1.0409,
+          "confidence": 0.3531,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "autoclave",
+      "group": "medical",
+      "functionalFeatures": [
+        "container",
+        "pressure",
+        "heat",
+        "service-access",
+        "sealed-interface"
+      ],
+      "expectedFamily": "pressure-containment",
+      "editProgram": {
+        "proposition": "Cultivate the pressure vessel and let its swelling reorganize restraint, seams, inspection, and rupture containment.",
+        "preserve": [
+          "port standard",
+          "pressure job",
+          "service envelope"
+        ],
+        "propagate": [
+          "cage geometry",
+          "flange placement",
+          "safety volume",
+          "failure direction"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.05877,
+        "fleshSkeletonDensity": 0.06785,
+        "normalComponents": 36,
+        "fleshComponents": 37
+      },
+      "correspondences": [
+        {
+          "normal": 6,
+          "flesh": 5,
+          "cost": 0.2127,
+          "confidence": 0.8084,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 1,
+          "cost": 0.249,
+          "confidence": 0.7795,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 2,
+          "cost": 0.251,
+          "confidence": 0.778,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 6,
+          "cost": 0.2621,
+          "confidence": 0.7694,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 3,
+          "cost": 0.4127,
+          "confidence": 0.6619,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 13,
+          "cost": 0.4588,
+          "confidence": 0.632,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 7,
+          "cost": 0.4716,
+          "confidence": 0.624,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 0,
+          "cost": 0.6223,
+          "confidence": 0.5367,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 4,
+          "cost": 0.6472,
+          "confidence": 0.5235,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 8,
+          "cost": 0.8185,
+          "confidence": 0.4411,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 12,
+          "cost": 0.8276,
+          "confidence": 0.4371,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 9,
+          "cost": 1.1045,
+          "confidence": 0.3314,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 11,
+          "cost": 1.1899,
+          "confidence": 0.3042,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 10,
+          "cost": 1.3516,
+          "confidence": 0.2588,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "chair",
+      "group": "domestic",
+      "functionalFeatures": [
+        "human-load",
+        "support",
+        "ground-contact",
+        "compliance",
+        "static"
+      ],
+      "expectedFamily": "compliant-support",
+      "editProgram": {
+        "proposition": "Cultivate distributed compliance where human load enters the object while preserving stable manufactured support geometry.",
+        "preserve": [
+          "human scale",
+          "ground stability",
+          "safe posture"
+        ],
+        "propagate": [
+          "load surface depth",
+          "restraint spacing",
+          "replacement access",
+          "frame geometry"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.03227,
+        "fleshSkeletonDensity": 0.0489,
+        "normalComponents": 26,
+        "fleshComponents": 22
+      },
+      "correspondences": [
+        {
+          "normal": 11,
+          "flesh": 12,
+          "cost": 0.1012,
+          "confidence": 0.9037,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 9,
+          "cost": 0.1687,
+          "confidence": 0.8447,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 13,
+          "cost": 0.1841,
+          "confidence": 0.8318,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 10,
+          "cost": 0.3261,
+          "confidence": 0.7217,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 1,
+          "cost": 0.327,
+          "confidence": 0.7211,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 11,
+          "cost": 0.4004,
+          "confidence": 0.6701,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 8,
+          "cost": 0.6692,
+          "confidence": 0.5121,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 3,
+          "cost": 0.7324,
+          "confidence": 0.4807,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 6,
+          "cost": 0.8329,
+          "confidence": 0.4348,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 7,
+          "cost": 0.8425,
+          "confidence": 0.4306,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 5,
+          "cost": 0.9302,
+          "confidence": 0.3945,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 2,
+          "cost": 1.6109,
+          "confidence": 0.1997,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 4,
+          "cost": 2.0598,
+          "confidence": 0.1275,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 0,
+          "cost": 2.277,
+          "confidence": 0.1026,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "mattress",
+      "group": "domestic",
+      "functionalFeatures": [
+        "human-load",
+        "support",
+        "compliance",
+        "distributed-pressure",
+        "static"
+      ],
+      "expectedFamily": "compliant-support",
+      "editProgram": {
+        "proposition": "Cultivate distributed compliance where human load enters the object while preserving stable manufactured support geometry.",
+        "preserve": [
+          "human scale",
+          "ground stability",
+          "safe posture"
+        ],
+        "propagate": [
+          "load surface depth",
+          "restraint spacing",
+          "replacement access",
+          "frame geometry"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.05397,
+        "fleshSkeletonDensity": 0.06298,
+        "normalComponents": 26,
+        "fleshComponents": 29
+      },
+      "correspondences": [
+        {
+          "normal": 11,
+          "flesh": 7,
+          "cost": 0.2311,
+          "confidence": 0.7936,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 12,
+          "cost": 0.2317,
+          "confidence": 0.7932,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 1,
+          "cost": 0.2442,
+          "confidence": 0.7834,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 5,
+          "cost": 0.2989,
+          "confidence": 0.7416,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 8,
+          "cost": 0.3123,
+          "confidence": 0.7318,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 2,
+          "cost": 0.3474,
+          "confidence": 0.7065,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 3,
+          "cost": 0.4103,
+          "confidence": 0.6635,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.5017,
+          "confidence": 0.6055,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 11,
+          "cost": 0.555,
+          "confidence": 0.5741,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 10,
+          "cost": 0.592,
+          "confidence": 0.5532,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 4,
+          "cost": 0.5947,
+          "confidence": 0.5517,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 9,
+          "cost": 0.6775,
+          "confidence": 0.5079,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 13,
+          "cost": 1.2174,
+          "confidence": 0.296,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 6,
+          "cost": 1.4941,
+          "confidence": 0.2245,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "filing-cabinet",
+      "group": "domestic",
+      "functionalFeatures": [
+        "container",
+        "repeated-storage",
+        "service-access",
+        "static",
+        "sliding-interface"
+      ],
+      "expectedFamily": "containment",
+      "editProgram": {
+        "proposition": "Cultivate a tensioned containment membrane inside standardized edges, closures, and lifting interfaces.",
+        "preserve": [
+          "usable volume",
+          "closure",
+          "handling interface"
+        ],
+        "propagate": [
+          "frame spacing",
+          "puncture protection",
+          "inspection access",
+          "replacement seams"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.0517,
+        "fleshSkeletonDensity": 0.06507,
+        "normalComponents": 28,
+        "fleshComponents": 35
+      },
+      "correspondences": [
+        {
+          "normal": 1,
+          "flesh": 1,
+          "cost": 0.097,
+          "confidence": 0.9076,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 3,
+          "cost": 0.1324,
+          "confidence": 0.876,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 2,
+          "cost": 0.1489,
+          "confidence": 0.8616,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.174,
+          "confidence": 0.8403,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 11,
+          "cost": 0.2042,
+          "confidence": 0.8153,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 7,
+          "cost": 0.2168,
+          "confidence": 0.8051,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 13,
+          "cost": 0.2988,
+          "confidence": 0.7417,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 4,
+          "cost": 0.3437,
+          "confidence": 0.7092,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 9,
+          "cost": 0.3565,
+          "confidence": 0.7001,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 12,
+          "cost": 0.4589,
+          "confidence": 0.632,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 10,
+          "cost": 0.8424,
+          "confidence": 0.4307,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 8,
+          "cost": 0.9094,
+          "confidence": 0.4028,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 5,
+          "cost": 0.9211,
+          "confidence": 0.3981,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 6,
+          "cost": 1.2094,
+          "confidence": 0.2984,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "sink",
+      "group": "domestic",
+      "functionalFeatures": [
+        "fluid-logistics",
+        "drainage",
+        "work-surface",
+        "sealed-interface",
+        "static"
+      ],
+      "expectedFamily": "flow",
+      "editProgram": {
+        "proposition": "Cultivate flow handling before payload, keeping hard ports and control interfaces while vascular geometry changes the housing.",
+        "preserve": [
+          "port location",
+          "flow direction",
+          "control affordance"
+        ],
+        "propagate": [
+          "manifold spacing",
+          "restraint rhythm",
+          "heat or pressure clearance",
+          "inspection access"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.03417,
+        "fleshSkeletonDensity": 0.03797,
+        "normalComponents": 22,
+        "fleshComponents": 22
+      },
+      "correspondences": [
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.0834,
+          "confidence": 0.92,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 6,
+          "cost": 0.1155,
+          "confidence": 0.8909,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 3,
+          "cost": 0.1785,
+          "confidence": 0.8366,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 1,
+          "cost": 0.2695,
+          "confidence": 0.7638,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 11,
+          "cost": 0.2876,
+          "confidence": 0.7501,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 13,
+          "cost": 0.2921,
+          "confidence": 0.7467,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 12,
+          "cost": 0.3539,
+          "confidence": 0.702,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 9,
+          "cost": 0.3626,
+          "confidence": 0.6958,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 4,
+          "cost": 0.3979,
+          "confidence": 0.6717,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 10,
+          "cost": 0.4427,
+          "confidence": 0.6423,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 5,
+          "cost": 0.6202,
+          "confidence": 0.5378,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 7,
+          "cost": 0.6208,
+          "confidence": 0.5375,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 8,
+          "cost": 0.6829,
+          "confidence": 0.5051,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 2,
+          "cost": 1.109,
+          "confidence": 0.3299,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "toilet",
+      "group": "domestic",
+      "functionalFeatures": [
+        "fluid-logistics",
+        "waste",
+        "human-load",
+        "drainage",
+        "sealed-interface"
+      ],
+      "expectedFamily": "flow",
+      "editProgram": {
+        "proposition": "Cultivate flow handling before payload, keeping hard ports and control interfaces while vascular geometry changes the housing.",
+        "preserve": [
+          "port location",
+          "flow direction",
+          "control affordance"
+        ],
+        "propagate": [
+          "manifold spacing",
+          "restraint rhythm",
+          "heat or pressure clearance",
+          "inspection access"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.03881,
+        "fleshSkeletonDensity": 0.0478,
+        "normalComponents": 28,
+        "fleshComponents": 23
+      },
+      "correspondences": [
+        {
+          "normal": 1,
+          "flesh": 2,
+          "cost": 0.2308,
+          "confidence": 0.7939,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 9,
+          "cost": 0.326,
+          "confidence": 0.7218,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 5,
+          "cost": 0.499,
+          "confidence": 0.6071,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 6,
+          "cost": 0.5005,
+          "confidence": 0.6062,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 8,
+          "cost": 0.5317,
+          "confidence": 0.5876,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 10,
+          "cost": 0.5664,
+          "confidence": 0.5676,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 3,
+          "cost": 0.5881,
+          "confidence": 0.5554,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 1,
+          "cost": 0.6233,
+          "confidence": 0.5361,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 11,
+          "cost": 0.6865,
+          "confidence": 0.5033,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 7,
+          "cost": 0.7218,
+          "confidence": 0.4859,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 4,
+          "cost": 0.879,
+          "confidence": 0.4152,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 12,
+          "cost": 0.8848,
+          "confidence": 0.4128,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 0,
+          "cost": 0.9599,
+          "confidence": 0.3829,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 13,
+          "cost": 1.7613,
+          "confidence": 0.1718,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "barrel",
+      "group": "storage",
+      "functionalFeatures": [
+        "container",
+        "fluid-logistics",
+        "pressure",
+        "sealed-interface",
+        "portable"
+      ],
+      "expectedFamily": "pressure-containment",
+      "editProgram": {
+        "proposition": "Cultivate the pressure vessel and let its swelling reorganize restraint, seams, inspection, and rupture containment.",
+        "preserve": [
+          "port standard",
+          "pressure job",
+          "service envelope"
+        ],
+        "propagate": [
+          "cage geometry",
+          "flange placement",
+          "safety volume",
+          "failure direction"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.02316,
+        "fleshSkeletonDensity": 0.04616,
+        "normalComponents": 7,
+        "fleshComponents": 19
+      },
+      "correspondences": [
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.2327,
+          "confidence": 0.7924,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 9,
+          "cost": 0.3109,
+          "confidence": 0.7328,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 5,
+          "cost": 0.3656,
+          "confidence": 0.6938,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 8,
+          "cost": 0.522,
+          "confidence": 0.5933,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 3,
+          "cost": 0.5688,
+          "confidence": 0.5662,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 11,
+          "cost": 1.0294,
+          "confidence": 0.3572,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 6,
+          "cost": 1.1409,
+          "confidence": 0.3195,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "jerry-can",
+      "group": "storage",
+      "functionalFeatures": [
+        "container",
+        "fluid-logistics",
+        "sealed-interface",
+        "portable",
+        "human-carry"
+      ],
+      "expectedFamily": "containment",
+      "editProgram": {
+        "proposition": "Cultivate a tensioned containment membrane inside standardized edges, closures, and lifting interfaces.",
+        "preserve": [
+          "usable volume",
+          "closure",
+          "handling interface"
+        ],
+        "propagate": [
+          "frame spacing",
+          "puncture protection",
+          "inspection access",
+          "replacement seams"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.03263,
+        "fleshSkeletonDensity": 0.05276,
+        "normalComponents": 21,
+        "fleshComponents": 24
+      },
+      "correspondences": [
+        {
+          "normal": 10,
+          "flesh": 11,
+          "cost": 0.2184,
+          "confidence": 0.8038,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 7,
+          "cost": 0.2526,
+          "confidence": 0.7767,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 10,
+          "cost": 0.283,
+          "confidence": 0.7535,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 12,
+          "cost": 0.2866,
+          "confidence": 0.7508,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.2921,
+          "confidence": 0.7467,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 6,
+          "cost": 0.3396,
+          "confidence": 0.7121,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 13,
+          "cost": 0.4549,
+          "confidence": 0.6345,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 2,
+          "cost": 0.4699,
+          "confidence": 0.6251,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 9,
+          "cost": 0.7138,
+          "confidence": 0.4898,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 8,
+          "cost": 0.7152,
+          "confidence": 0.4891,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 1,
+          "cost": 0.7172,
+          "confidence": 0.4881,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 4,
+          "cost": 0.9946,
+          "confidence": 0.3699,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 3,
+          "cost": 1.1222,
+          "confidence": 0.3256,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 5,
+          "cost": 1.6988,
+          "confidence": 0.1829,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "plastic-crate",
+      "group": "storage",
+      "functionalFeatures": [
+        "container",
+        "open-storage",
+        "portable",
+        "stacking-interface",
+        "load-frame"
+      ],
+      "expectedFamily": "containment",
+      "editProgram": {
+        "proposition": "Cultivate a tensioned containment membrane inside standardized edges, closures, and lifting interfaces.",
+        "preserve": [
+          "usable volume",
+          "closure",
+          "handling interface"
+        ],
+        "propagate": [
+          "frame spacing",
+          "puncture protection",
+          "inspection access",
+          "replacement seams"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.05942,
+        "fleshSkeletonDensity": 0.05436,
+        "normalComponents": 35,
+        "fleshComponents": 24
+      },
+      "correspondences": [
+        {
+          "normal": 2,
+          "flesh": 4,
+          "cost": 0.1272,
+          "confidence": 0.8805,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 6,
+          "cost": 0.2213,
+          "confidence": 0.8015,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 7,
+          "cost": 0.2238,
+          "confidence": 0.7995,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 5,
+          "cost": 0.2595,
+          "confidence": 0.7715,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 1,
+          "cost": 0.2899,
+          "confidence": 0.7483,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 3,
+          "cost": 0.4595,
+          "confidence": 0.6316,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 9,
+          "cost": 0.4927,
+          "confidence": 0.611,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 2,
+          "cost": 0.6551,
+          "confidence": 0.5194,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 12,
+          "cost": 0.8184,
+          "confidence": 0.4411,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 1.0298,
+          "confidence": 0.3571,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 13,
+          "cost": 1.05,
+          "confidence": 0.3499,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 10,
+          "cost": 1.0722,
+          "confidence": 0.3423,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 11,
+          "cost": 1.0872,
+          "confidence": 0.3372,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 8,
+          "cost": 1.4131,
+          "confidence": 0.2434,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "shelving-unit",
+      "group": "storage",
+      "functionalFeatures": [
+        "support",
+        "repeated-storage",
+        "static",
+        "load-frame",
+        "service-access"
+      ],
+      "expectedFamily": "support-logistics",
+      "editProgram": {
+        "proposition": "Cultivate the load or service column while retaining exact height, mobility, and attachment interfaces.",
+        "preserve": [
+          "working elevation",
+          "wheel contact",
+          "tool interface"
+        ],
+        "propagate": [
+          "column section",
+          "base spread",
+          "nutrient routing",
+          "maintenance clearance"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.04597,
+        "fleshSkeletonDensity": 0.05295,
+        "normalComponents": 21,
+        "fleshComponents": 20
+      },
+      "correspondences": [
+        {
+          "normal": 6,
+          "flesh": 7,
+          "cost": 0.2334,
+          "confidence": 0.7918,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.2968,
+          "confidence": 0.7432,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 5,
+          "cost": 0.3083,
+          "confidence": 0.7347,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 4,
+          "cost": 0.3224,
+          "confidence": 0.7244,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 2,
+          "cost": 0.3364,
+          "confidence": 0.7144,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 3,
+          "cost": 0.361,
+          "confidence": 0.6969,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 1,
+          "cost": 0.436,
+          "confidence": 0.6466,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 9,
+          "cost": 1.027,
+          "confidence": 0.3581,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 11,
+          "cost": 1.1374,
+          "confidence": 0.3207,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 13,
+          "cost": 1.2238,
+          "confidence": 0.2941,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 10,
+          "cost": 1.2664,
+          "confidence": 0.2819,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 8,
+          "cost": 1.7227,
+          "confidence": 0.1786,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 6,
+          "cost": 2.0601,
+          "confidence": 0.1274,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 12,
+          "cost": 2.1747,
+          "confidence": 0.1136,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "hand-truck",
+      "group": "storage",
+      "functionalFeatures": [
+        "human-force",
+        "mobile",
+        "ground-contact",
+        "load-frame",
+        "long-lever"
+      ],
+      "expectedFamily": "force-transfer",
+      "editProgram": {
+        "proposition": "Cultivate the force-transmission body while retaining rigid tool, grip, and reaction interfaces.",
+        "preserve": [
+          "direction of work",
+          "operator interface",
+          "terminal tool geometry"
+        ],
+        "propagate": [
+          "actuator volume",
+          "housing",
+          "reaction path",
+          "service access"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.03542,
+        "fleshSkeletonDensity": 0.04488,
+        "normalComponents": 17,
+        "fleshComponents": 19
+      },
+      "correspondences": [
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.0919,
+          "confidence": 0.9122,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 12,
+          "cost": 0.1352,
+          "confidence": 0.8736,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 2,
+          "cost": 0.3011,
+          "confidence": 0.74,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 4,
+          "cost": 0.3072,
+          "confidence": 0.7355,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 10,
+          "cost": 0.3209,
+          "confidence": 0.7255,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 3,
+          "cost": 0.3485,
+          "confidence": 0.7057,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 6,
+          "cost": 0.448,
+          "confidence": 0.6389,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 8,
+          "cost": 0.5432,
+          "confidence": 0.5809,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 5,
+          "cost": 0.5612,
+          "confidence": 0.5705,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 1,
+          "cost": 0.663,
+          "confidence": 0.5153,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 11,
+          "cost": 0.9056,
+          "confidence": 0.4043,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 13,
+          "cost": 0.9597,
+          "confidence": 0.383,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 7,
+          "cost": 1.5806,
+          "confidence": 0.2059,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 9,
+          "cost": 1.746,
+          "confidence": 0.1745,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "gate-valve",
+      "group": "infrastructure",
+      "functionalFeatures": [
+        "fluid-logistics",
+        "pressure",
+        "sealed-interface",
+        "flow-control",
+        "rotary-drive"
+      ],
+      "expectedFamily": "flow",
+      "editProgram": {
+        "proposition": "Cultivate flow handling before payload, keeping hard ports and control interfaces while vascular geometry changes the housing.",
+        "preserve": [
+          "port location",
+          "flow direction",
+          "control affordance"
+        ],
+        "propagate": [
+          "manifold spacing",
+          "restraint rhythm",
+          "heat or pressure clearance",
+          "inspection access"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.04285,
+        "fleshSkeletonDensity": 0.05963,
+        "normalComponents": 34,
+        "fleshComponents": 39
+      },
+      "correspondences": [
+        {
+          "normal": 2,
+          "flesh": 5,
+          "cost": 0.0022,
+          "confidence": 0.9978,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 8,
+          "cost": 0.0804,
+          "confidence": 0.9227,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 1,
+          "cost": 0.2516,
+          "confidence": 0.7775,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 10,
+          "cost": 0.3178,
+          "confidence": 0.7278,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 9,
+          "cost": 0.3183,
+          "confidence": 0.7274,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 3,
+          "cost": 0.3385,
+          "confidence": 0.7128,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 11,
+          "cost": 0.3895,
+          "confidence": 0.6774,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 4,
+          "cost": 0.4116,
+          "confidence": 0.6626,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 12,
+          "cost": 0.4611,
+          "confidence": 0.6306,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 6,
+          "cost": 0.4751,
+          "confidence": 0.6218,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 7,
+          "cost": 0.5414,
+          "confidence": 0.5819,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.6209,
+          "confidence": 0.5375,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 2,
+          "cost": 0.6962,
+          "confidence": 0.4985,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 13,
+          "cost": 0.8983,
+          "confidence": 0.4072,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "centrifugal-pump",
+      "group": "infrastructure",
+      "functionalFeatures": [
+        "fluid-logistics",
+        "pressure",
+        "sealed-interface",
+        "rotary-drive",
+        "flow-control"
+      ],
+      "expectedFamily": "flow",
+      "editProgram": {
+        "proposition": "Cultivate flow handling before payload, keeping hard ports and control interfaces while vascular geometry changes the housing.",
+        "preserve": [
+          "port location",
+          "flow direction",
+          "control affordance"
+        ],
+        "propagate": [
+          "manifold spacing",
+          "restraint rhythm",
+          "heat or pressure clearance",
+          "inspection access"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.04888,
+        "fleshSkeletonDensity": 0.05854,
+        "normalComponents": 21,
+        "fleshComponents": 29
+      },
+      "correspondences": [
+        {
+          "normal": 1,
+          "flesh": 1,
+          "cost": 0.1175,
+          "confidence": 0.8892,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 13,
+          "cost": 0.1301,
+          "confidence": 0.878,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 3,
+          "cost": 0.2308,
+          "confidence": 0.7939,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 12,
+          "cost": 0.3161,
+          "confidence": 0.729,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 2,
+          "cost": 0.3342,
+          "confidence": 0.7159,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 8,
+          "cost": 0.3377,
+          "confidence": 0.7134,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 5,
+          "cost": 0.4123,
+          "confidence": 0.6621,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 6,
+          "cost": 0.5151,
+          "confidence": 0.5974,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 7,
+          "cost": 0.5352,
+          "confidence": 0.5855,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 11,
+          "cost": 0.5908,
+          "confidence": 0.5539,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 0,
+          "cost": 0.6688,
+          "confidence": 0.5123,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 4,
+          "cost": 0.713,
+          "confidence": 0.4902,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 10,
+          "cost": 0.8778,
+          "confidence": 0.4157,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 9,
+          "cost": 1.117,
+          "confidence": 0.3273,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "pressure-tank",
+      "group": "infrastructure",
+      "functionalFeatures": [
+        "container",
+        "pressure",
+        "sealed-interface",
+        "static",
+        "inspection"
+      ],
+      "expectedFamily": "pressure-containment",
+      "editProgram": {
+        "proposition": "Cultivate the pressure vessel and let its swelling reorganize restraint, seams, inspection, and rupture containment.",
+        "preserve": [
+          "port standard",
+          "pressure job",
+          "service envelope"
+        ],
+        "propagate": [
+          "cage geometry",
+          "flange placement",
+          "safety volume",
+          "failure direction"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.02967,
+        "fleshSkeletonDensity": 0.05857,
+        "normalComponents": 24,
+        "fleshComponents": 23
+      },
+      "correspondences": [
+        {
+          "normal": 9,
+          "flesh": 8,
+          "cost": 0.0418,
+          "confidence": 0.9591,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 7,
+          "cost": 0.2042,
+          "confidence": 0.8153,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 5,
+          "cost": 0.2226,
+          "confidence": 0.8004,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 10,
+          "cost": 0.2881,
+          "confidence": 0.7497,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 11,
+          "cost": 0.2936,
+          "confidence": 0.7456,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 4,
+          "cost": 0.4643,
+          "confidence": 0.6286,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 12,
+          "cost": 0.5062,
+          "confidence": 0.6028,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 6,
+          "cost": 0.5535,
+          "confidence": 0.5749,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 9,
+          "cost": 0.6404,
+          "confidence": 0.5271,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.6451,
+          "confidence": 0.5246,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 13,
+          "cost": 0.7455,
+          "confidence": 0.4745,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 3,
+          "cost": 0.8349,
+          "confidence": 0.4339,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 1,
+          "cost": 1.3911,
+          "confidence": 0.2488,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 2,
+          "cost": 1.4403,
+          "confidence": 0.2369,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "radiator",
+      "group": "infrastructure",
+      "functionalFeatures": [
+        "fluid-logistics",
+        "heat",
+        "repetition",
+        "static",
+        "flow-control"
+      ],
+      "expectedFamily": "flow",
+      "editProgram": {
+        "proposition": "Cultivate flow handling before payload, keeping hard ports and control interfaces while vascular geometry changes the housing.",
+        "preserve": [
+          "port location",
+          "flow direction",
+          "control affordance"
+        ],
+        "propagate": [
+          "manifold spacing",
+          "restraint rhythm",
+          "heat or pressure clearance",
+          "inspection access"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.0544,
+        "fleshSkeletonDensity": 0.06654,
+        "normalComponents": 22,
+        "fleshComponents": 24
+      },
+      "correspondences": [
+        {
+          "normal": 10,
+          "flesh": 7,
+          "cost": 0.1839,
+          "confidence": 0.832,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 5,
+          "cost": 0.1865,
+          "confidence": 0.8299,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 10,
+          "cost": 0.279,
+          "confidence": 0.7565,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 8,
+          "cost": 0.2996,
+          "confidence": 0.7411,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 9,
+          "cost": 0.312,
+          "confidence": 0.732,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 13,
+          "cost": 0.319,
+          "confidence": 0.7269,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 6,
+          "cost": 0.466,
+          "confidence": 0.6275,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 11,
+          "cost": 0.4806,
+          "confidence": 0.6184,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 0,
+          "flesh": 1,
+          "cost": 0.6421,
+          "confidence": 0.5262,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 0,
+          "cost": 0.6472,
+          "confidence": 0.5235,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 4,
+          "cost": 0.6932,
+          "confidence": 0.5,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 12,
+          "cost": 0.7471,
+          "confidence": 0.4737,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 2,
+          "cost": 0.8698,
+          "confidence": 0.4191,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 3,
+          "cost": 1.4593,
+          "confidence": 0.2324,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    },
+    {
+      "id": "hose-reel",
+      "group": "infrastructure",
+      "functionalFeatures": [
+        "fluid-logistics",
+        "mobile",
+        "rotary-drive",
+        "flexible-medium",
+        "sealed-interface"
+      ],
+      "expectedFamily": "flow",
+      "editProgram": {
+        "proposition": "Cultivate flow handling before payload, keeping hard ports and control interfaces while vascular geometry changes the housing.",
+        "preserve": [
+          "port location",
+          "flow direction",
+          "control affordance"
+        ],
+        "propagate": [
+          "manifold spacing",
+          "restraint rhythm",
+          "heat or pressure clearance",
+          "inspection access"
+        ]
+      },
+      "sourceSignals": {
+        "normalSkeletonDensity": 0.04882,
+        "fleshSkeletonDensity": 0.05854,
+        "normalComponents": 27,
+        "fleshComponents": 14
+      },
+      "correspondences": [
+        {
+          "normal": 0,
+          "flesh": 0,
+          "cost": 0.2189,
+          "confidence": 0.8034,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 1,
+          "flesh": 1,
+          "cost": 0.2679,
+          "confidence": 0.765,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 12,
+          "flesh": 6,
+          "cost": 0.3258,
+          "confidence": 0.722,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 3,
+          "flesh": 3,
+          "cost": 0.4136,
+          "confidence": 0.6613,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 9,
+          "flesh": 7,
+          "cost": 0.6003,
+          "confidence": 0.5487,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 10,
+          "flesh": 10,
+          "cost": 0.8253,
+          "confidence": 0.4381,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 5,
+          "flesh": 8,
+          "cost": 0.8532,
+          "confidence": 0.426,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 2,
+          "flesh": 2,
+          "cost": 0.9196,
+          "confidence": 0.3987,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 7,
+          "flesh": 5,
+          "cost": 0.9483,
+          "confidence": 0.3874,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 6,
+          "flesh": 11,
+          "cost": 1.0353,
+          "confidence": 0.3551,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 13,
+          "flesh": 12,
+          "cost": 1.083,
+          "confidence": 0.3386,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 4,
+          "flesh": 4,
+          "cost": 1.0855,
+          "confidence": 0.3377,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 8,
+          "flesh": 9,
+          "cost": 1.3636,
+          "confidence": 0.2557,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        },
+        {
+          "normal": 11,
+          "flesh": 13,
+          "cost": 1.4183,
+          "confidence": 0.2421,
+          "status": "CORRESPONDENCE_PROPOSAL"
+        }
+      ]
+    }
+  ],
+  "leaveOneOut": {
+    "method": "five-nearest weighted Jaccard over functional features; held item excluded from vote",
+    "passed": 20,
+    "total": 25,
+    "accuracy": 0.8,
+    "results": [
+      {
+        "heldOut": "shovel",
+        "expected": "force-transfer",
+        "predicted": "force-transfer",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "hand-truck",
+            "similarity": 0.429,
+            "family": "force-transfer"
+          },
+          {
+            "id": "power-drill",
+            "similarity": 0.111,
+            "family": "force-transfer"
+          },
+          {
+            "id": "chair",
+            "similarity": 0.111,
+            "family": "compliant-support"
+          }
+        ]
+      },
+      {
+        "heldOut": "power-drill",
+        "expected": "force-transfer",
+        "predicted": "flow",
+        "pass": false,
+        "neighbors": [
+          {
+            "id": "shovel",
+            "similarity": 0.111,
+            "family": "force-transfer"
+          },
+          {
+            "id": "hose-reel",
+            "similarity": 0.111,
+            "family": "flow"
+          },
+          {
+            "id": "gate-valve",
+            "similarity": 0.111,
+            "family": "flow"
+          }
+        ]
+      },
+      {
+        "heldOut": "toolbox",
+        "expected": "containment",
+        "predicted": "containment",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "jerry-can",
+            "similarity": 0.429,
+            "family": "containment"
+          },
+          {
+            "id": "trash-can",
+            "similarity": 0.25,
+            "family": "containment"
+          },
+          {
+            "id": "plastic-crate",
+            "similarity": 0.25,
+            "family": "containment"
+          }
+        ]
+      },
+      {
+        "heldOut": "trash-can",
+        "expected": "containment",
+        "predicted": "containment",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "dumpster",
+            "similarity": 0.667,
+            "family": "containment"
+          },
+          {
+            "id": "toolbox",
+            "similarity": 0.25,
+            "family": "containment"
+          },
+          {
+            "id": "filing-cabinet",
+            "similarity": 0.25,
+            "family": "containment"
+          }
+        ]
+      },
+      {
+        "heldOut": "dumpster",
+        "expected": "containment",
+        "predicted": "containment",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "trash-can",
+            "similarity": 0.667,
+            "family": "containment"
+          },
+          {
+            "id": "wheeled-stretcher",
+            "similarity": 0.111,
+            "family": "compliant-support"
+          },
+          {
+            "id": "toolbox",
+            "similarity": 0.111,
+            "family": "containment"
+          }
+        ]
+      },
+      {
+        "heldOut": "iv-stand",
+        "expected": "support-logistics",
+        "predicted": "support-logistics",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "instrument-tray",
+            "similarity": 0.667,
+            "family": "support-logistics"
+          },
+          {
+            "id": "wheeled-stretcher",
+            "similarity": 0.429,
+            "family": "compliant-support"
+          },
+          {
+            "id": "examination-lamp",
+            "similarity": 0.429,
+            "family": "support-logistics"
+          }
+        ]
+      },
+      {
+        "heldOut": "examination-lamp",
+        "expected": "support-logistics",
+        "predicted": "support-logistics",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "iv-stand",
+            "similarity": 0.429,
+            "family": "support-logistics"
+          },
+          {
+            "id": "instrument-tray",
+            "similarity": 0.429,
+            "family": "support-logistics"
+          },
+          {
+            "id": "wheeled-stretcher",
+            "similarity": 0.25,
+            "family": "compliant-support"
+          }
+        ]
+      },
+      {
+        "heldOut": "instrument-tray",
+        "expected": "support-logistics",
+        "predicted": "support-logistics",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "iv-stand",
+            "similarity": 0.667,
+            "family": "support-logistics"
+          },
+          {
+            "id": "wheeled-stretcher",
+            "similarity": 0.429,
+            "family": "compliant-support"
+          },
+          {
+            "id": "examination-lamp",
+            "similarity": 0.429,
+            "family": "support-logistics"
+          }
+        ]
+      },
+      {
+        "heldOut": "wheeled-stretcher",
+        "expected": "compliant-support",
+        "predicted": "support-logistics",
+        "pass": false,
+        "neighbors": [
+          {
+            "id": "mattress",
+            "similarity": 0.429,
+            "family": "compliant-support"
+          },
+          {
+            "id": "iv-stand",
+            "similarity": 0.429,
+            "family": "support-logistics"
+          },
+          {
+            "id": "instrument-tray",
+            "similarity": 0.429,
+            "family": "support-logistics"
+          }
+        ]
+      },
+      {
+        "heldOut": "autoclave",
+        "expected": "pressure-containment",
+        "predicted": "pressure-containment",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "pressure-tank",
+            "similarity": 0.429,
+            "family": "pressure-containment"
+          },
+          {
+            "id": "barrel",
+            "similarity": 0.429,
+            "family": "pressure-containment"
+          },
+          {
+            "id": "trash-can",
+            "similarity": 0.25,
+            "family": "containment"
+          }
+        ]
+      },
+      {
+        "heldOut": "chair",
+        "expected": "compliant-support",
+        "predicted": "compliant-support",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "mattress",
+            "similarity": 0.667,
+            "family": "compliant-support"
+          },
+          {
+            "id": "wheeled-stretcher",
+            "similarity": 0.429,
+            "family": "compliant-support"
+          },
+          {
+            "id": "shelving-unit",
+            "similarity": 0.25,
+            "family": "support-logistics"
+          }
+        ]
+      },
+      {
+        "heldOut": "mattress",
+        "expected": "compliant-support",
+        "predicted": "compliant-support",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "chair",
+            "similarity": 0.667,
+            "family": "compliant-support"
+          },
+          {
+            "id": "wheeled-stretcher",
+            "similarity": 0.429,
+            "family": "compliant-support"
+          },
+          {
+            "id": "shelving-unit",
+            "similarity": 0.25,
+            "family": "support-logistics"
+          }
+        ]
+      },
+      {
+        "heldOut": "filing-cabinet",
+        "expected": "containment",
+        "predicted": "pressure-containment",
+        "pass": false,
+        "neighbors": [
+          {
+            "id": "shelving-unit",
+            "similarity": 0.429,
+            "family": "support-logistics"
+          },
+          {
+            "id": "trash-can",
+            "similarity": 0.25,
+            "family": "containment"
+          },
+          {
+            "id": "toolbox",
+            "similarity": 0.25,
+            "family": "containment"
+          }
+        ]
+      },
+      {
+        "heldOut": "sink",
+        "expected": "flow",
+        "predicted": "flow",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "toilet",
+            "similarity": 0.429,
+            "family": "flow"
+          },
+          {
+            "id": "radiator",
+            "similarity": 0.25,
+            "family": "flow"
+          },
+          {
+            "id": "pressure-tank",
+            "similarity": 0.25,
+            "family": "pressure-containment"
+          }
+        ]
+      },
+      {
+        "heldOut": "toilet",
+        "expected": "flow",
+        "predicted": "flow",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "sink",
+            "similarity": 0.429,
+            "family": "flow"
+          },
+          {
+            "id": "jerry-can",
+            "similarity": 0.25,
+            "family": "containment"
+          },
+          {
+            "id": "hose-reel",
+            "similarity": 0.25,
+            "family": "flow"
+          }
+        ]
+      },
+      {
+        "heldOut": "barrel",
+        "expected": "pressure-containment",
+        "predicted": "pressure-containment",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "jerry-can",
+            "similarity": 0.667,
+            "family": "containment"
+          },
+          {
+            "id": "pressure-tank",
+            "similarity": 0.429,
+            "family": "pressure-containment"
+          },
+          {
+            "id": "gate-valve",
+            "similarity": 0.429,
+            "family": "flow"
+          }
+        ]
+      },
+      {
+        "heldOut": "jerry-can",
+        "expected": "containment",
+        "predicted": "pressure-containment",
+        "pass": false,
+        "neighbors": [
+          {
+            "id": "barrel",
+            "similarity": 0.667,
+            "family": "pressure-containment"
+          },
+          {
+            "id": "toolbox",
+            "similarity": 0.429,
+            "family": "containment"
+          },
+          {
+            "id": "toilet",
+            "similarity": 0.25,
+            "family": "flow"
+          }
+        ]
+      },
+      {
+        "heldOut": "plastic-crate",
+        "expected": "containment",
+        "predicted": "containment",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "toolbox",
+            "similarity": 0.25,
+            "family": "containment"
+          },
+          {
+            "id": "jerry-can",
+            "similarity": 0.25,
+            "family": "containment"
+          },
+          {
+            "id": "barrel",
+            "similarity": 0.25,
+            "family": "pressure-containment"
+          }
+        ]
+      },
+      {
+        "heldOut": "shelving-unit",
+        "expected": "support-logistics",
+        "predicted": "compliant-support",
+        "pass": false,
+        "neighbors": [
+          {
+            "id": "filing-cabinet",
+            "similarity": 0.429,
+            "family": "containment"
+          },
+          {
+            "id": "mattress",
+            "similarity": 0.25,
+            "family": "compliant-support"
+          },
+          {
+            "id": "chair",
+            "similarity": 0.25,
+            "family": "compliant-support"
+          }
+        ]
+      },
+      {
+        "heldOut": "hand-truck",
+        "expected": "force-transfer",
+        "predicted": "force-transfer",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "shovel",
+            "similarity": 0.429,
+            "family": "force-transfer"
+          },
+          {
+            "id": "wheeled-stretcher",
+            "similarity": 0.111,
+            "family": "compliant-support"
+          },
+          {
+            "id": "trash-can",
+            "similarity": 0.111,
+            "family": "containment"
+          }
+        ]
+      },
+      {
+        "heldOut": "gate-valve",
+        "expected": "flow",
+        "predicted": "flow",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "centrifugal-pump",
+            "similarity": 1.0,
+            "family": "flow"
+          },
+          {
+            "id": "hose-reel",
+            "similarity": 0.429,
+            "family": "flow"
+          },
+          {
+            "id": "barrel",
+            "similarity": 0.429,
+            "family": "pressure-containment"
+          }
+        ]
+      },
+      {
+        "heldOut": "centrifugal-pump",
+        "expected": "flow",
+        "predicted": "flow",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "gate-valve",
+            "similarity": 1.0,
+            "family": "flow"
+          },
+          {
+            "id": "hose-reel",
+            "similarity": 0.429,
+            "family": "flow"
+          },
+          {
+            "id": "barrel",
+            "similarity": 0.429,
+            "family": "pressure-containment"
+          }
+        ]
+      },
+      {
+        "heldOut": "pressure-tank",
+        "expected": "pressure-containment",
+        "predicted": "pressure-containment",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "barrel",
+            "similarity": 0.429,
+            "family": "pressure-containment"
+          },
+          {
+            "id": "autoclave",
+            "similarity": 0.429,
+            "family": "pressure-containment"
+          },
+          {
+            "id": "sink",
+            "similarity": 0.25,
+            "family": "flow"
+          }
+        ]
+      },
+      {
+        "heldOut": "radiator",
+        "expected": "flow",
+        "predicted": "flow",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "sink",
+            "similarity": 0.25,
+            "family": "flow"
+          },
+          {
+            "id": "gate-valve",
+            "similarity": 0.25,
+            "family": "flow"
+          },
+          {
+            "id": "centrifugal-pump",
+            "similarity": 0.25,
+            "family": "flow"
+          }
+        ]
+      },
+      {
+        "heldOut": "hose-reel",
+        "expected": "flow",
+        "predicted": "flow",
+        "pass": true,
+        "neighbors": [
+          {
+            "id": "gate-valve",
+            "similarity": 0.429,
+            "family": "flow"
+          },
+          {
+            "id": "centrifugal-pump",
+            "similarity": 0.429,
+            "family": "flow"
+          },
+          {
+            "id": "toilet",
+            "similarity": 0.25,
+            "family": "flow"
+          }
+        ]
+      }
+    ]
+  },
+  "weaponMutations": "HUMAN_LABEL_REQUIRED"
+}

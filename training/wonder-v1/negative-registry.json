@@ -1,0 +1,56 @@
+{
+  "schema": "vector-noodle.negative-training.v1",
+  "policy": "QUARANTINED_NEGATIVE_EXAMPLES_NEVER_FEED_POSITIVE_GRAMMAR",
+  "examples": [
+    {
+      "id": "old-contact-sheet",
+      "path": "generated/vector-noodle-ink-v1/vector-noodle-ink-contact-sheet-v1.svg",
+      "sha256": "82123399b3b308a25634b94d56fd8f0ed7ea8ffc416fcc45978c3c3222b63a34",
+      "verdict": "USER_REJECTED_PRIMITIVE",
+      "failures": [
+        "GENERIC_CAPSULE",
+        "SURFACE_ATTACHMENT",
+        "NO_CAUSAL_GEOMETRY"
+      ]
+    },
+    {
+      "id": "bloody-wwii",
+      "verdict": "QUARANTINED_NEGATIVE_EXAMPLE",
+      "failures": [
+        "GORE_AS_STYLE",
+        "HISTORICAL_MACHINE_UNCHANGED"
+      ]
+    },
+    {
+      "id": "everything-gets-legs",
+      "verdict": "QUARANTINED_NEGATIVE_EXAMPLE",
+      "failures": [
+        "BIOLOGY_WITHOUT_FORCE_REASON"
+      ]
+    },
+    {
+      "id": "creature-aircraft",
+      "verdict": "QUARANTINED_NEGATIVE_EXAMPLE",
+      "failures": [
+        "CREATURE_SUBSTITUTION",
+        "LOST_ENGINEERING_PROPOSITION"
+      ]
+    },
+    {
+      "id": "flesh-through-armor",
+      "verdict": "QUARANTINED_NEGATIVE_EXAMPLE",
+      "failures": [
+        "DECORATIVE_EXPOSURE",
+        "NO_SERVICE_LOGIC"
+      ]
+    },
+    {
+      "id": "overdense-technical-diagram",
+      "verdict": "QUARANTINED_NEGATIVE_EXAMPLE",
+      "failures": [
+        "MICRODETAIL_CARRIES_MEANING",
+        "NO_NEGATIVE_SPACE"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "vector-noodle.wonder-study.v1",
+  "state": "PRELIMINARY_INTAKE_OPEN",
+  "notGraduated": true,
+  "visualHierarchy": [
+    {
+      "source": "punnett-ancestral-pressure-module",
+      "first": "three repeated cultivated pressure bodies held by a bilateral manufactured frame",
+      "second": "vertical service towers and paired force terminations",
+      "quietAgainstDense": "broad vessel silhouettes oppose dense couplers, rails, and seam hardware"
+    },
+    {
+      "source": "field-artillery-rooted-recoil",
+      "first": "long directional barrel and breech axis",
+      "second": "split carriage, traverse structure, tendon mechanisms, and four grown recoil contacts",
+      "quietAgainstDense": "long barrel intervals oppose the dense breech and carriage core"
+    }
+  ],
+  "forceLoadPaths": [
+    {
+      "source": "punnett-ancestral-pressure-module",
+      "path": [
+        "cultivated ground termination",
+        "vertical support",
+        "contained pressure body",
+        "upper coupling",
+        "paired frame"
+      ],
+      "reason": "repetition distributes load while biological variation remains constrained by standardized interfaces"
+    },
+    {
+      "source": "field-artillery-rooted-recoil",
+      "path": [
+        "grown recoil contact",
+        "carriage arm",
+        "traverse ring",
+        "breech",
+        "barrel axis"
+      ],
+      "reason": "cultivated tissues absorb and return recoil while rigid geometry preserves aim"
+    }
+  ],
+  "negativeSpace": [
+    "Punnett separates paired mechanisms with a central service corridor",
+    "Artillery uses barrel length and exploded spacing to make the dense functional core readable"
+  ],
+  "repetitionRhythm": [
+    "Punnett establishes authority through three pressure bodies and paired supports",
+    "Artillery repeats fasteners, barrel collars, carriage branches, and four load contacts without equalizing their hierarchy"
+  ],
+  "grownManufacturedGrammar": {
+    "grown": [
+      "asymmetric swelling under constraint",
+      "tendon bundles following load",
+      "callused biological contacts",
+      "small inherited variation inside repeated units"
+    ],
+    "manufactured": [
+      "orthogonal containment",
+      "flanges and collars",
+      "service clearance",
+      "rigid directional axes",
+      "boring steel reserved around extraordinary anatomy"
+    ]
+  },
+  "homologies": [
+    {
+      "from": "contained cultivated pressure body",
+      "to": "cultivated recoil tendon and grounded load organ",
+      "invariant": "living force management inside standardized mechanical mating surfaces",
+      "adaptation": "static pressure distribution becomes directional recoil absorption"
+    }
+  ],
+  "causalAssemblyGraph": [
+    {
+      "part": "cultivated pressure body",
+      "job": "store or modulate force",
+      "material": "domesticated tissue",
+      "load": "internal pressure",
+      "connects": [
+        "standardized flange",
+        "containment frame"
+      ],
+      "whyShape": "swollen curve visibly presses against but does not escape its cage",
+      "exposure": "inspection surface",
+      "protection": "load-bearing seam",
+      "failure": "rupture redirects force into containment"
+    },
+    {
+      "part": "artillery recoil tendon",
+      "job": "absorb and return firing impulse",
+      "material": "cultivated tensile tissue",
+      "load": "axial recoil",
+      "connects": [
+        "breech cradle",
+        "carriage load path"
+      ],
+      "whyShape": "bundled length provides travel while collars prevent lateral wandering",
+      "exposure": "serviceable bundle spans",
+      "protection": "mating collars",
+      "failure": "loss of controlled return and aim"
+    }
+  ],
+  "contourIntents": [
+    {
+      "id": "punnett-pressure-silhouette",
+      "language": "A repeated swollen living pressure body pushes visually against an upright manufactured cage but never escapes it.",
+      "status": "PRELIMINARY"
+    },
+    {
+      "id": "artillery-force-axis",
+      "language": "A long rigid firing axis terminates in a dense breech where cultivated tension divides into grounded recoil paths.",
+      "status": "PRELIMINARY"
+    }
+  ]
+}

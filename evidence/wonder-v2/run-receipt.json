@@ -1,0 +1,99 @@
+{
+  "schema": "vector-noodle.wonder-v2-run-receipt",
+  "date": "2026-09-05",
+  "state": "STRUCTURAL_STUDY_COMPLETE_AWAITING_HUMAN",
+  "classification": "FRONTIER_EXPANSION_NOT_PAR_ELIGIBLE",
+  "corpus": {
+    "sources": 11,
+    "quartets": 25,
+    "macroStudies": 5,
+    "panels": 110,
+    "centerlinePaths": 14253,
+    "correspondenceProposals": 334
+  },
+  "leaveOneOut": {
+    "passed": 20,
+    "total": 25,
+    "misses": [
+      "power-drill",
+      "wheeled-stretcher",
+      "filing-cabinet",
+      "jerry-can",
+      "shelving-unit"
+    ]
+  },
+  "ablation": {
+    "fault": "boolean transition counts collapsed skeleton connectivity",
+    "disabledResultPaths": 0,
+    "enabledResultPaths": 14253,
+    "sameInputTape": true
+  },
+  "causalBoundaries": [
+    {
+      "input": "source bytes",
+      "owner": "corpus-manifest plus build_wonder_corpus.verify_sources",
+      "falsifier": "hash or dimension mismatch"
+    },
+    {
+      "input": "semantic panel",
+      "owner": "build_wonder_corpus.panel_specs",
+      "falsifier": "not exactly 110 unique panel ids"
+    },
+    {
+      "input": "ink pixels",
+      "owner": "isolate_ink plus thin plus trace_edges",
+      "falsifier": "zero or non-cubic centerlines"
+    },
+    {
+      "input": "component graphs",
+      "owner": "induce_wonder_grammar.match_components",
+      "falsifier": "quartet lacks correspondence proposals"
+    },
+    {
+      "input": "functional features",
+      "owner": "leave-one-object-out weighted Jaccard",
+      "falsifier": "identity appears in its own neighbor set"
+    },
+    {
+      "input": "review state",
+      "owner": "noodle_server plus wonder route",
+      "falsifier": "machine emits artistic acceptance"
+    }
+  ],
+  "pixels": [
+    {
+      "path": "evidence/wonder-v2/gate-02-corpus-map.svg",
+      "sha256": "6c85ab14c1f039f9383ce2e2d699969a229b2d2c43cb020276f5dda5c85b2610",
+      "acceptance": "PENDING_HUMAN"
+    },
+    {
+      "path": "evidence/wonder-v2/gate-03-centerlines.svg",
+      "sha256": "053349bd0d1fda4e428f38eec8518eb1540825c760f57b12546eb6e903f51fa1",
+      "acceptance": "PENDING_HUMAN"
+    },
+    {
+      "path": "evidence/wonder-v2/gate-04-correspondence.svg",
+      "sha256": "5512a7ca47abbfff91d764338eaa94677fbc3a96079152e88971137d06a3d18d",
+      "acceptance": "PENDING_HUMAN"
+    },
+    {
+      "path": "evidence/wonder-v2/gate-05-leave-one-out.svg",
+      "sha256": "7c48bc56bc846080e1fda92c813473030be8ab36cb15c9d2898a294154924362",
+      "acceptance": "PENDING_HUMAN"
+    }
+  ],
+  "timing": {
+    "finalBuildAndVerificationSeconds": 21.3,
+    "parEligible": false
+  },
+  "localCodexTokens": {
+    "input": "UNKNOWN",
+    "output": "UNKNOWN",
+    "total": "UNKNOWN"
+  },
+  "retrospective": {
+    "wastedTime": "first thinning transition count used boolean addition; one later write guard had an indentation mismatch",
+    "weakestSoundnessClause": "five held-out functional-family misses and no human pixel verdict",
+    "improvement": "retain the red ablation test and add role features before training geometry mutations"
+  }
+}

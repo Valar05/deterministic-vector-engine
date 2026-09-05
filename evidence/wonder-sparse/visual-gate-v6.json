@@ -1,0 +1,65 @@
+{
+  "schema": "vector-noodle.visual-gate.v6",
+  "buildMarker": "empty-glass-correspondence-v6",
+  "state": "AWAITING_HUMAN_COMPONENT_COHERENCE",
+  "acceptance": false,
+  "sourceSha256": "e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1fa923",
+  "rejectedReplayHash": "fnv1a32-b4dcd1d5",
+  "candidateReplayHash": "fnv1a32-e6c6d6a4",
+  "diagnostics": {
+    "jointCoverage": 0.31739,
+    "jointCollision": 0.02755,
+    "areaGapRatio": 2.445,
+    "componentCountDiscovered": 4,
+    "qualityAuthority": false
+  },
+  "requirements": {
+    "sameCanonicalPathsBothViews": true,
+    "fixedPartCount": false,
+    "fractionalFallbackCuts": false,
+    "artificialCutFaces": false,
+    "accessibilityAnswersMayBeUnknown": true
+  },
+  "guardrail": {
+    "state": "AWAITING_USER_PIXEL_VERDICT",
+    "failures": [],
+    "replayHash": "fnv1a32-e6c6d6a4"
+  },
+  "artifacts": [
+    {
+      "path": "evidence/wonder-sparse/before-after-assembled-v6.svg",
+      "sha256": "96ef9ea97996a2c736325186e0bb528f749890d8c8cae9789520a47cc9872c77",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/before-after-exploded-v6.svg",
+      "sha256": "a362ce65cbfb1c055657101ef810f98e42d830ffa3bda254de29c86a2ff2f064",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/paired-component-correspondence-v6.svg",
+      "sha256": "dc3015e38b1a2aa34090b983ec2f83948d9b58af1e2e9e13ed4204959aa8efc7",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/primitive-interventions-v6.svg",
+      "sha256": "98804c1e31fc1e47172fb75e7a1273edd3d235d0dbacacbdb390d3c157c5183b",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/pairwise-intervention-v6.svg",
+      "sha256": "cbdfa8945b03ba5bae9dd20b797063c52141264ed84a44c9c806f421840e2a63",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/after-three-scale-v6.svg",
+      "sha256": "d9bf4eaed791628943ab7d38dc08a0c04345aeaba4cd3f14460670bc76b9696a",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/accessibility-oral-exam-v6.svg",
+      "sha256": "6c3138f076de97bba01df6b9595d20466b704ef171ed79a627f2e27142096507",
+      "accepted": false
+    }
+  ]
+}

@@ -3,98 +3,49 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Empty Glass · Mechanism Preservation</title>
+  <title>Empty Glass · Correspondence First</title>
   <link rel="stylesheet" href="./studio.css">
 </head>
-<body data-build-marker="empty-glass-relations-v5">
+<body data-build-marker="empty-glass-correspondence-v6">
   <header>
-    <p class="eyebrow">VECTOR NOODLE · MODERN OBJECT APPRENTICESHIP</p>
-    <h1>Explosion means construction.</h1>
-    <p>Find the minimum line information that preserves the same object when its evidenced parts separate.</p>
+    <p class="eyebrow">VECTOR NOODLE · MODERN OBJECT CONTROL</p>
+    <h1>The two views must explain one object.</h1>
+    <p>Exploded evidence proposes components. Assembled evidence tests correspondence. Uncertainty stays visible.</p>
   </header>
   <main>
     <section class="toolbar" aria-label="Study controls">
-      <div class="segmented" role="group" aria-label="Shovel view">
-        <button id="assembled" class="active">Assembled</button>
-        <button id="exploded">Exploded</button>
-      </div>
+      <div class="segmented" role="group" aria-label="Object view"><button id="assembled" class="active">Assembled</button><button id="exploded">Exploded</button></div>
       <label class="file">Load sealed source<input id="source-file" type="file" accept="image/*"></label>
-      <button id="reference-toggle">Hide reference</button>
-      <button id="map-toggle" class="active">Hide correspondence</button>
-      <output id="source-status">Checking source…</output>
+      <button id="reference-toggle">Hide reference</button><button id="map-toggle" class="active">Hide evidence map</button><output id="source-status">Checking source…</output>
     </section>
-
     <section class="workspace">
       <div class="drawing-column">
-        <div class="stage-heading">
-          <div><span id="pass-label">Gate 1 · correspondence</span><strong id="budget">0 / 20 visible strokes</strong></div>
-          <p id="instruction">Neutral landmarks and relations are source-derived. Judge those before deleting any stroke.</p>
-        </div>
-        <svg id="drawing" viewBox="0 0 397 397" aria-label="Mechanism-preserving shovel study">
-          <rect class="paper" width="100%" height="100%"/>
-          <image id="reference" preserveAspectRatio="none"/>
-          <g id="ink"></g>
-        </svg>
-        <p class="truth-line"><strong>Render law</strong> The exploded view owns transforms only. Every visible path comes from the assembled part geometry.</p>
-        <div id="part-ledger" class="part-ledger" aria-label="Neutral part and attachment ledger"></div>
+        <div class="stage-heading"><div><span>Gate 1 · cross-view coherence</span><strong id="budget">0 / 20 visible strokes</strong></div><p>Every path comes from an isolated exploded-region proposal. No global silhouette slabs.</p></div>
+        <svg id="drawing" viewBox="0 0 397 397" aria-label="Correspondence-first modern object study"><rect class="paper" width="100%" height="100%"/><image id="reference" preserveAspectRatio="none"/><g id="ink"></g></svg>
+        <p class="truth-line"><strong>Render law</strong> Both views reuse one canonical component program. A candidate correspondence is not an accepted part.</p>
+        <div id="part-ledger" class="part-ledger"></div>
+        <div id="oral-exam" class="part-ledger"></div>
       </div>
-
       <aside>
         <div class="panel">
-          <p class="panel-label">Three-scale visual truth</p>
-          <strong id="active-scale">Reviewing 96 px</strong>
-          <div id="scale-previews" class="scale-previews"></div>
-          <label>Concrete visual read<textarea id="review-note" rows="2" placeholder="Name the category or construction misread"></textarea></label>
-          <div class="review-axis">
-            <span>CATEGORY</span>
-            <button data-review-axis="CATEGORY" data-verdict="RECOGNIZABLE">Recognizable</button>
-            <button data-review-axis="CATEGORY" data-verdict="WRONG">Wrong</button>
-            <button data-review-axis="CATEGORY" data-verdict="GENERIC">Generic</button>
-            <button data-review-axis="CATEGORY" data-verdict="OVERDRAWN">Overdrawn</button>
-          </div>
-          <div class="review-axis">
-            <span>STRUCTURE</span>
-            <button data-review-axis="STRUCTURE" data-verdict="PRESERVED">Preserved</button>
-            <button data-review-axis="STRUCTURE" data-verdict="BROKEN">Broken</button>
-            <button data-review-axis="STRUCTURE" data-verdict="AMBIGUOUS">Ambiguous</button>
-            <button data-review-axis="STRUCTURE" data-verdict="OVERDRAWN">Overdrawn</button>
-          </div>
-          <p id="review-lock" class="warning">Hide the reference before recording judgment.</p>
+          <p class="panel-label">Three-scale human review</p><strong id="active-scale">Reviewing 96 px</strong><div id="scale-previews" class="scale-previews"></div>
+          <label>Concrete visual read<textarea id="review-note" rows="2" placeholder="Name the exact identity or construction failure"></textarea></label>
+          <div id="review-axes"></div><p id="review-lock" class="warning">Hide the reference before judgment.</p>
         </div>
-
         <div class="panel relation-test">
-          <p class="panel-label">Relation distortion first</p>
-          <strong id="relation-name">Unperturbed relation graph</strong>
-          <p id="relation-note">Relations must be judged before stroke deletion.</p>
-          <div class="actions"><button id="relation-prev">Previous</button><button id="relation-clear">Full</button><button id="relation-next">Next</button></div>
-          <div class="evidence-row"><span>CATEGORY · does distortion hurt recognition</span><button data-relation-axis="CATEGORY" data-value="POSITIVE">Yes</button><button data-relation-axis="CATEGORY" data-value="NEUTRAL">No change</button><button data-relation-axis="CATEGORY" data-value="NEGATIVE">Improves</button></div>
-          <div class="evidence-row"><span>STRUCTURE · does distortion hurt construction</span><button data-relation-axis="STRUCTURE" data-value="POSITIVE">Yes</button><button data-relation-axis="STRUCTURE" data-value="NEUTRAL">No change</button><button data-relation-axis="STRUCTURE" data-value="NEGATIVE">Improves</button></div>
+          <p class="panel-label">Primitive and attachment interventions first</p><strong id="intervention-name">Base program</strong><p id="intervention-note">Delete, rotate, scale, and detach before stroke compression.</p>
+          <div class="actions"><button id="intervention-prev">Previous</button><button id="intervention-clear">Base</button><button id="intervention-next">Next</button></div>
+          <label>Judgment axis<select id="proof-axis"></select></label><div class="evidence-row"><button data-proof-value="POSITIVE">Absence hurts</button><button data-proof-value="NEUTRAL">No change</button><button data-proof-value="NEGATIVE">Absence improves</button></div>
         </div>
-
         <div class="panel ablation">
-          <p class="panel-label">Stroke deletion second</p>
-          <strong id="ablation-name">Full drawing</strong>
-          <p id="ablation-note">Remove one stroke, then judge three different consequences.</p>
+          <p class="panel-label">Stroke deletion second</p><strong id="ablation-name">Full drawing</strong><p>Locked until primitive and pairwise proof is complete.</p>
           <div class="actions"><button id="ablation-prev">Previous</button><button id="ablation-clear">Full</button><button id="ablation-next">Next</button></div>
-          <div class="evidence-row" data-axis-row="CATEGORY"><span>CATEGORY · does deletion hurt recognition</span><button data-axis="CATEGORY" data-value="POSITIVE">Yes</button><button data-axis="CATEGORY" data-value="NEUTRAL">No change</button><button data-axis="CATEGORY" data-value="NEGATIVE">Improves</button></div>
-          <div class="evidence-row" data-axis-row="STRUCTURE"><span>STRUCTURE · does deletion hurt construction</span><button data-axis="STRUCTURE" data-value="POSITIVE">Yes</button><button data-axis="STRUCTURE" data-value="NEUTRAL">No change</button><button data-axis="STRUCTURE" data-value="NEGATIVE">Improves</button></div>
-          <div class="evidence-row" data-axis-row="NOISE"><span>NOISE · does deletion improve legibility</span><button data-axis="NOISE" data-value="POSITIVE">Yes</button><button data-axis="NOISE" data-value="NEUTRAL">No change</button><button data-axis="NOISE" data-value="NEGATIVE">Worsens</button></div>
+          <label>Judgment axis<select id="stroke-axis"></select></label><div class="evidence-row"><button data-stroke-value="POSITIVE">Absence hurts</button><button data-stroke-value="NEUTRAL">No change</button><button data-stroke-value="NEGATIVE">Absence improves</button></div>
         </div>
-
-        <div class="panel">
-          <p class="panel-label">Human boundary</p>
-          <p id="state">Loading…</p>
-          <p id="acceptance-blockers" class="warning">Acceptance is locked.</p>
-          <button id="accept-study" disabled>Accept paired study</button>
-          <div class="actions"><button id="export-svg">Export current SVG</button><button id="export-json">Export study</button><button id="reset">Reset evidence</button></div>
-        </div>
+        <div class="panel"><p class="panel-label">Human boundary</p><p id="state">Loading…</p><p id="acceptance-blockers" class="warning">Acceptance is locked.</p><button id="accept-study" disabled>Accept paired study</button><div class="actions"><button id="export-svg">Export SVG</button><button id="export-json">Export study</button><button id="reset">Reset</button></div></div>
       </aside>
     </section>
-
-    <section class="quarantine">
-      <strong>Negative ore retained.</strong>
-      <span>The former floating parts, invented fastener language, and explosion-axis marks cannot enter rendering.</span>
-    </section>
+    <section class="quarantine"><strong>Negative ore retained.</strong><span>The v5 PCA width slicer is preserved as VISUAL_REJECTED_REGRESSION and cannot enter v6 rendering.</span></section>
   </main>
   <script type="module" src="./studio.mjs"></script>
 </body>

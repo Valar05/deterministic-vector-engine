@@ -1,0 +1,117 @@
+{
+  "schema": "vector-noodle.engineering-receipt.v6",
+  "date": "2026-09-05",
+  "command": "implement the confirmed Correspondence-First Empty Glass plan",
+  "forbiddenStalePremise": "relation-first PCA width-slab decomposition is not component discovery",
+  "state": "IMPLEMENTED_AWAITING_HUMAN_COMPONENT_COHERENCE",
+  "accepted": false,
+  "causalChain": [
+    {
+      "edge": "paired source to component candidates",
+      "guard": "persistent exploded-region area gap",
+      "falsifier": "no gap at or above 1.45 returns UNKNOWN"
+    },
+    {
+      "edge": "component candidates to assembled hypotheses",
+      "guard": "bounded joint registration with alternatives and collision diagnostic",
+      "falsifier": "unpaired or unscored component"
+    },
+    {
+      "edge": "canonical contour to source",
+      "guard": "every path carries exploded component mask hash",
+      "falsifier": "missing sourceTrace is denied"
+    },
+    {
+      "edge": "shared program to two views",
+      "guard": "identical path data with view transforms only",
+      "falsifier": "independent exploded geometry is denied"
+    },
+    {
+      "edge": "primitive to retained proof",
+      "guard": "single, attachment, and pairwise interventions across seven axes",
+      "falsifier": "pending proof blocks acceptance"
+    },
+    {
+      "edge": "object program to function",
+      "guard": "accessibility oral exam",
+      "falsifier": "unsupported answer remains UNKNOWN"
+    },
+    {
+      "edge": "candidate to acceptance",
+      "guard": "hidden-reference multi-scale human review and explicit gesture",
+      "falsifier": "machine authority is denied"
+    }
+  ],
+  "diagnostics": {
+    "discoveredComponents": 4,
+    "areaGapRatio": 2.445,
+    "jointCoverage": 0.31739,
+    "jointCollision": 0.02755,
+    "canonicalPaths": 7,
+    "candidateAttachments": 3,
+    "singleInterventions": 26,
+    "pairwiseInterventions": 3,
+    "qualityAuthority": false
+  },
+  "verification": [
+    {
+      "command": "npm run wonder:sparse",
+      "result": "PASS, seven unaccepted SVG artifacts plus gate"
+    },
+    {
+      "command": "npm run test:wonder:finish",
+      "result": "PASS, 14 node tests and 6 server tests"
+    },
+    {
+      "command": "npm run test:wonder",
+      "result": "PASS, 8 apprenticeship boundary tests"
+    },
+    {
+      "command": "sh tools/server_tmux.sh",
+      "result": "PASS, durable tmux server on port 8811"
+    },
+    {
+      "command": "GET /api/noodle/health and /api/wonder/status",
+      "result": "PASS, v6 marker and human-pending state"
+    }
+  ],
+  "visualEvidence": "SVG evidence generated and served; visual correctness not self-certified and no local screenshot substituted for human review",
+  "threeAxisPar": {
+    "classification": "INVALID",
+    "reason": "exact local Codex input and output token deltas are unavailable, so this run cannot update exact par history"
+  },
+  "retrospective": {
+    "wastedTime": "one initial validation ran before pairwise evidence was attached; corrected once",
+    "wastedTokens": "unknown exact count; outputs were bounded",
+    "weakestSoundnessClause": "assembled correspondence covers 0.31739 of source ink and still requires human coherence judgment",
+    "improvement": "validate only after the complete object program and interaction evidence exist"
+  },
+  "files": {
+    "PROJECT_ORIENTATION.md": "b671b6ffaff7aa10a240d389b8d910227cd22bfdffd404a606b48342e55a20b0",
+    "README.md": "e0a6fa6ecf1c43b27bc5a7ed4cc896e57a959aa67d3fca61854b1eaeaa59896b",
+    "package.json": "fe1029cc2aa603bbcb45bf318422c7d9ddc8632952c02d15eb9d0ac0a0f88f41",
+    "src/perceptual-geometry.mjs": "9de8d64bf6540e0b1138d545641e23523eba5156d009e5b93d6918c780e34c09",
+    "src/sparse-line-study.mjs": "bcf631dd430577533e5952aabeb770be8724ab2e875b99c9c54fb0c4ab16975f",
+    "tests/sparse-line-study.test.mjs": "ad33b2139f49513cdd172eb17b9bebcef1e5cfccbc3010280f1031f8b2ed4fe2",
+    "tests/test_sparse_server.py": "dfa8a5e5ec969db6e21a8beb8b0d81530489d41bf5e9c6bff7a16e4800872794",
+    "tools/build_relation_study.mjs": "93cd06f89403646512a4be1d7981ed4cb5f9fc7d2fee0234b7cdb2b35c587fdf",
+    "tools/infer_paired_components.py": "314fed8a7405cf66cd77e32941fae2a014382fde7fe766b4a87e8ed25bec575c",
+    "tools/noodle_server.py": "8673b17eda295cd72b790f494dc1879c0688c16498683b056c5f052a8c258338",
+    "tools/render_sparse_shovel.mjs": "3e6486b4a4ace70042018e2182cb4ab6227d7fc91d3dac98e0ea941ff9228f81",
+    "tools/server_tmux.sh": "0a9f104543dfc6d841a1cc5cb1a9d4de1d1760f6397b96b45ca79451ee5152d7",
+    "training/wonder-sparse-v1/paired-correspondence.json": "5be9716cd50a656157f95f462b64fbac8309a1e56512d42fd25bd8996ae65a1d",
+    "training/wonder-sparse-v1/primitive-interventions.json": "b2bf693b3337a90cc49c65bb45a05266bc8e95d6a32525a83624d243d5cd9317",
+    "training/wonder-sparse-v1/rejected-relation-v5.json": "a06e8f7f43cafe6bdb552438eef05da2579cfb2af11088dee925a35632d7e0c0",
+    "training/wonder-sparse-v1/shovel-studies.json": "324d08730d392519d663d5b91e189fe6e24d859215fa97b5f22112a38514df0e",
+    "wonder/index.html": "35d327a4d1c550469b9878d4856b38226d802e050185037daad4b4ebb245f30a",
+    "wonder/studio.mjs": "f37a8a1e18190f5c6632122a71243f356d27b809a7215d6a3117c0ee6b2008af",
+    "evidence/wonder-sparse/accessibility-oral-exam-v6.svg": "6c3138f076de97bba01df6b9595d20466b704ef171ed79a627f2e27142096507",
+    "evidence/wonder-sparse/after-three-scale-v6.svg": "d9bf4eaed791628943ab7d38dc08a0c04345aeaba4cd3f14460670bc76b9696a",
+    "evidence/wonder-sparse/before-after-assembled-v6.svg": "96ef9ea97996a2c736325186e0bb528f749890d8c8cae9789520a47cc9872c77",
+    "evidence/wonder-sparse/before-after-exploded-v6.svg": "a362ce65cbfb1c055657101ef810f98e42d830ffa3bda254de29c86a2ff2f064",
+    "evidence/wonder-sparse/paired-component-correspondence-v6.svg": "dc3015e38b1a2aa34090b983ec2f83948d9b58af1e2e9e13ed4204959aa8efc7",
+    "evidence/wonder-sparse/pairwise-intervention-v6.svg": "cbdfa8945b03ba5bae9dd20b797063c52141264ed84a44c9c806f421840e2a63",
+    "evidence/wonder-sparse/primitive-interventions-v6.svg": "98804c1e31fc1e47172fb75e7a1273edd3d235d0dbacacbdb390d3c157c5183b",
+    "evidence/wonder-sparse/visual-gate-v6.json": "dcab16aedf25ce991f304ffb46ebd7b94960f32a4118b17f77d2de09c529c38a"
+  }
+}

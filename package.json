@@ -11,7 +11,8 @@
     "wonder:sparse": "node tools/build_relation_study.mjs && node tools/render_sparse_shovel.mjs",
     "test:wonder:sparse": "node --test tests/sparse-line-study.test.mjs",
     "test:wonder:finish": "node --test tests/sparse-line-study.test.mjs && python -m unittest tests.test_sparse_server",
-    "wonder:relations": "node tools/build_relation_study.mjs"
+    "wonder:relations": "npm run wonder:correspondence",
+    "wonder:correspondence": "node tools/build_relation_study.mjs"
   },
   "dependencies": {
     "@visioncortex/vtracer": "1.0.0-alpha.4"

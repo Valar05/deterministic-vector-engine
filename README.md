@@ -1,106 +1,84 @@
 # Deterministic Offline Vector Engine
 
-> Status: the SVG box remains implemented. The portrait and Wonder v2 skeleton corpus are user-rejected archaeology. The active branch is the Empty Glass modern-shovel apprenticeship and is awaiting the user’s pixel verdict.
+> Current truth: the pure SVG box remains implemented. Portrait, skeleton-corpus, and relation-first shovel attempts are rejected archaeology. The active Wonder branch is a correspondence-first modern-object control and remains visually unaccepted.
 
-This project compiles inspectable vector programs into ordinary SVG. No runtime AI, Canvas, WebGL, Inkscape executable, or hidden raster enters the vector output.
+This project compiles inspectable object programs into ordinary SVG. No runtime AI, Canvas, WebGL, Inkscape executable, or hidden raster enters the output.
 
-## Current truth
+## Current surfaces
 
-| Surface | State | Visual authority |
+| Surface | State | Authority |
 |---|---|---|
-| Interactive brutalist SVG box | Implemented | User acceptance remains separate from tests |
-| Portrait experiment | `USER_REJECTED` | Preserved negative evidence |
-| Wonder v2 skeleton and ontology gates | `USER_REJECTED` | Not visual learning evidence |
-| Empty Glass shovel studio | Implemented candidate | `AWAITING_USER_PIXEL_VERDICT` |
-| Fleshpunk transformation | Excluded from current learner | Later separately confirmed garnish phase |
+| Interactive brutalist SVG box | Implemented | User acceptance remains separate |
+| Portrait experiment | `USER_REJECTED` | Preserved negative ore |
+| Wonder v2 skeleton and ontology | `USER_REJECTED` | Not visual learning evidence |
+| Relation-first v5 shovel | `VISUAL_REJECTED_REGRESSION` | Preserved baguette-slicer falsification |
+| Correspondence-first v6 control | `AWAITING_HUMAN_COMPONENT_COHERENCE` | Human only |
+| Fleshpunk transformation | Excluded | Later experiment after modern control |
 
-Machine checks may deny. They cannot grant artistic acceptance.
-
-## Empty Glass law
-
-The active learner asks which few lines make an uploaded modern object unmistakable.
+## Correspondence-first law
 
 ```text
-modern reference
-  → silhouette
-  → identity anchors
-  → correction strokes for concrete misreads
-  → hide reference at three scales
-  → remove every stroke once
-  → retain the user-judged recognition core
-  → deterministic SVG replay
+assembled + exploded evidence
+  → isolated exploded-region candidates
+  → cross-view correspondence hypotheses
+  → shared latent component candidates
+  → attachment graph
+  → canonical component contours
+  → two poses of one object program
+  → primitive and pairwise intervention
+  → sparse stroke ablation
+  → human judgment
 ```
 
-Each assembled or exploded view may retain at most 20 strokes. A stroke has only geometry, one of three roles, a subject-specific note, a human ablation verdict, and a replay identity. Negative space is represented by the strokes that bound it.
+The exploded view supervises part discovery. The system never asks for a fixed number of parts and never manufactures fallback cuts. Canonical contours originate in isolated exploded-region masks and carry their hashes. Assembled geometry is a registration hypothesis, not a separately drawn picture.
 
-The current shovel starter has 16 assembled candidates and 20 exploded candidates. Every candidate is unaccepted until destructive review is complete.
+Seven proof axes remain independent: CATEGORY, INSTANCE, MECHANISM, AFFORDANCE, NOISE, SCALE, and CROSS_VIEW. Twenty strokes is only a ceiling. Machine metrics are diagnostics and can never promote a candidate.
+
+The object program also takes an accessibility oral exam. Functional questions stay `UNKNOWN` until the graph contains sufficient evidence. A recognizable drawing that cannot explain its construction has not graduated.
 
 ## Run
 
 ```sh
-npm run test:wonder:finish
 npm run wonder:sparse
+npm run test:wonder:finish
 sh tools/server_tmux.sh
 ```
 
 Review surface:
 
-<http://127.0.0.1:8811/wonder/>
+http://127.0.0.1:8811/wonder/
 
-Health and status:
+Health:
 
-<http://127.0.0.1:8811/api/noodle/health>
+http://127.0.0.1:8811/api/noodle/health
 
-<http://127.0.0.1:8811/api/wonder/status>
+Status:
 
-The uploaded contact sheet is copied only into an ignored local source cache after its SHA-256 digest is verified. If it is unavailable, use **Load local source** and choose the modern-object contact sheet. The exported study and SVG never contain source pixels or source paths.
+http://127.0.0.1:8811/api/wonder/status
 
-## Studio use
+## Review order
 
-1. Choose assembled or exploded.
-2. Draw a silhouette, identity anchor, or correction stroke directly on the visible reference.
-3. Hide the reference and record an independent verdict at 96, 220, and 360 pixels.
-4. Walk the destructive test and mark each missing stroke `ESSENTIAL` or `REMOVABLE`.
-5. Delete removable ink; negative-space relationships repair or fail closed.
-6. Repeat all three scale verdicts after any geometry change.
-7. Use **Accept this view** only when every surviving stroke is essential and every scale is recognizable.
-8. Finish both views. Acceptance is saved atomically under ignored local state and remains human-owned.
+1. Verify the sealed modern source.
+2. Compare assembled and exploded component proposals.
+3. Review single primitive, attachment, and pairwise interventions across all seven axes.
+4. Only then perform stroke ablation.
+5. Hide the reference and judge CATEGORY, INSTANCE, MECHANISM, and CROSS_VIEW at 96, 220, and 360 pixels.
+6. Accept only through the explicit human gesture after every gate is complete.
 
-Drawing has no timing, direction, pressure, or gesture-angle requirement. Undo, redo, source replacement, explicit reference hiding, visible budget, autosave, and JSON/SVG export are available from the same mobile surface.
-
-## Source boundary
-
-Base learning accepts only `MODERN_OBJECT` studies. Any source identity containing Fleshpunk, cultivated mutation, or organic mutation is rejected. Normal-to-Fleshpunk correspondences, family labels, and the old 20-of-25 ontology result cannot configure the sparse learner.
-
-The curve fitter consumes deliberate pointer strokes. It uses chord-length parameterization, least-squares cubic control placement, a measured maximum-error split, and recursive fitting. It does not turn raster skeleton pixels into interpolated cubics.
-
-Reference pattern:
-
-<https://github.com/odiak/fit-curve>
-
-## Evidence
-
-- `evidence/wonder-sparse/shovel-review-v2.svg` shows both unaccepted views at three scales.
-- `evidence/wonder-sparse/shovel-ablation-v2.svg` removes every candidate stroke independently.
-- `evidence/wonder-sparse/visual-gate-v2.json` enumerates every remaining acceptance blocker.
-- The original shovel evidence remains preserved as the pre-hardening candidate.
-- `evidence/wonder-v2/REJECTION.json` prevents the superseded gates from being presented as green.
-
-Static tests verify the 20-stroke ceiling, exact browser source hashing, independent scale reviews, deterministic fitting and replay, source exclusion, deletion repair, ablation coverage, human-only promotion, atomic acceptance receipts, and raster-free SVG. Those are guardrails, not proof that the shovel is good.
+The current proposal discovers four regions from a 2.445 area gap and emits seven shared paths. Joint assembled coverage is 0.31739 and collision is 0.02755. Those numbers are diagnostics, not evidence that the decomposition is correct.
 
 ## Repository map
 
 ```text
-src/sparse-line-study.mjs                 engine-agnostic sparse-study kernel
-wonder/                                   mobile tracing and ablation adapter
-training/wonder-sparse-v1/                modern shovel study and provenance
-evidence/wonder-sparse/                    review SVGs and explicit visual gate
-tools/render_sparse_shovel.mjs            deterministic evidence renderer
-training/wonder-v2/                        rejected historical corpus
+src/perceptual-geometry.mjs              correspondence compiler and interventions
+src/sparse-line-study.mjs                engine-agnostic evidence and acceptance kernel
+tools/infer_paired_components.py         paired raster evidence proposal
+tools/build_relation_study.mjs           deterministic corpus builder
+wonder/                                  mobile human review adapter
+training/wonder-sparse-v1/               sealed proposal, interventions, and negative ore
+evidence/wonder-sparse/                   v5 rejection and v6 visual gates
 ```
-
-The original SVG box, Rosetta research, and rejected portrait remain in the repository as independent surfaces and archaeology.
 
 ## Rights
 
-No open-source license is granted to project-authored material at this time. The uploaded source image is not committed. Third-party research links retain their original ownership and licenses.
+No open-source license is granted to project-authored material at this time. The uploaded source image is not committed. Third-party research retains its original ownership and licenses.

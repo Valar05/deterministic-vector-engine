@@ -7,14 +7,14 @@ from urllib.parse import urlparse
 
 ROOT=Path(__file__).resolve().parent.parent
 MAX_BODY=16384
-BUILD_MARKER='punnett-wonder-apprenticeship-v2'
+BUILD_MARKER='empty-glass-shovel-v1'
 class Handler(SimpleHTTPRequestHandler):
     server_version='VectorNoodle/1'
     def __init__(self,*args,**kwargs): super().__init__(*args,directory=str(ROOT),**kwargs)
     def end_headers(self):
         self.send_header('Cache-Control','no-store')
         self.send_header('X-Content-Type-Options','nosniff')
-        self.send_header('Content-Security-Policy',"default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'")
+        self.send_header('Content-Security-Policy',"default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'")
         super().end_headers()
     def log_message(self,fmt,*args): print(f'{self.client_address[0]} {fmt%args}',flush=True)
     def send_json(self,payload,status=200):
@@ -22,10 +22,10 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_response(status);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(body)));self.end_headers();self.wfile.write(body)
     def do_GET(self):
         path=urlparse(self.path).path
-        if path=='/api/noodle/health': return self.send_json({'state':'READY','buildMarker':BUILD_MARKER,'modelFreeRuntime':True,'sourceSet':'TRAINING_SET_SEALED','machineVerdict':'STRUCTURAL_STUDY_COMPLETE_AWAITING_HUMAN'})
+        if path=='/api/noodle/health': return self.send_json({'state':'READY','buildMarker':BUILD_MARKER,'modelFreeRuntime':True,'sourceSet':'MODERN_OBJECTS_ONLY','machineVerdict':'AWAITING_USER_PIXEL_VERDICT'})
         if path=='/api/wonder/status':
-            manifest=json.loads((ROOT/'training'/'wonder-v2'/'corpus-manifest.json').read_text())
-            return self.send_json({'state':manifest['state'],'sealed':manifest['sealed'],'sourceCount':len(manifest['sources']),'machineVerdict':'DENY' if not manifest['sealed'] else 'STRUCTURAL_STUDY_COMPLETE_AWAITING_HUMAN'})
+            curriculum=json.loads((ROOT/'training'/'wonder-sparse-v1'/'shovel-studies.json').read_text())
+            return self.send_json({'state':curriculum['state'],'subject':'shovel','sourcePolicy':curriculum['sourcePolicy'],'views':[{'view':study['view'],'strokeCount':len(study['strokes'])} for study in curriculum['studies']],'machineVerdict':'AWAITING_USER_PIXEL_VERDICT'})
         if path.startswith('/.noodle-state') or path.startswith('/.git'): return self.send_error(404)
         return super().do_GET()
     def do_POST(self):

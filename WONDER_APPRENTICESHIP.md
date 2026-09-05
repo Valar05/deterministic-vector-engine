@@ -1,36 +1,34 @@
-# Punnett Wonder Apprenticeship
+# Empty Glass Modern-Object Apprenticeship
 
-This branch replaces the rejected generic capsule premise with contrastive causal apprenticeship.
+## Active commission
 
-## Current truth
+The first target is the uploaded modern shovel. Learning uses only the modern assembled and exploded views. Fleshpunk is forbidden input and reserved for a later garnish phase.
 
-Eleven exact source plates are hash-sealed into 25 transformation quartets and five macro assembled-to-exploded studies. The derived corpus contains 110 panels and 14,253 centerline cubic candidates. All recovered geometry remains `TEACHER_PROPOSAL`. The three weapon mutations remain `HUMAN_LABEL_REQUIRED`.
+The prior raster-skeleton, blob-correspondence, and hand-authored ontology pipeline is `USER_REJECTED`. Its artifacts remain preserved under `training/wonder-v2/` and `evidence/wonder-v2/` as negative evidence.
 
-The first leave-one-object-out run predicts 20 of 25 mechanism families. Power drill, wheeled stretcher, filing cabinet, jerry can, and shelving unit are retained failures. The system is `STRUCTURAL_STUDY_COMPLETE_AWAITING_HUMAN`, never artistically accepted.
+## Recognition loop
 
-## Causal pipeline
+1. Keep no more than 20 candidate strokes per view.
+2. Establish silhouette before detail.
+3. Add identity anchors that distinguish this shovel.
+4. Add correction ink only for an observed hidden-reference misread.
+5. Review without the source at 96, 220, and 360 pixels.
+6. Remove each stroke once and ask whether recognition collapses.
+7. Delete redundant strokes.
+8. Export a raster-free SVG and deterministic study record.
 
-`exact source hash → semantic panel role → ink isolation → centerline skeleton → cubic stroke graph → assembled/exploded correspondence → functional ontology → contrastive edit program → held-out prediction → SVG evidence → human verdict`
-
-VTracer remains available for closed silhouette candidates. The new centerline lane handles drawn strokes without turning each ink mark into a doubled filled outline. Florence remains an optional offline region teacher. Neither tool enters the deterministic runtime or owns judgment. No Inkscape executable or copied Inkscape code is used.
-
-## Gates
-
-1. Corpus topology verifies 11 source hashes, 25 quartets, five macro pairs, and 110 unique panels.
-2. Centerline recovery emits source-derived cubic paths marked as unaccepted proposals.
-3. Correspondence exposes component costs and uncertainty. Geometry proposes while function decides.
-4. Leave-one-out excludes the held object from its own neighbor vote and preserves every miss.
-5. Reconstruction still requires FAITHFUL, TOO MECHANICAL, TOO ORGANIC, DECORATIVE FLESH, and WONDER at identical scale.
-6. Only the human may artistically accept.
+Only the user can decide that the pixels are recognizable or accepted.
 
 ## Run
 
 ```sh
-python tools/build_wonder_corpus.py verify
-npm run wonder:corpus
-npm run test:wonder:corpus
-npm run test:wonder
+npm run test:wonder:sparse
+npm run wonder:sparse
 sh tools/server_tmux.sh
 ```
 
-Review route: `/wonder/`
+Review:
+
+<http://127.0.0.1:8811/wonder/>
+
+The uncommitted source cache is verified against SHA-256 `e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1fa923` before use.

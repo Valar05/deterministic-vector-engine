@@ -1,0 +1,11 @@
+{
+  "schema": "vector-noodle.rejected-evidence.v1",
+  "state": "USER_REJECTED",
+  "artifacts": [
+    "gate-03-centerlines.svg",
+    "gate-04-correspondence.svg",
+    "gate-05-leave-one-out.svg"
+  ],
+  "reason": "Raster skeletons, spatial blob matching, and hand-authored ontology prediction do not prove visual learning.",
+  "replacement": "../wonder-sparse/shovel-three-scale.svg"
+}

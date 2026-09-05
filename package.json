@@ -7,7 +7,9 @@
     "wonder:intake": "python tools/wonder_source_intake.py verify",
     "wonder:render": "node tools/render_wonder_gate.mjs",
     "test:wonder:corpus": "python -m unittest discover -s tests -p test_wonder_corpus.py",
-    "wonder:corpus": "python tools/build_wonder_corpus.py build --max-dim 360 && python tools/induce_wonder_grammar.py"
+    "wonder:corpus:legacy": "python tools/build_wonder_corpus.py build --max-dim 360 && python tools/induce_wonder_grammar.py",
+    "wonder:sparse": "node tools/render_sparse_shovel.mjs",
+    "test:wonder:sparse": "node --test tests/sparse-line-study.test.mjs"
   },
   "dependencies": {
     "@visioncortex/vtracer": "1.0.0-alpha.4"

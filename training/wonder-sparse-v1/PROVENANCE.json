@@ -1,0 +1,60 @@
+{
+  "schema": "vector-noodle.asset-provenance.v1",
+  "date": "2026-09-05",
+  "source": {
+    "id": "utility-normal",
+    "externalPath": "/storage/emulated/0/Pictures/file_000000003dbc82308d6bed066cb8f146.png",
+    "sha256": "e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1fa923",
+    "assetClass": "USER_SUPPLIED_GENERATED_SOURCE_ART",
+    "generator": "UNKNOWN",
+    "license": "USER_CONTROLLED_SOURCE_PROVENANCE_UNKNOWN",
+    "committed": false,
+    "localCache": "training/wonder-sparse-v1/source-cache/utility-normal.png",
+    "cachePolicy": "IGNORED_LOCAL_ONLY"
+  },
+  "transcription": {
+    "method": "ASSISTED_SPARSE_LINE_RECONSTRUCTION",
+    "authoringAgent": "OpenAI Codex",
+    "runtimeAI": false,
+    "rasterSkeletonization": false,
+    "inkLimitPerView": 20,
+    "artisticState": "AWAITING_USER_PIXEL_VERDICT"
+  },
+  "artifacts": [
+    {
+      "path": "evidence/wonder-sparse/shovel-assembled.svg",
+      "sha256": "420bcf45d4de35568256107411bd7a4be58bf2cb8f7d8ad4dc20ee793d09fb86",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/shovel-exploded.svg",
+      "sha256": "ff06d730750f42289a11bbbab3715806eb3a71bce05783a4b1d1f78f07ef1167",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/shovel-three-scale.svg",
+      "sha256": "d4e7d50f00e760293fadae19fd72f45b288eba561c744f9e5834e5cf677ca3cc",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/shovel-ablation.svg",
+      "sha256": "c0d81a122b46cd62c9250037450f12188d3283b10b4d2d1c499a112265639178",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/visual-gate.json",
+      "sha256": "321fe6f67e10e9427b5ea03198dc605e81331021cbf155144b22bca3c2e31df4",
+      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "generator": "tools/render_sparse_shovel.mjs",
+      "accepted": false
+    }
+  ]
+}

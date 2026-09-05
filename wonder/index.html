@@ -1,1 +1,81 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wonder Apprenticeship</title><style>html,body{margin:0;background:#171512;color:#fffdf7;font:16px system-ui}main{max-width:1180px;margin:auto;padding:18px}img{display:block;width:100%;height:auto;background:#fffdf7;border:1px solid #736d63;margin:18px 0 38px}code,.amber{color:#f2d28b}h2{margin-top:42px}</style><main><h1>Wonder Apprenticeship</h1><p class="amber">Eleven sources sealed. Twenty-five causal quartets. Machine state: structurally studied, awaiting human.</p><h2>Gate 02 — Corpus topology</h2><img src="../evidence/wonder-v2/gate-02-corpus-map.svg" alt="Map of twenty-five causal training quartets"><h2>Gate 03 — Centerline recovery</h2><img src="../evidence/wonder-v2/gate-03-centerlines.svg" alt="Recovered pressure tank centerline candidates"><h2>Gate 04 — Correspondence</h2><img src="../evidence/wonder-v2/gate-04-correspondence.svg" alt="Normal to cultivated component correspondence proposals"><h2>Gate 05 — Held-out learning</h2><img src="../evidence/wonder-v2/gate-05-leave-one-out.svg" alt="Leave one object out results"><p>Machine verdict: <code>STRUCTURAL_STUDY_COMPLETE_AWAITING_HUMAN</code>. Weapon mutation labels remain human-owned.</p></main></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Empty Glass · Shovel</title>
+  <link rel="stylesheet" href="./studio.css">
+</head>
+<body data-build-marker="empty-glass-shovel-v1">
+  <header>
+    <p class="eyebrow">VECTOR NOODLE · MODERN OBJECT APPRENTICESHIP</p>
+    <h1>Every stroke must earn its ink.</h1>
+    <p>The shovel is lesson one. Draw sparsely, hide the source, then destroy one line at a time.</p>
+  </header>
+  <main>
+    <section class="toolbar" aria-label="Study controls">
+      <div class="segmented" role="group" aria-label="Shovel view">
+        <button id="assembled" class="active">Assembled</button>
+        <button id="exploded">Exploded</button>
+      </div>
+      <label class="file">Load local source<input id="source-file" type="file" accept="image/*"></label>
+      <button id="reference-toggle">Hide reference</button>
+      <output id="source-status">Checking local source…</output>
+    </section>
+
+    <section class="workspace">
+      <div class="drawing-column">
+        <div class="stage-heading">
+          <div><span id="pass-label">Pass 1 · silhouette</span><strong id="budget">0 / 20 strokes</strong></div>
+          <p id="instruction">Outer mass first. No detail can rescue a generic silhouette.</p>
+        </div>
+        <svg id="drawing" viewBox="0 0 397 397" aria-label="Interactive shovel tracing surface">
+          <rect class="paper" width="100%" height="100%"/>
+          <image id="reference" preserveAspectRatio="none"/>
+          <g id="ink"></g>
+          <polyline id="preview"/>
+        </svg>
+        <div class="role-picker" role="group" aria-label="Stroke role">
+          <button data-role="SILHOUETTE" class="active">Silhouette</button>
+          <button data-role="IDENTITY_ANCHOR">Identity anchor</button>
+          <button data-role="CORRECTION">Correction</button>
+        </div>
+        <label class="note">Why does this stroke exist?<input id="stroke-note" maxlength="120" placeholder="Specific misread this line fixes"></label>
+        <div class="actions">
+          <button id="undo">Undo</button><button id="redo">Redo</button><button id="delete-selected">Delete selected</button><button id="prune">Delete removable</button>
+        </div>
+      </div>
+
+      <aside>
+        <div class="panel">
+          <p class="panel-label">Hidden-reference review</p>
+          <div id="scale-previews" class="scale-previews"></div>
+          <label>What does it read as?<textarea id="review-note" rows="2" placeholder="Name the concrete misread"></textarea></label>
+          <div id="verdicts" class="verdicts">
+            <button data-verdict="RECOGNIZABLE">Recognizable</button><button data-verdict="WRONG">Wrong</button><button data-verdict="GENERIC">Generic</button><button data-verdict="OVERDRAWN">Overdrawn</button>
+          </div>
+          <p id="review-lock" class="warning">Hide the reference before recording a verdict.</p>
+        </div>
+        <div class="panel ablation">
+          <p class="panel-label">Destructive test</p>
+          <strong id="ablation-name">Start ablation</strong>
+          <p id="ablation-note">Each step removes exactly one stroke.</p>
+          <div class="actions"><button id="ablation-prev">Previous</button><button id="ablation-next">Next</button></div>
+          <div class="actions"><button id="essential">Identity collapses</button><button id="removable">Still reads</button></div>
+        </div>
+        <div class="panel">
+          <p class="panel-label">Durable record</p>
+          <p id="state">Loading…</p>
+          <div class="actions"><button id="export-svg">Export SVG</button><button id="export-json">Export study</button><button id="reset">Reset starter</button></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="quarantine">
+      <strong>Previous gates are quarantined.</strong>
+      <span>Centerline skeletons, blob correspondence, and the 20 / 25 ontology score are not visual learning evidence.</span>
+    </section>
+  </main>
+  <script type="module" src="./studio.mjs"></script>
+</body>
+</html>

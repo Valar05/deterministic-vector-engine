@@ -1,0 +1,29 @@
+{
+  "schema": "vector-noodle.wonder-sources.v1",
+  "state": "INTAKE_OPEN",
+  "setId": "punnett-exploded-apprenticeship-v1",
+  "sealed": false,
+  "expectedScope": "full exploded set supplied by the human",
+  "sources": [
+    {
+      "id": "punnett-ancestral-pressure-module",
+      "path": "/storage/emulated/0/Pictures/file_00000000307482308ac98ab4bae7a89b.png",
+      "sha256": "7695957839fece28a71348b5ef9f9a97218932488515f95e58dd2f62130b7d09",
+      "width": 1536,
+      "height": 1024,
+      "role": "canonical-exploded-anatomy",
+      "status": "PRELIMINARY_ACCEPTED_SOURCE"
+    },
+    {
+      "id": "field-artillery-rooted-recoil",
+      "path": "/storage/emulated/0/Pictures/file_000000006c6c823087bfdcdc0d6f4cb8.png",
+      "sha256": "da9ff6590ca414063e60a6c4b37b4ad4af6d813680c4cd4a8b9f795fb5cc0c49",
+      "width": 1536,
+      "height": 1024,
+      "role": "parallel-homology-source",
+      "status": "PRELIMINARY_ACCEPTED_SOURCE"
+    }
+  ],
+  "replacementPolicy": "Any missing path, byte change, hash mismatch, or unlisted source fails closed.",
+  "sealPolicy": "Only an explicit human declaration that the full set is present may change sealed to true."
+}

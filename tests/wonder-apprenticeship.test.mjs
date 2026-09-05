@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import { validateStudy, validateVariants, assertMachineVerdict, candidateCanEnterGrammar, MACHINE_VERDICTS } from '../src/wonder-apprenticeship.mjs';
+const read=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url)));
+const manifest=read('../training/wonder-v1/source-manifest.json');
+const study=read('../training/wonder-v1/preliminary-study.json');
+test('unsealed source set denies artistic training',()=>assert.deepEqual(validateStudy(study,manifest).failures.includes('SOURCE_SET_NOT_SEALED'),true));
+test('machine verdict vocabulary cannot grant artistic acceptance',()=>{assert.deepEqual(MACHINE_VERDICTS,['DENY','STRUCTURALLY_VALID_AWAITING_HUMAN']);assert.throws(()=>assertMachineVerdict('ARTISTICALLY_ACCEPTED'),/MACHINE_CANNOT_GRANT/)});
+test('candidate path cannot enter grammar without intent, reason, and human study disposition',()=>{assert.equal(candidateCanEnterGrammar({status:'TEACHER_PROPOSAL'}),false);assert.equal(candidateCanEnterGrammar({contourIntentId:'c1',assemblyReasonId:'a1',humanDisposition:'KEEP_FOR_STUDY'}),true)});
+test('all five variants and identical scale are independently required',()=>{const four=['FAITHFUL','TOO_MECHANICAL','TOO_ORGANIC','DECORATIVE_FLESH'].map(kind=>({kind,scale:1}));assert.match(validateVariants(four).failures.join(','),/MISSING_VARIANT:WONDER/);assert.match(validateVariants([...four,{kind:'WONDER',scale:.9}]).failures.join(','),/VARIANT_SCALE_MISMATCH/)});
+test('negative corpus is quarantined and old generator is explicitly rejected',()=>{const n=read('../training/wonder-v1/negative-registry.json');assert.match(n.policy,/NEVER_FEED_POSITIVE_GRAMMAR/);assert.equal(n.examples[0].verdict,'USER_REJECTED_PRIMITIVE')});
+test('production server quarantines rejected imagegen endpoints',()=>{const server=fs.readFileSync(new URL('../tools/noodle_server.py',import.meta.url),'utf8');assert.match(server,/USER_REJECTED_PRIMITIVE/);assert.match(server,/410/);assert.doesNotMatch(server,/vector_imagegen_daemon/)});
+test('runtime has no teacher or tracing model import',()=>{const runtime=fs.readFileSync(new URL('../src/vector-imagegen.mjs',import.meta.url),'utf8');assert.doesNotMatch(runtime,/florence|transformers|vtracer/i)});
+test('toolchain excludes Inkscape runtime and any machine acceptance authority',()=>{const lock=read('../training/wonder-v1/toolchain-lock.json');assert.equal(lock.inkscape.status,'FORBIDDEN_RUNTIME');assert.equal(lock.inkscape.codeCopied,false);assert.equal(lock.florence.runtimeDependency,false);assert.equal(lock.florence.acceptanceAuthority,false)});

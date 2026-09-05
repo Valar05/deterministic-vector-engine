@@ -1,0 +1,23 @@
+{
+  "schema": "vector-noodle.source-intake-receipt.v1",
+  "manifestState": "INTAKE_OPEN",
+  "sealed": false,
+  "status": "VERIFIED_INTAKE_OPEN",
+  "failures": [],
+  "sources": [
+    {
+      "id": "punnett-ancestral-pressure-module",
+      "sha256": "7695957839fece28a71348b5ef9f9a97218932488515f95e58dd2f62130b7d09",
+      "bytes": 2030756,
+      "status": "VERIFIED",
+      "cache": "training/wonder-v1/source-cache/punnett-ancestral-pressure-module.png"
+    },
+    {
+      "id": "field-artillery-rooted-recoil",
+      "sha256": "da9ff6590ca414063e60a6c4b37b4ad4af6d813680c4cd4a8b9f795fb5cc0c49",
+      "bytes": 2154031,
+      "status": "VERIFIED",
+      "cache": "training/wonder-v1/source-cache/field-artillery-rooted-recoil.png"
+    }
+  ]
+}

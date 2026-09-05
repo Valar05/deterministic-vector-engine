@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { createRequire } from 'node:module';
+import { hash } from '../src/wonder-apprenticeship.mjs';
+const require=createRequire(import.meta.url);
+const vtracer=require('@visioncortex/vtracer');
+const [input, output, receiptPath] = process.argv.slice(2);
+if (!input || !output) throw new Error('usage: node tools/wonder_vtracer.mjs INPUT OUTPUT [RECEIPT]');
+const svg=vtracer.convertBuffer(fs.readFileSync(input),{clustering:'bw',mode:'spline',adaptive:true,adaptiveWindow:25,adaptiveT:7,filterSpeckle:8,cornerThreshold:60,lengthThreshold:4,simplify:1.6,pathPrecision:2,optimize:2});
+fs.mkdirSync(path.dirname(output),{recursive:true});
+fs.writeFileSync(output,svg);
+const receipt={schema:'vector-noodle.contour-candidate.v1',status:'TEACHER_PROPOSAL',accepted:false,source:path.resolve(input),sourceHash:hash(fs.readFileSync(input)),svg:path.resolve(output),svgHash:hash(svg),tool:{name:'@visioncortex/vtracer',version:'1.0.0-alpha.4'},entryGate:{contourIntentId:null,assemblyReasonId:null,humanDisposition:null}};
+if (receiptPath) fs.writeFileSync(receiptPath,JSON.stringify(receipt,null,2)+'\n');
+console.log(JSON.stringify(receipt,null,2));

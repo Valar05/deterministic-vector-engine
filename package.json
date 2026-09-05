@@ -1,0 +1,13 @@
+{
+  "name": "deterministic-vector-engine-wonder",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:wonder": "node --test tests/wonder-apprenticeship.test.mjs",
+    "wonder:intake": "python tools/wonder_source_intake.py verify",
+    "wonder:render": "node tools/render_wonder_gate.mjs"
+  },
+  "dependencies": {
+    "@visioncortex/vtracer": "1.0.0-alpha.4"
+  }
+}

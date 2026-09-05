@@ -62,3 +62,9 @@ Review URL: <http://127.0.0.1:8810/transcription/?v=dve-transcription-v1>
 Direct SVG: <http://127.0.0.1:8810/transcription/portrait.svg?v=dve-transcription-v1>
 
 Evidence state: structural, privacy, draft-distinctness, preview-bounds, and agent critique gates are green. Final visible acceptance remains `USER_PIXEL_CONFIRMATION_PENDING`.
+
+## Wonder apprenticeship branch
+
+The current replacement owner is `/wonder/`. It quarantines the rejected capsule generator and teaches causal visual grammar from immutable exploded source plates. VTracer may recover candidate contours and a pinned Florence ONNX package may propose regions offline, but neither enters the deterministic runtime or owns artistic acceptance. Source intake is currently `INTAKE_OPEN`; art mutations remain locked until the human declares the full exploded set present.
+
+Run `python tools/wonder_source_intake.py verify`, `npm run test:wonder`, `npm run wonder:render`, and `sh tools/server_tmux.sh`. The current review URL is `http://127.0.0.1:8811/`.

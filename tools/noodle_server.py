@@ -1,31 +1,13 @@
 #!/usr/bin/env python3
 import argparse
 import json
-import subprocess
-import threading
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT=Path(__file__).resolve().parent.parent
-CLI=ROOT/'tools'/'vector_imagegen_cli.mjs'
-PROMPTS=ROOT/'training'/'contact-sheet-prompts.v1.json'
-GENOME=ROOT/'training'/'style-genome.v1.json'
 MAX_BODY=16384
-BUILD_MARKER='vector-noodle-imagegen-v1'
-DAEMON_PATH=ROOT/'tools'/'vector_imagegen_daemon.mjs'
-DAEMON=subprocess.Popen(['node',str(DAEMON_PATH)],cwd=ROOT,text=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,bufsize=1)
-DAEMON_LOCK=threading.Lock()
-
-def daemon(request):
-    with DAEMON_LOCK:
-        if DAEMON.poll() is not None:return {'state':'REJECT','reason':'GENERATOR_NOT_RUNNING'},500
-        DAEMON.stdin.write(json.dumps(request,separators=(',',':'))+'\n');DAEMON.stdin.flush();line=DAEMON.stdout.readline()
-    try:payload=json.loads(line)
-    except json.JSONDecodeError:return {'state':'REJECT','reason':'DAEMON_PROTOCOL_ERROR'},500
-    return payload,200 if payload.get('state')=='GENERATED' else 409
-
-
+BUILD_MARKER='punnett-wonder-apprenticeship-v1'
 class Handler(SimpleHTTPRequestHandler):
     server_version='VectorNoodle/1'
     def __init__(self,*args,**kwargs): super().__init__(*args,directory=str(ROOT),**kwargs)
@@ -40,7 +22,10 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_response(status);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(body)));self.end_headers();self.wfile.write(body)
     def do_GET(self):
         path=urlparse(self.path).path
-        if path=='/api/noodle/health': return self.send_json({'state':'READY','buildMarker':BUILD_MARKER,'modelFree':True})
+        if path=='/api/noodle/health': return self.send_json({'state':'READY','buildMarker':BUILD_MARKER,'modelFreeRuntime':True,'sourceSet':'INTAKE_OPEN','machineVerdict':'DENY'})
+        if path=='/api/wonder/status':
+            manifest=json.loads((ROOT/'training'/'wonder-v1'/'source-manifest.json').read_text())
+            return self.send_json({'state':manifest['state'],'sealed':manifest['sealed'],'sourceCount':len(manifest['sources']),'machineVerdict':'DENY' if not manifest['sealed'] else 'STRUCTURAL_REVIEW_REQUIRED'})
         if path.startswith('/.noodle-state') or path.startswith('/.git'): return self.send_error(404)
         return super().do_GET()
     def do_POST(self):
@@ -52,12 +37,8 @@ class Handler(SimpleHTTPRequestHandler):
         try: data=json.loads(self.rfile.read(length))
         except (json.JSONDecodeError,UnicodeDecodeError): return self.send_json({'state':'REJECT','reason':'BAD_JSON'},400)
         path=urlparse(self.path).path
-        if path in {'/api/noodle/compile','/api/imagegen/generate'}:
-            import time
-            started=time.monotonic_ns();payload,status=daemon({'command':'generate','prompt':str(data.get('prompt',''))});payload['elapsedMs']=(time.monotonic_ns()-started)//1_000_000;return self.send_json(payload,status)
-        if path=='/api/imagegen/contact-sheet':
-            import time
-            started=time.monotonic_ns();payload,status=daemon({'command':'contact-sheet'});payload['elapsedMs']=(time.monotonic_ns()-started)//1_000_000;return self.send_json(payload,status)
+        if path in {'/api/noodle/compile','/api/imagegen/generate','/api/imagegen/contact-sheet'}:
+            return self.send_json({'state':'REJECT','reason':'USER_REJECTED_PRIMITIVE','replacement':'/wonder/'},410)
         return self.send_json({'state':'REJECT','reason':'UNKNOWN_ENDPOINT'},404)
 
 if __name__=='__main__':

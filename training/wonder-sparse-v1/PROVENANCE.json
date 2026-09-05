@@ -1,5 +1,5 @@
 {
-  "schema": "vector-noodle.asset-provenance.v1",
+  "schema": "vector-noodle.asset-provenance.v2",
   "date": "2026-09-05",
   "source": {
     "id": "utility-normal",
@@ -13,74 +13,85 @@
     "cachePolicy": "IGNORED_LOCAL_ONLY"
   },
   "transcription": {
-    "method": "ASSISTED_SPARSE_LINE_RECONSTRUCTION",
+    "method": "MECHANISM_PRESERVING_SPARSE_LINE_RECONSTRUCTION",
     "authoringAgent": "OpenAI Codex",
     "runtimeAI": false,
     "rasterSkeletonization": false,
-    "inkLimitPerView": 20,
+    "semanticPartOntology": false,
+    "geometryOwner": "ASSEMBLED_PART_PATHS",
+    "explodedOperation": "PART_TRANSFORMS_ONLY",
+    "visibleStrokeCeiling": 20,
+    "visibleStrokeTarget": null,
+    "strokeAxes": [
+      "CATEGORY",
+      "STRUCTURE",
+      "NOISE"
+    ],
     "artisticState": "AWAITING_USER_PIXEL_VERDICT",
-    "reviewContract": "THREE_SCALE_HASH_VERIFIED_ABLATION_COMPLETE_USER_GESTURE",
-    "reviewBuildMarker": "empty-glass-shovel-finish-v3"
+    "reviewContract": "THREE_SCALE_DUAL_STATE_ABLATION_HUMAN_ONLY",
+    "reviewBuildMarker": "empty-glass-mechanism-v4"
+  },
+  "negativeOre": {
+    "state": "USER_REJECTED_MECHANISM_PRESERVATION",
+    "reason": "EXPLODED_TROPE_WITHOUT_ATTACHMENT_TRUTH",
+    "rejectedStudySha256": "e582026c38644446e0bd7b6af879893c65e5b56c59a84b259acaf56eb9e761ab"
   },
   "artifacts": [
     {
-      "path": "evidence/wonder-sparse/shovel-assembled.svg",
-      "sha256": "420bcf45d4de35568256107411bd7a4be58bf2cb8f7d8ad4dc20ee793d09fb86",
+      "path": "evidence/wonder-sparse/shovel-assembled-mechanism-v3.svg",
+      "sha256": "46209547ac67ab2e2d3025bbf1b43c4b6d1f2239ce417ea4f8a6257bf0122849",
       "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
       "generator": "tools/render_sparse_shovel.mjs",
       "accepted": false
     },
     {
-      "path": "evidence/wonder-sparse/shovel-exploded.svg",
-      "sha256": "ff06d730750f42289a11bbbab3715806eb3a71bce05783a4b1d1f78f07ef1167",
+      "path": "evidence/wonder-sparse/shovel-exploded-mechanism-v3.svg",
+      "sha256": "b6c3b286b8c6c2c684433b596009d7b056dbc0757e4968b58847eac722d0550c",
       "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
       "generator": "tools/render_sparse_shovel.mjs",
       "accepted": false
     },
     {
-      "path": "evidence/wonder-sparse/shovel-three-scale.svg",
-      "sha256": "d4e7d50f00e760293fadae19fd72f45b288eba561c744f9e5834e5cf677ca3cc",
+      "path": "evidence/wonder-sparse/shovel-correspondence-v3.svg",
+      "sha256": "8c0eb3783b549fb0bc547f49eae2f3c2b0d79fb71d83d0388f010956112623c6",
       "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
       "generator": "tools/render_sparse_shovel.mjs",
       "accepted": false
     },
     {
-      "path": "evidence/wonder-sparse/shovel-ablation.svg",
-      "sha256": "c0d81a122b46cd62c9250037450f12188d3283b10b4d2d1c499a112265639178",
+      "path": "evidence/wonder-sparse/shovel-mechanism-review-v3.svg",
+      "sha256": "d2a00eb77dfa288ac2a4c4f9e7f87129966d665518c4802be52525bc3916af91",
       "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
       "generator": "tools/render_sparse_shovel.mjs",
       "accepted": false
     },
     {
-      "path": "evidence/wonder-sparse/visual-gate.json",
-      "sha256": "321fe6f67e10e9427b5ea03198dc605e81331021cbf155144b22bca3c2e31df4",
+      "path": "evidence/wonder-sparse/shovel-mechanism-ablation-v3.svg",
+      "sha256": "8f5965eef0d4855267c58fdf9a50c92f3c96f196e87b4296a0ee9da0cdc2f553",
       "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
       "generator": "tools/render_sparse_shovel.mjs",
       "accepted": false
     },
     {
-      "path": "evidence/wonder-sparse/shovel-review-v2.svg",
-      "sha256": "a955c4f114e2a718479874da119399787164fd1369ec09b48953c7b7afbfc25e",
+      "path": "evidence/wonder-sparse/visual-gate-v3.json",
+      "sha256": "21010dc37a517a96adb9f597f1efd14f33dd73c41f5fdd6354bf33d64f8ffaec",
       "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
       "generator": "tools/render_sparse_shovel.mjs",
-      "accepted": false,
-      "version": "REVIEW_V2"
+      "accepted": false
     },
     {
-      "path": "evidence/wonder-sparse/shovel-ablation-v2.svg",
-      "sha256": "c0d81a122b46cd62c9250037450f12188d3283b10b4d2d1c499a112265639178",
-      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
+      "path": "evidence/wonder-sparse/REJECTION_MECHANISM_V2.json",
+      "sha256": "746a1e3a33624206332a06afdab02c955573f9cb3e496ab93583e28c3a1b55b7",
+      "assetClass": "QUARANTINED_NEGATIVE_EXAMPLE",
       "generator": "tools/render_sparse_shovel.mjs",
-      "accepted": false,
-      "version": "REVIEW_V2"
+      "accepted": false
     },
     {
-      "path": "evidence/wonder-sparse/visual-gate-v2.json",
-      "sha256": "d4584a90405b843dd4496462f845e97d04fb2aaaee0c7cff4131b20e774fbdfe",
-      "assetClass": "PROJECT_GENERATED_REVIEW_EVIDENCE",
-      "generator": "tools/render_sparse_shovel.mjs",
-      "accepted": false,
-      "version": "REVIEW_V2"
+      "path": "evidence/wonder-sparse/engineering-receipt-v3.json",
+      "sha256": "93675bc4032fd2f54a2bc8431015db433f6a5be27d6458b7866224838958e173",
+      "assetClass": "ENGINEERING_RECEIPT",
+      "generator": "bounded-retrospective",
+      "accepted": false
     }
   ]
 }

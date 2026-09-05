@@ -1,0 +1,22 @@
+{
+  "schema": "vector-noodle.visual-gate.v3",
+  "buildMarker": "empty-glass-mechanism-v4",
+  "state": "AWAITING_USER_PIXEL_VERDICT",
+  "expected": "The same source-evidenced part geometry preserves category and construction when separated.",
+  "actual": "Fresh transform-only assembled, exploded, correspondence, three-scale, and dual-state ablation artifacts generated. Human CATEGORY STRUCTURE and NOISE judgments remain pending.",
+  "acceptance": false,
+  "sourceSha256": "e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1fa923",
+  "guardrail": {
+    "state": "AWAITING_USER_PIXEL_VERDICT",
+    "failures": [],
+    "replayHash": "fnv1a32-849134b1"
+  },
+  "acceptanceBlockerCount": 109,
+  "visibleStrokeCounts": {
+    "ASSEMBLED": 15,
+    "EXPLODED": 16
+  },
+  "partCount": 8,
+  "attachmentCount": 5,
+  "rejectedExplodedGeometrySha256": "e582026c38644446e0bd7b6af879893c65e5b56c59a84b259acaf56eb9e761ab"
+}

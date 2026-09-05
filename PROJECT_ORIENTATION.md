@@ -2,35 +2,34 @@
 
 ## Current owner
 
-The active Wonder owner is the Empty Glass shovel studio under `/wonder/`.
+The active Wonder owner is the Empty Glass mechanism studio under wonder.
 
 Production path:
 
-`modern local source → authored pointer stroke → deterministic cubic fit → sparse study → hidden-reference review → ablation → raster-free SVG`
+sealed modern paired reference → neutral part correspondence → evidenced attachment graph → shared base paths → assembled or transform-only exploded view → three-scale CATEGORY and STRUCTURE review → dual-state CATEGORY / STRUCTURE / NOISE ablation → human verdict
 
-The former Wonder v2 skeleton pipeline is rejected archaeology. Fleshpunk is not part of base learning.
+The former independent exploded shovel is a hash-sealed negative example. Fleshpunk remains forbidden in base learning.
 
 ## Public boundaries
 
-- `fitStroke(points, tolerance)` fits deliberate strokes through a measured cubic error objective.
-- `validateSparseStudy(study)` rejects non-modern sources, Fleshpunk identifiers, invalid roles, broken negative spaces, and more than 20 strokes.
-- `renderSparseSvg(study, options)` is the replaceable SVG terminal adapter.
-- `recordScaleReview` records one hidden-reference scale at a time.
-- `acceptanceFailures` exposes every unmet source, scale, ablation, and visibility gate.
-- `promoteUserAccepted` requires an explicit user gesture after all blockers are cleared.
-- Machine state is limited to `DENY` or `AWAITING_USER_PIXEL_VERDICT`.
+- validateMechanismStudy rejects semantic part labels, disconnected construction graphs, independent exploded geometry, unsupported marks, non-modern sources, and more than 20 visible strokes.
+- renderMechanismSvg is the replaceable SVG terminal adapter.
+- Part paths are stored exactly once. ASSEMBLED and EXPLODED own affine transforms and visibility only.
+- setAblationEvidence records CATEGORY, STRUCTURE, and NOISE independently for each visible stroke in each state.
+- recordScaleReview keeps CATEGORY recognition separate from STRUCTURE preservation at 96, 220, and 360 pixels.
+- acceptanceFailures rejects pending, harmful, noisy, or non-load-bearing retained ink.
+- promoteUserAccepted requires an explicit user gesture after every paired gate clears.
+- Machine state is limited to DENY or AWAITING_USER_PIXEL_VERDICT.
 
 The older box compiler remains independent and unchanged.
 
 ## Run and verify
 
-```sh
-npm run test:wonder:finish
-npm run wonder:sparse
-sh tools/server_tmux.sh
-curl -fsS http://127.0.0.1:8811/api/noodle/health | grep -F 'empty-glass-shovel-finish-v3'
-curl -fsS http://127.0.0.1:8811/api/wonder/status | grep -F 'MODERN_OBJECTS_ONLY'
-```
+    npm run test:wonder:finish
+    npm run wonder:sparse
+    sh tools/server_tmux.sh
+    curl -fsS http://127.0.0.1:8811/api/noodle/health | grep -F 'empty-glass-mechanism-v4'
+    curl -fsS http://127.0.0.1:8811/api/wonder/status | grep -F 'MODERN_OBJECTS_ONLY'
 
 Review URL:
 
@@ -38,22 +37,24 @@ Review URL:
 
 ## Interaction contract
 
-- Touch, pen, or mouse draws without timing, angle, direction, or pressure requirements.
-- Three explicit roles are available: silhouette, identity anchor, correction.
-- Undo, redo, deletion, reference replacement, and autosave are immediate.
-- Source pixels are hashed in-browser before drawing or judgment is enabled.
-- Reference visibility is explicit and each of 96, 220, and 360 pixels owns a verdict.
-- Ablation hides one stroke without altering the evidence graph.
-- Removing ink repairs negative-space references and invalidates stale scale reviews.
+- The sealed source is hashed in-browser before judgment is enabled.
+- Assembled and exploded views show the same base paths.
+- Source-evidence rectangles use neutral part IDs rather than a shovel ontology.
+- The exploded view cannot author or render an independent path.
+- Reference visibility is explicit.
+- Every scale owns separate CATEGORY and STRUCTURE verdicts.
+- Ablation removes one shared stroke and collects CATEGORY, STRUCTURE, and NOISE evidence for the current state.
+- Hidden assembled component geometry is explicit and cannot be born during explosion.
 - Explicit human acceptance is saved atomically under ignored local state.
 - JSON and SVG exports contain no reference pixels.
 
 ## Evidence state
 
-- Assembled starter: 16 candidate strokes.
-- Exploded starter: 20 candidate strokes.
-- Source, scale, ablation, replay, and receipt guardrails: implemented.
-- Versioned three-scale and destructive-ablation SVGs: generated.
-- Artistic state: `AWAITING_USER_PIXEL_VERDICT`.
+- Eight neutral parts.
+- Five evidenced attachment relationships.
+- Fifteen assembled-visible strokes and sixteen exploded-visible strokes.
+- The stroke count is a ceiling check, never a target.
+- Fresh correspondence, three-scale, and dual-state ablation gates are versioned under evidence/wonder-sparse.
+- Artistic state remains AWAITING_USER_PIXEL_VERDICT.
 
-Only the user can promote the shovel pixels.
+Only the user can promote the paired mechanism study.

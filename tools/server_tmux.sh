@@ -4,7 +4,7 @@ set -eu
 PROJECT_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 SESSION_NAME=dve-wonder-server
 PORT=${DVE_WONDER_PORT:-8811}
-MARKER=empty-glass-shovel-finish-v3
+MARKER=empty-glass-mechanism-v4
 
 if ! command -v tmux >/dev/null 2>&1; then
   echo 'ERROR: tmux is required for the durable server lane.' >&2

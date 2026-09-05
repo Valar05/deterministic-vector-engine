@@ -2,3 +2,23 @@
 
 .preview-card{cursor:pointer;border:2px solid transparent;padding:3px;border-radius:6px}.preview-card.active{border-color:var(--amber)}#active-scale{display:block;margin-bottom:8px;color:#fff}#accept-view{width:100%;border-color:#4d8c5c;background:#1d3523}#accept-view:not(:disabled){background:#4d8c5c}.accepted{color:#8ee09d!important}#curriculum-state{margin-left:auto}
 .scale-previews{display:flex;flex-direction:column;align-items:flex-start;overflow-x:auto}.preview-card svg{width:var(--review-size);height:var(--review-size);max-width:none;max-height:none}.preview-card.normal,.preview-card.large{grid-column:auto}
+
+#drawing{cursor:default}
+#ink path{pointer-events:none}
+.truth-line{color:var(--muted);font-size:.86rem;border-left:3px solid var(--amber);padding-left:10px}
+.truth-line strong{color:var(--amber);margin-right:6px}
+.part-ledger{margin-top:12px;padding:12px;border:1px solid #4a4237;border-radius:8px;background:#1a1815}
+.part-ledger>strong{color:#fff}
+.part-ledger ol{margin:.8rem 0 0;padding-left:1.4rem;color:var(--muted);font:12px/1.55 monospace}
+.part-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.part-chips span{border:1px solid #625747;border-radius:999px;padding:4px 8px;color:var(--amber);font:11px monospace}
+.review-axis{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:10px}
+.review-axis span{grid-column:1/-1;color:var(--amber);font-size:.72rem;font-weight:900;letter-spacing:.1em}
+.review-axis button{min-height:39px;padding:.45rem}
+.evidence-row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+.evidence-row span{grid-column:1/-1;color:var(--amber);font-size:.72rem;font-weight:800}
+.evidence-row button{min-height:39px;padding:.4rem;font-size:.78rem}
+.preview-card{background:#191714;text-align:left;display:grid;gap:5px}
+.preview-card span{font:10px monospace;color:var(--muted)}
+.preview-card svg{display:block}
+@media(max-width:520px){.review-axis,.evidence-row{grid-template-columns:1fr 1fr}.review-axis button:last-child,.evidence-row button:last-child{grid-column:1/-1}}

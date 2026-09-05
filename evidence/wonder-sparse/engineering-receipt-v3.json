@@ -1,0 +1,59 @@
+{
+  "schema": "vector-noodle.engineering-receipt.v3",
+  "date": "2026-09-05",
+  "buildMarker": "empty-glass-mechanism-v4",
+  "result": "IMPLEMENTED_AWAITING_USER_PIXEL_VERDICT",
+  "frontierClassification": "INVALID",
+  "parUpdated": false,
+  "parReason": "No human-accepted visual result exists.",
+  "localCodexTokens": {
+    "state": "UNKNOWN",
+    "exact": false,
+    "parEligible": false
+  },
+  "soundness": {
+    "semanticCoverage": "CATEGORY STRUCTURE and NOISE are independent in both visible states.",
+    "productionPath": "Live tmux server returned the exact build marker and mechanism status.",
+    "negativeControls": [
+      "independent exploded geometry denied",
+      "semantic part labels denied",
+      "disconnected attachment graph denied",
+      "unsupported marks denied",
+      "harmful and non-load-bearing retained strokes denied"
+    ],
+    "ordinaryVariation": "Assembled and exploded reuse one path set under different part transforms.",
+    "recovery": "Old exploded result remains hash-sealed as a quarantined negative example.",
+    "acceptedEvidence": "PENDING_USER_PIXEL_VERDICT"
+  },
+  "touchedBoundaries": [
+    {
+      "boundary": "sealed source to neutral correspondence",
+      "falsifier": "missing evidence rectangle or semantic part label"
+    },
+    {
+      "boundary": "part geometry to exploded presentation",
+      "falsifier": "independent exploded path payload"
+    },
+    {
+      "boundary": "stroke ablation to judgment",
+      "falsifier": "missing CATEGORY STRUCTURE or NOISE value"
+    },
+    {
+      "boundary": "browser verdict to persistence",
+      "falsifier": "machine authority or incomplete paired review"
+    },
+    {
+      "boundary": "server to handoff",
+      "falsifier": "wrong build marker or unreachable exact URL"
+    }
+  ],
+  "retrospective": {
+    "wastedTime": [
+      "Android image viewer could not enforce its sandbox",
+      "one over-escaped neutral-ID expression",
+      "one eager default lookup in the migration helper"
+    ],
+    "weakestClause": "Fresh pixels are generated and served but not human accepted.",
+    "nextImprovement": "Measure transformed path coverage against each source evidence rectangle before rendering."
+  }
+}

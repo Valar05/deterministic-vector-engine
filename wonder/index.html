@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Empty Glass · Shovel</title>
+  <title>Empty Glass · Mechanism Preservation</title>
   <link rel="stylesheet" href="./studio.css">
 </head>
-<body data-build-marker="empty-glass-shovel-finish-v3">
+<body data-build-marker="empty-glass-mechanism-v4">
   <header>
     <p class="eyebrow">VECTOR NOODLE · MODERN OBJECT APPRENTICESHIP</p>
-    <h1>Every stroke must earn its ink.</h1>
-    <p>The shovel is lesson one. Draw sparsely, hide the source, then destroy one line at a time.</p>
+    <h1>Explosion means construction.</h1>
+    <p>Find the minimum line information that preserves the same object when its evidenced parts separate.</p>
   </header>
   <main>
     <section class="toolbar" aria-label="Study controls">
@@ -18,65 +18,73 @@
         <button id="assembled" class="active">Assembled</button>
         <button id="exploded">Exploded</button>
       </div>
-      <label class="file">Load local source<input id="source-file" type="file" accept="image/*"></label>
+      <label class="file">Load sealed source<input id="source-file" type="file" accept="image/*"></label>
       <button id="reference-toggle">Hide reference</button>
-      <output id="source-status">Checking local source…</output><output id="curriculum-state">0 / 2 views accepted</output>
+      <button id="map-toggle" class="active">Hide correspondence</button>
+      <output id="source-status">Checking source…</output>
     </section>
 
     <section class="workspace">
       <div class="drawing-column">
         <div class="stage-heading">
-          <div><span id="pass-label">Pass 1 · silhouette</span><strong id="budget">0 / 20 strokes</strong></div>
-          <p id="instruction">Outer mass first. No detail can rescue a generic silhouette.</p>
+          <div><span id="pass-label">Gate 1 · correspondence</span><strong id="budget">0 / 20 visible strokes</strong></div>
+          <p id="instruction">Red boxes are source evidence regions. Neutral IDs prevent a hand-authored shovel ontology.</p>
         </div>
-        <svg id="drawing" viewBox="0 0 397 397" aria-label="Interactive shovel tracing surface">
+        <svg id="drawing" viewBox="0 0 397 397" aria-label="Mechanism-preserving shovel study">
           <rect class="paper" width="100%" height="100%"/>
           <image id="reference" preserveAspectRatio="none"/>
           <g id="ink"></g>
-          <polyline id="preview"/>
         </svg>
-        <div class="role-picker" role="group" aria-label="Stroke role">
-          <button data-role="SILHOUETTE" class="active">Silhouette</button>
-          <button data-role="IDENTITY_ANCHOR">Identity anchor</button>
-          <button data-role="CORRECTION">Correction</button>
-        </div>
-        <label class="note">Why does this stroke exist?<input id="stroke-note" maxlength="120" placeholder="Specific misread this line fixes"></label>
-        <div class="actions">
-          <button id="undo">Undo</button><button id="redo">Redo</button><button id="delete-selected">Delete selected</button><button id="prune">Delete removable</button>
-        </div>
+        <p class="truth-line"><strong>Render law</strong> The exploded view owns transforms only. Every visible path comes from the assembled part geometry.</p>
+        <div id="part-ledger" class="part-ledger" aria-label="Neutral part and attachment ledger"></div>
       </div>
 
       <aside>
         <div class="panel">
-          <p class="panel-label">Hidden-reference review</p>
+          <p class="panel-label">Three-scale visual truth</p>
           <strong id="active-scale">Reviewing 96 px</strong>
           <div id="scale-previews" class="scale-previews"></div>
-          <label>What does it read as?<textarea id="review-note" rows="2" placeholder="Name the concrete misread"></textarea></label>
-          <div id="verdicts" class="verdicts">
-            <button data-verdict="RECOGNIZABLE">Recognizable</button><button data-verdict="WRONG">Wrong</button><button data-verdict="GENERIC">Generic</button><button data-verdict="OVERDRAWN">Overdrawn</button>
+          <label>Concrete visual read<textarea id="review-note" rows="2" placeholder="Name the category or construction misread"></textarea></label>
+          <div class="review-axis">
+            <span>CATEGORY</span>
+            <button data-review-axis="CATEGORY" data-verdict="RECOGNIZABLE">Recognizable</button>
+            <button data-review-axis="CATEGORY" data-verdict="WRONG">Wrong</button>
+            <button data-review-axis="CATEGORY" data-verdict="GENERIC">Generic</button>
+            <button data-review-axis="CATEGORY" data-verdict="OVERDRAWN">Overdrawn</button>
           </div>
-          <p id="review-lock" class="warning">Hide the reference before recording a verdict.</p>
+          <div class="review-axis">
+            <span>STRUCTURE</span>
+            <button data-review-axis="STRUCTURE" data-verdict="PRESERVED">Preserved</button>
+            <button data-review-axis="STRUCTURE" data-verdict="BROKEN">Broken</button>
+            <button data-review-axis="STRUCTURE" data-verdict="AMBIGUOUS">Ambiguous</button>
+            <button data-review-axis="STRUCTURE" data-verdict="OVERDRAWN">Overdrawn</button>
+          </div>
+          <p id="review-lock" class="warning">Hide the reference before recording judgment.</p>
         </div>
+
         <div class="panel ablation">
-          <p class="panel-label">Destructive test</p>
-          <strong id="ablation-name">Start ablation</strong>
-          <p id="ablation-note">Each step removes exactly one stroke.</p>
-          <div class="actions"><button id="ablation-prev">Previous</button><button id="ablation-clear">Full drawing</button><button id="ablation-next">Next</button></div>
-          <div class="actions"><button id="essential">Identity collapses</button><button id="removable">Still reads</button></div>
+          <p class="panel-label">Dual-state destructive test</p>
+          <strong id="ablation-name">Full drawing</strong>
+          <p id="ablation-note">Remove one stroke, then judge three different consequences.</p>
+          <div class="actions"><button id="ablation-prev">Previous</button><button id="ablation-clear">Full</button><button id="ablation-next">Next</button></div>
+          <div class="evidence-row" data-axis-row="CATEGORY"><span>CATEGORY · does deletion hurt recognition</span><button data-axis="CATEGORY" data-value="POSITIVE">Yes</button><button data-axis="CATEGORY" data-value="NEUTRAL">No change</button><button data-axis="CATEGORY" data-value="NEGATIVE">Improves</button></div>
+          <div class="evidence-row" data-axis-row="STRUCTURE"><span>STRUCTURE · does deletion hurt construction</span><button data-axis="STRUCTURE" data-value="POSITIVE">Yes</button><button data-axis="STRUCTURE" data-value="NEUTRAL">No change</button><button data-axis="STRUCTURE" data-value="NEGATIVE">Improves</button></div>
+          <div class="evidence-row" data-axis-row="NOISE"><span>NOISE · does deletion improve legibility</span><button data-axis="NOISE" data-value="POSITIVE">Yes</button><button data-axis="NOISE" data-value="NEUTRAL">No change</button><button data-axis="NOISE" data-value="NEGATIVE">Worsens</button></div>
         </div>
+
         <div class="panel">
-          <p class="panel-label">Durable record</p>
+          <p class="panel-label">Human boundary</p>
           <p id="state">Loading…</p>
           <p id="acceptance-blockers" class="warning">Acceptance is locked.</p>
-          <button id="accept-view" disabled>Accept this view</button>
-          <div class="actions"><button id="export-svg">Export SVG</button><button id="export-json">Export study</button><button id="reset">Reset starter</button></div>
+          <button id="accept-study" disabled>Accept paired study</button>
+          <div class="actions"><button id="export-svg">Export current SVG</button><button id="export-json">Export study</button><button id="reset">Reset evidence</button></div>
         </div>
       </aside>
     </section>
 
     <section class="quarantine">
-      <strong>Previous gates are quarantined.</strong>
-      <span>Centerline skeletons, blob correspondence, and the 20 / 25 ontology score are not visual learning evidence.</span>
+      <strong>Negative ore retained.</strong>
+      <span>The former floating parts, invented fastener language, and explosion-axis marks cannot enter rendering.</span>
     </section>
   </main>
   <script type="module" src="./studio.mjs"></script>

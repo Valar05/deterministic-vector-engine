@@ -1,0 +1,12 @@
+{
+  "schema": "vector-noodle.rejected-visual.v1",
+  "state": "USER_REJECTED_MECHANISM_PRESERVATION",
+  "reason": "EXPLODED_TROPE_WITHOUT_ATTACHMENT_TRUTH",
+  "sha256": "e582026c38644446e0bd7b6af879893c65e5b56c59a84b259acaf56eb9e761ab",
+  "forbiddenReuse": [
+    "independent exploded paths",
+    "unmapped rectangular marks",
+    "explosion-axis marks"
+  ],
+  "replacementGate": "visual-gate-v3.json"
+}

@@ -2,20 +2,29 @@
 import argparse
 import json
 import subprocess
+import threading
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT=Path(__file__).resolve().parent.parent
-CLI=ROOT/'tools'/'noodle_cli.mjs'
+CLI=ROOT/'tools'/'vector_imagegen_cli.mjs'
+PROMPTS=ROOT/'training'/'contact-sheet-prompts.v1.json'
+GENOME=ROOT/'training'/'style-genome.v1.json'
 MAX_BODY=16384
-BUILD_MARKER='vector-noodle-compiler-v1'
+BUILD_MARKER='vector-noodle-imagegen-v1'
+DAEMON_PATH=ROOT/'tools'/'vector_imagegen_daemon.mjs'
+DAEMON=subprocess.Popen(['node',str(DAEMON_PATH)],cwd=ROOT,text=True,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,bufsize=1)
+DAEMON_LOCK=threading.Lock()
 
-def cli(*args):
-    completed=subprocess.run(['node',str(CLI),*args],cwd=ROOT,text=True,capture_output=True,timeout=20,check=False)
-    try: payload=json.loads(completed.stdout)
-    except json.JSONDecodeError: return {'state':'REJECT','reason':'CLI_PROTOCOL_ERROR'},500
-    return payload,200 if completed.returncode==0 else 409
+def daemon(request):
+    with DAEMON_LOCK:
+        if DAEMON.poll() is not None:return {'state':'REJECT','reason':'GENERATOR_NOT_RUNNING'},500
+        DAEMON.stdin.write(json.dumps(request,separators=(',',':'))+'\n');DAEMON.stdin.flush();line=DAEMON.stdout.readline()
+    try:payload=json.loads(line)
+    except json.JSONDecodeError:return {'state':'REJECT','reason':'DAEMON_PROTOCOL_ERROR'},500
+    return payload,200 if payload.get('state')=='GENERATED' else 409
+
 
 class Handler(SimpleHTTPRequestHandler):
     server_version='VectorNoodle/1'
@@ -32,8 +41,6 @@ class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
         path=urlparse(self.path).path
         if path=='/api/noodle/health': return self.send_json({'state':'READY','buildMarker':BUILD_MARKER,'modelFree':True})
-        if path.startswith('/api/noodle/jobs/'):
-            job=path.rsplit('/',1)[-1];payload,status=cli('status',job);return self.send_json(payload,status)
         if path.startswith('/.noodle-state') or path.startswith('/.git'): return self.send_error(404)
         return super().do_GET()
     def do_POST(self):
@@ -45,12 +52,12 @@ class Handler(SimpleHTTPRequestHandler):
         try: data=json.loads(self.rfile.read(length))
         except (json.JSONDecodeError,UnicodeDecodeError): return self.send_json({'state':'REJECT','reason':'BAD_JSON'},400)
         path=urlparse(self.path).path
-        if path=='/api/noodle/compile': payload,status=cli('request','--prompt',str(data.get('prompt','')));return self.send_json(payload,status)
-        parts=path.strip('/').split('/')
-        if len(parts)==5 and parts[:3]==['api','noodle','jobs'] and parts[4] in {'accept','reject'}:
-            args=[parts[4],parts[3],str(data.get('candidateHash',''))]
-            if parts[4]=='accept': args.append('--user-accepted')
-            payload,status=cli(*args);return self.send_json(payload,status)
+        if path in {'/api/noodle/compile','/api/imagegen/generate'}:
+            import time
+            started=time.monotonic_ns();payload,status=daemon({'command':'generate','prompt':str(data.get('prompt',''))});payload['elapsedMs']=(time.monotonic_ns()-started)//1_000_000;return self.send_json(payload,status)
+        if path=='/api/imagegen/contact-sheet':
+            import time
+            started=time.monotonic_ns();payload,status=daemon({'command':'contact-sheet'});payload['elapsedMs']=(time.monotonic_ns()-started)//1_000_000;return self.send_json(payload,status)
         return self.send_json({'state':'REJECT','reason':'UNKNOWN_ENDPOINT'},404)
 
 if __name__=='__main__':

@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';import {generateVectorImage,buildContactSheet} from '../src/vector-imagegen.mjs';
+const root=path.dirname(path.dirname(fileURLToPath(import.meta.url))),args=process.argv.slice(2),cmd=args.shift()||'generate';
+const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8')), genome=read('training/style-genome.v1.json');
+function arg(name,fallback=''){const i=args.indexOf(name);return i<0?fallback:args[i+1];}
+function atomic(file,data){fs.mkdirSync(path.dirname(file),{recursive:true});const t=path.join(path.dirname(file),`.${path.basename(file)}.tmp`);fs.writeFileSync(t,data);fs.renameSync(t,file);}
+if(cmd==='generate'){const result=generateVectorImage(arg('--prompt'),genome,{styleEnabled:!args.includes('--no-style')});if(result.state!=='GENERATED'){console.log(JSON.stringify(result));process.exitCode=2;}else{const out=arg('--out');if(out)atomic(path.resolve(out),result.svg);console.log(JSON.stringify(result));}}
+else if(cmd==='contact-sheet'){const prompts=read('training/contact-sheet-prompts.v1.json').prompts,out=path.resolve(arg('--out-dir',path.join(root,'generated/vector-noodle-ink-v1'))),result=buildContactSheet(prompts,genome);atomic(path.join(out,'vector-noodle-ink-contact-sheet-v1.svg'),result.svg);result.images.forEach((im,i)=>atomic(path.join(out,`${String(i+1).padStart(2,'0')}-${im.intent.family}.svg`),im.svg));const pack={...result,svg:undefined,images:result.images.map(im=>({...im,svg:undefined}))};atomic(path.join(out,'vector-noodle-contact-package.v1.json'),JSON.stringify(pack,null,2)+'\n');console.log(JSON.stringify({state:result.state,images:result.images.length,svgHash:result.svgHash,out}));}
+else{console.error('usage: generate --prompt TEXT or contact-sheet --out-dir PATH');process.exitCode=2;}

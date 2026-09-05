@@ -1,31 +1,8 @@
-const form=document.querySelector('#renderForm');
-const input=document.querySelector('#promptInput');
-const output=document.querySelector('#vector-output');
-const status=document.querySelector('#resolvedStatus');
-const gallery=document.querySelector('#trainingGallery');
-const decisions=document.querySelector('#decisionControls');
-let activeJob=null;
-
-async function api(path,body){const response=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const data=await response.json();if(!response.ok&&data.state!=='REJECT')throw new Error(data.reason||`HTTP ${response.status}`);return data;}
-function safeSvg(markup){const doc=new DOMParser().parseFromString(markup,'image/svg+xml'),svg=doc.documentElement;if(svg.localName!=='svg'||doc.querySelector('parsererror,script,foreignObject'))throw new Error('UNSAFE_SVG');for(const element of svg.querySelectorAll('*'))for(const attr of [...element.attributes])if(attr.name.startsWith('on')||/^(href|src)$/i.test(attr.name))throw new Error('UNSAFE_SVG');return document.importNode(svg,true);}
-function mount(markup){output.replaceChildren(safeSvg(markup));installInteraction(output.querySelector('svg'));}
-function installInteraction(svg){
- svg.setAttribute('tabindex','0');
- const ink=svg.querySelector('g'),depthNodes=[...svg.querySelectorAll('[data-depth]')];depthNodes.forEach((node)=>node.dataset.baseTransform=node.getAttribute('transform')||'');
- let yaw=-12,pitch=8,drag=false,lastX=0,lastY=0,raf=0;
- const draw=()=>{raf=0;const yr=yaw*Math.PI/180,pr=pitch*Math.PI/180,a=Math.cos(yr),b=Math.sin(pr)*.28,c=-Math.sin(yr)*.22,d=Math.cos(pr);ink.setAttribute('transform',`translate(400 300) matrix(${a} ${b} ${c} ${d} 0 0) translate(-400 -300)`);for(const node of depthNodes){const z=Number(node.dataset.depth)||0,base=node.dataset.baseTransform;node.setAttribute('transform',`${base} translate(${(Math.sin(yr)*z*2.2).toFixed(2)} ${(-Math.sin(pr)*z*2.2).toFixed(2)})`.trim());}};
- const schedule=()=>{if(!raf)raf=requestAnimationFrame(draw);};
- svg.addEventListener('pointerdown',(event)=>{drag=true;lastX=event.clientX;lastY=event.clientY;svg.setPointerCapture(event.pointerId);output.dataset.dragging='true';});
- svg.addEventListener('pointermove',(event)=>{if(!drag)return;yaw=(yaw+(event.clientX-lastX)*.7)%360;pitch=Math.max(-82,Math.min(82,pitch-(event.clientY-lastY)*.7));lastX=event.clientX;lastY=event.clientY;schedule();});
- const end=()=>{drag=false;delete output.dataset.dragging;};svg.addEventListener('pointerup',end);svg.addEventListener('pointercancel',end);
- svg.addEventListener('dblclick',()=>{yaw=-12;pitch=8;schedule();});
- svg.addEventListener('keydown',(event)=>{const moves={ArrowLeft:[-6,0],ArrowRight:[6,0],ArrowUp:[0,6],ArrowDown:[0,-6]};if(event.key==='Home'){yaw=-12;pitch=8;}else if(moves[event.key]){yaw+=moves[event.key][0];pitch=Math.max(-82,Math.min(82,pitch+moves[event.key][1]));}else return;event.preventDefault();schedule();});
- schedule();
-}
-function showStages(job){gallery.replaceChildren();for(const stage of job.stages||[]){const button=document.createElement('button');button.type='button';button.className='stage';button.dataset.stage=stage.name;const thumb=safeSvg(stage.svg);thumb.removeAttribute('tabindex');const label=document.createElement('span');label.textContent=stage.name.replaceAll('-',' ');button.append(thumb,label);button.addEventListener('click',()=>mount(stage.svg));gallery.append(button);}decisions.hidden=false;}
-function show(result){activeJob=null;gallery.replaceChildren();decisions.hidden=true;if(result.state==='COMPILED'){status.textContent=`COMPILED // ${result.capabilityId} // ${result.svgHash.slice(0,12)}`;mount(result.svg);return;}if(result.state==='AWAITING_USER'){activeJob=result;status.textContent=`TRAINED // ${result.objective.winner} // AWAITING YOUR VERDICT`;showStages(result);mount(result.stages.at(-1).svg);return;}status.textContent=`${result.state} // ${result.reason||'explicit stop'}`;}
-async function forge(){status.textContent='COMPILING SYMBOLS';try{show(await api('/api/noodle/compile',{prompt:input.value}));}catch(error){status.textContent=`REJECT // ${error.message}`;}}
-form.addEventListener('submit',(event)=>{event.preventDefault();forge();});
-document.querySelector('#acceptButton').addEventListener('click',async()=>{if(!activeJob)return;show(await api(`/api/noodle/jobs/${activeJob.jobId}/accept`,{candidateHash:activeJob.candidateHash}));await forge();});
-document.querySelector('#rejectButton').addEventListener('click',async()=>{if(!activeJob)return;const result=await api(`/api/noodle/jobs/${activeJob.jobId}/reject`,{candidateHash:activeJob.candidateHash});status.textContent=`${result.state} // NEGATIVE EXAMPLE PRESERVED`;decisions.hidden=true;});
-forge();
+const form=document.querySelector('#renderForm'),input=document.querySelector('#promptInput'),output=document.querySelector('#vector-output'),status=document.querySelector('#resolvedStatus'),ledger=document.querySelector('#ledger'),gallery=document.querySelector('#trainingGallery');
+async function api(path,body){const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}),d=await r.json();if(!r.ok)throw new Error(d.reason||`HTTP ${r.status}`);return d;}
+function safeSvg(markup){const doc=new DOMParser().parseFromString(markup,'image/svg+xml'),svg=doc.documentElement;if(svg.localName!=='svg'||doc.querySelector('parsererror,script,foreignObject,image,filter'))throw new Error('UNSAFE_SVG');for(const e of svg.querySelectorAll('*'))for(const a of [...e.attributes])if(a.name.startsWith('on')||/^(href|src)$/i.test(a.name))throw new Error('UNSAFE_SVG');return document.importNode(svg,true);}
+function interaction(svg){const ink=svg.querySelector('g');if(!ink)return;let yaw=-10,pitch=6,drag=false,lx=0,ly=0,raf=0;const base=[...svg.querySelectorAll('[data-depth]')].map(n=>[n,n.getAttribute('transform')||'']);const draw=()=>{raf=0;const y=yaw*Math.PI/180,p=pitch*Math.PI/180;ink.setAttribute('transform',`translate(400 300) matrix(${Math.cos(y)} ${Math.sin(p)*.24} ${-Math.sin(y)*.2} ${Math.cos(p)} 0 0) translate(-400 -300)`);for(const [n,t] of base){const z=Number(n.dataset.depth)||0;n.setAttribute('transform',`${t} translate(${(Math.sin(y)*z*2).toFixed(2)} ${(-Math.sin(p)*z*2).toFixed(2)})`.trim());}};const go=()=>{if(!raf)raf=requestAnimationFrame(draw)};svg.addEventListener('pointerdown',e=>{drag=true;lx=e.clientX;ly=e.clientY;svg.setPointerCapture(e.pointerId)});svg.addEventListener('pointermove',e=>{if(!drag)return;yaw=(yaw+(e.clientX-lx)*.7)%360;pitch=Math.max(-82,Math.min(82,pitch-(e.clientY-ly)*.7));lx=e.clientX;ly=e.clientY;go()});svg.addEventListener('pointerup',()=>drag=false);svg.addEventListener('pointercancel',()=>drag=false);svg.addEventListener('dblclick',()=>{yaw=-10;pitch=6;go()});go();}
+function mount(markup){const svg=safeSvg(markup);output.replaceChildren(svg);interaction(svg);}
+function showLedger(r){ledger.replaceChildren();for(const c of r.clauseCoverage||[]){const p=document.createElement('p');p.textContent=`${c.status} // ${c.text}`;ledger.append(p);}}
+async function generate(){status.textContent='MACHINING NOODLES';gallery.replaceChildren();try{const r=await api('/api/imagegen/generate',{prompt:input.value});mount(r.svg);showLedger(r);status.textContent=`GENERATED // ${r.intent.detail} // ${r.intent.family} // ${r.svgHash.slice(0,12)} // AI 0`;}catch(e){status.textContent=`REJECT // ${e.message}`;}}
+form.addEventListener('submit',e=>{e.preventDefault();generate()});document.querySelector('#sheetButton').addEventListener('click',async()=>{status.textContent='BUILDING TEN';try{const r=await api('/api/imagegen/contact-sheet',{});const svg=safeSvg(r.svg);gallery.replaceChildren(svg);status.textContent=`TEN GENERATED // ${r.svgHash.slice(0,12)} // ${r.elapsedMs} MS // AI 0`;}catch(e){status.textContent=`REJECT // ${e.message}`;}});generate();

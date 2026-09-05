@@ -1,0 +1,125 @@
+{
+  "samples": [
+    {
+      "aspect": 0.908284023668639,
+      "columnRhythm": 0.27397839463956014,
+      "componentCount": 16,
+      "darkRatio": 0.3370295698924731,
+      "inkRatio": 0.5364625336021506,
+      "rowRhythm": 0.18891211433963598,
+      "strokeRatio": 0.022381748468407847,
+      "transitionRatio": 0.10309139784946236
+    },
+    {
+      "aspect": 0.908284023668639,
+      "columnRhythm": 0.19299294021097144,
+      "componentCount": 13,
+      "darkRatio": 0.19751344086021505,
+      "inkRatio": 0.3250504032258065,
+      "rowRhythm": 0.14652876400177245,
+      "strokeRatio": 0.019160235603455318,
+      "transitionRatio": 0.07296706989247312
+    },
+    {
+      "aspect": 0.9112426035502958,
+      "columnRhythm": 0.22793409424227565,
+      "componentCount": 32,
+      "darkRatio": 0.21364343549250536,
+      "inkRatio": 0.36087225642398285,
+      "rowRhythm": 0.16606498169052378,
+      "strokeRatio": 0.01765229724745192,
+      "transitionRatio": 0.08755186027837258
+    },
+    {
+      "aspect": 0.908284023668639,
+      "columnRhythm": 0.173700522897969,
+      "componentCount": 16,
+      "darkRatio": 0.2088079637096774,
+      "inkRatio": 0.35441028225806454,
+      "rowRhythm": 0.17893732144159463,
+      "strokeRatio": 0.01787235935350429,
+      "transitionRatio": 0.08529065860215054
+    },
+    {
+      "aspect": 0.908284023668639,
+      "columnRhythm": 0.15694298022386455,
+      "componentCount": 23,
+      "darkRatio": 0.3297883064516129,
+      "inkRatio": 0.5277049731182796,
+      "rowRhythm": 0.2654416248573561,
+      "strokeRatio": 0.019347292963591774,
+      "transitionRatio": 0.11731350806451613
+    },
+    {
+      "aspect": 0.908284023668639,
+      "columnRhythm": 0.16160976450829895,
+      "componentCount": 31,
+      "darkRatio": 0.1649571572580645,
+      "inkRatio": 0.29256552419354837,
+      "rowRhythm": 0.18005272835036434,
+      "strokeRatio": 0.014118147821592533,
+      "transitionRatio": 0.08912970430107527
+    },
+    {
+      "aspect": 0.908284023668639,
+      "columnRhythm": 0.1177698849615317,
+      "componentCount": 28,
+      "darkRatio": 0.17718834005376344,
+      "inkRatio": 0.3236307123655914,
+      "rowRhythm": 0.21819095167503813,
+      "strokeRatio": 0.014101436086224654,
+      "transitionRatio": 0.09871051747311828
+    },
+    {
+      "aspect": 0.9112426035502958,
+      "columnRhythm": 0.19082782065536613,
+      "componentCount": 42,
+      "darkRatio": 0.29652368843683086,
+      "inkRatio": 0.48227131290149894,
+      "rowRhythm": 0.2880339075801579,
+      "strokeRatio": 0.01948032915510768,
+      "transitionRatio": 0.10602499330835118
+    },
+    {
+      "aspect": 0.908284023668639,
+      "columnRhythm": 0.18850265668604713,
+      "componentCount": 19,
+      "darkRatio": 0.35085265456989245,
+      "inkRatio": 0.543338373655914,
+      "rowRhythm": 0.27289084312622663,
+      "strokeRatio": 0.025031650453217074,
+      "transitionRatio": 0.093359375
+    },
+    {
+      "aspect": 0.908284023668639,
+      "columnRhythm": 0.18434484135248755,
+      "componentCount": 34,
+      "darkRatio": 0.31048387096774194,
+      "inkRatio": 0.5052377352150538,
+      "rowRhythm": 0.2353598800115778,
+      "strokeRatio": 0.017773926097987326,
+      "transitionRatio": 0.1222614247311828
+    },
+    {
+      "aspect": 1.5,
+      "columnRhythm": 0.10368496841754589,
+      "componentCount": 156,
+      "darkRatio": 0.00021192265395894428,
+      "inkRatio": 0.16245876099706744,
+      "rowRhythm": 0.0873471794448542,
+      "strokeRatio": 0.004261431714252704,
+      "transitionRatio": 0.2235955828445748
+    },
+    {
+      "aspect": 0.6666666666666666,
+      "columnRhythm": 0.07549898639308911,
+      "componentCount": 133,
+      "darkRatio": 0.02575719391495601,
+      "inkRatio": 0.1121128115835777,
+      "rowRhythm": 0.0573435536872722,
+      "strokeRatio": 0.004334825519618773,
+      "transitionRatio": 0.15169079912023462
+    }
+  ],
+  "schema": "vector-noodle.ink-metrics.v1"
+}

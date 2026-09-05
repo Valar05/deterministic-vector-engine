@@ -1,0 +1,52 @@
+{
+  "derivedCorpusHash": "b75880147d25bf7a43d407bab17261e4eee2bbe413f4015161b7e1f95cbc6cc9",
+  "excluded": [
+    {
+      "id": "colored-contact-sheet-v1",
+      "reason": "ink-only commission",
+      "sha256": "c8a6aa1f0ff506722a3ef7ddf95da609e5005f9aa7d0c9a8797b22018731b12f"
+    }
+  ],
+  "schema": "vector-noodle.training-sources.v1",
+  "segmentation": {
+    "artCropBottomRatio": 0.8,
+    "artCropTopRatio": 0.09,
+    "contactSheet": "five-by-two"
+  },
+  "sources": [
+    {
+      "bytes": 2686568,
+      "grid": [
+        5,
+        2
+      ],
+      "height": 1024,
+      "id": "ink-contact-sheet-v2",
+      "mode": "L",
+      "path": "/storage/emulated/0/Pictures/file_000000002ed48230afe64eda4f061e6c.png",
+      "role": "canonical-contact-sheet",
+      "sha256": "b7a993d5a2dd983764f567fe40f1a17613bf3523fe15dfff4fc7daee2df61fbb",
+      "width": 1536
+    },
+    {
+      "bytes": 1630095,
+      "height": 1024,
+      "id": "pressure-valve-hires",
+      "mode": "L",
+      "path": "/storage/emulated/0/Pictures/Fleshpunk/Fleshpunk_Pressure_Valve_Gate_BEST.png",
+      "role": "line-quality-reference",
+      "sha256": "f3a1022019157ae819e74df5665392da7d31a249d690b02937f358572791c727",
+      "width": 1536
+    },
+    {
+      "bytes": 1470495,
+      "height": 1536,
+      "id": "canary-hires",
+      "mode": "L",
+      "path": "/storage/emulated/0/Pictures/Fleshpunk/fleshpunk-canary-ink-v1.png",
+      "role": "line-quality-reference",
+      "sha256": "f93f7eb1002dca4a96e206caad7322f07d028d7585e638f25d6bbb6000f3aef7",
+      "width": 1024
+    }
+  ]
+}

@@ -17,7 +17,7 @@ body {
     radial-gradient(circle at 50% 18%, #2b3030 0, #111516 43%, #080a0b 78%);
 }
 
-button, input { font: inherit; }
+button, input, textarea { font: inherit; }
 
 .shell {
   width: min(100%, 44rem);
@@ -66,13 +66,14 @@ h1 {
 }
 
 input,
+textarea,
 button {
   min-height: 48px;
   border: 2px solid #484e4c;
   border-radius: 0;
 }
 
-input {
+input, textarea {
   min-width: 0;
   padding: 0 .85rem;
   color: #f2f3ef;
@@ -81,6 +82,7 @@ input {
 }
 
 input:focus-visible,
+textarea:focus-visible,
 #vector-output:focus-visible {
   border-color: #ca6337;
   outline: 3px solid #ca633766;
@@ -192,3 +194,5 @@ button:active { transform: translate(2px, 2px); }
 .decision-controls { display: grid; grid-template-columns: 1fr 1fr; gap: .55rem; }
 button.reject { color: #f0dfd8; background: #26110f; border-color: #893d32; }
 @media (max-width: 28rem) { .training-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+textarea{width:100%;resize:vertical;padding:.8rem;color:#f2f3ef;background:#121617;outline:none;line-height:1.35}.action-row{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}.secondary{color:#d0a288;background:#15191a;border-color:#80604e}.ledger{display:flex;gap:.35rem;overflow:auto}.ledger p{flex:0 0 auto;margin:0;padding:.35rem .5rem;border:1px solid #484e4c;color:#b9beb9;font:700 .6rem/1.2 ui-monospace,monospace}.contact svg{display:block;width:100%;background:#fffef9;border:2px solid #484e4c}@media(max-width:28rem){.action-row{grid-template-columns:1fr}}

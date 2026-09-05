@@ -4,7 +4,7 @@ set -eu
 PROJECT_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 SESSION_NAME=dve-m1-server
 PORT=8810
-MARKER=vector-noodle-compiler-v1
+MARKER=vector-noodle-imagegen-v1
 
 if ! command -v tmux >/dev/null 2>&1; then
   echo 'ERROR: tmux is required for the durable server lane.' >&2

@@ -1,0 +1,3 @@
+import fs from 'node:fs';import readline from 'node:readline';import {generateVectorImage,buildContactSheet} from '../src/vector-imagegen.mjs';
+const genome=JSON.parse(fs.readFileSync(new URL('../training/style-genome.v1.json',import.meta.url))),prompts=JSON.parse(fs.readFileSync(new URL('../training/contact-sheet-prompts.v1.json',import.meta.url))).prompts,rl=readline.createInterface({input:process.stdin,crlfDelay:Infinity});
+for await(const line of rl){try{const q=JSON.parse(line),r=q.command==='contact-sheet'?buildContactSheet(prompts,genome):generateVectorImage(q.prompt,genome);process.stdout.write(JSON.stringify(r)+'\n');}catch(error){process.stdout.write(JSON.stringify({state:'REJECT',reason:'DAEMON_ERROR',detail:error.message})+'\n');}}

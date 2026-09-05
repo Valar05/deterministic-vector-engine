@@ -1,0 +1,26 @@
+{
+  "boltRadius": 3.2,
+  "columnRhythm": 0.179023,
+  "componentMedian": 30,
+  "corpusHash": "b75880147d25bf7a43d407bab17261e4eee2bbe413f4015161b7e1f95cbc6cc9",
+  "darkMarkRatio": 0.211226,
+  "explodedGap": 47.6,
+  "id": "fleshpunk-ink-v1",
+  "ink": "#11100d",
+  "inkDensity": 0.357641,
+  "organicAmplitude": 28.0,
+  "paper": "#fffef9",
+  "ribCount": 13,
+  "rowRhythm": 0.184482,
+  "rules": {
+    "blackInkOnly": true,
+    "deterministic": true,
+    "rasterEmbedding": false,
+    "shading": false
+  },
+  "sampleCount": 12,
+  "schema": "vector-noodle.ink-style-genome.v1",
+  "secondaryStrokeRatio": 0.58,
+  "strokeWidth": 3.8,
+  "transitionRatio": 0.100901
+}

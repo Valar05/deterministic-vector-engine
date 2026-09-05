@@ -1,0 +1,73 @@
+{
+  "files": [
+    {
+      "bytes": 5515,
+      "file": "01-object.svg",
+      "sha256": "8899849b5da7620ee73e46d1e8743c1033ec99dad3647dcb749507934a994bba"
+    },
+    {
+      "bytes": 5735,
+      "file": "02-weapon.svg",
+      "sha256": "7ac0617f7fac72562b5e71290620cb16e49ceb4c15b5644f92a43943da64fbd8"
+    },
+    {
+      "bytes": 6948,
+      "file": "03-weapon.svg",
+      "sha256": "4c7d17941200c98925c0dbf65e40b3af43c5e967c16c966f4eb698969560b23d"
+    },
+    {
+      "bytes": 9794,
+      "file": "04-vehicle.svg",
+      "sha256": "e82e714a2c3f06a6708ed094b9e0d319a6c8a298c723d93e913886c00d93f34a"
+    },
+    {
+      "bytes": 10518,
+      "file": "05-vehicle.svg",
+      "sha256": "8e5cfe5f4ead45e6bacadc12da19c1915acab750a7c5b77ab0c517de5cf23622"
+    },
+    {
+      "bytes": 7819,
+      "file": "06-creature.svg",
+      "sha256": "73e12a61c1e37cd501c3d23cab463879d5e7ae851e90f6bf58cb408055946229"
+    },
+    {
+      "bytes": 7041,
+      "file": "07-object.svg",
+      "sha256": "e6ce809f5b9cf78366f813ff5713fb4a30c329020c8afeac630588388adafbff"
+    },
+    {
+      "bytes": 11175,
+      "file": "08-vehicle.svg",
+      "sha256": "b8385611ea50689d2868d6fee5666c21be455c52bb1a42a6d679e98e9a8d8a02"
+    },
+    {
+      "bytes": 9296,
+      "file": "09-creature.svg",
+      "sha256": "f099b8dfde452adf48636b83733429ac728408f216e8345ca610239939226c76"
+    },
+    {
+      "bytes": 7484,
+      "file": "10-instrument.svg",
+      "sha256": "002f723094ad2c770589042cd4ee70806d4ccd20b9a4ab41a8608d3a0e5a426d"
+    },
+    {
+      "bytes": 272754,
+      "file": "vector-noodle-contact-package.v1.json",
+      "sha256": "0437f58d05a87e3770a4bc8420e36b16b8d75fcfcfbf56eba632c7c95515ff55"
+    },
+    {
+      "bytes": 34684,
+      "file": "vector-noodle-ink-contact-sheet-v1.png",
+      "sha256": "948116ed5c03f5c60f930b104bcb340a59f10565959bce0e57f3f4666ae74d3e"
+    },
+    {
+      "bytes": 81503,
+      "file": "vector-noodle-ink-contact-sheet-v1.svg",
+      "sha256": "82123399b3b308a25634b94d56fd8f0ed7ea8ffc416fcc45978c3c3222b63a34"
+    }
+  ],
+  "modelCalls": 0,
+  "schema": "vector-noodle.generated-assets.v1",
+  "sourceManifest": "training/source-manifest.v1.json",
+  "styleGenome": "training/style-genome.v1.json"
+}

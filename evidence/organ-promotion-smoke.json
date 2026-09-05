@@ -1,0 +1,14 @@
+{
+  "candidateHash": "c29240d77e105659fbb8dada615db3407454526ff03e1822c29cd9c8df001e8d",
+  "capabilityId": "custom_pipe_valve_tendon_connective_tissue",
+  "dveCommit": "e3e62d3",
+  "gitCleanAfter": true,
+  "humanProductionApproval": false,
+  "jobId": "job-d0d7555949897a11",
+  "organRecoveryCommit": "d558aa3",
+  "postPromotionState": "COMPILED",
+  "receiptSeal": "12854e79f0902f25bb156d59fbd2dc2c928bc99596e0c42821b0e19b426bb2eb",
+  "schema": "vector-noodle.organ-promotion-smoke.v1",
+  "scope": "isolated temporary clone only",
+  "svgHash": "97014f6d2637034049e2013ba56f20434037b0a120f47b6cb49dafc3ed1440ba"
+}

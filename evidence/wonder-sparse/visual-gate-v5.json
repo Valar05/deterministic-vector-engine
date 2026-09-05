@@ -1,0 +1,59 @@
+{
+  "schema": "vector-noodle.visual-gate.v5",
+  "buildMarker": "empty-glass-relations-v5",
+  "state": "AWAITING_USER_PIXEL_VERDICT",
+  "acceptance": false,
+  "sourceSha256": "e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1fa923",
+  "oldReplayHash": "fnv1a32-849134b1",
+  "newReplayHash": "fnv1a32-b4dcd1d5",
+  "antiNoop": {
+    "oldCandidateReplayHash": "fnv1a32-849134b1",
+    "newCandidateReplayHash": "fnv1a32-b4dcd1d5",
+    "sharedPathHashCount": 0,
+    "assembledContourDelta": 7.1657,
+    "oldSourceError": 10.0776,
+    "newSourceError": 6.8412,
+    "newToOldErrorRatio": 0.6789,
+    "oldVisibleStrokes": 15,
+    "newVisibleStrokes": 5
+  },
+  "relationContrast": {
+    "relationId": "relation-02",
+    "operator": "SCALE",
+    "strokeControl": "stroke-04",
+    "CATEGORY": "PENDING_HUMAN",
+    "STRUCTURE": "PENDING_HUMAN"
+  },
+  "guardrail": {
+    "state": "AWAITING_USER_PIXEL_VERDICT",
+    "failures": [],
+    "replayHash": "fnv1a32-b4dcd1d5"
+  },
+  "artifacts": [
+    {
+      "path": "evidence/wonder-sparse/before-after-assembled-v5.svg",
+      "sha256": "05e2444d3dc7d0157a1050cf9193e6127cbec300325cc543f0e4a802fb4eec30",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/before-after-exploded-v5.svg",
+      "sha256": "82e51235209c01b634e516cf31e2f49dba25931fb28ceb7c2ddc8eaf851faaa0",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/neutral-landmark-relation-graph-v5.svg",
+      "sha256": "0445f6f37bb00c947a2c721579324e4b2aeb5a9818b8fdffc9c8b030a1c055b5",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/relation-vs-stroke-ablation-v5.svg",
+      "sha256": "3182cddb66411c9d976f58ec8f106f5142ba941ded51e077d255fdbc261762a5",
+      "accepted": false
+    },
+    {
+      "path": "evidence/wonder-sparse/after-three-scale-v5.svg",
+      "sha256": "d1ac6ce6fd4b2403443227eb371e035ee24ab55df2e398bfa6a621b6ddfa69f0",
+      "accepted": false
+    }
+  ]
+}

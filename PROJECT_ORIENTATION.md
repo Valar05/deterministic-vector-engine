@@ -2,59 +2,41 @@
 
 ## Current owner
 
-The active Wonder owner is the Empty Glass mechanism studio under wonder.
+The active Wonder owner is the relation-first Empty Glass studio under `wonder`.
 
 Production path:
 
-sealed modern paired reference → neutral part correspondence → evidenced attachment graph → shared base paths → assembled or transform-only exploded view → three-scale CATEGORY and STRUCTURE review → dual-state CATEGORY / STRUCTURE / NOISE ablation → human verdict
+sealed modern paired reference → VTracer teacher proposal → neutral extrema, width minima, enclosed regions, and dominant axis → landmark relation graph → canonical contour decisions → shared SVG strokes → relation distortion review → stroke ablation → human verdict
 
-The former independent exploded shovel is a hash-sealed negative example. Fleshpunk remains forbidden in base learning.
+The prior v4 shovel is preserved as `USER_REJECTED_VISUAL_NOOP`. Fleshpunk remains forbidden in base learning.
 
 ## Public boundaries
 
-- validateMechanismStudy rejects semantic part labels, disconnected construction graphs, independent exploded geometry, unsupported marks, non-modern sources, and more than 20 visible strokes.
-- renderMechanismSvg is the replaceable SVG terminal adapter.
-- Part paths are stored exactly once. ASSEMBLED and EXPLODED own affine transforms and visibility only.
-- setAblationEvidence records CATEGORY, STRUCTURE, and NOISE independently for each visible stroke in each state.
-- recordScaleReview keeps CATEGORY recognition separate from STRUCTURE preservation at 96, 220, and 360 pixels.
-- acceptanceFailures rejects pending, harmful, noisy, or non-load-bearing retained ink.
-- promoteUserAccepted requires an explicit user gesture after every paired gate clears.
-- Machine state is limited to DENY or AWAITING_USER_PIXEL_VERDICT.
-
-The older box compiler remains independent and unchanged.
+- `src/perceptual-geometry.mjs` derives neutral geometry without shovel part names.
+- `tools/build_relation_study.mjs` verifies the sealed source, builds the graph, matches exploded components, enforces anti-no-op thresholds, and produces a deterministic curriculum.
+- `validateMechanismStudy` rejects stroke-first studies, semantic part labels, disconnected construction graphs, independent exploded geometry, unsupported sources, and more than 20 visible strokes.
+- `renderMechanismSvg` remains the replaceable SVG terminal adapter.
+- Assembled and exploded views reuse identical path data; only evidenced transforms differ.
+- Relation evidence must be collected before stroke deletion. CATEGORY and STRUCTURE remain separate.
+- Machine state is limited to `DENY` or `AWAITING_USER_PIXEL_VERDICT`.
 
 ## Run and verify
 
-    npm run test:wonder:finish
     npm run wonder:sparse
+    npm run test:wonder:finish
     sh tools/server_tmux.sh
-    curl -fsS http://127.0.0.1:8811/api/noodle/health | grep -F 'empty-glass-mechanism-v4'
-    curl -fsS http://127.0.0.1:8811/api/wonder/status | grep -F 'MODERN_OBJECTS_ONLY'
+    curl -fsS http://127.0.0.1:8811/api/noodle/health | grep -F 'empty-glass-relations-v5'
 
 Review URL:
 
 <http://127.0.0.1:8811/wonder/>
 
-## Interaction contract
+## Evidence
 
-- The sealed source is hashed in-browser before judgment is enabled.
-- Assembled and exploded views show the same base paths.
-- Source-evidence rectangles use neutral part IDs rather than a shovel ontology.
-- The exploded view cannot author or render an independent path.
-- Reference visibility is explicit.
-- Every scale owns separate CATEGORY and STRUCTURE verdicts.
-- Ablation removes one shared stroke and collects CATEGORY, STRUCTURE, and NOISE evidence for the current state.
-- Hidden assembled component geometry is explicit and cannot be born during explosion.
-- Explicit human acceptance is saved atomically under ignored local state.
-- JSON and SVG exports contain no reference pixels.
-
-## Evidence state
-
-- Eight neutral parts.
-- Five evidenced attachment relationships.
-- Fifteen assembled-visible strokes and sixteen exploded-visible strokes.
-- The stroke count is a ceiling check, never a target.
-- Fresh correspondence, three-scale, and dual-state ablation gates are versioned under evidence/wonder-sparse.
-- Artistic state remains AWAITING_USER_PIXEL_VERDICT.
-
-Only the user can promote the paired mechanism study.
+- Four source-derived neutral regions and nine relations.
+- Five visible shared strokes, with 20 retained only as a ceiling.
+- Seventeen deterministic relation perturbations precede stroke ablation.
+- A second modern-object crop proves the extractor is not a hidden shovel ontology.
+- Before and after assembled pixels, before and after exploded pixels, the graph, and the relation-versus-stroke contrast are under `evidence/wonder-sparse`.
+- The new candidate reuses zero old path hashes and reduces source-contour error to 67.89 percent of the rejected candidate.
+- Artistic state remains `AWAITING_USER_PIXEL_VERDICT`. Only the user can promote it.

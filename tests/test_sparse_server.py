@@ -13,6 +13,7 @@ class MechanismServerTest(unittest.TestCase):
  def accepted(self):
   curriculum=json.loads((ROOT/'training'/'wonder-sparse-v1'/'shovel-studies.json').read_text());study=copy.deepcopy(curriculum['study'])
   study['source']['verification']={'state':'VERIFIED','sha256':server.EXPECTED_SHOVEL_SHA}
+  for item in study['relationEvidence']:item['CATEGORY']='POSITIVE';item['STRUCTURE']='NEUTRAL'
   for view in server.VIEWS:
    study['review'][view]['referenceHidden']=True
    study['review'][view]['CATEGORY']=[{'size':size,'verdict':'RECOGNIZABLE','note':''} for size in server.REVIEW_SCALES]
@@ -25,6 +26,8 @@ class MechanismServerTest(unittest.TestCase):
  def test_persistence_is_atomic_and_content_addressed(self):
   with tempfile.TemporaryDirectory() as temp:
    root=Path(temp);receipt,failures=server.persist_user_accepted_study(self.accepted(),root);self.assertEqual(failures,[]);self.assertTrue((root/'shovel-accepted-mechanism.json').is_file());self.assertEqual(len(receipt),64);self.assertFalse((root/'shovel-accepted-mechanism.json.tmp').exists());self.assertTrue(server.accepted_study(root))
+ def test_rejects_pending_relation_evidence(self):
+  study=self.accepted();study['relationEvidence'][0]['CATEGORY']='PENDING';study['acceptance']['replayHash']=server.acceptance_hash(study);self.assertTrue(any(item.startswith('RELATION_EVIDENCE_INCOMPLETE') for item in server.validate_user_accepted_study(study)))
  def test_rejects_non_object_body(self):self.assertEqual(server.validate_user_accepted_study([]),['BAD_BODY'])
  def test_rejects_old_independent_exploded_payload(self):
   study=self.accepted();study['explodedStrokes']=[{'d':'M0 0L1 1'}];study['acceptance']['replayHash']=server.acceptance_hash(study);self.assertIn('INDEPENDENT_EXPLODED_GEOMETRY_FORBIDDEN',server.validate_user_accepted_study(study))

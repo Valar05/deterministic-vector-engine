@@ -4,6 +4,8 @@ export const REVIEW_SCALES=Object.freeze([96,220,360]);
 export const STROKE_ROLES=Object.freeze(['SILHOUETTE','STRUCTURE','CORRECTION']);
 export const EVIDENCE_AXES=Object.freeze(['CATEGORY','STRUCTURE','NOISE']);
 export const EVIDENCE_VALUES=Object.freeze(['PENDING','POSITIVE','NEUTRAL','NEGATIVE','NOT_VISIBLE']);
+export const LANDMARK_TYPES=Object.freeze(['AXIS_MIN','AXIS_MAX','NORMAL_MIN','NORMAL_MAX','WIDTH_MINIMUM','ENCLOSED_REGION']);
+export const RELATION_TYPES=Object.freeze(['AXIS_ANGLE','LENGTH_RATIO','JUNCTION_CONTINUITY','NEGATIVE_SPACE_ASPECT']);
 const clone=value=>JSON.parse(JSON.stringify(value));
 const finite=value=>Number.isFinite(Number(value));
 const neutralId=(value,prefix)=>new RegExp('^'+prefix+'-\\d{2}$').test(value||'');
@@ -36,6 +38,12 @@ export function recordScaleReview(study,{view,axis,size,verdict,referenceHidden,
  if(referenceHidden!==true)throw new Error('REJECT:REFERENCE_MUST_BE_HIDDEN_FOR_REVIEW');
  const next=invalidate(study);next.review[view].referenceHidden=true;next.review[view][axis]=next.review[view][axis].map(item=>item.size===size?{size,verdict,note}:item);return next;
 }
+export function setRelationEvidence(study,{relationId,axis,value}){
+ if(!['CATEGORY','STRUCTURE'].includes(axis))throw new Error('REJECT:BAD_RELATION_AXIS:'+axis);
+ if(!['POSITIVE','NEUTRAL','NEGATIVE'].includes(value))throw new Error('REJECT:BAD_RELATION_VALUE:'+value);
+ if(!study.landmarkGraph?.relations?.some(relation=>relation.id===relationId))throw new Error('REJECT:UNKNOWN_RELATION:'+relationId);
+ const next=invalidate(study),item=next.relationEvidence.find(entry=>entry.relationId===relationId);if(!item)throw new Error('REJECT:MISSING_RELATION_EVIDENCE:'+relationId);item[axis]=value;return next;
+}
 export function ablationCases(study,view){return visibleStrokes(study,view).map(stroke=>({view,strokeId:stroke.id,partId:stroke.partId,label:view+' WITHOUT '+stroke.id}))}
 function rectValid(rect){return rect&&['x','y','width','height'].every(key=>finite(rect[key]))&&Number(rect.width)>0&&Number(rect.height)>0}
 function containsForbidden(value){if(typeof value==='string')return/flesh|cultivated|organic-mutation/i.test(value);if(Array.isArray(value))return value.some(containsForbidden);if(value&&typeof value==='object')return Object.values(value).some(containsForbidden);return false}
@@ -51,6 +59,11 @@ export function validateMechanismStudy(study){
  if(study?.source?.class!=='MODERN_OBJECT')failures.push('SOURCE_NOT_MODERN_OBJECT');
  if(containsForbidden(study))failures.push('FLESHPUNK_SOURCE_FORBIDDEN');
  if(study?.explodedStrokes||study?.studies)failures.push('INDEPENDENT_EXPLODED_GEOMETRY_FORBIDDEN');
+ const graph=study?.landmarkGraph;if(graph?.schema!=='vector-noodle.landmark-graph.v1')failures.push('LANDMARK_GRAPH_MISSING');
+ if(study?.derivation?.method!=='RELATION_FIRST_NEUTRAL_GEOMETRY')failures.push('RELATION_FIRST_DERIVATION_REQUIRED');
+ const landmarkIds=new Set(),graphPartIds=new Set((graph?.parts||[]).map(part=>part.id));for(const landmark of graph?.landmarks||[]){if(!neutralId(landmark.id,'landmark')||landmarkIds.has(landmark.id))failures.push('BAD_LANDMARK:'+landmark.id);landmarkIds.add(landmark.id);if(!LANDMARK_TYPES.includes(landmark.type)||!finite(landmark.point?.x)||!finite(landmark.point?.y))failures.push('BAD_LANDMARK_GEOMETRY:'+landmark.id)}
+ if(!graph?.landmarks?.length)failures.push('NO_LANDMARKS');if(!graph?.relations?.length)failures.push('NO_RELATIONS');
+ const relationIds=new Set();for(const relation of graph?.relations||[]){if(!neutralId(relation.id,'relation')||relationIds.has(relation.id))failures.push('BAD_RELATION:'+relation.id);relationIds.add(relation.id);if(!RELATION_TYPES.includes(relation.type)||!finite(relation.target)||!finite(relation.tolerance))failures.push('BAD_RELATION_GEOMETRY:'+relation.id);if(!Array.isArray(relation.members)||relation.members.some(id=>!landmarkIds.has(id)&&!graphPartIds.has(id)))failures.push('BAD_RELATION_MEMBERS:'+relation.id)}
  if(!Array.isArray(study?.parts)||study.parts.length<2)failures.push('NO_CONSTRUCTION_PARTS');
  const partIds=new Set(),strokeIds=new Set();
  for(const part of study?.parts||[]){
@@ -77,6 +90,7 @@ export function validateMechanismStudy(study){
   for(const view of VIEWS)if(!rectValid(edge.sourceEvidence?.[view]))failures.push('MISSING_ATTACHMENT_EVIDENCE:'+edge.id+':'+view);
  }
  if(!connected(study))failures.push('ASSEMBLED_ATTACHMENT_GRAPH_DISCONNECTED');
+ const evidenceIds=new Set((study?.relationEvidence||[]).map(item=>item.relationId));for(const id of relationIds)if(!evidenceIds.has(id))failures.push('MISSING_RELATION_EVIDENCE:'+id);for(const item of study?.relationEvidence||[]){if(!relationIds.has(item.relationId))failures.push('ORPHAN_RELATION_EVIDENCE:'+item.relationId);for(const axis of ['CATEGORY','STRUCTURE'])if(!['PENDING','POSITIVE','NEUTRAL','NEGATIVE'].includes(item[axis]))failures.push('BAD_RELATION_EVIDENCE:'+item.relationId+':'+axis)}
  for(const mark of study?.rejectedExplodedMarks||[])if(mark.state!=='QUARANTINED_NEGATIVE_EXAMPLE')failures.push('UNSUPPORTED_EXPLODED_MARK:'+mark.id);
  for(const view of VIEWS){const review=study?.review?.[view];if(!review)failures.push('MISSING_REVIEW:'+view);else for(const axis of ['CATEGORY','STRUCTURE'])if(!Array.isArray(review[axis])||REVIEW_SCALES.some(size=>!review[axis].some(item=>item.size===size&&'verdict'in item)))failures.push('BAD_REVIEW_SCALES:'+view+':'+axis)}
  if(study?.state==='USER_ACCEPTED'&&study?.acceptance?.replayHash!==acceptanceHash(study))failures.push('ACCEPTANCE_REPLAY_MISMATCH');
@@ -91,6 +105,7 @@ export function acceptanceFailures(study){
  const failures=[...validateMechanismStudy(study).failures],verification=study?.source?.verification;
  if(verification?.state!=='VERIFIED')failures.push('SOURCE_UNVERIFIED');if(verification?.sha256!==study?.source?.sha256)failures.push('SOURCE_HASH_MISMATCH');
  for(const edge of study?.attachments||[])if(edge.state!=='EVIDENCED')failures.push('ATTACHMENT_UNKNOWN:'+edge.id);
+ for(const item of study?.relationEvidence||[]){const values=['CATEGORY','STRUCTURE'].map(axis=>item[axis]);for(const axis of ['CATEGORY','STRUCTURE'])if(item[axis]==='PENDING')failures.push('RELATION_EVIDENCE_PENDING:'+item.relationId+':'+axis);if(values.includes('NEGATIVE')||!values.includes('POSITIVE'))failures.push('RELATION_NOT_LOAD_BEARING:'+item.relationId)}
  for(const view of VIEWS){const review=study.review?.[view];if(review?.referenceHidden!==true)failures.push('REFERENCE_VISIBLE:'+view);for(const size of REVIEW_SCALES){if(review?.CATEGORY?.find(item=>item.size===size)?.verdict!=='RECOGNIZABLE')failures.push('CATEGORY_NOT_RECOGNIZABLE:'+view+':'+size);if(review?.STRUCTURE?.find(item=>item.size===size)?.verdict!=='PRESERVED')failures.push('STRUCTURE_NOT_PRESERVED:'+view+':'+size)}}
  failures.push(...retainedFailures(study));return[...new Set(failures)];
 }

@@ -13,7 +13,7 @@ EXPECTED_SHOVEL_SHA='e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1
 REVIEW_SCALES=(96,220,360)
 VIEWS=('ASSEMBLED','EXPLODED')
 AXES=('CATEGORY','STRUCTURE','NOISE')
-BUILD_MARKER='empty-glass-mechanism-v4'
+BUILD_MARKER='empty-glass-relations-v5'
 
 def acceptance_hash(data):
  candidate=copy.deepcopy(data);candidate.pop('acceptance',None);candidate.pop('state',None)
@@ -32,6 +32,14 @@ def validate_user_accepted_study(data):
  if data.get('schema')!='vector-noodle.mechanism-line-study.v1':failures.append('BAD_SCHEMA')
  if data.get('subjectId')!='shovel':failures.append('BAD_TARGET')
  if data.get('explodedStrokes') or data.get('studies'):failures.append('INDEPENDENT_EXPLODED_GEOMETRY_FORBIDDEN')
+ if data.get('derivation',{}).get('method')!='RELATION_FIRST_NEUTRAL_GEOMETRY' or data.get('landmarkGraph',{}).get('schema')!='vector-noodle.landmark-graph.v1':failures.append('RELATION_FIRST_GRAPH_MISSING')
+ relations=data.get('landmarkGraph',{}).get('relations',[]);
+ if not relations:failures.append('NO_RELATIONS')
+ evidence={item.get('relationId'):item for item in data.get('relationEvidence',[])}
+ for relation in relations:
+  item=evidence.get(relation.get('id'),{});values=[item.get('CATEGORY'),item.get('STRUCTURE')]
+  if any(value=='PENDING' or value is None for value in values):failures.append(f'RELATION_EVIDENCE_INCOMPLETE:{relation.get("id")}')
+  elif 'NEGATIVE' in values or 'POSITIVE' not in values:failures.append(f'RELATION_NOT_LOAD_BEARING:{relation.get("id")}')
  if source.get('class')!='MODERN_OBJECT' or source.get('sha256')!=EXPECTED_SHOVEL_SHA:failures.append('BAD_SOURCE')
  if verification.get('state')!='VERIFIED' or verification.get('sha256')!=EXPECTED_SHOVEL_SHA:failures.append('SOURCE_UNVERIFIED')
  if 'flesh' in json.dumps(data,sort_keys=True).lower():failures.append('FLESHPUNK_FORBIDDEN')
@@ -81,7 +89,7 @@ class Handler(SimpleHTTPRequestHandler):
   if path=='/api/wonder/status':
    curriculum=json.loads((ROOT/'training'/'wonder-sparse-v1'/'shovel-studies.json').read_text());study=curriculum['study'];accepted=accepted_study(ROOT/'.noodle-state')
    counts={view:sum(stroke.get('visible',{}).get(view) is not False for _,stroke in all_strokes(study)) for view in VIEWS}
-   return self.send_json({'state':'USER_ACCEPTED' if accepted else curriculum['state'],'subject':'shovel','sourcePolicy':curriculum['sourcePolicy'],'partCount':len(study['parts']),'attachmentCount':len(study['attachments']),'visibleStrokeCounts':counts,'userAccepted':accepted,'machineVerdict':'AWAITING_USER_PIXEL_VERDICT'})
+   return self.send_json({'state':'USER_ACCEPTED' if accepted else curriculum['state'],'subject':'shovel','sourcePolicy':curriculum['sourcePolicy'],'partCount':len(study['parts']),'attachmentCount':len(study['attachments']),'relationCount':len(study.get('landmarkGraph',{}).get('relations',[])),'visibleStrokeCounts':counts,'userAccepted':accepted,'machineVerdict':'AWAITING_USER_PIXEL_VERDICT'})
   if path.startswith('/.noodle-state') or path.startswith('/.git'):return self.send_error(404)
   return super().do_GET()
  def do_POST(self):

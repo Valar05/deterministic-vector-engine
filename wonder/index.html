@@ -6,7 +6,7 @@
   <title>Empty Glass · Mechanism Preservation</title>
   <link rel="stylesheet" href="./studio.css">
 </head>
-<body data-build-marker="empty-glass-mechanism-v4">
+<body data-build-marker="empty-glass-relations-v5">
   <header>
     <p class="eyebrow">VECTOR NOODLE · MODERN OBJECT APPRENTICESHIP</p>
     <h1>Explosion means construction.</h1>
@@ -28,7 +28,7 @@
       <div class="drawing-column">
         <div class="stage-heading">
           <div><span id="pass-label">Gate 1 · correspondence</span><strong id="budget">0 / 20 visible strokes</strong></div>
-          <p id="instruction">Red boxes are source evidence regions. Neutral IDs prevent a hand-authored shovel ontology.</p>
+          <p id="instruction">Neutral landmarks and relations are source-derived. Judge those before deleting any stroke.</p>
         </div>
         <svg id="drawing" viewBox="0 0 397 397" aria-label="Mechanism-preserving shovel study">
           <rect class="paper" width="100%" height="100%"/>
@@ -62,8 +62,17 @@
           <p id="review-lock" class="warning">Hide the reference before recording judgment.</p>
         </div>
 
+        <div class="panel relation-test">
+          <p class="panel-label">Relation distortion first</p>
+          <strong id="relation-name">Unperturbed relation graph</strong>
+          <p id="relation-note">Relations must be judged before stroke deletion.</p>
+          <div class="actions"><button id="relation-prev">Previous</button><button id="relation-clear">Full</button><button id="relation-next">Next</button></div>
+          <div class="evidence-row"><span>CATEGORY · does distortion hurt recognition</span><button data-relation-axis="CATEGORY" data-value="POSITIVE">Yes</button><button data-relation-axis="CATEGORY" data-value="NEUTRAL">No change</button><button data-relation-axis="CATEGORY" data-value="NEGATIVE">Improves</button></div>
+          <div class="evidence-row"><span>STRUCTURE · does distortion hurt construction</span><button data-relation-axis="STRUCTURE" data-value="POSITIVE">Yes</button><button data-relation-axis="STRUCTURE" data-value="NEUTRAL">No change</button><button data-relation-axis="STRUCTURE" data-value="NEGATIVE">Improves</button></div>
+        </div>
+
         <div class="panel ablation">
-          <p class="panel-label">Dual-state destructive test</p>
+          <p class="panel-label">Stroke deletion second</p>
           <strong id="ablation-name">Full drawing</strong>
           <p id="ablation-note">Remove one stroke, then judge three different consequences.</p>
           <div class="actions"><button id="ablation-prev">Previous</button><button id="ablation-clear">Full</button><button id="ablation-next">Next</button></div>

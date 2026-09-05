@@ -7,7 +7,7 @@ from urllib.parse import urlparse
 
 ROOT=Path(__file__).resolve().parent.parent
 MAX_BODY=16384
-BUILD_MARKER='punnett-wonder-apprenticeship-v1'
+BUILD_MARKER='punnett-wonder-apprenticeship-v2'
 class Handler(SimpleHTTPRequestHandler):
     server_version='VectorNoodle/1'
     def __init__(self,*args,**kwargs): super().__init__(*args,directory=str(ROOT),**kwargs)
@@ -22,10 +22,10 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_response(status);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(body)));self.end_headers();self.wfile.write(body)
     def do_GET(self):
         path=urlparse(self.path).path
-        if path=='/api/noodle/health': return self.send_json({'state':'READY','buildMarker':BUILD_MARKER,'modelFreeRuntime':True,'sourceSet':'INTAKE_OPEN','machineVerdict':'DENY'})
+        if path=='/api/noodle/health': return self.send_json({'state':'READY','buildMarker':BUILD_MARKER,'modelFreeRuntime':True,'sourceSet':'TRAINING_SET_SEALED','machineVerdict':'STRUCTURAL_STUDY_COMPLETE_AWAITING_HUMAN'})
         if path=='/api/wonder/status':
-            manifest=json.loads((ROOT/'training'/'wonder-v1'/'source-manifest.json').read_text())
-            return self.send_json({'state':manifest['state'],'sealed':manifest['sealed'],'sourceCount':len(manifest['sources']),'machineVerdict':'DENY' if not manifest['sealed'] else 'STRUCTURAL_REVIEW_REQUIRED'})
+            manifest=json.loads((ROOT/'training'/'wonder-v2'/'corpus-manifest.json').read_text())
+            return self.send_json({'state':manifest['state'],'sealed':manifest['sealed'],'sourceCount':len(manifest['sources']),'machineVerdict':'DENY' if not manifest['sealed'] else 'STRUCTURAL_STUDY_COMPLETE_AWAITING_HUMAN'})
         if path.startswith('/.noodle-state') or path.startswith('/.git'): return self.send_error(404)
         return super().do_GET()
     def do_POST(self):

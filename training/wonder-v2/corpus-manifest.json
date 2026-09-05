@@ -1,0 +1,399 @@
+{
+  "schema": "vector-noodle.wonder-corpus.v2",
+  "state": "TRAINING_SET_SEALED",
+  "sealed": true,
+  "sealedBy": "USER_CONFIRMED_2026-09-05",
+  "sourceCount": 11,
+  "transformationQuartetCount": 25,
+  "macroStudyCount": 5,
+  "sources": [
+    {
+      "id": "punnett-ancestral-pressure-module",
+      "path": "/storage/emulated/0/Pictures/file_00000000307482308ac98ab4bae7a89b.png",
+      "sha256": "7695957839fece28a71348b5ef9f9a97218932488515f95e58dd2f62130b7d09",
+      "width": 1536,
+      "height": 1024,
+      "layout": "macro-pair",
+      "role": "canonical-anchor",
+      "assetClass": "user-supplied-generated-source-art",
+      "origin": "Android Pictures intake",
+      "generator": "UNKNOWN",
+      "license": "USER_CONTROLLED_SOURCE_PROVENANCE_UNKNOWN"
+    },
+    {
+      "id": "field-artillery-rooted-recoil",
+      "path": "/storage/emulated/0/Pictures/file_000000006c6c823087bfdcdc0d6f4cb8.png",
+      "sha256": "da9ff6590ca414063e60a6c4b37b4ad4af6d813680c4cd4a8b9f795fb5cc0c49",
+      "width": 1536,
+      "height": 1024,
+      "layout": "macro-pair",
+      "role": "macro-homology",
+      "assetClass": "user-supplied-generated-source-art",
+      "origin": "Android Pictures intake",
+      "generator": "UNKNOWN",
+      "license": "USER_CONTROLLED_SOURCE_PROVENANCE_UNKNOWN"
+    },
+    {
+      "id": "weapon-mutation-a",
+      "path": "/storage/emulated/0/Pictures/file_00000000e94c8230980168a82b3de1fa.png",
+      "sha256": "555a7e6fb612ae8eacea0271d9d08b3f0f6c9c44f755d32bb4a3f230e39c6c0d",
+      "width": 1536,
+      "height": 1024,
+      "layout": "macro-pair",
+      "role": "human-label-required",
+      "assetClass": "user-supplied-generated-source-art",
+      "origin": "Android Pictures intake",
+      "generator": "UNKNOWN",
+      "license": "USER_CONTROLLED_SOURCE_PROVENANCE_UNKNOWN"
+    },
+    {
+      "id": "weapon-mutation-b",
+      "path": "/storage/emulated/0/Pictures/file_00000000c22c82308e9d6f8ff7d89d47.png",
+      "sha256": "b0b428e039faf343416add224851e52bead64df57fe9b6fa126c9f3d900d75a8",
+      "width": 1536,
+      "height": 1024,
+      "layout": "macro-pair",
+      "role": "human-label-required",
+      "assetClass": "user-supplied-generated-source-art",
+      "origin": "Android Pictures intake",
+      "generator": "UNKNOWN",
+      "license": "USER_CONTROLLED_SOURCE_PROVENANCE_UNKNOWN"
+    },
+    {
+      "id": "weapon-mutation-c",
+      "path": "/storage/emulated/0/Pictures/file_00000000a2808230ab4326dc612b8a66.png",
+      "sha256": "4de65ff95dedf9ed000ed4332c7f3cb3f74228192c69e1a3c9a3ae824372369e",
+      "width": 1536,
+      "height": 1024,
+      "layout": "macro-pair",
+      "role": "human-label-required",
+      "assetClass": "user-supplied-generated-source-art",
+      "origin": "Android Pictures intake",
+      "generator": "UNKNOWN",
+      "license": "USER_CONTROLLED_SOURCE_PROVENANCE_UNKNOWN"
+    },
+    {
+      "id": "utility-normal",
+      "path": "/storage/emulated/0/Pictures/file_000000003dbc82308d6bed066cb8f146.png",
+      "sha256": "e4202ceb87bae2ab00d98b25999ab1105eda878d38904d97d070b63aff1fa923",
+      "width": 1983,
+      "height": 793,
+      "layout": "five-by-two-normal",
+      "role": "cross-sheet-normal",
+      "assetClass": "user-supplied-generated-source-art",
+      "origin": "Android Pictures intake",
+      "generator": "UNKNOWN",
+      "license": "USER_CONTROLLED_SOURCE_PROVENANCE_UNKNOWN"
+    },
+    {
+      "id": "medical-transformations",
+      "path": "/storage/emulated/0/Pictures/file_00000000ac90823082f8f63d041d347d.png",
+      "sha256": "adfbdd054d13c2c465ccb3b2a535766f7f60ff0b8d17337f30c8843e66254886",
+      "width": 1983,
+      "height": 793,
+      "layout": "five-by-four-quartets",
+      "role": "transformation-quartets",
+      "assetClass": "user-supplied-generated-source-art",
+      "origin": "Android Pictures intake",
+      "generator": "UNKNOWN",
+      "license": "USER_CONTROLLED_SOURCE_PROVENANCE_UNKNOWN"
+    },
+    {
+      "id": "domestic-transformations",
+      "path": "/storage/emulated/0/Pictures/file_0000000080fc823091f2c517ef30e5b5.png",
+      "sha256": "01e0d7bfd35e3edfd8df34dac4ac02ef58c7a4aee571be59a3bea32dbc3927a2",
+      "width": 1986,
+      "height": 792,
+      "layout": "five-by-four-quartets",
+      "role": "transformation-quartets",
+      "assetClass": "user-supplied-generated-source-art",
+      "origin": "Android Pictures intake",
+      "generator": "UNKNOWN",
+      "license": "USER_CONTROLLED_SOURCE_PROVENANCE_UNKNOWN"
+    },
+    {
+      "id": "storage-transformations",
+      "path": "/storage/emulated/0/Pictures/file_00000000c6288230a96ee8db9ac76149.png",
+      "sha256": "179396feecff4f07cd894c886a1ac23211dca0febf6a444392348da2ffa61179",
+      "width": 1983,
+      "height": 793,
+      "layout": "five-by-four-quartets",
+      "role": "transformation-quartets",
+      "assetClass": "user-supplied-generated-source-art",
+      "origin": "Android Pictures intake",
+      "generator": "UNKNOWN",
+      "license": "USER_CONTROLLED_SOURCE_PROVENANCE_UNKNOWN"
+    },
+    {
+      "id": "infrastructure-transformations",
+      "path": "/storage/emulated/0/Pictures/file_00000000a4b08230a2ed7684fd571a8e.png",
+      "sha256": "f10fe4103a394eff01291675a7052b50919a9c741ab68447ba3f723a1036fc8f",
+      "width": 1983,
+      "height": 793,
+      "layout": "ten-by-two-split-quartets",
+      "role": "transformation-quartets",
+      "assetClass": "user-supplied-generated-source-art",
+      "origin": "Android Pictures intake",
+      "generator": "UNKNOWN",
+      "license": "USER_CONTROLLED_SOURCE_PROVENANCE_UNKNOWN"
+    },
+    {
+      "id": "utility-fleshpunk",
+      "path": "/storage/emulated/0/Pictures/file_00000000550482309d65297994f164e1.png",
+      "sha256": "463425b4e0f3f0df8f9af52d1cc1d6e6758c33c9a590d28bdb8f327f42e97f95",
+      "width": 1983,
+      "height": 793,
+      "layout": "five-by-two-fleshpunk",
+      "role": "cross-sheet-fleshpunk",
+      "assetClass": "user-supplied-generated-source-art",
+      "origin": "Android Pictures intake",
+      "generator": "UNKNOWN",
+      "license": "USER_CONTROLLED_SOURCE_PROVENANCE_UNKNOWN"
+    }
+  ],
+  "transformationQuartets": [
+    {
+      "id": "shovel",
+      "group": "utility",
+      "label": "SHOVEL",
+      "refs": {
+        "normalSource": "utility-normal",
+        "fleshSource": "utility-fleshpunk",
+        "column": 0
+      }
+    },
+    {
+      "id": "power-drill",
+      "group": "utility",
+      "label": "POWER DRILL",
+      "refs": {
+        "normalSource": "utility-normal",
+        "fleshSource": "utility-fleshpunk",
+        "column": 1
+      }
+    },
+    {
+      "id": "toolbox",
+      "group": "utility",
+      "label": "TOOLBOX",
+      "refs": {
+        "normalSource": "utility-normal",
+        "fleshSource": "utility-fleshpunk",
+        "column": 2
+      }
+    },
+    {
+      "id": "trash-can",
+      "group": "utility",
+      "label": "TRASH CAN",
+      "refs": {
+        "normalSource": "utility-normal",
+        "fleshSource": "utility-fleshpunk",
+        "column": 3
+      }
+    },
+    {
+      "id": "dumpster",
+      "group": "utility",
+      "label": "DUMPSTER",
+      "refs": {
+        "normalSource": "utility-normal",
+        "fleshSource": "utility-fleshpunk",
+        "column": 4
+      }
+    },
+    {
+      "id": "iv-stand",
+      "group": "medical",
+      "label": "IV STAND",
+      "refs": {
+        "source": "medical-transformations",
+        "column": 0
+      }
+    },
+    {
+      "id": "examination-lamp",
+      "group": "medical",
+      "label": "EXAMINATION LAMP",
+      "refs": {
+        "source": "medical-transformations",
+        "column": 1
+      }
+    },
+    {
+      "id": "instrument-tray",
+      "group": "medical",
+      "label": "INSTRUMENT TRAY",
+      "refs": {
+        "source": "medical-transformations",
+        "column": 2
+      }
+    },
+    {
+      "id": "wheeled-stretcher",
+      "group": "medical",
+      "label": "WHEELED STRETCHER",
+      "refs": {
+        "source": "medical-transformations",
+        "column": 3
+      }
+    },
+    {
+      "id": "autoclave",
+      "group": "medical",
+      "label": "AUTOCLAVE",
+      "refs": {
+        "source": "medical-transformations",
+        "column": 4
+      }
+    },
+    {
+      "id": "chair",
+      "group": "domestic",
+      "label": "CHAIR",
+      "refs": {
+        "source": "domestic-transformations",
+        "column": 0
+      }
+    },
+    {
+      "id": "mattress",
+      "group": "domestic",
+      "label": "MATTRESS",
+      "refs": {
+        "source": "domestic-transformations",
+        "column": 1
+      }
+    },
+    {
+      "id": "filing-cabinet",
+      "group": "domestic",
+      "label": "FILING CABINET",
+      "refs": {
+        "source": "domestic-transformations",
+        "column": 2
+      }
+    },
+    {
+      "id": "sink",
+      "group": "domestic",
+      "label": "SINK",
+      "refs": {
+        "source": "domestic-transformations",
+        "column": 3
+      }
+    },
+    {
+      "id": "toilet",
+      "group": "domestic",
+      "label": "TOILET",
+      "refs": {
+        "source": "domestic-transformations",
+        "column": 4
+      }
+    },
+    {
+      "id": "barrel",
+      "group": "storage",
+      "label": "BARREL",
+      "refs": {
+        "source": "storage-transformations",
+        "column": 0
+      }
+    },
+    {
+      "id": "jerry-can",
+      "group": "storage",
+      "label": "JERRY CAN",
+      "refs": {
+        "source": "storage-transformations",
+        "column": 1
+      }
+    },
+    {
+      "id": "plastic-crate",
+      "group": "storage",
+      "label": "PLASTIC CRATE",
+      "refs": {
+        "source": "storage-transformations",
+        "column": 2
+      }
+    },
+    {
+      "id": "shelving-unit",
+      "group": "storage",
+      "label": "SHELVING UNIT",
+      "refs": {
+        "source": "storage-transformations",
+        "column": 3
+      }
+    },
+    {
+      "id": "hand-truck",
+      "group": "storage",
+      "label": "HAND TRUCK",
+      "refs": {
+        "source": "storage-transformations",
+        "column": 4
+      }
+    },
+    {
+      "id": "gate-valve",
+      "group": "infrastructure",
+      "label": "GATE VALVE",
+      "refs": {
+        "source": "infrastructure-transformations",
+        "column": 0
+      }
+    },
+    {
+      "id": "centrifugal-pump",
+      "group": "infrastructure",
+      "label": "CENTRIFUGAL PUMP",
+      "refs": {
+        "source": "infrastructure-transformations",
+        "column": 1
+      }
+    },
+    {
+      "id": "pressure-tank",
+      "group": "infrastructure",
+      "label": "PRESSURE TANK",
+      "refs": {
+        "source": "infrastructure-transformations",
+        "column": 2
+      }
+    },
+    {
+      "id": "radiator",
+      "group": "infrastructure",
+      "label": "RADIATOR",
+      "refs": {
+        "source": "infrastructure-transformations",
+        "column": 3
+      }
+    },
+    {
+      "id": "hose-reel",
+      "group": "infrastructure",
+      "label": "HOSE REEL",
+      "refs": {
+        "source": "infrastructure-transformations",
+        "column": 4
+      }
+    }
+  ],
+  "macroStudies": [
+    "punnett-ancestral-pressure-module",
+    "field-artillery-rooted-recoil",
+    "weapon-mutation-a",
+    "weapon-mutation-b",
+    "weapon-mutation-c"
+  ],
+  "weaponMutationLabels": {
+    "weapon-mutation-a": "HUMAN_LABEL_REQUIRED",
+    "weapon-mutation-b": "HUMAN_LABEL_REQUIRED",
+    "weapon-mutation-c": "HUMAN_LABEL_REQUIRED"
+  },
+  "policy": "Hash mismatch, missing source, unexpected dimensions, or ambiguous layout fails closed."
+}

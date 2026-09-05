@@ -1,6 +1,6 @@
 # Deterministic Offline Vector Engine
 
-> **Status:** experimental, offline-first, deterministic SVG research project. The interactive brutalist box works. The first portrait transcription is **visually rejected**. The durable tracing studio described below is confirmed but not yet implemented.
+> **Status:** experimental, offline-first, deterministic SVG research project. The interactive brutalist box works. The portrait transcription is **visually rejected**. The Punnett Wonder v2 causal apprenticeship is structurally implemented and awaits human visual judgment.
 
 This repository explores a deliberately small vector engine whose production output is ordinary SVG rather than Canvas, WebGL, a model file, or a runtime AI response. The long-term objective is to turn human intent, authored curves, deformation systems, animation curves, and procedural material logic into compact deterministic vector programs that remain inspectable and runnable on a mobile browser.
 
@@ -16,7 +16,8 @@ The project began with a deliberately simple text-to-shape birth gate and evolve
 | Vector Rosetta research corpus | Implemented | Research validator passes | Reference material only |
 | Editorial portrait v1 | Implemented artifact | SVG constraints and privacy checks pass | **REJECTED by user: “this is horrific”** |
 | Permanent tracing/learning studio | Confirmed design | No production implementation yet | Not available |
-| Deterministic image-critique schema | Confirmed design | No production implementation yet | Not available |
+| Punnett Wonder causal apprenticeship | Implemented | 11 sealed sources, 110 panels, 14,253 centerline paths, 20/25 held-out predictions | Awaiting human review |
+| Deterministic image-critique schema | Implemented for Wonder structural denial | Machine may deny but cannot artistically accept | Human verdict required |
 | Milestones 2–5 from the original blueprint | Research/design only | Not implemented | Not available |
 
 Machine checks are guardrails. A visual artifact remains red until the user accepts the actual pixels.
@@ -29,7 +30,8 @@ sh tools/server_tmux.sh
 
 Then open:
 
-- Vector Noodle box: <http://127.0.0.1:8810/>
+- Punnett Wonder training gates: <http://127.0.0.1:8811/>
+- Vector Noodle box historical route: <http://127.0.0.1:8810/>
 - Current rejected portrait surface: <http://127.0.0.1:8810/transcription/>
 - Current rejected portrait SVG: <http://127.0.0.1:8810/transcription/portrait.svg>
 

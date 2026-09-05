@@ -5,7 +5,9 @@
   "scripts": {
     "test:wonder": "node --test tests/wonder-apprenticeship.test.mjs",
     "wonder:intake": "python tools/wonder_source_intake.py verify",
-    "wonder:render": "node tools/render_wonder_gate.mjs"
+    "wonder:render": "node tools/render_wonder_gate.mjs",
+    "test:wonder:corpus": "python -m unittest discover -s tests -p test_wonder_corpus.py",
+    "wonder:corpus": "python tools/build_wonder_corpus.py build --max-dim 360 && python tools/induce_wonder_grammar.py"
   },
   "dependencies": {
     "@visioncortex/vtracer": "1.0.0-alpha.4"

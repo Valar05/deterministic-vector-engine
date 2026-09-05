@@ -1,0 +1,341 @@
+{
+  "schema": "vector-noodle.functional-ontology.v1",
+  "objects": {
+    "shovel": {
+      "features": [
+        "handheld",
+        "human-force",
+        "ground-contact",
+        "cutting-edge",
+        "long-lever"
+      ],
+      "expectedFamily": "force-transfer"
+    },
+    "power-drill": {
+      "features": [
+        "handheld",
+        "rotary-drive",
+        "tool-interface",
+        "torque",
+        "portable-power"
+      ],
+      "expectedFamily": "force-transfer"
+    },
+    "toolbox": {
+      "features": [
+        "portable",
+        "container",
+        "latching",
+        "human-carry",
+        "service-access"
+      ],
+      "expectedFamily": "containment"
+    },
+    "trash-can": {
+      "features": [
+        "container",
+        "waste",
+        "lid",
+        "mobile",
+        "service-access"
+      ],
+      "expectedFamily": "containment"
+    },
+    "dumpster": {
+      "features": [
+        "container",
+        "waste",
+        "lid",
+        "mobile",
+        "lifting-interface"
+      ],
+      "expectedFamily": "containment"
+    },
+    "iv-stand": {
+      "features": [
+        "support",
+        "fluid-logistics",
+        "mobile",
+        "height-adjustment",
+        "human-service"
+      ],
+      "expectedFamily": "support-logistics"
+    },
+    "examination-lamp": {
+      "features": [
+        "support",
+        "articulation",
+        "precision-direction",
+        "mobile",
+        "human-service"
+      ],
+      "expectedFamily": "support-logistics"
+    },
+    "instrument-tray": {
+      "features": [
+        "support",
+        "work-surface",
+        "mobile",
+        "height-adjustment",
+        "human-service"
+      ],
+      "expectedFamily": "support-logistics"
+    },
+    "wheeled-stretcher": {
+      "features": [
+        "human-load",
+        "support",
+        "mobile",
+        "height-adjustment",
+        "compliance"
+      ],
+      "expectedFamily": "compliant-support"
+    },
+    "autoclave": {
+      "features": [
+        "container",
+        "pressure",
+        "heat",
+        "service-access",
+        "sealed-interface"
+      ],
+      "expectedFamily": "pressure-containment"
+    },
+    "chair": {
+      "features": [
+        "human-load",
+        "support",
+        "ground-contact",
+        "compliance",
+        "static"
+      ],
+      "expectedFamily": "compliant-support"
+    },
+    "mattress": {
+      "features": [
+        "human-load",
+        "support",
+        "compliance",
+        "distributed-pressure",
+        "static"
+      ],
+      "expectedFamily": "compliant-support"
+    },
+    "filing-cabinet": {
+      "features": [
+        "container",
+        "repeated-storage",
+        "service-access",
+        "static",
+        "sliding-interface"
+      ],
+      "expectedFamily": "containment"
+    },
+    "sink": {
+      "features": [
+        "fluid-logistics",
+        "drainage",
+        "work-surface",
+        "sealed-interface",
+        "static"
+      ],
+      "expectedFamily": "flow"
+    },
+    "toilet": {
+      "features": [
+        "fluid-logistics",
+        "waste",
+        "human-load",
+        "drainage",
+        "sealed-interface"
+      ],
+      "expectedFamily": "flow"
+    },
+    "barrel": {
+      "features": [
+        "container",
+        "fluid-logistics",
+        "pressure",
+        "sealed-interface",
+        "portable"
+      ],
+      "expectedFamily": "pressure-containment"
+    },
+    "jerry-can": {
+      "features": [
+        "container",
+        "fluid-logistics",
+        "sealed-interface",
+        "portable",
+        "human-carry"
+      ],
+      "expectedFamily": "containment"
+    },
+    "plastic-crate": {
+      "features": [
+        "container",
+        "open-storage",
+        "portable",
+        "stacking-interface",
+        "load-frame"
+      ],
+      "expectedFamily": "containment"
+    },
+    "shelving-unit": {
+      "features": [
+        "support",
+        "repeated-storage",
+        "static",
+        "load-frame",
+        "service-access"
+      ],
+      "expectedFamily": "support-logistics"
+    },
+    "hand-truck": {
+      "features": [
+        "human-force",
+        "mobile",
+        "ground-contact",
+        "load-frame",
+        "long-lever"
+      ],
+      "expectedFamily": "force-transfer"
+    },
+    "gate-valve": {
+      "features": [
+        "fluid-logistics",
+        "pressure",
+        "sealed-interface",
+        "flow-control",
+        "rotary-drive"
+      ],
+      "expectedFamily": "flow"
+    },
+    "centrifugal-pump": {
+      "features": [
+        "fluid-logistics",
+        "pressure",
+        "sealed-interface",
+        "rotary-drive",
+        "flow-control"
+      ],
+      "expectedFamily": "flow"
+    },
+    "pressure-tank": {
+      "features": [
+        "container",
+        "pressure",
+        "sealed-interface",
+        "static",
+        "inspection"
+      ],
+      "expectedFamily": "pressure-containment"
+    },
+    "radiator": {
+      "features": [
+        "fluid-logistics",
+        "heat",
+        "repetition",
+        "static",
+        "flow-control"
+      ],
+      "expectedFamily": "flow"
+    },
+    "hose-reel": {
+      "features": [
+        "fluid-logistics",
+        "mobile",
+        "rotary-drive",
+        "flexible-medium",
+        "sealed-interface"
+      ],
+      "expectedFamily": "flow"
+    }
+  },
+  "families": {
+    "force-transfer": {
+      "proposition": "Cultivate the force-transmission body while retaining rigid tool, grip, and reaction interfaces.",
+      "preserve": [
+        "direction of work",
+        "operator interface",
+        "terminal tool geometry"
+      ],
+      "propagate": [
+        "actuator volume",
+        "housing",
+        "reaction path",
+        "service access"
+      ]
+    },
+    "containment": {
+      "proposition": "Cultivate a tensioned containment membrane inside standardized edges, closures, and lifting interfaces.",
+      "preserve": [
+        "usable volume",
+        "closure",
+        "handling interface"
+      ],
+      "propagate": [
+        "frame spacing",
+        "puncture protection",
+        "inspection access",
+        "replacement seams"
+      ]
+    },
+    "support-logistics": {
+      "proposition": "Cultivate the load or service column while retaining exact height, mobility, and attachment interfaces.",
+      "preserve": [
+        "working elevation",
+        "wheel contact",
+        "tool interface"
+      ],
+      "propagate": [
+        "column section",
+        "base spread",
+        "nutrient routing",
+        "maintenance clearance"
+      ]
+    },
+    "compliant-support": {
+      "proposition": "Cultivate distributed compliance where human load enters the object while preserving stable manufactured support geometry.",
+      "preserve": [
+        "human scale",
+        "ground stability",
+        "safe posture"
+      ],
+      "propagate": [
+        "load surface depth",
+        "restraint spacing",
+        "replacement access",
+        "frame geometry"
+      ]
+    },
+    "pressure-containment": {
+      "proposition": "Cultivate the pressure vessel and let its swelling reorganize restraint, seams, inspection, and rupture containment.",
+      "preserve": [
+        "port standard",
+        "pressure job",
+        "service envelope"
+      ],
+      "propagate": [
+        "cage geometry",
+        "flange placement",
+        "safety volume",
+        "failure direction"
+      ]
+    },
+    "flow": {
+      "proposition": "Cultivate flow handling before payload, keeping hard ports and control interfaces while vascular geometry changes the housing.",
+      "preserve": [
+        "port location",
+        "flow direction",
+        "control affordance"
+      ],
+      "propagate": [
+        "manifold spacing",
+        "restraint rhythm",
+        "heat or pressure clearance",
+        "inspection access"
+      ]
+    }
+  }
+}

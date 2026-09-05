@@ -11,3 +11,4 @@ __pycache__/
 training/wonder-v1/source-cache/
 training/wonder-v1/model-cache/
 training/wonder-v1/candidates/
+training/wonder-v2/derived/

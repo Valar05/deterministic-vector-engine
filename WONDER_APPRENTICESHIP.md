@@ -1,33 +1,36 @@
 # Punnett Wonder Apprenticeship
 
-This branch replaces the rejected generic capsule training premise with a contrastive artistic apprenticeship.
+This branch replaces the rejected generic capsule premise with contrastive causal apprenticeship.
 
 ## Current truth
 
-The source set is `INTAKE_OPEN`. The Punnett pressure module and exploded field artillery plate are verified preliminary sources. Their first defensible shared lesson is living force management inside standardized mechanical interfaces. That relationship is provisional until the human declares the full exploded set present.
+Eleven exact source plates are hash-sealed into 25 transformation quartets and five macro assembled-to-exploded studies. The derived corpus contains 110 panels and 14,253 centerline cubic candidates. All recovered geometry remains `TEACHER_PROPOSAL`. The three weapon mutations remain `HUMAN_LABEL_REQUIRED`.
 
-## Pipeline
+The first leave-one-object-out run predicts 20 of 25 mechanism families. Power drill, wheeled stretcher, filing cabinet, jerry can, and shelving unit are retained failures. The system is `STRUCTURAL_STUDY_COMPLETE_AWAITING_HUMAN`, never artistically accepted.
 
-`immutable source hash → visual and force ledgers → optional offline region proposals → candidate contour recovery → plain-language contour intent → causal assembly reason → faithful reconstruction → three deliberate failures → wonder mutation → machine denial or structural validity → human artistic verdict`
+## Causal pipeline
 
-VTracer recovers candidate contours. Florence may propose regions offline. Neither emits grammar, final art, or acceptance. No Inkscape executable or Inkscape source code is used.
+`exact source hash → semantic panel role → ink isolation → centerline skeleton → cubic stroke graph → assembled/exploded correspondence → functional ontology → contrastive edit program → held-out prediction → SVG evidence → human verdict`
+
+VTracer remains available for closed silhouette candidates. The new centerline lane handles drawn strokes without turning each ink mark into a doubled filled outline. Florence remains an optional offline region teacher. Neither tool enters the deterministic runtime or owns judgment. No Inkscape executable or copied Inkscape code is used.
 
 ## Gates
 
-1. Intake gate verifies every exact source hash and fails closed on replacement.
-2. Study gate requires hierarchy, force, negative space, rhythm, shape grammar, causal adjacency, and contour intent.
-3. Reconstruction gate requires FAITHFUL plus TOO MECHANICAL, TOO ORGANIC, DECORATIVE FLESH, and WONDER at identical scale.
-4. Machine QA can only deny or report structurally valid awaiting human.
-5. Only the human can artistically accept.
+1. Corpus topology verifies 11 source hashes, 25 quartets, five macro pairs, and 110 unique panels.
+2. Centerline recovery emits source-derived cubic paths marked as unaccepted proposals.
+3. Correspondence exposes component costs and uncertainty. Geometry proposes while function decides.
+4. Leave-one-out excludes the held object from its own neighbor vote and preserves every miss.
+5. Reconstruction still requires FAITHFUL, TOO MECHANICAL, TOO ORGANIC, DECORATIVE FLESH, and WONDER at identical scale.
+6. Only the human may artistically accept.
 
 ## Run
 
 ```sh
-python tools/wonder_source_intake.py cache
-npm install --ignore-scripts
+python tools/build_wonder_corpus.py verify
+npm run wonder:corpus
+npm run test:wonder:corpus
 npm run test:wonder
-npm run wonder:render
-node tools/wonder_vtracer.mjs training/wonder-v1/source-cache/punnett-ancestral-pressure-module.png training/wonder-v1/candidates/punnett.svg training/wonder-v1/candidates/punnett.receipt.json
+sh tools/server_tmux.sh
 ```
 
 Review route: `/wonder/`

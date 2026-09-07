@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Saint Andrew's Shovel — accepted interactive decomposition</title>
+<style>{{CSS}}</style>
+</head>
+<body data-build="dve-accepted-shovel-interactive-v2" data-accepted-static-sha256="3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b">
+<main id="app">
+  <div class="row assembly" role="group" aria-label="Assembly controls"><button id="assemble" type="button" aria-pressed="true">Assemble</button><button id="spread" type="button" aria-pressed="false">Reference layout</button><button id="resetPart" type="button">Reset part</button></div>
+  <div class="row parts" role="group" aria-label="Select shovel part"><button type="button" data-select="handle" aria-pressed="true">D-handle</button><button type="button" data-select="shaft" aria-pressed="false">Shaft</button><button type="button" data-select="socket" aria-pressed="false">Socket</button><button type="button" data-select="blade" aria-pressed="false">Blade</button></div>
+  <div class="row modes" role="group" aria-label="Transform mode"><button type="button" data-transform="move" aria-pressed="true">Move</button><button type="button" data-transform="rotate" aria-pressed="false">Rotate</button><button type="button" data-transform="scale" aria-pressed="false">Scale</button><button type="button" data-transform="light" aria-pressed="false">Light</button></div>
+  <section id="workspace" class="workspace" aria-label="Interactive Saint Andrew's Shovel">
+    <div id="acceptedFrame" class="layer">
+<!-- ACCEPTED_SHOVEL_BEGIN sha256=3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b -->
+{{ACCEPTED_SVG}}
+<!-- ACCEPTED_SHOVEL_END -->
+    </div>
+    <div id="explodedFrame" class="layer"><svg id="partsScene" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMid meet" aria-label="Decomposed views of the accepted shovel"></svg></div>
+    <svg id="lightScene" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+<defs>
+  <radialGradient id="uiLight" gradientUnits="userSpaceOnUse" cx="512" cy="360" r="330">
+    <stop offset="0" stop-color="#fffdf7" stop-opacity=".45"/>
+    <stop offset=".22" stop-color="#fffaf0" stop-opacity=".18"/>
+    <stop offset=".55" stop-color="#fff" stop-opacity=".045"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </radialGradient>
+  <clipPath id="uiHandleClip"><rect x="385" y="38" width="254" height="322" rx="16"/></clipPath>
+  <clipPath id="uiShaftClip"><rect x="468" y="330" width="88" height="604" rx="10"/></clipPath>
+  <clipPath id="uiSocketClip"><rect x="456" y="904" width="112" height="108" rx="10"/></clipPath>
+  <clipPath id="uiBladeClip"><path d="M348 986 L468 986 Q479 986 481 962 L481 927 L543 927 L543 962 Q545 986 556 986 L676 986 L676 1187 Q672 1293 620 1377 Q575 1421 512 1441 Q449 1421 404 1377 Q352 1293 348 1187 Z"/></clipPath>
+</defs>
+<g data-light-piece="handle" clip-path="url(#uiHandleClip)"><rect width="1024" height="1536" fill="url(#uiLight)"/></g>
+<g data-light-piece="shaft" clip-path="url(#uiShaftClip)"><rect width="1024" height="1536" fill="url(#uiLight)"/></g>
+<g data-light-piece="socket" clip-path="url(#uiSocketClip)"><rect width="1024" height="1536" fill="url(#uiLight)"/></g>
+<g data-light-piece="blade" clip-path="url(#uiBladeClip)"><rect width="1024" height="1536" fill="url(#uiLight)"/></g>
+</svg>
+    <svg id="assembledHits" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+  <rect data-assembled-hit="handle" x="385" y="38" width="254" height="322" rx="18" fill="transparent"/>
+  <rect data-assembled-hit="shaft" x="468" y="330" width="88" height="584" rx="12" fill="transparent"/>
+  <rect data-assembled-hit="socket" x="456" y="904" width="112" height="82" rx="12" fill="transparent"/>
+  <path data-assembled-hit="blade" d="M348 986 L468 986 Q479 986 481 962 L481 927 L543 927 L543 962 Q545 986 556 986 L676 986 L676 1187 Q672 1293 620 1377 Q575 1421 512 1441 Q449 1421 404 1377 Q352 1293 348 1187 Z" fill="transparent"/>
+</svg>
+    <div id="status" class="status" aria-live="polite"></div>
+  </section>
+</main>
+<script>{{JS}}</script>
+</body>
+</html>

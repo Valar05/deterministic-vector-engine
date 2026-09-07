@@ -9,6 +9,7 @@ DIST=BASE/"dist/index.html"
 SHELL=BASE/"runtime/shell.html"
 CSS=BASE/"runtime/runtime.css"
 JS=BASE/"runtime/runtime.js"
+PARTS=BASE/"runtime/3d"
 BUILDER=ROOT/"tools/build_accepted_shovel_spa.py"
 ACCEPTED_SHA="3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b"
 ACCEPTED_SVG_SHA="7511c9fd8ff9e833b22cd3d4af5e3e0a88dd435c17de665535e37ea0a5227dda"
@@ -48,7 +49,9 @@ class AcceptedShovelInteractiveTests(unittest.TestCase):
         mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
         with tempfile.TemporaryDirectory() as td:
             out=Path(td)/"index.html"
-            mod.build(ACCEPTED,SHELL,CSS,JS,out)
+            runtime=Path(td)/"runtime.js"
+            mod.build(ACCEPTED,SHELL,CSS,PARTS,runtime,out)
             self.assertEqual(out.read_bytes(),DIST.read_bytes())
+            self.assertEqual(runtime.read_bytes(),JS.read_bytes())
 
 if __name__=="__main__":unittest.main()

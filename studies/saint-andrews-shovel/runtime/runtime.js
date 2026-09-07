@@ -137,7 +137,7 @@
   function basis(name){const q=state[name].q;return {ex:rotateV([1,0,0],q),ey:rotateV([0,1,0],q),ez:rotateV([0,0,1],q)}}
   function matrixFor(name,z=0){
     const c=centers[name],st=state[name],{ex,ey,ez}=basis(name),s=st.s;
-    const a=s*ex[0],b=s*ex[1],cc=s*ex[0],d=s*ey[1];
+    const a=s*ex[0],b=s*ex[1],cc=s*ey[0],d=s*ey[1];
     const e=c.x+st.dx+s*ez[0]*z-a*c.x-cc*c.y;
     const f=c.y+st.dy+s*ez[1]*z-b*c.x-d*c.y;
     return {a,b,c:cc,d,e,f,svg:`matrix(${a.toFixed(6)} ${b.toFixed(6)} ${cc.toFixed(6)} ${d.toFixed(6)} ${e.toFixed(3)} ${f.toFixed(3)})`,ez};
@@ -152,7 +152,7 @@
       layer.node.setAttribute('transform',matrixFor(name,layer.z).svg);
       if(layer.kind==='side')layer.node.style.visibility=sideVisibility==='1'?'visible':'hidden';
     });
-    const ordered=[...root.__layers].sort(,y)=>normalZ>=0?x.z-y.z:y.z-x.z);
+    const ordered=[...root.__layers].sort((x,y)=>normalZ>=0?x.z-y.z:y.z-x.z);
     ordered.forEach(l=>root.appendChild(l.node));
     root.__hit.setAttribute('transform',matrixFor(name,nearFaceZ(name)).svg);root.appendChild(root.__hit);
     syncLightTransform();
@@ -170,7 +170,7 @@
     assemble.setAttribute('aria-pressed',String(!exploded));spread.setAttribute('aria-pressed',String(exploded&&referenceLayout));
   }
   function updateStatus(extra=''){status.textContent=extra||(exploded?`${label(selected)} · ${mode} · 3D vector`:`${label(selected)} selected · drag a part to pull only that part free`)}
-  function select(name){if(!pieceNodes[name])return;selected=name;if(exploded)document.getElementById('partsView')?.appendChild(pieceNodes[name]);Object.entries(lightNodes).forEach(([k,n])=>{n.style.display=k===name?'inline':'none'});updatePressed();syncLightTransform();updateStatus()}
+  function select(name){if(!pieceNodes[name])return;selected=name;if(exploded)document.getElementById('partsView')?.appendChild(pieceNodes[name]);Object.entries(lightNodes).forEach(([k,n])=>n.style.display=k===name?'inline':'none');updatePressed();syncLightTransform();updateStatus()}
   function setMode(next,announce=true){if(!['move','rotate','scale','light'].includes(next))return;mode=next;updatePressed();if(announce)updateStatus()}
   function showAssembled(){exploded=false;referenceLayout=false;gesture=null;acceptedFrame.style.visibility='visible';explodedFrame.style.visibility='hidden';assembledHits.style.visibility='visible';resetAll();lightScene.style.opacity=lightVisible?'.18':'0';syncLightTransform();updatePressed();updateStatus('Assembled · accepted shovel frozen · drag a part to pull it free');haptic(8)}
   function showExploded(){exploded=true;acceptedFrame.style.visibility='hidden';explodedFrame.style.visibility='visible';assembledHits.style.visibility='hidden';lightScene.style.opacity=lightVisible?'.18':'0';updatePressed();syncLightTransform()}
@@ -240,7 +240,7 @@
     if(!exploded)return;const s=state[selected];if(e.key==='r'||e.key==='R'){e.preventDefault();resetPart(selected);return}
     if(mode==='move'){if(e.key==='ArrowLeft')s.dx-=10;else if(e.key==='ArrowRight')s.dx+=10;else if(e.key==='ArrowUp')s.dy-=10;else if(e.key==='ArrowDown')s.dy+=10;else return;apply(selected)}
     else if(mode==='rotate'){
-      if(e.key==='ArrowLeft')rotateSelected([0,1,0],-.12);else if(e.key==='ArrowRight')rotateSelected([0,1,0],.12);else if(e.key==='ArrowUp')rotateSelected([1,0,0],-.12);else if(e.key==='ArrowDown')rotateSelected([1,0,0],.12);else if(e.key==='q'||e.key==='Q')rotateSelected([0,0,1],-.12);else if(e.key=='e'||e.key==='E')rotateSelected([0,0,1],.12);else return;
+      if(e.key==='ArrowLeft')rotateSelected([0,1,0],-.12);else if(e.key==='ArrowRight')rotateSelected([0,1,0],.12);else if(e.key==='ArrowUp')rotateSelected([1,0,0],-.12);else if(e.key==='ArrowDown')rotateSelected([1,0,0],.12);else if(e.key==='q'||e.key==='Q')rotateSelected([0,0,1],-.12);else if(e.key==='e'||e.key==='E')rotateSelected([0,0,1],.12);else return;
     }else if(mode==='scale'){if(e.key==='ArrowUp')s.s=clamp(s.s*1.06,.30,3);else if(e.key==='ArrowDown')s.s=clamp(s.s/1.06,.30,3);else return;apply(selected)}else return;
     e.preventDefault();updateStatus();
   });
@@ -253,6 +253,6 @@
     get exploded(){return exploded},get referenceLayout(){return referenceLayout},get selected(){return selected},get mode(){return mode},
     getPieceState:n=>({...state[n],q:[...state[n].q]}),select,setMode,assemble:showAssembled,reference:setReferenceLayout,resetPart,
     pull:n=>{if(!pieceNodes[n])return false;enterDirectPull(n);return true},
-    rotate:(n,axis,angle)=>{if(!pieceNodes[nW])return false;state[n].q=mulQ(axisQ(axis,angle),state[n].q);apply(n);return true}
+    rotate:(n,axis,angle)=>{if(!pieceNodes[n])return false;state[n].q=mulQ(axisQ(axis,angle),state[n].q);apply(n);return true}
   };
 })();

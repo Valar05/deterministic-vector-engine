@@ -19,9 +19,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Prove accepted SVG source bytes are frozen
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Prove source artwork equals accepted artwork
         shell: bash
-        run: test "$(sha256sum studies/saint-andrews-shovel/source.svg | cut -d' ' -f1)" = "b4e94882f519d472c81048d72e5b3a10ce8f60bea3288d4bd0e4e2de758349a7"
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,re
+          accepted=Path('studies/saint-andrews-shovel/accepted.html').read_bytes()
+          source=Path('studies/saint-andrews-shovel/source.svg').read_bytes().rstrip(b'\r\n')
+          m=re.search(rb'(<svg\b.*?</svg>)',accepted,re.S)
+          if not m: raise SystemExit('accepted artifact has no SVG')
+          art=m.group(1)
+          if hashlib.sha256(art).hexdigest()!='7511c9fd8ff9e833b22cd3d4af5e3e0a88dd435c17de665535e37ea0a5227dda':
+              raise SystemExit('accepted SVG art hash changed')
+          if source!=art: raise SystemExit('source artwork differs from accepted artwork')
+          PY
 
   build-test:
     needs: [accepted-guard, source-guard]

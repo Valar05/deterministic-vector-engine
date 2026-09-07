@@ -2,16 +2,20 @@
   "artifact": "Saint Andrew's Shovel",
   "stage": "whole-object",
   "source": "studies/saint-andrews-shovel/source.svg",
-  "source_sha256": "76c7ef0a05980eee9a493b8d2336dcd4cc0dd4af44d898fdafa36e0c7e4c32ff",
-  "source_bytes": 10520,
+  "source_sha256": "b4e94882f519d472c81048d72e5b3a10ce8f60bea3288d4bd0e4e2de758349a7",
+  "source_bytes": 11466,
   "output": "studies/saint-andrews-shovel/dist/index.html",
-  "output_sha256": "642f2917afb42b190b97f2ec6d6a84ec4dc1cd0241792bb01dacb4dd36cc2354",
-  "output_bytes": 11073,
+  "output_sha256": "3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b",
+  "output_bytes": 12019,
   "raster_embedded": false,
   "interactive": false,
   "decomposable": false,
   "user_visual_accepted": false,
   "acceptance_surface": "Drew cognitive visual match",
-  "last_patch": "add-only structural D-handle neck bridge",
-  "regnet_open_wounds": ["W01_DECORATIVE_SCRATCH", "V01_BLADE_DEPTH", "H02_HARDWARE_DEPTH"]
+  "latest_add_only_fix": "D-handle load path closed with two fillet-weld gussets; no prior visual element removed or altered.",
+  "regnet_open_wounds": [
+    "W01_DECORATIVE_SCRATCH",
+    "V01_BLADE_DEPTH",
+    "H02_HARDWARE_DEPTH"
+  ]
 }

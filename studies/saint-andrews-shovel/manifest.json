@@ -1,6 +1,6 @@
 {
   "artifact": "Saint Andrew's Shovel",
-  "stage": "accepted-interactive-decomposition",
+  "stage": "accepted-interactive-3d-vector-decomposition",
   "visual_authority": {
     "path": "studies/saint-andrews-shovel/accepted.html",
     "bytes": 12019,
@@ -19,13 +19,28 @@
   },
   "interactive_artifact": {
     "path": "studies/saint-andrews-shovel/dist/index.html",
-    "bytes": 30419,
-    "sha256": "2aeafa81cfddd27a02f9d619a5f9514ba4313048cfc2f185d33fb3f991db8945",
-    "git_blob_sha1": "25c3b6db3cfc0e1aacd557621b2fc2c431ad46f6",
+    "bytes": 35763,
+    "sha256": "98d8320b1cf66f2203c52becaa8213dcf8ab14b6cf5a94d88fd4141d7c660356",
+    "git_blob_sha1": "d1f68e84e27aad9365eb56b6aa8bb10c4a3828c9",
     "raster_embedded": false,
     "single_file_html": true,
     "interactive": true,
-    "decomposable": true
+    "decomposable": true,
+    "independent_3d_vectors": true
+  },
+  "runtime": {
+    "path": "studies/saint-andrews-shovel/runtime/runtime.js",
+    "sha256": "a3a8b7497f504cdb17ac1c30831b2b125bcf5fcc42ac970f3d0c292f3914e3f4",
+    "mechanism": "vector-noodle-beveled-box-quaternion-extrusion",
+    "source_parts": [
+      "runtime/3d/01.js",
+      "runtime/3d/02.js",
+      "runtime/3d/03.js",
+      "runtime/3d/04.js",
+      "runtime/3d/05.js"
+    ],
+    "assembly": "five SHA-locked chunks concatenated exactly; builder rejects any mismatch",
+    "rendering": "SVG affine projection of quaternion-rotated vector layers; no Canvas, WebGL, CSS 3D, raster, or runtime AI"
   },
   "controls": [
     "Assemble",
@@ -43,18 +58,24 @@
   "interaction_contract": {
     "tap": "select only; never decomposes",
     "drag_assembled": "after threshold, pull only touched part free",
-    "reference_layout": "separate all four accepted parts",
+    "reference_layout": "separate all four accepted parts as independent 3D vectors",
     "assemble": "restore exact frozen accepted whole-object frame",
-    "move_rotate_scale": "operate only on selected free part",
+    "move": "one-finger planar drag on selected free part",
+    "rotate": "one-finger free virtual trackball: pitch, yaw, and roll with quaternion state",
+    "scale": "one-finger vertical drag; shrink/grow selected free part",
     "light": "runtime-only non-destructive overlay",
-    "scroll": "none; complete interface fits one phone viewport"
+    "edge_on_accessibility": "after selection, Rotate and Scale may use the whole workspace so an edge-on part remains manipulable",
+    "scroll": "none; complete interface fits one phone viewport",
+    "keyboard": "arrows move/pitch/yaw, Q/E roll, arrows scale, R reset, Esc assemble, Space reference"
   },
   "remote_build_evidence": {
     "workflow": "Build accepted shovel SPA",
-    "run_id": 34159269045,
+    "run_id": 34168759702,
     "conclusion": "success",
     "accepted_guard": "success",
-    "build_test": "success",
+    "javascript_syntax": "success",
+    "old_functionality_regression": "success",
+    "new_3d_regression": "success",
     "publish": "success"
   },
   "regnet_open_wounds": []

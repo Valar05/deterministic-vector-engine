@@ -7,18 +7,24 @@ permissions:
   contents: write
 
 jobs:
-  freeze-guard:
+  accepted-guard:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Prove accepted art is untouched
+      - name: Prove accepted HTML bytes are frozen
         shell: bash
-        run: |
-          test "$(sha256sum studies/saint-andrews-shovel/accepted.html | cut -d' ' -f1)" = "3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b"
-          test "$(sha256sum studies/saint-andrews-shovel/source.svg | cut -d' ' -f1)" = "b4e94882f519d472c81048d72e5b3a10ce8f60bea3288d4bd0e4e2de758349a7"
+        run: test "$(sha256sum studies/saint-andrews-shovel/accepted.html | cut -d' ' -f1)" = "3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b"
+
+  source-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prove accepted SVG source bytes are frozen
+        shell: bash
+        run: test "$(sha256sum studies/saint-andrews-shovel/source.svg | cut -d' ' -f1)" = "b4e94882f519d472c81048d72e5b3a10ce8f60bea3288d4bd0e4e2de758349a7"
 
   build-test:
-    needs: freeze-guard
+    needs: [accepted-guard, source-guard]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

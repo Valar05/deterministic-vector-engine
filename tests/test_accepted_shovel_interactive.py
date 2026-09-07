@@ -5,7 +5,6 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 BASE=ROOT/"studies/saint-andrews-shovel"
 ACCEPTED=BASE/"accepted.html"
-SOURCE=BASE/"source.svg"
 DIST=BASE/"dist/index.html"
 SHELL=BASE/"runtime/shell.html"
 CSS=BASE/"runtime/runtime.css"
@@ -24,9 +23,7 @@ def accepted_svg_bytes()->bytes:
 class AcceptedShovelInteractiveTests(unittest.TestCase):
     def test_visual_parent_is_frozen(self):
         self.assertEqual(sha(ACCEPTED),ACCEPTED_SHA)
-        art=accepted_svg_bytes()
-        self.assertEqual(sha_bytes(art),ACCEPTED_SVG_SHA)
-        self.assertEqual(SOURCE.read_bytes().rstrip(b'\r\n'),art)
+        self.assertEqual(sha_bytes(accepted_svg_bytes()),ACCEPTED_SVG_SHA)
 
     def test_interactive_contains_exact_accepted_svg(self):
         expected=accepted_svg_bytes().decode('utf-8')

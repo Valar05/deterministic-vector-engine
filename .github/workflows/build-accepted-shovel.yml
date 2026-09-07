@@ -23,9 +23,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build capability around frozen parent
+      - name: Build exact 3D capability around frozen parent
         run: python tools/build_accepted_shovel_spa.py
-      - name: Run shovel regression tests
+      - name: Prove assembled JavaScript parses
+        run: node --check studies/saint-andrews-shovel/runtime/runtime.js
+      - name: Run old functionality and new 3D regression tests
         run: python -m unittest tests/test_accepted_shovel_interactive.py tests/test_accepted_shovel_3d.py -v
       - name: Re-prove accepted art stayed frozen
         shell: bash
@@ -39,17 +41,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Rebuild exact deterministic SPA
+      - name: Rebuild exact deterministic runtime and SPA
         run: python tools/build_accepted_shovel_spa.py
-      - name: Commit generated SPA when changed
+      - name: Commit runtime and SPA when changed
         shell: bash
         run: |
-          if git diff --quiet -- studies/saint-andrews-shovel/dist/index.html; then
-            echo "Generated SPA already current."
+          if git diff --quiet -- studies/saint-andrews-shovel/runtime/runtime.js studies/saint-andrews-shovel/dist/index.html; then
+            echo "3D runtime and generated SPA already current."
             exit 0
           fi
           git config user.name "fortress-vector-builder"
           git config user.email "actions@users.noreply.github.com"
-          git add studies/saint-andrews-shovel/dist/index.html
+          git add studies/saint-andrews-shovel/runtime/runtime.js studies/saint-andrews-shovel/dist/index.html
           git commit -m "Build accepted Saint Andrew shovel 3D SPA"
           git push

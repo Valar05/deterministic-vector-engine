@@ -1,8 +1,32 @@
 {
-  "accepted_static": "studies/saint-andrews-shovel/accepted.html",
-  "accepted_static_bytes": 12019,
-  "accepted_static_sha256": "3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b",
   "artifact": "Saint Andrew's Shovel",
+  "stage": "accepted-interactive-decomposition",
+  "visual_authority": {
+    "path": "studies/saint-andrews-shovel/accepted.html",
+    "bytes": 12019,
+    "sha256": "3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b",
+    "embedded_svg_sha256": "7511c9fd8ff9e833b22cd3d4af5e3e0a88dd435c17de665535e37ea0a5227dda",
+    "frozen": true,
+    "user_visual_accepted": true,
+    "acceptance_quote": "Absolute beauty.",
+    "failure_condition": "Any mutation to the accepted shovel artwork is failure. New capability must compile around this exact parent."
+  },
+  "historical_generation_source": {
+    "path": "studies/saint-andrews-shovel/source.svg",
+    "visual_authority": false,
+    "status": "provenance_only",
+    "note": "Preserve untouched. It is not used to authorize or rebuild accepted pixels."
+  },
+  "interactive_artifact": {
+    "path": "studies/saint-andrews-shovel/dist/index.html",
+    "bytes": 30419,
+    "sha256": "2aeafa81cfddd27a02f9d619a5f9514ba4313048cfc2f185d33fb3f991db8945",
+    "git_blob_sha1": "25c3b6db3cfc0e1aacd557621b2fc2c431ad46f6",
+    "raster_embedded": false,
+    "single_file_html": true,
+    "interactive": true,
+    "decomposable": true
+  },
   "controls": [
     "Assemble",
     "Reference layout",
@@ -16,28 +40,22 @@
     "Scale",
     "Light"
   ],
-  "decomposable": true,
   "interaction_contract": {
-    "assemble": "restore exact accepted whole-object frame",
-    "drag_assembled": "after threshold, pull only the touched part free",
-    "light": "runtime-only non-destructive lighting overlay",
-    "move_rotate_scale": "operate on selected free part",
+    "tap": "select only; never decomposes",
+    "drag_assembled": "after threshold, pull only touched part free",
     "reference_layout": "separate all four accepted parts",
-    "scroll": "none; complete interface fits one phone viewport",
-    "tap": "select only; never decomposes"
+    "assemble": "restore exact frozen accepted whole-object frame",
+    "move_rotate_scale": "operate only on selected free part",
+    "light": "runtime-only non-destructive overlay",
+    "scroll": "none; complete interface fits one phone viewport"
   },
-  "interactive": true,
-  "output": "studies/saint-andrews-shovel/dist/index.html",
-  "output_bytes": 30419,
-  "output_sha256": "2aeafa81cfddd27a02f9d619a5f9514ba4313048cfc2f185d33fb3f991db8945",
-  "raster_embedded": false,
-  "regnet_open_wounds": [],
-  "source": "studies/saint-andrews-shovel/source.svg",
-  "source_bytes": 11466,
-  "source_sha256": "b4e94882f519d472c81048d72e5b3a10ce8f60bea3288d4bd0e4e2de758349a7",
-  "stage": "accepted-interactive-decomposition",
-  "user_visual_accepted": true,
-  "visual_acceptance_quote": "Absolute beauty.",
-  "visual_failure_condition": "Any mutation to the accepted shovel artwork is failure; capability must be layered around the frozen artifact.",
-  "visual_frozen": true
+  "remote_build_evidence": {
+    "workflow": "Build accepted shovel SPA",
+    "run_id": 34159269045,
+    "conclusion": "success",
+    "accepted_guard": "success",
+    "build_test": "success",
+    "publish": "success"
+  },
+  "regnet_open_wounds": []
 }

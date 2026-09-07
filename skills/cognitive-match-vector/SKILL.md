@@ -12,3 +12,17 @@ Purpose: reproduce an accepted raster visual oracle as a deterministic, raster-f
 8. Saint Andrew forbids stopping at machine green. Hashes prove identity only. Drew's visual verdict is the acceptance surface.
 9. Commit source SVG, builder, manifest, tests, and wound ledger to the Vector Noodle repository on every material iteration before delivery.
 10. After acceptance, preserve the accepted whole-object visual as immutable parent while adding interaction around it.
+
+## Post-acceptance 3D inheritance
+
+11. The accepted front face is an heirloom, not source material for another redraw. Do not simplify, reinterpret, regenerate, or reconstruct it to gain 3D capability.
+12. Depth belongs to runtime clones. Build back faces and bounded side slices from the accepted vector sections while the assembled surface continues to render the exact accepted parent bytes.
+13. Reuse the nearest proven mechanism before inventing another one. For Saint Andrew's Shovel, the authority is the original Vector Noodle beveled-box virtual trackball/quaternion mechanism in this repository.
+14. Each decomposed part owns independent state: planar position, quaternion orientation, and uniform scale. One part moving or rotating may not disturb the others.
+15. Rotate means free 3D rotation: pitch, yaw, and roll with no Euler axis lock. One finger maps to a virtual trackball; keyboard controls remain an accessible alternative.
+16. Touch remains first class. Minimum targets stay large, scrolling stays disabled, direct pull keeps a movement threshold, and an edge-on selected part must remain manipulable without hunting for a one-pixel face.
+17. Preserve the full previous control contract during escalation. Adding 3D may not delete Assemble, Reference layout, Reset part, part selection, Move, Rotate, Scale, Light, haptics, or keyboard fallback.
+18. Deterministic delivery uses hash-locked runtime chunks when a transport cannot reliably carry a large source file. The builder concatenates exact bytes, verifies every chunk and the final runtime SHA, syntax-checks JavaScript, replays prior regressions, then publishes the single-file HTML.
+19. Remote green is supporting evidence, not permission to mutate accepted art. The immutable accepted-art hash must pass before every capability build.
+
+Pocket form: **ACCEPT FACE. FREEZE FACE. EXTRUDE CLONES. REUSE THE BOX. QUATERNION EVERYTHING. NEVER PAY FOR 3D WITH LOST FUNCTION.**

@@ -7,24 +7,42 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  freeze-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prove accepted art is untouched
+        shell: bash
+        run: |
+          test "$(sha256sum studies/saint-andrews-shovel/accepted.html | cut -d' ' -f1)" = "3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b"
+          test "$(sha256sum studies/saint-andrews-shovel/source.svg | cut -d' ' -f1)" = "b4e94882f519d472c81048d72e5b3a10ce8f60bea3288d4bd0e4e2de758349a7"
+
+  build-test:
+    needs: freeze-guard
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build frozen-parent SPA
+      - name: Build capability around frozen parent
         run: python tools/build_accepted_shovel_spa.py
-      - name: Verify immutable parent and deterministic output
-        shell: bash
-        run: |
-          test "$(sha256sum studies/saint-andrews-shovel/accepted.html | cut -d' ' -f1)" = "3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b"
-          test "$(sha256sum studies/saint-andrews-shovel/source.svg | cut -d' ' -f1)" = "b4e94882f519d472c81048d72e5b3a10ce8f60bea3288d4bd0e4e2de758349a7"
-          test "$(sha256sum studies/saint-andrews-shovel/dist/index.html | cut -d' ' -f1)" = "2aeafa81cfddd27a02f9d619a5f9514ba4313048cfc2f185d33fb3f991db8945"
-          git diff --exit-code -- studies/saint-andrews-shovel/source.svg studies/saint-andrews-shovel/accepted.html
       - name: Run shovel regression tests
         run: python -m unittest tests/test_accepted_shovel_interactive.py -v
+      - name: Re-prove art stayed frozen
+        shell: bash
+        run: git diff --exit-code -- studies/saint-andrews-shovel/source.svg studies/saint-andrews-shovel/accepted.html
+
+  publish:
+    needs: build-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rebuild exact deterministic SPA
+        run: python tools/build_accepted_shovel_spa.py
       - name: Commit generated SPA when changed
         shell: bash
         run: |

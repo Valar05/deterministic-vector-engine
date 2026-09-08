@@ -10,13 +10,13 @@ PARTS=BASE/"runtime/3d"
 SHELL=BASE/"runtime/shell.html"
 CSS=BASE/"runtime/runtime.css"
 ACCEPTED_SHA="3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b"
-RUNTIME_SHA="a3a8b7497f504cdb17ac1c30831b2b125bcf5fcc42ac970f3d0c292f3914e3f4"
+RUNTIME_SHA="108d7fb5466a04f7930032fcd2a85a67d5cf52889d525152c0aba181f27150fc"
 PART_SHA={
-    "01.js":"8e55892e6e88223ebec840bb7e5e3dea9be2cb991c001a965ac331a5695a8291",
-    "02.js":"fcdc062a3144dc506e0a30044289d6f56ce66fbbdd95033edff6b451b8223ad0",
-    "03.js":"5688d5493445f32c2bce22cbe7ef41c11d6e2d14853bfb654c927e2c36c5c28c",
-    "04.js":"5a18394fa9bb9cb38511661a5a9881c06b8c983d7c1cc69a9d88f71f9b321cae",
-    "05.js":"d206a42debafb69915ed784b5e2219408b0158d0ca14c229ad39e212faa20297",
+    "01.js":"d1e9dbc7a48bc7fd77475310a9363562c091752a58b9b87ec570bbb3af27ece4",
+    "02.js":"756292e43cfa9eba0a620b4a0f8e5f5153b645e5879d95d3c8600628d6ed2f4c",
+    "03.js":"74138be3eb49688bc574138c3e4b2dca5d49a8e60997d347996422fa75675dfd",
+    "04.js":"6c78ff9fef93e704d46d8082e7831ac754bbf47f520ede8a423f1cfe214a967b",
+    "05.js":"7cd0a89a423735f2f271ca8f1ed8d5a87d49b0aa0131ad9e7f5b2387cd597e90",
 }
 
 def sha(data:bytes)->str:return hashlib.sha256(data).hexdigest()
@@ -35,15 +35,19 @@ class AcceptedShovel3DTests(unittest.TestCase):
         self.assertEqual(sha(joined),RUNTIME_SHA)
         self.assertEqual(RUNTIME.read_bytes(),joined)
 
-    def test_runtime_reuses_vector_noodle_3d_mechanism(self):
+    def test_runtime_uses_curved_contour_surfaces_not_paper_stack(self):
         js=RUNTIME.read_text()
         for token in (
-            "vector-noodle-beveled-box-quaternion-extrusion",
-            "betweenQ(","axisQ(","rotateV(","matrixFor(",
-            "q:[1,0,0,0]","data-layer-kind","thickness=",
+            "vector-noodle-quaternion-curved-strip-surfaces",
+            "betweenQ(","axisQ(","rotateV(","stripTransform(","profileSample(",
+            "curve:'cylinder'","curve:'blade'","data-surface-side","data-strip",
+            "Same material/albedo on both sides","brightness=(.70+.30*clamp(facing,0,1))",
             "Rotate 3D","3D vector"
         ):
             self.assertIn(token,js)
+        self.assertNotIn("brightness(.42)",js)
+        self.assertNotIn("slices=7",js)
+        self.assertNotIn("vector-noodle-beveled-box-quaternion-extrusion",js)
         self.assertNotIn("WebGL",js)
         self.assertNotIn("<canvas",js.lower())
 
@@ -53,7 +57,7 @@ class AcceptedShovel3DTests(unittest.TestCase):
             self.assertIn(f">{label}<",shell)
         self.assertIn("min-height:44px",css)
         self.assertIn("touch-action:none",css)
-        self.assertIn("mode==='rotate'||mode==='scale'",js)
+        self.assertIn("mode==='move'||mode==='rotate'||mode==='scale'",js)
         self.assertIn("only this part moves",js)
         self.assertIn("Math.hypot(p.x-gesture.start.x,p.y-gesture.start.y)>8",js)
 
@@ -61,6 +65,6 @@ class AcceptedShovel3DTests(unittest.TestCase):
         shell=SHELL.read_text()
         self.assertIn('{{ACCEPTED_SVG}}',shell)
         self.assertIn(ACCEPTED_SHA,shell)
-        self.assertIn('dve-accepted-shovel-interactive-v3-3d',shell)
+        self.assertIn('dve-accepted-shovel-interactive-v4-contour-3d',shell)
 
 if __name__=="__main__":unittest.main()

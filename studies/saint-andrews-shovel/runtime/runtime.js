@@ -49,7 +49,13 @@
 
   const centers={handle:{x:512,y:190},shaft:{x:512,y:625},socket:{x:512,y:960},blade:{x:512,y:1210}};
   const radii={handle:155,shaft:145,socket:85,blade:205};
-  const thickness={handle:28,shaft:18,socket:32,blade:24};
+  // Per-part curved cross-sections. These are runtime geometry only: the accepted face remains byte-frozen.
+  const profiles={
+    handle:{minX:397,maxX:627,minY:38,maxY:357,depth:34,strips:30,curve:'round'},
+    shaft:{minX:484,maxX:540,minY:337,maxY:929,depth:30,strips:24,curve:'cylinder'},
+    socket:{minX:474,maxX:550,minY:914,maxY:1004,depth:34,strips:22,curve:'round'},
+    blade:{minX:348,maxX:676,minY:927,maxY:1441,depth:36,strips:42,curve:'blade'}
+  };
   const reference={
     handle:{dx:-190,dy:80,rz:-5,s:.93},
     shaft:{dx:175,dy:70,rz:4,s:.93},
@@ -87,22 +93,36 @@
   function appendSection(target,nodes,a,z,idMap){
     nodes.slice(a,z).forEach(n=>target.appendChild(rewriteTree(n.cloneNode(true),idMap)));
   }
-  function makeVisualLayer(name,section,nodes,idMap,z,kind){
-    const g=el('g',{'data-layer-kind':kind,'data-layer-z':z,'aria-hidden':'true'});
-    appendSection(g,nodes,section[0],section[1],idMap);
-    if(kind==='side'){
-      g.style.filter='brightness(.33) saturate(.72)';
-      g.style.opacity='.96';
-    }else if(kind==='back'){
-      g.style.filter='brightness(.42) saturate(.64)';
+  function appendSection(target,nodes,a,z,idMap){
+    nodes.slice(a,z).forEach(n=>target.appendChild(rewriteTree(n.cloneNode(true),idMap)));
+  }
+  function profileSample(name,x,side){
+    const p=profiles[name],cx=(p.minX+p.maxX)/2,half=(p.maxX-p.minX)/2;
+    const t=clamp((x-cx)/half,-1,1),a=Math.abs(t),inside=Math.max(0,1-t*t);
+    let z,dz;
+    if(p.curve==='blade'){
+      // Shallow forged dish plus a stronger central keel: broad curvature, not a paper slab.
+      const broad=Math.pow(Math.max(0,1-a),1.55);
+      const ridge=Math.pow(Math.max(0,1-a*4.2),2.1);
+      z=p.depth*(.62*broad+.38*ridge);
+      const eps=.001;
+      const sample=u=>{
+        const aa=Math.abs(clamp(u,-1,1));
+        return p.depth*(.62*Math.pow(Math.max(0,1-aa),1.55)+.38*Math.pow(Math.max(0,1-aa*4.2),2.1));
+      };
+      dz=(sample(t+eps)-sample(t-eps))/(2*eps*half);
+    }else{
+      z=p.depth*Math.sqrt(inside);
+      dz=inside>1e-5?(-p.depth*t/(half*Math.sqrt(inside))):0;
+      dz=clamp(dz,-2.8,2.8);
     }
-    return g;
+    return {z:side*z,dz:side*dz,t};
   }
   function buildPieces(){
     const sourceNodes=[...sourceSvg.childNodes];
     const defs=sourceSvg.querySelector('defs');
     const idMap={};defs.querySelectorAll('[id]').forEach(n=>idMap[n.id]=`x-${n.id}`);
-    partsScene.appendChild(rewriteTree(defs.cloneNode(true),idMap));
+    const runtimeDefs=rewriteTree(defs.cloneNode(true),idMap);partsScene.appendChild(runtimeDefs);
     const marker=t=>sourceNodes.findIndex(n=>n.nodeType===8&&n.nodeValue.includes(t));
     const h=marker('D handle'),s=marker('shaft'),so=marker('socket'),b=marker('blade');
     if(Math.min(h,s,so,b)<0)throw new Error('accepted shovel section markers missing');
@@ -112,18 +132,25 @@
     const view=el('g',{id:'partsView'});partsScene.appendChild(view);
     Object.entries(sections).forEach(([name,section])=>{
       const root=el('g',{class:'piece','data-piece':name,id:`piece-${name}`});
-      const half=thickness[name]/2;
-      const layers=[];
-      const back=makeVisualLayer(name,section,sourceNodes,idMap,-half,'back');layers.push({node:back,z:-half,kind:'back'});
-      const slices=7;
-      for(let i=1;i<=slices;i++){
-        const z=-half+(i/(slices+1))*thickness[name];
-        const side=makeVisualLayer(name,section,sourceNodes,idMap,z,'side');layers.push({node:side,z,kind:'side'});
+      const art=el('g',{id:`contour-art-${name}`,'aria-hidden':'true'});appendSection(art,sourceNodes,section[0],section[1],idMap);runtimeDefs.appendChild(art);
+      const p=profiles[name],w=(p.maxX-p.minX)/p.strips,surfaces=[];
+      for(let i=0;i<p.strips;i++){
+        const x0=p.minX+i*w,x1=p.minX+(i+1)*w,xc=(x0+x1)/2;
+        const clip=el('clipPath',{id:`contour-clip-${name}-${i}`,clipPathUnits:'userSpaceOnUse'});
+        clip.appendChild(el('rect',{x:(x0-.08).toFixed(3),y:p.minY,width:(w+.16).toFixed(3),height:p.maxY-p.minY}));runtimeDefs.appendChild(clip);
+        for(const side of [1,-1]){
+          const sample=profileSample(name,xc,side),use=el('use',{
+            href:`#contour-art-${name}`,
+            'clip-path':`url(#contour-clip-${name}-${i})`,
+            'data-surface-side':side>0?'front':'back',
+            'data-strip':i
+          });
+          // Same material/albedo on both sides. Lighting is orientation-derived at runtime.
+          surfaces.push({node:use,x:xc,z:sample.z,dz:sample.dz,side,index:i});root.appendChild(use);
+        }
       }
-      const front=makeVisualLayer(name,section,sourceNodes,idMap,half,'front');layers.push({node:front,z:half,kind:'front'});
       const hit=el('g',{'data-layer-kind':'hit'});hit.insertAdjacentHTML('beforeend',hitMarkup[name]);
-      root.__layers=layers;root.__hit=hit;root.__front=front;root.__back=back;
-      layers.forEach(l=>root.appendChild(l.node));root.appendChild(hit);view.appendChild(root);
+      root.__surfaces=surfaces;root.__hit=hit;view.appendChild(root);
     });
   }
   buildPieces();
@@ -135,26 +162,42 @@
 
   function toSvg(x,y){const p=partsScene.createSVGPoint();p.x=x;p.y=y;const c=partsScene.getScreenCTM();return c?p.matrixTransform(c.inverse()):{x:512,y:768}}
   function basis(name){const q=state[name].q;return {ex:rotateV([1,0,0],q),ey:rotateV([0,1,0],q),ez:rotateV([0,0,1],q)}}
-  function matrixFor(name,z=0){
-    const c=centers[name],st=state[name],{ex,ey,ez}=basis(name),s=st.s;
-    const a=s*ex[0],b=s*ex[1],cc=s*ey[0],d=s*ey[1];
-    const e=c.x+st.dx+s*ez[0]*z-a*c.x-cc*c.y;
-    const f=c.y+st.dy+s*ez[1]*z-b*c.x-d*c.y;
-    return {a,b,c:cc,d,e,f,svg:`matrix(${a.toFixed(6)} ${b.toFixed(6)} ${cc.toFixed(6)} ${d.toFixed(6)} ${e.toFixed(3)} ${f.toFixed(3)})`,ez};
+  function planeMatrix(name,z=0){
+    const c=centers[name],st=state[name],{ex,ey,ez}=basis(name),sc=st.s;
+    const a=sc*ex[0],b=sc*ex[1],cc=sc*ey[0],d=sc*ey[1];
+    const e=c.x+st.dx+sc*ez[0]*z-a*c.x-cc*c.y;
+    const f=c.y+st.dy+sc*ez[1]*z-b*c.x-d*c.y;
+    return `matrix(${a.toFixed(6)} ${b.toFixed(6)} ${cc.toFixed(6)} ${d.toFixed(6)} ${e.toFixed(3)} ${f.toFixed(3)})`;
   }
-  function nearFaceZ(name){return basis(name).ez[2]>=0?thickness[name]/2:-thickness[name]/2}
+  function stripTransform(name,surface){
+    const c=centers[name],st=state[name],sc=st.s,q=st.q;
+    const u=surface.x-c.x,z=surface.z;
+    const tangent=rotateV([1,0,surface.dz],q),ey=rotateV([0,1,0],q),center=rotateV([u,0,z],q);
+    const a=sc*tangent[0],b=sc*tangent[1],cc=sc*ey[0],d=sc*ey[1];
+    const e=c.x+st.dx+sc*center[0]-a*surface.x-cc*c.y;
+    const f=c.y+st.dy+sc*center[1]-b*surface.x-d*c.y;
+    return `matrix(${a.toFixed(6)} ${b.toFixed(6)} ${cc.toFixed(6)} ${d.toFixed(6)} ${e.toFixed(3)} ${f.toFixed(3)})`;
+  }
+  function surfaceNormal(name,surface){
+    const local=surface.side>0?normV([-surface.dz,0,1]):normV([surface.dz,0,-1]);
+    return rotateV(local,state[name].q);
+  }
+  function surfaceDepth(name,surface){
+    const c=centers[name],u=surface.x-c.x;return rotateV([u,0,surface.z],state[name].q)[2];
+  }
   function apply(name){
-    const root=pieceNodes[name],normalZ=basis(name).ez[2];
-    root.__front.style.opacity=normalZ>=0?'1':'0';
-    root.__back.style.opacity=normalZ<0?'1':'0';
-    const sideVisibility=Math.abs(normalZ)>.995?'0':'1';
-    root.__layers.forEach(layer=>{
-      layer.node.setAttribute('transform',matrixFor(name,layer.z).svg);
-      if(layer.kind==='side')layer.node.style.visibility=sideVisibility==='1'?'visible':'hidden';
+    const root=pieceNodes[name],visible=[];
+    root.__surfaces.forEach(surface=>{
+      const normal=surfaceNormal(name,surface),facing=normal[2];
+      if(facing<=.008){surface.node.style.visibility='hidden';return}
+      surface.node.style.visibility='visible';surface.node.setAttribute('transform',stripTransform(name,surface));
+      // Camera-relative soft light: front and back share the same albedo and receive equal treatment.
+      const brightness=(.70+.30*clamp(facing,0,1)).toFixed(3);
+      surface.node.style.filter=`brightness(${brightness})`;
+      visible.push({surface,depth:surfaceDepth(name,surface)});
     });
-    const ordered=[...root.__layers].sort((x,y)=>normalZ>=0?x.z-y.z:y.z-x.z);
-    ordered.forEach(l=>root.appendChild(l.node));
-    root.__hit.setAttribute('transform',matrixFor(name,nearFaceZ(name)).svg);root.appendChild(root.__hit);
+    visible.sort((a,b)=>a.depth-b.depth).forEach(x=>root.appendChild(x.surface.node));
+    root.__hit.setAttribute('transform',planeMatrix(name,0));root.appendChild(root.__hit);
     syncLightTransform();
   }
   function applyAll(){Object.keys(state).forEach(apply)}
@@ -176,7 +219,7 @@
   function showExploded(){exploded=true;acceptedFrame.style.visibility='hidden';explodedFrame.style.visibility='visible';assembledHits.style.visibility='hidden';lightScene.style.opacity=lightVisible?'.18':'0';updatePressed();syncLightTransform()}
   function setReferenceLayout(){referenceLayout=true;setReferenceStates();showExploded();updateStatus('Reference layout · four independent 3D vectors');haptic(10)}
   function enterDirectPull(name){referenceLayout=false;resetAll();showExploded();select(name);setMode('move',false);updateStatus(`${label(name)} pulled free · only this part moves · Rotate 3D / Scale / Light`);haptic(11)}
-  function syncLightTransform(){Object.entries(lightNodes).forEach(([k,n])=>{n.style.display=k===selected?'inline':'none';n.setAttribute('transform',exploded?matrixFor(k,nearFaceZ(k)).svg:'')})}
+  function syncLightTransform(){Object.entries(lightNodes).forEach(([k,n])=>{n.style.display=k===selected?'inline':'none';n.setAttribute('transform',exploded?planeMatrix(k,0):'')})}
   function setLight(x,y){const p=toSvg(x,y);uiLight.setAttribute('cx',clamp(p.x,-40,1064).toFixed(1));uiLight.setAttribute('cy',clamp(p.y,-40,1576).toFixed(1));lightVisible=true;lightScene.style.opacity='.20';syncLightTransform()}
 
   function spherePoint(name,p){
@@ -209,8 +252,8 @@
     if(name)select(name);
     if(mode==='light'){gesture={kind:'light',id:e.pointerId,start:p,name:name||selected};setLight(e.clientX,e.clientY);return}
     if(exploded){
-      // Rotate/Scale can use the whole workspace after selection: edge-on parts remain easy to manipulate.
-      if(name||mode==='rotate'||mode==='scale'){beginPiece(name||selected,e);return}
+      // After selection, the whole workspace is a generous manipulation surface: edge-on parts remain touch-friendly.
+      if(name||mode==='move'||mode==='rotate'||mode==='scale'){beginPiece(name||selected,e);return}
     }
     if(!exploded&&name){gesture={kind:'armed',id:e.pointerId,name,start:p};updateStatus(`${label(name)} selected · drag to pull only this part free`);return}
     gesture=null;
@@ -247,9 +290,9 @@
 
   Object.values(lightNodes).forEach(n=>n.style.display='none');select('handle');setMode('move',false);showAssembled();
   window.__SHOVEL_RUNTIME__={
-    version:'accepted-shovel-runtime-v3-3d',
+    version:'accepted-shovel-runtime-v4-contour-3d',
     acceptedStaticSha256:'3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b',
-    mechanism:'vector-noodle-beveled-box-quaternion-extrusion',
+    mechanism:'vector-noodle-quaternion-curved-strip-surfaces',
     get exploded(){return exploded},get referenceLayout(){return referenceLayout},get selected(){return selected},get mode(){return mode},
     getPieceState:n=>({...state[n],q:[...state[n].q]}),select,setMode,assemble:showAssembled,reference:setReferenceLayout,resetPart,
     pull:n=>{if(!pieceNodes[n])return false;enterDirectPull(n);return true},

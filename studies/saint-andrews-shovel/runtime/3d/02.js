@@ -12,22 +12,36 @@
   function appendSection(target,nodes,a,z,idMap){
     nodes.slice(a,z).forEach(n=>target.appendChild(rewriteTree(n.cloneNode(true),idMap)));
   }
-  function makeVisualLayer(name,section,nodes,idMap,z,kind){
-    const g=el('g',{'data-layer-kind':kind,'data-layer-z':z,'aria-hidden':'true'});
-    appendSection(g,nodes,section[0],section[1],idMap);
-    if(kind==='side'){
-      g.style.filter='brightness(.33) saturate(.72)';
-      g.style.opacity='.96';
-    }else if(kind==='back'){
-      g.style.filter='brightness(.42) saturate(.64)';
+  function appendSection(target,nodes,a,z,idMap){
+    nodes.slice(a,z).forEach(n=>target.appendChild(rewriteTree(n.cloneNode(true),idMap)));
+  }
+  function profileSample(name,x,side){
+    const p=profiles[name],cx=(p.minX+p.maxX)/2,half=(p.maxX-p.minX)/2;
+    const t=clamp((x-cx)/half,-1,1),a=Math.abs(t),inside=Math.max(0,1-t*t);
+    let z,dz;
+    if(p.curve==='blade'){
+      // Shallow forged dish plus a stronger central keel: broad curvature, not a paper slab.
+      const broad=Math.pow(Math.max(0,1-a),1.55);
+      const ridge=Math.pow(Math.max(0,1-a*4.2),2.1);
+      z=p.depth*(.62*broad+.38*ridge);
+      const eps=.001;
+      const sample=u=>{
+        const aa=Math.abs(clamp(u,-1,1));
+        return p.depth*(.62*Math.pow(Math.max(0,1-aa),1.55)+.38*Math.pow(Math.max(0,1-aa*4.2),2.1));
+      };
+      dz=(sample(t+eps)-sample(t-eps))/(2*eps*half);
+    }else{
+      z=p.depth*Math.sqrt(inside);
+      dz=inside>1e-5?(-p.depth*t/(half*Math.sqrt(inside))):0;
+      dz=clamp(dz,-2.8,2.8);
     }
-    return g;
+    return {z:side*z,dz:side*dz,t};
   }
   function buildPieces(){
     const sourceNodes=[...sourceSvg.childNodes];
     const defs=sourceSvg.querySelector('defs');
     const idMap={};defs.querySelectorAll('[id]').forEach(n=>idMap[n.id]=`x-${n.id}`);
-    partsScene.appendChild(rewriteTree(defs.cloneNode(true),idMap));
+    const runtimeDefs=rewriteTree(defs.cloneNode(true),idMap);partsScene.appendChild(runtimeDefs);
     const marker=t=>sourceNodes.findIndex(n=>n.nodeType===8&&n.nodeValue.includes(t));
     const h=marker('D handle'),s=marker('shaft'),so=marker('socket'),b=marker('blade');
     if(Math.min(h,s,so,b)<0)throw new Error('accepted shovel section markers missing');
@@ -37,26 +51,26 @@
     const view=el('g',{id:'partsView'});partsScene.appendChild(view);
     Object.entries(sections).forEach(([name,section])=>{
       const root=el('g',{class:'piece','data-piece':name,id:`piece-${name}`});
-      const half=thickness[name]/2;
-      const layers=[];
-      const back=makeVisualLayer(name,section,sourceNodes,idMap,-half,'back');layers.push({node:back,z:-half,kind:'back'});
-      const slices=7;
-      for(let i=1;i<=slices;i++){
-        const z=-half+(i/(slices+1))*thickness[name];
-        const side=makeVisualLayer(name,section,sourceNodes,idMap,z,'side');layers.push({node:side,z,kind:'side'});
+      const art=el('g',{id:`contour-art-${name}`,'aria-hidden':'true'});appendSection(art,sourceNodes,section[0],section[1],idMap);runtimeDefs.appendChild(art);
+      const p=profiles[name],w=(p.maxX-p.minX)/p.strips,surfaces=[];
+      for(let i=0;i<p.strips;i++){
+        const x0=p.minX+i*w,x1=p.minX+(i+1)*w,xc=(x0+x1)/2;
+        const clip=el('clipPath',{id:`contour-clip-${name}-${i}`,clipPathUnits:'userSpaceOnUse'});
+        clip.appendChild(el('rect',{x:(x0-.08).toFixed(3),y:p.minY,width:(w+.16).toFixed(3),height:p.maxY-p.minY}));runtimeDefs.appendChild(clip);
+        for(const side of [1,-1]){
+          const sample=profileSample(name,xc,side),use=el('use',{
+            href:`#contour-art-${name}`,
+            'clip-path':`url(#contour-clip-${name}-${i})`,
+            'data-surface-side':side>0?'front':'back',
+            'data-strip':i
+          });
+          // Same material/albedo on both sides. Lighting is orientation-derived at runtime.
+          surfaces.push({node:use,x:xc,z:sample.z,dz:sample.dz,side,index:i});root.appendChild(use);
+        }
       }
-      const front=makeVisualLayer(name,section,sourceNodes,idMap,half,'front');layers.push({node:front,z:half,kind:'front'});
       const hit=el('g',{'data-layer-kind':'hit'});hit.insertAdjacentHTML('beforeend',hitMarkup[name]);
-      root.__layers=layers;root.__hit=hit;root.__front=front;root.__back=back;
-      layers.forEach(l=>root.appendChild(l.node));root.appendChild(hit);view.appendChild(root);
+      root.__surfaces=surfaces;root.__hit=hit;view.appendChild(root);
     });
   }
   buildPieces();
 
-  const pieceNodes=Object.fromEntries([...document.querySelectorAll('#partsScene .piece')].map(n=>[n.dataset.piece,n]));
-  const lightNodes=Object.fromEntries([...document.querySelectorAll('[data-light-piece]')].map(n=>[n.dataset.lightPiece,n]));
-  let selected='handle',mode='move',exploded=false,referenceLayout=false,gesture=null,lightVisible=false;
-  const haptic=(ms=6)=>{try{navigator.vibrate?.(ms)}catch(_){}};
-
-  function toSvg(x,y){const p=partsScene.createSVGPoint();p.x=x;p.y=y;const c=partsScene.getScreenCTM();return c?p.matrixTransform(c.inverse()):{x:512,y:768}}
-  function basis(name){const q=state[name].q;return {ex:rotateV([1,0,0],q),ey:rotateV([0,1,0],q),ez:rotateV([0,0,1],q)}}

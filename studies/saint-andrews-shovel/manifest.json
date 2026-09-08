@@ -1,82 +1,67 @@
 {
   "artifact": "Saint Andrew's Shovel",
-  "stage": "accepted-interactive-3d-vector-decomposition",
+  "stage": "accepted-contour-3d-decomposition",
   "visual_authority": {
     "path": "studies/saint-andrews-shovel/accepted.html",
-    "bytes": 12019,
     "sha256": "3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b",
-    "embedded_svg_sha256": "7511c9fd8ff9e833b22cd3d4af5e3e0a88dd435c17de665535e37ea0a5227dda",
     "frozen": true,
     "user_visual_accepted": true,
-    "acceptance_quote": "Absolute beauty.",
-    "failure_condition": "Any mutation to the accepted shovel artwork is failure. New capability must compile around this exact parent."
+    "failure_condition": "Any mutation to the accepted shovel artwork is failure. Runtime capability must compile around this exact parent."
   },
-  "historical_generation_source": {
-    "path": "studies/saint-andrews-shovel/source.svg",
-    "visual_authority": false,
-    "status": "provenance_only",
-    "note": "Preserve untouched. It is not used to authorize or rebuild accepted pixels."
+  "fertile_animation_parent": {
+    "branch": "fertile/spine-paper-doll-v1",
+    "head": "63bb38ae4246a98a7406e45f562b28b87ef7103b",
+    "status": "preserved",
+    "model": "layered accepted-face 2.5D paper-doll depth",
+    "intended_uses": ["Sprite", "Spine", "paper-doll animation", "layered prop animation"]
+  },
+  "contour_runtime": {
+    "version": "accepted-shovel-runtime-v4-contour-3d",
+    "mechanism": "vector-noodle-quaternion-curved-strip-surfaces",
+    "sha256": "108d7fb5466a04f7930032fcd2a85a67d5cf52889d525152c0aba181f27150fc",
+    "raster_embedded": false,
+    "canvas": false,
+    "webgl": false,
+    "user_visual_accepted": false,
+    "acceptance_surface": "Drew visual/touch interrogation"
+  },
+  "cross_sections": {
+    "D-handle": "rounded contour-bearing section",
+    "Shaft": "cylindrical semicircular cross-section",
+    "Socket": "rounded formed-metal cross-section",
+    "Blade": "shallow forged dish with central keel/ridge"
+  },
+  "material_law": {
+    "front_back_albedo": "same material identity on both sides",
+    "lighting": "camera/orientation-derived; back is not darkened merely for being back"
   },
   "interactive_artifact": {
     "path": "studies/saint-andrews-shovel/dist/index.html",
-    "bytes": 35763,
-    "sha256": "98d8320b1cf66f2203c52becaa8213dcf8ab14b6cf5a94d88fd4141d7c660356",
-    "git_blob_sha1": "d1f68e84e27aad9365eb56b6aa8bb10c4a3828c9",
-    "raster_embedded": false,
+    "bytes": 38177,
+    "sha256": "78f4e0cbc31b1d5de29c22b3a7a9cad4645b20fd72e9362d26babc6e992b748e",
+    "git_blob_sha1": "30165d774575eec81e9b134e05f330dce8424cf4",
     "single_file_html": true,
     "interactive": true,
-    "decomposable": true,
-    "independent_3d_vectors": true
+    "decomposable": true
   },
-  "runtime": {
-    "path": "studies/saint-andrews-shovel/runtime/runtime.js",
-    "sha256": "a3a8b7497f504cdb17ac1c30831b2b125bcf5fcc42ac970f3d0c292f3914e3f4",
-    "mechanism": "vector-noodle-beveled-box-quaternion-extrusion",
-    "source_parts": [
-      "runtime/3d/01.js",
-      "runtime/3d/02.js",
-      "runtime/3d/03.js",
-      "runtime/3d/04.js",
-      "runtime/3d/05.js"
-    ],
-    "assembly": "five SHA-locked chunks concatenated exactly; builder rejects any mismatch",
-    "rendering": "SVG affine projection of quaternion-rotated vector layers; no Canvas, WebGL, CSS 3D, raster, or runtime AI"
-  },
-  "controls": [
-    "Assemble",
-    "Reference layout",
-    "Reset part",
-    "D-handle",
-    "Shaft",
-    "Socket",
-    "Blade",
-    "Move",
-    "Rotate",
-    "Scale",
-    "Light"
-  ],
+  "controls": ["Assemble", "Reference layout", "Reset part", "D-handle", "Shaft", "Socket", "Blade", "Move", "Rotate", "Scale", "Light"],
   "interaction_contract": {
     "tap": "select only; never decomposes",
     "drag_assembled": "after threshold, pull only touched part free",
-    "reference_layout": "separate all four accepted parts as independent 3D vectors",
+    "reference_layout": "separate all four accepted parts",
     "assemble": "restore exact frozen accepted whole-object frame",
-    "move": "one-finger planar drag on selected free part",
-    "rotate": "one-finger free virtual trackball: pitch, yaw, and roll with quaternion state",
-    "scale": "one-finger vertical drag; shrink/grow selected free part",
+    "move_rotate_scale": "operate on selected free part with generous workspace manipulation after selection",
+    "rotate": "free quaternion virtual trackball; pitch, yaw and roll",
     "light": "runtime-only non-destructive overlay",
-    "edge_on_accessibility": "after selection, Rotate and Scale may use the whole workspace so an edge-on part remains manipulable",
-    "scroll": "none; complete interface fits one phone viewport",
-    "keyboard": "arrows move/pitch/yaw, Q/E roll, arrows scale, R reset, Esc assemble, Space reference"
+    "scroll": "none; complete interface fits one phone viewport"
   },
   "remote_build_evidence": {
     "workflow": "Build accepted shovel SPA",
-    "run_id": 34168759702,
+    "run_id": 34202576041,
     "conclusion": "success",
     "accepted_guard": "success",
-    "javascript_syntax": "success",
-    "old_functionality_regression": "success",
-    "new_3d_regression": "success",
+    "build_test": "success",
     "publish": "success"
   },
-  "regnet_open_wounds": []
+  "regnet_open_wounds": ["Contour-volume appearance remains pending Drew's visual interrogation; machine green is not visual acceptance."]
 }

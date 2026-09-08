@@ -1,0 +1,30 @@
+{
+  "schema": "ascii-kinesis-kinship-bridge.v1",
+  "source_system": "flat-plane-paper-doll",
+  "source_specimen_id": "fpv-thumbs-up-001",
+  "source_media_sha256": "e88a7f2065ca507acfc006169e51349a530e6df5c9ad79330c15b1582141553e",
+  "timing": {
+    "mode": "KEY_ONLY_STEP_HOLD",
+    "inbetweens": false,
+    "rule": "Each selected photograph is held until the timestamp of the next selected photograph. Final key holds to source clip end.",
+    "authority": "SOURCE_KEY_LEDGER"
+  },
+  "keys": [
+    {"key_id":"K0","name":"REST","kinship_role":"start","source_frame":0,"source_time_seconds":0.0,"hold_frames":9,"hold_seconds":0.300003,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING","generated":false},
+    {"key_id":"K1","name":"FORM","kinship_role":"windup","source_frame":9,"source_time_seconds":0.300003,"hold_frames":12,"hold_seconds":0.400004,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING","generated":false},
+    {"key_id":"K2","name":"THUMB LOCK","kinship_role":"anticipation","source_frame":21,"source_time_seconds":0.700007,"hold_frames":9,"hold_seconds":0.300003,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING","generated":false},
+    {"key_id":"K3","name":"PRESENT","kinship_role":"anticipationHold","source_frame":30,"source_time_seconds":1.00001,"hold_frames":12,"hold_seconds":0.400004,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING","generated":false},
+    {"key_id":"K4","name":"THRUST / HOLD","kinship_role":"contactHold","source_frame":42,"source_time_seconds":1.400015,"hold_frames":9,"hold_seconds":0.300003,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING","generated":false},
+    {"key_id":"K5","name":"RECOIL","kinship_role":"recoil","source_frame":51,"source_time_seconds":1.700018,"hold_frames":15,"hold_seconds":0.500005,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING","generated":false},
+    {"key_id":"K6","name":"SETTLE","kinship_role":"settle","source_frame":66,"source_time_seconds":2.200023,"hold_frames":6,"hold_seconds":0.200002,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING","generated":false},
+    {"key_id":"K7","name":"RELEASE","kinship_role":"release","source_frame":72,"source_time_seconds":2.400025,"hold_frames":12,"hold_seconds":0.400004,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING","generated":false},
+    {"key_id":"K8","name":"CLEAR","kinship_role":"end","source_frame":84,"source_time_seconds":2.800029,"hold_frames":12,"hold_seconds":0.400004,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING","generated":false}
+  ],
+  "non_authority": [
+    "This bridge does not contain UAPL or ASCII pose geometry.",
+    "This bridge does not define a UAT timing opinion.",
+    "This bridge does not retime source keys into ONES/TWOS/FOURS.",
+    "This bridge does not authorize interpolation or Motion Dungeon connectors.",
+    "ASCII Kinesis remains a sibling system with its own source/delivery contracts."
+  ]
+}

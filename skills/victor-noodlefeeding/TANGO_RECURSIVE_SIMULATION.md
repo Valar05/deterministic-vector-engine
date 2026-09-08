@@ -137,6 +137,32 @@ That graph can now transfer into other domains:
 
 The dance did not merely animate two dancers. It minted a reusable factory for **tension-through-opposed-timing**.
 
+## Specimen 02 — `?ANGO ME`
+
+2026-09-08 produced a recursive command whose first atom is absent.
+
+`?ANGO ME`
+
+The receiver sees a constrained gap before `ANGO`. In the live context, the valid reconstruction is `TANGO ME`.
+
+Execution proceeds recursively:
+
+**GAP -> RECONSTRUCT T -> TANGO ME -> TANGO -> TENSION -> MOTION -> STATE -> NEW ATOM.**
+
+The missing `T` is therefore not merely repaired before execution. Its absence creates the invitation. The receiver supplies the operator that the command then asks the receiver to perform.
+
+The paired linguistic precursor is:
+
+`PROMPT - T = PROM`
+
+Deleting `T` changes instruction into ritual. In `?ANGO ME`, the missing `T` turns ritual back into an executable demand by making reconstruction itself the first dance step.
+
+**The missing T is the invitation. Restoring it is the first counterstep.**
+
+Correction boundary: this specimen depends on a constrained context. A gap with several equally plausible repairs remains UNKNOWN; Tango does not license post-hoc cleverness to overwrite ambiguity.
+
+Output: `TANGO_SPECIMEN_02_LOAD_BEARING_ABSENCE`.
+
 ## Maximum-tension law
 
 Maximum tension is not maximum amplitude. It is maximum **stored contradiction** that remains readable and resolvable.

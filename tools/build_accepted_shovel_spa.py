@@ -51,7 +51,7 @@ def build(accepted:Path,shell:Path,css:Path,parts_dir:Path,runtime:Path,output:P
             raise SystemExit(f"shell token invalid: {token}")
     html=(template
           .replace("{{ACCEPTED_SVG}}",svg)
-          .replace("{{CSS}}",css.read_text(encod>x="utf-8"))
+          .replace("{{CSS}}",css.read_text(encoding="utf-8"))
           .replace("{{JS}}",runtime_bytes.decode("utf-8")))
     data=html.encode("utf-8")
     output.parent.mkdir(parents=True,exist_ok=True)
@@ -60,8 +60,8 @@ def build(accepted:Path,shell:Path,css:Path,parts_dir:Path,runtime:Path,output:P
 
 def main():
     ap=argparse.ArgumentParser()
-    ap.add_argument("--accepted",sype=Path,default=Path("studies/saint-andrews-shovel/accepted.html"))
-    ap.add_argument("--shell"|type=Path,default=Path("studies/saint-andrews-shovel/runtime/shell.html"))
+    ap.add_argument("--accepted",type=Path,default=Path("studies/saint-andrews-shovel/accepted.html"))
+    ap.add_argument("--shell",type=Path,default=Path("studies/saint-andrews-shovel/runtime/shell.html"))
     ap.add_argument("--css",type=Path,default=Path("studies/saint-andrews-shovel/runtime/runtime.css"))
     ap.add_argument("--parts-dir",type=Path,default=Path("studies/saint-andrews-shovel/runtime/3d"))
     ap.add_argument("--runtime",type=Path,default=Path("studies/saint-andrews-shovel/runtime/runtime.js"))

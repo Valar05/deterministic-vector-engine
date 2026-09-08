@@ -13,24 +13,24 @@ Purpose: reproduce an accepted raster visual oracle as a deterministic, raster-f
 9. Commit source SVG, builder, manifest, tests, and wound ledger to the Vector Noodle repository on every material iteration before delivery.
 10. After acceptance, preserve the accepted whole-object visual as immutable parent while adding interaction around it.
 
-## Post-acceptance 3D inheritance
+## 2D-first deformation authority
 
-11. The accepted front face is an heirloom, not source material for another redraw. Do not simplify, reinterpret, regenerate, or reconstruct it to gain 3D capability.
-12. Depth belongs to runtime clones. Build generated surfaces from the accepted vector sections while the assembled surface continues to render the exact accepted parent bytes.
-13. Reuse the nearest proven mechanism before inventing another one. For Saint Andrew's Shovel, the authority is the original Vector Noodle beveled-box virtual trackball/quaternion mechanism in this repository.
-14. Each decomposed part owns independent state: planar position, quaternion orientation, and uniform scale. One part moving or rotating may not disturb the others.
-15. Rotate means free 3D rotation: pitch, yaw, and roll with no Euler axis lock. One finger maps to a virtual trackball; keyboard controls remain an accessible alternative.
-16. Touch remains first class. Minimum targets stay large, scrolling stays disabled, direct pull keeps a movement threshold, and an edge-on selected part must remain manipulable without hunting for a one-pixel face.
-17. Preserve the full previous control contract during escalation. Adding 3D may not delete Assemble, Reference layout, Reset part, part selection, Move, Rotate, Scale, Light, haptics, or keyboard fallback.
-18. Deterministic delivery uses hash-locked runtime chunks when a transport cannot reliably carry a large source file. The builder concatenates exact bytes, verifies every chunk and the final runtime SHA, syntax-checks JavaScript, replays prior regressions, then publishes the single-file HTML.
-19. Remote green is supporting evidence, not permission to mutate accepted art. The immutable accepted-art hash must pass before every capability build.
+11. Physical 3D is paused until a commissioned shot proves it is necessary. Do not escalate to volumetric geometry merely because the runtime can.
+12. The default post-acceptance primitive is a flat vector plane, optionally positioned as a simple 3D quad. The source remains 2D art.
+13. Each part owns a deformation cage. Begin with the four bounding-box corners. Add a sparse 3x3 lattice only when local deformation requires more control.
+14. Deformation vocabulary includes squash, stretch, skew, shear, taper, perspective lean, asymmetric recoil, anticipation compression, impact bulge, directional smear, and settle wobble.
+15. Render nonlinear-looking deformation through a small fixed piecewise-affine mesh: clipped reusable source-art triangles plus affine transforms. Do not regenerate accepted path data every frame.
+16. Keep vertices scarce and semantic. Add a vertex only to control a specific local deformation. Dense meshes are a performance failure unless a visible result earns them.
+17. Faux depth may use linked flat planes: accepted face, distorted multiply shadow, masked highlight, sparse rim/edge treatment. Synthetic Z may drive shadow offset/scale, ordering and perspective cheats without constructing a volume.
+18. A duplicated distorted mesh is a valid fake-shadow mechanism. Shadow deformation should reinforce motion and depth cues, not require physical lights.
+19. Preserve all established interaction semantics: Assemble, Reference layout, Reset part, part selection, Move, Rotate, Scale, Light, direct pull threshold, no-scroll phone fit, haptics, keyboard fallback. Add Deform; do not pay for it by removing previous controls.
+20. Touch stays first class. Cage control handles use generous hit areas; the visual control point may be small while its touch target remains large.
+21. Animation hot path may update cage coordinates, a few affine matrices, and a few material/shadow parameters. It may not clone nodes, rebuild topology, regenerate the source paths, or run heavy filters per triangle.
+22. Sprite/attachment replacement and mesh deformation should be exhausted before real volume is reconsidered.
 
-## Contour-volume escalation
+## Preserved 3D research
 
-20. Paper-doll depth is not a failure when the target is Sprite/Spine-style animation. When a lightweight layered result is fertile, freeze it as its own branch before changing the physical model. Do not destroy one successful parent to obtain another.
-21. Physical 3D is a cross-section problem, not a layer-count problem. Repeating a flat face at many Z offsets produces a convincing card stack but does not make a shaft round, a socket formed, or a blade forged.
-22. Choose a semantic cross-section per part. A shaft may use a cylindrical/semicircular profile; formed hardware a rounded profile; a shovel blade a shallow dish plus center keel/ridge. Cross-section geometry belongs only to runtime clones.
-23. Front and back share material identity. Never make the back face darker merely because it is the back. Use orientation-derived lighting and the same albedo/material language on both sides.
-24. Preserve user manipulation while adding contours. A selected part must still be easy to move, rotate, and scale when nearly edge-on; the workspace may act as the selected part's generous manipulation surface after selection.
+23. Existing paper-doll and contour-volume branches remain fertile evidence, not active authority. Do not delete or rewrite them.
+24. If real 3D is later justified, reuse the nearest proven mechanism and preserve the exact accepted face as an heirloom. No redraw is allowed merely to gain depth.
 
-Pocket form: **ACCEPT FACE. FREEZE FACE. SAVE FERTILE PARENTS. CONTOUR THE DEPTH. REUSE THE QUATERNIONS. NEVER PAY FOR 3D WITH LOST FUNCTION.**
+Pocket form: **ACCEPT FACE. FREEZE FACE. FLAT FIRST. FEW VERTICES. DEFORM THE PLANE. FAKE THE DEPTH. EARN THE VOLUME.**

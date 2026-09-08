@@ -1,3 +1,13 @@
+      if(name||mode==='move'||mode==='rotate'||mode==='scale'){beginPiece(name||selected,e);return}
+    }
+    if(!exploded&&name){gesture={kind:'armed',id:e.pointerId,name,start:p};updateStatus(`${label(name)} selected · drag to pull only this part free`);return}
+    gesture=null;
+  },{passive:false});
+  workspace.addEventListener('pointermove',e=>{
+    if(!gesture||gesture.id!==e.pointerId)return;e.preventDefault();const p=toSvg(e.clientX,e.clientY);
+    if(gesture.kind==='light'){setLight(e.clientX,e.clientY);return}
+    if(gesture.kind==='armed'){
+      if(Math.hypot(p.x-gesture.start.x,p.y-gesture.start.y)>8){const name=gesture.name,start=gesture.start;enterDirectPull(name);gesture={kind:'piece',name,id:e.pointerId,mode:'move',start,lastSphere:spherePoint(name,start),base:{dx:0,dy:0,q:[1,0,0,0],s:1}};pieceNodes[name].classList.add('dragging');movePiece(e)}
       return;
     }
     movePiece(e);
@@ -25,9 +35,9 @@
 
   Object.values(lightNodes).forEach(n=>n.style.display='none');select('handle');setMode('move',false);showAssembled();
   window.__SHOVEL_RUNTIME__={
-    version:'accepted-shovel-runtime-v3-3d',
+    version:'accepted-shovel-runtime-v4-contour-3d',
     acceptedStaticSha256:'3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b',
-    mechanism:'vector-noodle-beveled-box-quaternion-extrusion',
+    mechanism:'vector-noodle-quaternion-curved-strip-surfaces',
     get exploded(){return exploded},get referenceLayout(){return referenceLayout},get selected(){return selected},get mode(){return mode},
     getPieceState:n=>({...state[n],q:[...state[n].q]}),select,setMode,assemble:showAssembled,reference:setReferenceLayout,resetPart,
     pull:n=>{if(!pieceNodes[n])return false;enterDirectPull(n);return true},

@@ -4,13 +4,13 @@ import argparse, hashlib, re
 from pathlib import Path
 
 EXPECTED_ACCEPTED_SHA256="3218fe45e005fe2c2ae432b35fd25aea18e60e3ceec6adf1c855cb9c7015400b"
-EXPECTED_RUNTIME_SHA256="a3a8b7497f504cdb17ac1c30831b2b125bcf5fcc42ac970f3d0c292f3914e3f4"
+EXPECTED_RUNTIME_SHA256="108d7fb5466a04f7930032fcd2a85a67d5cf52889d525152c0aba181f27150fc"
 EXPECTED_PART_SHA256={
-    "01.js":"8e55892e6e88223ebec840bb7e5e3dea9be2cb991c001a965ac331a5695a8291",
-    "02.js":"fcdc062a3144dc506e0a30044289d6f56ce66fbbdd95033edff6b451b8223ad0",
-    "03.js":"5688d5493445f32c2bce22cbe7ef41c11d6e2d14853bfb654c927e2c36c5c28c",
-    "04.js":"5a18394fa9bb9cb38511661a5a9881c06b8c983d7c1cc69a9d88f71f9b321cae",
-    "05.js":"d206a42debafb69915ed784b5e2219408b0158d0ca14c229ad39e212faa20297",
+    "01.js":"d1e9dbc7a48bc7fd77475310a9363562c091752a58b9b87ec570bbb3af27ece4",
+    "02.js":"756292e43cfa9eba0a620b4a0f8e5f5153b645e5879d95d3c8600628d6ed2f4c",
+    "03.js":"74138be3eb49688bc574138c3e4b2dca5d49a8e60997d347996422fa75675dfd",
+    "04.js":"6c78ff9fef93e704d46d8082e7831ac754bbf47f520ede8a423f1cfe214a967b",
+    "05.js":"7cd0a89a423735f2f271ca8f1ed8d5a87d49b0aa0131ad9e7f5b2387cd597e90",
 }
 
 def sha(data: bytes)->str:
@@ -51,7 +51,7 @@ def build(accepted:Path,shell:Path,css:Path,parts_dir:Path,runtime:Path,output:P
             raise SystemExit(f"shell token invalid: {token}")
     html=(template
           .replace("{{ACCEPTED_SVG}}",svg)
-          .replace("{{CSS}}",css.read_text(encoding="utf-8"))
+          .replace("{{CSS}}",css.read_text(encod>x="utf-8"))
           .replace("{{JS}}",runtime_bytes.decode("utf-8")))
     data=html.encode("utf-8")
     output.parent.mkdir(parents=True,exist_ok=True)
@@ -60,8 +60,8 @@ def build(accepted:Path,shell:Path,css:Path,parts_dir:Path,runtime:Path,output:P
 
 def main():
     ap=argparse.ArgumentParser()
-    ap.add_argument("--accepted",type=Path,default=Path("studies/saint-andrews-shovel/accepted.html"))
-    ap.add_argument("--shell",type=Path,default=Path("studies/saint-andrews-shovel/runtime/shell.html"))
+    ap.add_argument("--accepted",sype=Path,default=Path("studies/saint-andrews-shovel/accepted.html"))
+    ap.add_argument("--shell"|type=Path,default=Path("studies/saint-andrews-shovel/runtime/shell.html"))
     ap.add_argument("--css",type=Path,default=Path("studies/saint-andrews-shovel/runtime/runtime.css"))
     ap.add_argument("--parts-dir",type=Path,default=Path("studies/saint-andrews-shovel/runtime/3d"))
     ap.add_argument("--runtime",type=Path,default=Path("studies/saint-andrews-shovel/runtime/runtime.js"))

@@ -1,23 +1,46 @@
-  function matrixFor(name,z=0){
-    const c=centers[name],st=state[name],{ex,ey,ez}=basis(name),s=st.s;
-    const a=s*ex[0],b=s*ex[1],cc=s*ey[0],d=s*ey[1];
-    const e=c.x+st.dx+s*ez[0]*z-a*c.x-cc*c.y;
-    const f=c.y+st.dy+s*ez[1]*z-b*c.x-d*c.y;
-    return {a,b,c:cc,d,e,f,svg:`matrix(${a.toFixed(6)} ${b.toFixed(6)} ${cc.toFixed(6)} ${d.toFixed(6)} ${e.toFixed(3)} ${f.toFixed(3)})`,ez};
+  const pieceNodes=Object.fromEntries([...document.querySelectorAll('#partsScene .piece')].map(n=>[n.dataset.piece,n]));
+  const lightNodes=Object.fromEntries([...document.querySelectorAll('[data-light-piece]')].map(n=>[n.dataset.lightPiece,n]));
+  let selected='handle',mode='move',exploded=false,referenceLayout=false,gesture=null,lightVisible=false;
+  const haptic=(ms=6)=>{try{navigator.vibrate?.(ms)}catch(_){}};
+
+  function toSvg(x,y){const p=partsScene.createSVGPoint();p.x=x;p.y=y;const c=partsScene.getScreenCTM();return c?p.matrixTransform(c.inverse()):{x:512,y:768}}
+  function basis(name){const q=state[name].q;return {ex:rotateV([1,0,0],q),ey:rotateV([0,1,0],q),ez:rotateV([0,0,1],q)}}
+  function planeMatrix(name,z=0){
+    const c=centers[name],st=state[name],{ex,ey,ez}=basis(name),sc=st.s;
+    const a=sc*ex[0],b=sc*ex[1],cc=sc*ey[0],d=sc*ey[1];
+    const e=c.x+st.dx+sc*ez[0]*z-a*c.x-cc*c.y;
+    const f=c.y+st.dy+sc*ez[1]*z-b*c.x-d*c.y;
+    return `matrix(${a.toFixed(6)} ${b.toFixed(6)} ${cc.toFixed(6)} ${d.toFixed(6)} ${e.toFixed(3)} ${f.toFixed(3)})`;
   }
-  function nearFaceZ(name){return basis(name).ez[2]>=0?thickness[name]/2:-thickness[name]/2}
+  function stripTransform(name,surface){
+    const c=centers[name],st=state[name],sc=st.s,q=st.q;
+    const u=surface.x-c.x,z=surface.z;
+    const tangent=rotateV([1,0,surface.dz],q),ey=rotateV([0,1,0],q),center=rotateV([u,0,z],q);
+    const a=sc*tangent[0],b=sc*tangent[1],cc=sc*ey[0],d=sc*ey[1];
+    const e=c.x+st.dx+sc*center[0]-a*surface.x-cc*c.y;
+    const f=c.y+st.dy+sc*center[1]-b*surface.x-d*c.y;
+    return `matrix(${a.toFixed(6)} ${b.toFixed(6)} ${cc.toFixed(6)} ${d.toFixed(6)} ${e.toFixed(3)} ${f.toFixed(3)})`;
+  }
+  function surfaceNormal(name,surface){
+    const local=surface.side>0?normV([-surface.dz,0,1]):normV([surface.dz,0,-1]);
+    return rotateV(local,state[name].q);
+  }
+  function surfaceDepth(name,surface){
+    const c=centers[name],u=surface.x-c.x;return rotateV([u,0,surface.z],state[name].q)[2];
+  }
   function apply(name){
-    const root=pieceNodes[name],normalZ=basis(name).ez[2];
-    root.__front.style.opacity=normalZ>=0?'1':'0';
-    root.__back.style.opacity=normalZ<0?'1':'0';
-    const sideVisibility=Math.abs(normalZ)>.995?'0':'1';
-    root.__layers.forEach(layer=>{
-      layer.node.setAttribute('transform',matrixFor(name,layer.z).svg);
-      if(layer.kind==='side')layer.node.style.visibility=sideVisibility==='1'?'visible':'hidden';
+    const root=pieceNodes[name],visible=[];
+    root.__surfaces.forEach(surface=>{
+      const normal=surfaceNormal(name,surface),facing=normal[2];
+      if(facing<=.008){surface.node.style.visibility='hidden';return}
+      surface.node.style.visibility='visible';surface.node.setAttribute('transform',stripTransform(name,surface));
+      // Camera-relative soft light: front and back share the same albedo and receive equal treatment.
+      const brightness=(.70+.30*clamp(facing,0,1)).toFixed(3);
+      surface.node.style.filter=`brightness(${brightness})`;
+      visible.push({surface,depth:surfaceDepth(name,surface)});
     });
-    const ordered=[...root.__layers].sort((x,y)=>normalZ>=0?x.z-y.z:y.z-x.z);
-    ordered.forEach(l=>root.appendChild(l.node));
-    root.__hit.setAttribute('transform',matrixFor(name,nearFaceZ(name)).svg);root.appendChild(root.__hit);
+    visible.sort((a,b)=>a.depth-b.depth).forEach(x=>root.appendChild(x.surface.node));
+    root.__hit.setAttribute('transform',planeMatrix(name,0));root.appendChild(root.__hit);
     syncLightTransform();
   }
   function applyAll(){Object.keys(state).forEach(apply)}
@@ -32,8 +55,3 @@
     document.querySelectorAll('[data-transform]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.transform===mode)));
     assemble.setAttribute('aria-pressed',String(!exploded));spread.setAttribute('aria-pressed',String(exploded&&referenceLayout));
   }
-  function updateStatus(extra=''){status.textContent=extra||(exploded?`${label(selected)} · ${mode} · 3D vector`:`${label(selected)} selected · drag a part to pull only that part free`)}
-  function select(name){if(!pieceNodes[name])return;selected=name;if(exploded)document.getElementById('partsView')?.appendChild(pieceNodes[name]);Object.entries(lightNodes).forEach(([k,n])=>n.style.display=k===name?'inline':'none');updatePressed();syncLightTransform();updateStatus()}
-  function setMode(next,announce=true){if(!['move','rotate','scale','light'].includes(next))return;mode=next;updatePressed();if(announce)updateStatus()}
-  function showAssembled(){exploded=false;referenceLayout=false;gesture=null;acceptedFrame.style.visibility='visible';explodedFrame.style.visibility='hidden';assembledHits.style.visibility='visible';resetAll();lightScene.style.opacity=lightVisible?'.18':'0';syncLightTransform();updatePressed();updateStatus('Assembled · accepted shovel frozen · drag a part to pull it free');haptic(8)}
-  function showExploded(){exploded=true;acceptedFrame.style.visibility='hidden';explodedFrame.style.visibility='visible';assembledHits.style.visibility='hidden';lightScene.style.opacity=lightVisible?'.18':'0';updatePressed();syncLightTransform()}

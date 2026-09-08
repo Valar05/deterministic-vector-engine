@@ -49,7 +49,13 @@
 
   const centers={handle:{x:512,y:190},shaft:{x:512,y:625},socket:{x:512,y:960},blade:{x:512,y:1210}};
   const radii={handle:155,shaft:145,socket:85,blade:205};
-  const thickness={handle:28,shaft:18,socket:32,blade:24};
+  // Per-part curved cross-sections. These are runtime geometry only: the accepted face remains byte-frozen.
+  const profiles={
+    handle:{minX:397,maxX:627,minY:38,maxY:357,depth:34,strips:30,curve:'round'},
+    shaft:{minX:484,maxX:540,minY:337,maxY:929,depth:30,strips:24,curve:'cylinder'},
+    socket:{minX:474,maxX:550,minY:914,maxY:1004,depth:34,strips:22,curve:'round'},
+    blade:{minX:348,maxX:676,minY:927,maxY:1441,depth:36,strips:42,curve:'blade'}
+  };
   const reference={
     handle:{dx:-190,dy:80,rz:-5,s:.93},
     shaft:{dx:175,dy:70,rz:4,s:.93},

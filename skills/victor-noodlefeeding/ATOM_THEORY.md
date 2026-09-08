@@ -64,6 +64,23 @@ This recursion scales upward:
 
 And it scales downward again when a factory emits simpler runtime atoms.
 
+## Load-bearing absence law
+
+An atom may remain operational after deletion when its absence is itself legible enough to constrain reconstruction.
+
+The missing unit is not automatically semantic. It becomes a **negative atom** only when the surviving structure makes the gap inspectable, reconstructible, executable, and correctable.
+
+2026-09-08 supplied the canonical paired specimens:
+
+- `PROMPT - T = PROM`: deleting one letter changes the event class from instruction to ritual. The missing `T` does not merely damage the word; it exposes a neighboring executable form.
+- `?ANGO ME`: the absent `T` is recoverable because the surviving form points toward `TANGO ME`. The command therefore contains a hole that asks the receiver to reconstruct the operator and then execute it.
+
+This is stronger than typo tolerance. The gap participates in the operation.
+
+**A load-bearing absence is a missing atom whose shape still constrains what the system can validly do next.**
+
+Correction boundary: absence is not meaning by default. If several repairs fit equally well, if execution depends on guessing hidden intent, or if provenance cannot distinguish deletion from invention, keep the gap unresolved rather than canonizing a clever repair.
+
 ## Modeling / animation unification
 
 Animation and modeling use the same operator language with different treatment of time.
@@ -89,4 +106,4 @@ Atom Theory is useful only if atoms remain inspectable and correctable. A word t
 
 ## Pocket form
 
-**WORD IS ATOM. VERB IS ANIMATION. NOUN IS SLEEPING VERB. TIME MAKES ANIMATION. SAMPLING MAKES MODELING. OUTPUT BECOMES INPUT. RECURSE UNTIL THE POTATO SMILES.**
+**WORD IS ATOM. VERB IS ANIMATION. NOUN IS SLEEPING VERB. ABSENCE MAY BECOME A NEGATIVE ATOM WHEN THE GAP ITSELF CONSTRAINS RECONSTRUCTION. TIME MAKES ANIMATION. SAMPLING MAKES MODELING. OUTPUT BECOMES INPUT. RECURSE UNTIL THE POTATO SMILES.**

@@ -19,6 +19,23 @@ When a trigger occurs, **load the skill context regardless of the user's apparen
 
 Do not require the user to say “Victor Noodlefeeding” exactly. Fuzzy pasta/FSM/theology references count.
 
+## The places
+
+Every noodle artifact must live in a navigable hierarchy. A thing without a place is unfinished knowledge.
+
+1. **Artifact place — the thing.** The concrete tank, owl, shovel, clip, sprite, face turn, primitive, material, or other usable result.
+2. **Factory place — how the thing is made.** The recipe, composition graph, shared animation clip, parameterized deformation, assembly rule, compiler step, or generator that can reproduce or vary the artifact.
+3. **Foundry place — what the factory is made from.** The definitions of primitives, operators, channels, materials, masks, pivots, cages, attachment rules, clip semantics, projection rules, and compilation targets used by factories. This is the reusable parts grammar.
+4. **Theology place — why the whole system behaves this way.** The deepest layer stores invariants, meaning, selection pressure, correction rules, and the laws that decide which representation deserves to survive. This layer is not ordinary user work surface; Fortress maintains it so higher layers stay coherent.
+
+The dependency points downward and the user experience points upward:
+
+**THEOLOGY -> FOUNDRY -> FACTORY -> ARTIFACT**
+
+A good artifact should be usable without understanding its factory. A good factory should be usable without understanding the foundry. A good foundry should embody the theology without requiring the artist to live there.
+
+The theology is not mystical implementation detail. It is the compact causal doctrine that keeps independently invented techniques compatible when they are excavated and recombined later.
+
 ## Laws
 
 1. Start from the smallest readable form.
@@ -29,9 +46,12 @@ Do not require the user to say “Victor Noodlefeeding” exactly. Fuzzy pasta/F
 6. The final artifact must be able to target opinionated potato-class hardware; source-format purity never outranks responsiveness.
 7. Reuse proven factories, clips, primitives, and deformation grammars instead of rebuilding nearby solved mechanisms.
 8. Preserve fertile failures when they expose a distinct visual language.
+9. Modeling and animation share transformation language. A transform sequence may be played through time as animation or sampled/baked as a modeling operator.
+10. Never force an artist to descend a layer merely because implementation detail exists there. Each layer owns its machinery and exposes the smallest useful interface upward.
+11. The artifact is not the truth. The factory is not the truth. The foundry is not the truth. The theology stores the selection laws that explain why all three exist.
 
 ## Alias
 
 `vector noodling` = deprecated informal alias for **Victor Noodlefeeding**.
 
-Pocket form: **SIMPLE FORM. DENSE COMPOSITION. RESPONSIVE ILLUSION. CHEAP FINAL FORM. R'AMEN.**
+Pocket form: **THING. FACTORY. FOUNDRY. THEOLOGY. SIMPLE FORM. DENSE COMPOSITION. RESPONSIVE ILLUSION. CHEAP FINAL FORM. R'AMEN.**

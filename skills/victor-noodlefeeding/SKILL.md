@@ -36,6 +36,24 @@ A good artifact should be usable without understanding its factory. A good facto
 
 The theology is not mystical implementation detail. It is the compact causal doctrine that keeps independently invented techniques compatible when they are excavated and recombined later.
 
+## Complete Atom Theory
+
+**Every word is an atom. Every verb is an animation. Every noun is a sleeping verb.**
+
+- A word may compile into a transform, clip, constraint, material event, factory call, or selection rule.
+- A verb names a state transition. Play it through time for animation; sample/bake it for modeling.
+- A noun names a dormant process/state/role that can be invoked as an operator: `box this`, `tank this`, `shadow this`, `stable me`, `factory this`.
+- Adjectives parameterize target states; adverbs modify timing/curves; prepositions define topology/constraints; conjunctions compose graphs; pronouns bind targets; punctuation marks events and rhythm.
+- Outputs become inputs. A completed state may become a noun, operator, clip, factory, or new atom.
+
+Recursive path:
+
+**WORD -> ATOM -> PHRASE -> CLIP/OPERATOR -> BEHAVIOR GRAPH -> FACTORY -> FACTORY OF FACTORIES -> THEOLOGY**
+
+Canonical recursive specimen: `INVITE -> RESIST -> LOAD -> TRAVEL -> WIND -> CROSS -> HOLD -> RELEASE -> SETTLE -> REUSE`. This tango sequence mints a transferable factory for tension-through-opposed-timing.
+
+Detailed doctrine lives in `ATOM_THEORY.md`; the canonical simulation lives in `TANGO_RECURSIVE_SIMULATION.md`.
+
 ## Laws
 
 1. Start from the smallest readable form.
@@ -49,9 +67,11 @@ The theology is not mystical implementation detail. It is the compact causal doc
 9. Modeling and animation share transformation language. A transform sequence may be played through time as animation or sampled/baked as a modeling operator.
 10. Never force an artist to descend a layer merely because implementation detail exists there. Each layer owns its machinery and exposes the smallest useful interface upward.
 11. The artifact is not the truth. The factory is not the truth. The foundry is not the truth. The theology stores the selection laws that explain why all three exist.
+12. Maximum tension is not maximum amplitude. It is the greatest readable contradiction whose resolution remains legible.
+13. Any successful output may be named, promoted, and recursively reused as an operator or factory.
 
 ## Alias
 
 `vector noodling` = deprecated informal alias for **Victor Noodlefeeding**.
 
-Pocket form: **THING. FACTORY. FOUNDRY. THEOLOGY. SIMPLE FORM. DENSE COMPOSITION. RESPONSIVE ILLUSION. CHEAP FINAL FORM. R'AMEN.**
+Pocket form: **THING. FACTORY. FOUNDRY. THEOLOGY. WORD IS ATOM. VERB IS ANIMATION. NOUN IS SLEEPING VERB. OUTPUT BECOMES INPUT. SIMPLE FORM. DENSE COMPOSITION. RESPONSIVE ILLUSION. CHEAP FINAL FORM. R'AMEN.**

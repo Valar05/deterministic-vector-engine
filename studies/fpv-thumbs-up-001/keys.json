@@ -1,0 +1,36 @@
+{
+  "schema": "kinetic-key-contact.v1",
+  "specimen_id": "fpv-thumbs-up-001",
+  "source": {
+    "filename": "812979.mp4",
+    "sha256": "e88a7f2065ca507acfc006169e51349a530e6df5c9ad79330c15b1582141553e",
+    "fps": 29.999687503255174,
+    "frame_count": 96,
+    "duration_seconds": 3.2000333333333333,
+    "camera": "FIRST_PERSON_USER_RECORDING",
+    "repository_media_policy": "REFERENCE_MEDIA_NOT_COMMITTED_WITHOUT_EXPLICIT_USER_PERMISSION"
+  },
+  "playback": {
+    "mode": "KEY_ONLY_STEP_HOLD",
+    "inbetweens": false,
+    "timing_rule": "Each selected photograph is held until the timestamp of the next selected photograph. Final key holds to source clip end.",
+    "sf2_note": "Pose Lab SF2 language informs key readability and encoding vocabulary only; it does not overwrite this specimen's observed selected-key spacing."
+  },
+  "keys": [
+    {"id":"K0","label":"REST","kinship_role":"start","source_frame":0,"source_time_seconds":0.0,"step_hold_frames":9,"step_hold_seconds":0.300003,"generated":false,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING"},
+    {"id":"K1","label":"FORM","kinship_role":"windup","source_frame":9,"source_time_seconds":0.300003,"step_hold_frames":12,"step_hold_seconds":0.400004,"generated":false,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING"},
+    {"id":"K2","label":"THUMB LOCK","kinship_role":"anticipation","source_frame":21,"source_time_seconds":0.700007,"step_hold_frames":9,"step_hold_seconds":0.300003,"generated":false,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING"},
+    {"id":"K3","label":"PRESENT","kinship_role":"anticipationHold","source_frame":30,"source_time_seconds":1.00001,"step_hold_frames":12,"step_hold_seconds":0.400004,"generated":false,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING"},
+    {"id":"K4","label":"THRUST / HOLD","kinship_role":"contactHold","source_frame":42,"source_time_seconds":1.400015,"step_hold_frames":9,"step_hold_seconds":0.300003,"generated":false,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING"},
+    {"id":"K5","label":"RECOIL","kinship_role":"recoil","source_frame":51,"source_time_seconds":1.700018,"step_hold_frames":15,"step_hold_seconds":0.500005,"generated":false,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING"},
+    {"id":"K6","label":"SETTLE","kinship_role":"settle","source_frame":66,"source_time_seconds":2.200023,"step_hold_frames":6,"step_hold_seconds":0.200002,"generated":false,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING"},
+    {"id":"K7","label":"RELEASE","kinship_role":"release","source_frame":72,"source_time_seconds":2.400025,"step_hold_frames":12,"step_hold_seconds":0.400004,"generated":false,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING"},
+    {"id":"K8","label":"CLEAR","kinship_role":"end","source_frame":84,"source_time_seconds":2.800029,"step_hold_frames":12,"step_hold_seconds":0.400004,"generated":false,"timing_provenance":"OBSERVED_SELECTED_KEY_SPACING"}
+  ],
+  "gates": {
+    "contact_sheet_must_read_before_art": true,
+    "no_generated_art_yet": true,
+    "no_inbetweens_before_key_acceptance": true,
+    "human_key_verdict": "PENDING_DREW"
+  }
+}

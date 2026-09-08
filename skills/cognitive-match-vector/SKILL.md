@@ -38,9 +38,19 @@ Purpose: reproduce an accepted raster visual oracle as a deterministic, raster-f
 28. Default escalation order for character or prop animation is now: **static accepted art -> affine acting -> procedural mask/material effect -> sparse cage deformation -> attachment/sprite replacement as needed -> real 3D only if still visibly necessary.**
 29. If an animation can be made convincing with position/rotation/scale/skew alone, adding mesh vertices is a regression in simplicity unless the extra deformation produces a visible gain Drew can name.
 
+## Shared animation clips
+
+30. **Animation clips are reusable temporal behavior, not actor-owned art.** A clip stores time curves and events; an actor binds those curves to its own sprite/part, pivot, facing and dimensions.
+31. The slime melee attack and Phagocyte Turtle melee attack are explicitly the **same shared clip**. Reuse the clip; do not duplicate its timing merely because the actors have different drawings.
+32. A canonical shared clip may contain channels for translation, pivot, rotation, X/Y scale, skew/shear, optional cage vertices, attachment/frame index, material parameters such as dissolve/reveal/threshold, and event markers such as launch/contact/recover/emit.
+33. Actor bindings may provide local pivot, facing direction, amplitude multipliers, and sparse channel remaps. Per-actor overrides should be minimal and justified by a visible difference.
+34. **Attachment replacement is a first-class rung.** The Phagocyte Turtle mouth demonstrates that a few discrete replacement drawings can be cheaper and clearer than forcing a mesh to express a genuinely different mouth pose.
+35. Shared clips should preserve timing semantics across species: anticipation means anticipation, impact compression means impact compression, settle means settle. Art supplies identity; clips supply behavior.
+36. Author a good force curve once, then bind it many times. Clip reuse is both a production optimization and a consistency mechanism.
+
 ## Preserved 3D research
 
-30. Existing paper-doll and contour-volume branches remain fertile evidence, not active authority. Do not delete or rewrite them.
-31. If real 3D is later justified, reuse the nearest proven mechanism and preserve the exact accepted face as an heirloom. No redraw is allowed merely to gain depth.
+37. Existing paper-doll and contour-volume branches remain fertile evidence, not active authority. Do not delete or rewrite them.
+38. If real 3D is later justified, reuse the nearest proven mechanism and preserve the exact accepted face as an heirloom. No redraw is allowed merely to gain depth.
 
-Pocket form: **ACCEPT FACE. FREEZE FACE. AFFINE FIRST. FEW VERTICES. DEFORM THE PLANE. FAKE THE DEPTH. EARN THE VOLUME.**
+Pocket form: **ACCEPT FACE. FREEZE FACE. AFFINE FIRST. MATERIAL TIME. SHARED CLIPS. FEW VERTICES. FAKE THE DEPTH. EARN THE VOLUME.**
